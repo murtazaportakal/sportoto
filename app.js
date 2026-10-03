@@ -9,8 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
     predictions: [],
 
     init() {
+      this.setupAnimations();
       this.simulateLoading();
       this.fetchLiveFixtures();
+    },
+
+    setupAnimations() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // Observe all elements with .animate-in
+      setTimeout(() => {
+        document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+      }, 100);
     },
 
     async fetchLiveFixtures() {
