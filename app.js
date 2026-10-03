@@ -10,7 +10,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
     init() {
       this.simulateLoading();
+      this.fetchLiveFixtures();
     },
+
+    async fetchLiveFixtures() {
+      const apiKey = "JVpXsaqNmtR2s2QamdkI7AMSKQ9IdvKBZ7XarlDqJuzWhCpJBAN4zLFNtnNB";
+      const apiUrl = `https://www.nosyapi.com/apiv2/service/bettable-matches/sporToto?apiKey=${apiKey}`;
+      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
+      
+      try {
+        const response = await fetch(proxyUrl);
+        if (response.ok) {
+          const data = await response.json();
+          const matches = data.data || data;
+          if (matches && matches.length > 0) {
+            this.mapApiDataToFixtures(matches);
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn("Could not fetch live fixtures from NosyAPI. Falling back to local dataset.", err);
+      }
+      // If failed, use local FIXTURES_DATA
+      this.activeFixtures = FIXTURES_DATA;
+    },
+
+    mapApiDataToFixtures(matches) {
+      const teamMap = {
+        'galatasaray': 'GAL', 'fenerbahçe': 'FEN', 'fenerbahce': 'FEN', 'beşiktaş': 'BJK', 'besiktas': 'BJK',
+        'trabzonspor': 'TRA', 'başakşehir': 'IBFK', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
+        'antalyaspor': 'ANT', 'kasımpaşa': 'KAS', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
+        'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON', 'ankaragücü': 'ANK', 'ankaragucu': 'ANK',
+        'hatayspor': 'HAT', 'fatih karagümrük': 'FKG', 'karagümrük': 'FKG', 'gaziantep': 'GAZ',
+        'samsunspor': 'SAM', 'rizespor': 'RIZ', 'pendikspor': 'PEN', 'istanbulspor': 'IST', 'göztepe': 'GOZ',
+        'real madrid': 'RMA', 'barcelona': 'BAR', 'manchester city': 'MCI', 'man city': 'MCI', 
+        'arsenal': 'ARS', 'liverpool': 'LIV', 'bayern münih': 'BAY', 'bayern': 'BAY', 
+        'inter': 'INT', 'milan': 'MIL', 'ac milan': 'MIL', 'juventus': 'JUV'
+      };
+
+      function getCode(name) {
+        const clean = name.trim().toLowerCase();
+        for (const [key, code] of Object.entries(teamMap)) {
+          if (clean.includes(key)) return code;
+        }
+        return "UNKNOWN"; 
+      }
+
+      const parsedFixtures = [];
+      let idCounter = 1;
+      
+      for (const match of matches) {
+         const homeRaw = match.homeTeam || match.home || match.Team1 || "";
+         const awayRaw = match.awayTeam || match.away || match.Team2 || "";
+         if (!homeRaw || !awayRaw) continue;
+         parsedFixtures.push({ id: idCounter++, home: getCode(homeRaw), away: getCode(awayRaw) });
+      }
+      
+      this.activeFixtures = parsedFixtures.slice(0, 15);
+      if (this.activeFixtures.length === 0) this.activeFixtures = FIXTURES_DATA;
+    },
+
 
     simulateLoading() {
       const progressBar = document.getElementById('loading-progress-bar');
@@ -46,7 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
       this.featureVectors = FeatureEngineering.buildAllFeatureVectors(TEAMS_DATA, []);
       
       // 2. Calculate match probabilities for each fixture
-      this.predictions = FIXTURES_DATA.map(fixture => {
+      const fixturesToUse = this.activeFixtures || FIXTURES_DATA;
+      
+      this.predictions = fixturesToUse.map(fixture => {
         const homeTeam = TEAMS_DATA.find(t => t.code === fixture.home);
         const awayTeam = TEAMS_DATA.find(t => t.code === fixture.away);
         
