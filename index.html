@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ML-powered prediction model for Weekly Sportoto. Feature-based analysis of Turkish Super League teams.">
+  <title>Weekly Sportoto ML Predictions | AI-Powered 1-X-2 Analysis</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text" id="loading-text">Initializing Sportoto ML Engine...</div>
+    <div class="loading-progress">
+      <div class="loading-progress-bar" id="loading-progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <a href="#" class="nav-brand">
+      <span class="nav-brand-icon">⚽</span>
+      <span class="nav-brand-text">Sportoto ML Predictor</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#predictions">Weekly Ticket</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-container">
+    
+    <!-- ====== HERO SECTION ====== -->
+    <section class="hero" id="hero">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span>LIVE MODEL • TURKISH SUPER LEAGUE</span>
+      </div>
+      <h1>
+        Weekly Sportoto<br>
+        <span class="gradient-text">ML Prediction Engine</span>
+      </h1>
+      <p class="hero-subtitle">
+        Machine learning model predicting 15 Sportoto matches using logistic regression 
+        and feature-based composite scoring of Turkish Super League teams.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-value" id="hero-teams">20</div>
+          <div class="hero-stat-label">Teams Analyzed</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value" id="hero-matches">15</div>
+          <div class="hero-stat-label">Matches Predicted</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value" id="hero-features">12+</div>
+          <div class="hero-stat-label">ML Features</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PREDICTIONS TICKET ====== -->
+    <section class="section" id="predictions">
+      <div class="section-header">
+        <div class="section-tag">1-X-2 Probabilities</div>
+        <h2 class="section-title">Weekly Sportoto Ticket</h2>
+        <p class="section-subtitle">
+          AI-generated predictions for all 15 matches. The highlighted box indicates the highest probability outcome recommended by the model.
+        </p>
+      </div>
+      
+      <div class="glass-card animate-in" style="overflow-x:auto;">
+        <table class="mc-advancement-table" id="sportoto-table">
+          <thead>
+            <tr>
+              <th style="width:32px">#</th>
+              <th>Home Team</th>
+              <th>Away Team</th>
+              <th>1 (Home Win)</th>
+              <th>X (Draw)</th>
+              <th>2 (Away Win)</th>
+              <th>Recommended Pick</th>
+            </tr>
+          </thead>
+          <tbody id="sportoto-table-body">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-text">
+      ⚽ Weekly Sportoto ML Prediction Engine — Built with pure JavaScript ML • 
+      Not financial advice
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/sportoto_data.js"></script>
+  <script src="ml/feature_engineering.js"></script>
+  <script src="ml/prediction_engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

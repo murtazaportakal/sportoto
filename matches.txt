@@ -1,0 +1,15 @@
+Galatasaray - Fenerbahçe
+Beşiktaş - Trabzonspor
+Başakşehir - Adana Demirspor
+Antalyaspor - Kasımpaşa
+Alanyaspor - Kayserispor
+Sivasspor - Konyaspor
+Ankaragücü - Hatayspor
+Fatih Karagümrük - Gaziantep FK
+Samsunspor - Rizespor
+Pendikspor - İstanbulspor
+Galatasaray - Beşiktaş
+Fenerbahçe - Trabzonspor
+Başakşehir - Antalyaspor
+Kasımpaşa - Adana Demirspor
+Kayserispor - Sivasspor
