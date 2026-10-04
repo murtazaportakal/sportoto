@@ -8,10 +8,31 @@ document.addEventListener('DOMContentLoaded', () => {
     featureVectors: {},
     predictions: [],
 
-    init() {
+    async init() {
       this.setupAnimations();
-      this.simulateLoading();
-      this.fetchLiveFixtures();
+      
+      const loadingText = document.getElementById('loading-text');
+      const progressBar = document.getElementById('loading-progress-bar');
+      
+      progressBar.style.width = '30%';
+      loadingText.textContent = "Fetching Live Fixtures...";
+      await this.fetchLiveFixtures();
+
+      progressBar.style.width = '60%';
+      loadingText.textContent = "Fetching Live Team Stats...";
+      await this.fetchLiveStats();
+
+      progressBar.style.width = '90%';
+      loadingText.textContent = "Calculating ML Predictions...";
+      
+      setTimeout(() => {
+        progressBar.style.width = '100%';
+        document.getElementById('loading-overlay').style.opacity = '0';
+        setTimeout(() => {
+          document.getElementById('loading-overlay').style.display = 'none';
+          this.runPredictions();
+        }, 500);
+      }, 500);
     },
 
     setupAnimations() {
@@ -87,32 +108,73 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
 
-    simulateLoading() {
-      const progressBar = document.getElementById('loading-progress-bar');
-      const loadingText = document.getElementById('loading-text');
-      let progress = 0;
+    async fetchLiveStats() {
+      console.log("Fetching live team stats from ESPN API...");
+      const leagues = ['tur.1', 'eng.1', 'esp.1', 'ger.1', 'ita.1'];
       
-      const interval = setInterval(() => {
-        progress += Math.random() * 15;
-        if (progress > 100) progress = 100;
-        
-        progressBar.style.width = `${progress}%`;
-        
-        if (progress > 30 && progress < 60) loadingText.textContent = "Building feature vectors...";
-        if (progress >= 60 && progress < 90) loadingText.textContent = "Calculating match probabilities...";
-        if (progress >= 90) loadingText.textContent = "Finalizing predictions...";
-        
-        if (progress === 100) {
-          clearInterval(interval);
-          setTimeout(() => {
-            document.getElementById('loading-overlay').style.opacity = '0';
-            setTimeout(() => {
-              document.getElementById('loading-overlay').style.display = 'none';
-              this.runPredictions();
-            }, 500);
-          }, 400);
+      const espnTeamMap = {
+        'galatasaray': 'GAL', 'fenerbahce': 'FEN', 'besiktas': 'BJK',
+        'trabzonspor': 'TRA', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
+        'antalyaspor': 'ANT', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
+        'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON', 
+        'ankaragucu': 'ANK', 'hatayspor': 'HAT', 'fatih karagumruk': 'FKG', 
+        'gaziantep': 'GAZ', 'samsunspor': 'SAM', 'rizespor': 'RIZ', 
+        'pendikspor': 'PEN', 'istanbulspor': 'IST', 'goztepe': 'GOZ',
+        'amed sfk': 'AME', 'genclerbirligi': 'GEN', 'erzurum': 'ERZ',
+        'kocaelispor': 'KOC', 'eyupspor': 'EYU', 'corum fk': 'COR',
+        'real madrid': 'RMA', 'barcelona': 'BAR', 'villarreal': 'VIL',
+        'manchester city': 'MCI', 'arsenal': 'ARS', 'liverpool': 'LIV', 'manchester united': 'MUN', 'tottenham': 'TOT',
+        'bayern munich': 'BAY', 'rb leipzig': 'RBL', 'eintracht frankfurt': 'EIN', 'augsburg': 'AUG',
+        'inter milan': 'INT', 'ac milan': 'MIL', 'juventus': 'JUV', 'roma': 'ROM', 'como': 'COM'
+      };
+
+      function getCode(name) {
+        const clean = name.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        for (const [key, code] of Object.entries(espnTeamMap)) {
+          if (clean.includes(key)) return code;
         }
-      }, 200);
+        return null; 
+      }
+
+      try {
+        for (const league of leagues) {
+          const response = await fetch(`https://site.web.api.espn.com/apis/v2/sports/soccer/${league}/standings`);
+          if (!response.ok) continue;
+          const data = await response.json();
+          const standings = data.children[0].standings.entries;
+          
+          for (const s of standings) {
+            const teamName = s.team.displayName;
+            const code = getCode(teamName);
+            if (!code) continue;
+
+            const stats = s.stats;
+            const getStat = (name) => stats.find(st => st.name === name)?.value || 0;
+            
+            const points = getStat('points');
+            const gamesPlayed = getStat('gamesPlayed') || 1;
+            const goalsFor = getStat('pointsFor');
+            const goalsAgainst = getStat('pointsAgainst');
+            const gd = getStat('pointDifferential');
+            
+            const leagueBoost = league === 'tur.1' ? 0 : 200; 
+            const newElo = 1350 + (points * 12) + (gd * 5) + leagueBoost; 
+            const gfPerGame = (goalsFor / gamesPlayed).toFixed(2);
+            const gaPerGame = (goalsAgainst / gamesPlayed).toFixed(2);
+
+            // Dynamically update TEAMS_DATA in memory before predictions
+            const teamIndex = TEAMS_DATA.findIndex(t => t.code === code);
+            if (teamIndex !== -1) {
+              TEAMS_DATA[teamIndex].eloRating = newElo;
+              TEAMS_DATA[teamIndex].recentForm.goalsFor = parseFloat(gfPerGame);
+              TEAMS_DATA[teamIndex].recentForm.goalsAgainst = parseFloat(gaPerGame);
+            }
+          }
+        }
+        console.log("Dynamically updated TEAMS_DATA from ESPN API");
+      } catch (err) {
+        console.warn("Could not fetch live stats.", err);
+      }
     },
 
     runPredictions() {
