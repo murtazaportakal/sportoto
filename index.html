@@ -27,6 +27,8 @@
     </a>
     <ul class="nav-links">
       <li><a href="#predictions">Weekly Ticket</a></li>
+      <li><a href="#system-coupon">System Kupon</a></li>
+      <li><a href="#tuning">Model Tuning & Benchmark</a></li>
     </ul>
   </nav>
 
@@ -65,10 +67,10 @@
     <!-- ====== PREDICTIONS TICKET ====== -->
     <section class="section" id="predictions">
       <div class="section-header">
-        <div class="section-tag">1-X-2 Probabilities</div>
+        <div class="section-tag">11. HAFTA • 23-26 EKİM 2026</div>
         <h2 class="section-title">Weekly Sportoto Ticket</h2>
         <p class="section-subtitle">
-          AI-generated predictions for all 15 matches. The highlighted box indicates the highest probability outcome recommended by the model.
+          AI-generated predictions for all 15 matches of the current Sportoto round. The highlighted box indicates the highest probability outcome recommended by the model.
         </p>
       </div>
       
@@ -92,6 +94,165 @@
       </div>
     </section>
 
+    <!-- ====== SYSTEM COUPON GENERATOR ====== -->
+    <section class="section" id="system-coupon">
+      <div class="section-header">
+        <div class="section-tag">SPOR TOTO KUPON OLUŞTURUCU</div>
+        <h2 class="section-title">System Ticket Generator</h2>
+        <p class="section-subtitle">
+          Generate mathematically optimized multi-column Spor Toto coupons covering banko matches and high-uncertainty derbies with Double Chances (Çifte Şans).
+        </p>
+      </div>
+
+      <!-- Coupon Controls -->
+      <div class="glass-card animate-in" style="margin-bottom: 1.5rem; padding: 1.5rem;">
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between;">
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <label style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">DOUBLE CHANCES COVERAGE (ÇİFTE ŞANS SAYISI)</label>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="coupon-dc-selector">
+              <button class="btn-chip" data-count="2">2 Çifte (4 Kolon • 20 ₺)</button>
+              <button class="btn-chip" data-count="3">3 Çifte (8 Kolon • 40 ₺)</button>
+              <button class="btn-chip active" data-count="4">4 Çifte (16 Kolon • 80 ₺)</button>
+              <button class="btn-chip" data-count="5">5 Çifte (32 Kolon • 160 ₺)</button>
+              <button class="btn-chip" data-count="6">6 Çifte (64 Kolon • 320 ₺)</button>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <label style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">DOUBLE STRATEGY</label>
+            <div style="display: flex; gap: 0.5rem;" id="coupon-strategy-selector">
+              <button class="btn-chip active" data-strategy="draw_protection">Draw Protection (1-X / X-2)</button>
+              <button class="btn-chip" data-strategy="max_coverage">Top 2 Probabilities</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metrics bar -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
+          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.75rem; color: var(--text-secondary);">Total Columns</div>
+            <div style="font-size: 1.4rem; font-weight: 700; color: #60A5FA;" id="coupon-stat-columns">16</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.75rem; color: var(--text-secondary);">Ticket Cost</div>
+            <div style="font-size: 1.4rem; font-weight: 700; color: #34D399;" id="coupon-stat-cost">80 ₺</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.75rem; color: var(--text-secondary);">Banko Matches</div>
+            <div style="font-size: 1.4rem; font-weight: 700; color: #F59E0B;" id="coupon-stat-bankos">11</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.75rem; color: var(--text-secondary);">Doubles Covered</div>
+            <div style="font-size: 1.4rem; font-weight: 700; color: #A78BFA;" id="coupon-stat-doubles">4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card animate-in" style="overflow-x:auto;">
+        <table class="mc-advancement-table" id="coupon-table">
+          <thead>
+            <tr>
+              <th style="width:32px">#</th>
+              <th>Home Team</th>
+              <th>Away Team</th>
+              <th>1 (Home)</th>
+              <th>X (Draw)</th>
+              <th>2 (Away)</th>
+              <th>System Pick</th>
+              <th>Classification</th>
+            </tr>
+          </thead>
+          <tbody id="coupon-table-body">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ====== LONG-TERM STATISTICS & MODEL TUNING ====== -->
+    <section class="section" id="tuning">
+      <div class="section-header">
+        <div class="section-tag">EMPİRİK KALİBRASYON & GERİYE DÖNÜK TEST</div>
+        <h2 class="section-title">Long-Term Statistics & Model Tuning</h2>
+        <p class="section-subtitle">
+          Evaluate and optimize model hyperparameters against a compiled database of 680+ real historical match results.
+        </p>
+      </div>
+
+      <!-- Long-term historical benchmark cards -->
+      <div class="glass-card animate-in" style="margin-bottom: 1.5rem; padding: 1.5rem;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
+          <span>📚</span> Long-Term Süper Lig Benchmark (680 Matches)
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem;">
+          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Historical Home Wins</div>
+            <div style="font-size: 1.6rem; font-weight: 700; color: #60A5FA;">44.7%</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">304 Matches</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Historical Draws (X)</div>
+            <div style="font-size: 1.6rem; font-weight: 700; color: #F59E0B;">25.3%</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">172 Matches (~1 in 4)</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Historical Away Wins</div>
+            <div style="font-size: 1.6rem; font-weight: 700; color: #34D399;">30.0%</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">204 Matches</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Goal Averages</div>
+            <div style="font-size: 1.3rem; font-weight: 700; color: #E0E7FF;">1.58 : 1.25</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Home : Away G/G</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tuning Comparison Card -->
+      <div class="glass-card animate-in" style="padding: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.25rem;">Hyperparameter Optimization & Validation</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Grid search calibration across Sigmoid Scale, Draw Base, Equilibrium Gap, and Home Boost.</p>
+          </div>
+          <button id="btn-run-tuning" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); border: none; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);">
+            <span>⚡</span>
+            <span id="btn-tuning-text">Calibrate & Tune Model</span>
+          </button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+          <!-- Baseline Card -->
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">BASELINE MODEL</span>
+              <span style="background: rgba(255,255,255,0.05); color: var(--text-secondary); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem;">Default</span>
+            </div>
+            <div style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;" id="baseline-acc">44.96%</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Brier Score: <span id="baseline-brier" style="color: var(--text-primary); font-weight: 600;">0.6322</span></div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.6;" id="baseline-params">
+              Sigmoid: 4.5 • Draw Base: 0.26<br>
+              Gap Threshold: 6.0% • Home Boost: 5%
+            </div>
+          </div>
+
+          <!-- Optimized Card -->
+          <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(99, 102, 241, 0.08)); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 1.25rem; position: relative;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <span style="font-size: 0.85rem; font-weight: 600; color: #10B981;">OPTIMIZED MODEL</span>
+              <span style="background: rgba(16, 185, 129, 0.2); color: #10B981; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;" id="tuning-improvement-badge">+3.26% Accuracy</span>
+            </div>
+            <div style="font-size: 2rem; font-weight: 800; color: #10B981; margin-bottom: 0.5rem;" id="optimized-acc">48.22%</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Brier Score: <span id="optimized-brier" style="color: #10B981; font-weight: 600;">0.6220</span> (Lower is better)</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;" id="optimized-params">
+              Sigmoid: 3.5 • Draw Base: 0.30<br>
+              Gap Threshold: 4.0% • Home Boost: 7%
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <!-- Footer -->
@@ -104,8 +265,11 @@
 
   <!-- Scripts -->
   <script src="data/sportoto_data.js"></script>
+  <script src="data/historical_data.js"></script>
   <script src="ml/feature_engineering.js"></script>
   <script src="ml/prediction_engine.js"></script>
+  <script src="ml/model_tuner.js"></script>
+  <script src="ml/system_coupon_generator.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

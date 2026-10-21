@@ -22,28 +22,68 @@ const lines = fs.readFileSync(matchesFile, 'utf8').split('\n');
 const fixtures = [];
 let idCounter = 1;
 
-// Team name normalization to match TEAMS_DATA codes
+// Comprehensive team name normalization to match TEAMS_DATA codes
 const teamMap = {
-  'galatasaray': 'GAL', 'fenerbahçe': 'FEN', 'fenerbahce': 'FEN', 'beşiktaş': 'BJK', 'besiktas': 'BJK',
-  'trabzonspor': 'TRA', 'başakşehir': 'IBFK', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
-  'antalyaspor': 'ANT', 'kasımpaşa': 'KAS', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
-  'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON', 'ankaragücü': 'ANK', 'ankaragucu': 'ANK',
-  'hatayspor': 'HAT', 'fatih karagümrük': 'FKG', 'karagümrük': 'FKG', 'gaziantep': 'GAZ',
-  'samsunspor': 'SAM', 'rizespor': 'RIZ', 'pendikspor': 'PEN', 'istanbulspor': 'IST'
+  // Turkish Super Lig & 1. Lig
+  'galatasaray': 'GAL', 'fenerbahce': 'FEN', 'besiktas': 'BJK',
+  'trabzonspor': 'TRA', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
+  'antalyaspor': 'ANT', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
+  'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON',
+  'ankaragucu': 'ANK', 'hatayspor': 'HAT', 'karagumruk': 'FKG',
+  'gaziantep': 'GAZ', 'samsunspor': 'SAM', 'rizespor': 'RIZ',
+  'pendikspor': 'PEN', 'istanbulspor': 'IST', 'goztepe': 'GOZ',
+  'amed': 'AME', 'genclerbirligi': 'GEN', 'erzurum': 'ERZ',
+  'kocaelispor': 'KOC', 'eyupspor': 'EYU', 'corum': 'COR',
+
+  // European Teams
+  'everton': 'EVE', 'chelsea': 'CHE', 'brentford': 'BRE',
+  'liverpool': 'LIV', 'manchester city': 'MCI', 'man city': 'MCI',
+  'arsenal': 'ARS', 'manchester united': 'MUN', 'tottenham': 'TOT',
+  'real betis': 'BET', 'betis': 'BET', 'barcelona': 'BAR',
+  'real madrid': 'RMA', 'sevilla': 'SEV', 'villarreal': 'VIL',
+  'milan': 'MIL', 'atalanta': 'ATA', 'juventus': 'JUV',
+  'lazio': 'LAZ', 'inter': 'INT', 'roma': 'ROM', 'como': 'COM',
+  'bayern': 'BAY', 'leipzig': 'RBL', 'frankfurt': 'EIN', 'augsburg': 'AUG',
+  'dortmund': 'BVB', 'borussia dortmund': 'BVB',
+  'monaco': 'ASM', 'as monaco': 'ASM',
+  'lille': 'LIL',
+  'paris': 'PSG', 'psg': 'PSG',
+  'lyon': 'LYO',
+  'napoli': 'NAP'
 };
 
+function normalizeName(name) {
+  return name
+    .trim()
+    .toLowerCase()
+    .replace(/ı/g, 'i')
+    .replace(/İ/g, 'i')
+    .replace(/ğ/g, 'g')
+    .replace(/ü/g, 'u')
+    .replace(/ş/g, 's')
+    .replace(/ö/g, 'o')
+    .replace(/ç/g, 'c')
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
 function getCode(name) {
-  const clean = name.trim().toLowerCase();
+  const clean = normalizeName(name);
   for (const [key, code] of Object.entries(teamMap)) {
     if (clean.includes(key)) return code;
   }
-  return null; // For unknown European teams, etc.
+  return null;
 }
 
 for (const line of lines) {
-  if (!line.includes('-')) continue;
+  const trimmed = line.trim();
+  if (!trimmed) continue;
   
-  const [homeRaw, awayRaw] = line.split('-');
+  const parts = trimmed.split(/\s+[-–—]\s+/);
+  if (parts.length < 2) continue;
+  
+  const homeRaw = parts[0];
+  const awayRaw = parts[1];
   const homeCode = getCode(homeRaw) || "UNKNOWN";
   const awayCode = getCode(awayRaw) || "UNKNOWN";
   

@@ -21,11 +21,34 @@ const teamMap = {
   'real madrid': 'RMA', 'barcelona': 'BAR', 'villarreal': 'VIL',
   'manchester city': 'MCI', 'arsenal': 'ARS', 'liverpool': 'LIV', 'manchester united': 'MUN', 'tottenham': 'TOT',
   'bayern munich': 'BAY', 'rb leipzig': 'RBL', 'eintracht frankfurt': 'EIN', 'augsburg': 'AUG',
-  'inter milan': 'INT', 'ac milan': 'MIL', 'juventus': 'JUV', 'roma': 'ROM', 'como': 'COM'
+  'inter milan': 'INT', 'ac milan': 'MIL', 'juventus': 'JUV', 'roma': 'ROM', 'como': 'COM',
+  'everton': 'EVE', 'chelsea': 'CHE', 'brentford': 'BRE',
+  'real betis': 'BET', 'sevilla': 'SEV', 'atalanta': 'ATA', 'lazio': 'LAZ',
+  'borussia dortmund': 'BVB', 'dortmund': 'BVB',
+  'monaco': 'ASM', 'as monaco': 'ASM',
+  'lille': 'LIL',
+  'paris saint-germain': 'PSG', 'paris sg': 'PSG', 'psg': 'PSG',
+  'lyon': 'LYO', 'olympique lyon': 'LYO',
+  'napoli': 'NAP'
 };
 
+function normalizeName(name) {
+  return name
+    .trim()
+    .toLowerCase()
+    .replace(/ı/g, 'i')
+    .replace(/İ/g, 'i')
+    .replace(/ğ/g, 'g')
+    .replace(/ü/g, 'u')
+    .replace(/ş/g, 's')
+    .replace(/ö/g, 'o')
+    .replace(/ç/g, 'c')
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
 function getCode(name) {
-  const clean = name.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const clean = normalizeName(name);
   for (const [key, code] of Object.entries(teamMap)) {
     if (clean.includes(key)) return code;
   }
@@ -35,7 +58,7 @@ function getCode(name) {
 async function updateStats() {
   console.log("Fetching live team stats from ESPN API for multiple leagues...");
 
-  const leagues = ['tur.1', 'eng.1', 'esp.1', 'ger.1', 'ita.1'];
+  const leagues = ['tur.1', 'eng.1', 'esp.1', 'ger.1', 'ita.1', 'fra.1'];
   
   try {
     let dataContent = fs.readFileSync(dataFile, 'utf8');

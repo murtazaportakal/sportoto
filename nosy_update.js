@@ -16,22 +16,51 @@ const dataFile = path.join(__dirname, 'data', 'sportoto_data.js');
 
 // Extended map to support European teams commonly found in Sportoto
 const teamMap = {
-  // Turkish
-  'galatasaray': 'GAL', 'fenerbahçe': 'FEN', 'fenerbahce': 'FEN', 'beşiktaş': 'BJK', 'besiktas': 'BJK',
-  'trabzonspor': 'TRA', 'başakşehir': 'IBFK', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
-  'antalyaspor': 'ANT', 'kasımpaşa': 'KAS', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
-  'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON', 'ankaragücü': 'ANK', 'ankaragucu': 'ANK',
-  'hatayspor': 'HAT', 'fatih karagümrük': 'FKG', 'karagümrük': 'FKG', 'gaziantep': 'GAZ',
-  'samsunspor': 'SAM', 'rizespor': 'RIZ', 'pendikspor': 'PEN', 'istanbulspor': 'IST', 'göztepe': 'GOZ',
-  
+  // Turkish Super Lig & 1. Lig
+  'galatasaray': 'GAL', 'fenerbahce': 'FEN', 'besiktas': 'BJK',
+  'trabzonspor': 'TRA', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
+  'antalyaspor': 'ANT', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
+  'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON',
+  'ankaragucu': 'ANK', 'hatayspor': 'HAT', 'karagumruk': 'FKG',
+  'gaziantep': 'GAZ', 'samsunspor': 'SAM', 'rizespor': 'RIZ',
+  'pendikspor': 'PEN', 'istanbulspor': 'IST', 'goztepe': 'GOZ',
+  'amed': 'AME', 'genclerbirligi': 'GEN', 'erzurum': 'ERZ',
+  'kocaelispor': 'KOC', 'eyupspor': 'EYU', 'corum': 'COR',
+
   // European
-  'real madrid': 'RMA', 'barcelona': 'BAR', 'manchester city': 'MCI', 'man city': 'MCI', 
-  'arsenal': 'ARS', 'liverpool': 'LIV', 'bayern münih': 'BAY', 'bayern': 'BAY', 
-  'inter': 'INT', 'milan': 'MIL', 'ac milan': 'MIL', 'juventus': 'JUV'
+  'everton': 'EVE', 'chelsea': 'CHE', 'brentford': 'BRE',
+  'liverpool': 'LIV', 'manchester city': 'MCI', 'man city': 'MCI',
+  'arsenal': 'ARS', 'manchester united': 'MUN', 'tottenham': 'TOT',
+  'real betis': 'BET', 'betis': 'BET', 'barcelona': 'BAR',
+  'real madrid': 'RMA', 'sevilla': 'SEV', 'villarreal': 'VIL',
+  'milan': 'MIL', 'atalanta': 'ATA', 'juventus': 'JUV',
+  'lazio': 'LAZ', 'inter': 'INT', 'roma': 'ROM', 'como': 'COM',
+  'bayern': 'BAY', 'leipzig': 'RBL', 'frankfurt': 'EIN', 'augsburg': 'AUG',
+  'dortmund': 'BVB', 'borussia dortmund': 'BVB',
+  'monaco': 'ASM', 'as monaco': 'ASM',
+  'lille': 'LIL',
+  'paris': 'PSG', 'psg': 'PSG',
+  'lyon': 'LYO', 'olympique lyon': 'LYO',
+  'napoli': 'NAP'
 };
 
+function normalizeName(name) {
+  return name
+    .trim()
+    .toLowerCase()
+    .replace(/ı/g, 'i')
+    .replace(/İ/g, 'i')
+    .replace(/ğ/g, 'g')
+    .replace(/ü/g, 'u')
+    .replace(/ş/g, 's')
+    .replace(/ö/g, 'o')
+    .replace(/ç/g, 'c')
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
 function getCode(name) {
-  const clean = name.trim().toLowerCase();
+  const clean = normalizeName(name);
   for (const [key, code] of Object.entries(teamMap)) {
     if (clean.includes(key)) return code;
   }
