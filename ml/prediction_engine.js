@@ -37,10 +37,48 @@ const PredictionEngine = {
 
   /**
    * Three-way logistic model: Win / Draw / Loss probabilities
-   * Based on the strength differential between two teams
+   * Now integrates:
+   *   - H2H history modifier (from H2HEngine)
+   *   - Home/Away split stats momentum (from SplitStatsEngine)
+   *   - Streak momentum modifier
+   *   - Fixture congestion / rest days fatigue
+   *
+   * @param {Object} teamAFeatures  - home team feature vector
+   * @param {Object} teamBFeatures  - away team feature vector
+   * @param {Object} featureEngine
+   * @param {Object} [h2hMap]       - optional H2H map from H2HEngine.buildH2HMap()
+   * @param {Object} [splitStats]   - optional split stats from SplitStatsEngine.buildSplitStats()
    */
-  predictMatchOutcome(teamAFeatures, teamBFeatures, featureEngine) {
-    const differential = featureEngine.calculateMatchDifferential(teamAFeatures, teamBFeatures);
+  predictMatchOutcome(teamAFeatures, teamBFeatures, featureEngine, h2hMap, splitStats) {
+    let differential = featureEngine.calculateMatchDifferential(teamAFeatures, teamBFeatures);
+
+    // ─ 1. Head-to-Head modifier ─────────────────────────────────────
+    if (h2hMap && typeof H2HEngine !== 'undefined') {
+      const h2hMod = H2HEngine.calculateH2HModifier(h2hMap, teamAFeatures.teamCode, teamBFeatures.teamCode);
+      differential += h2hMod;
+    }
+
+    // ─ 2. Streak momentum & rest/fatigue modifiers ──────────────────
+    if (splitStats && typeof SplitStatsEngine !== 'undefined') {
+      const homeCtx = SplitStatsEngine.getContextFeatures(splitStats, teamAFeatures.teamCode, 'home');
+      const awayCtx = SplitStatsEngine.getContextFeatures(splitStats, teamBFeatures.teamCode, 'away');
+
+      // Streak momentum: hot home team gets +, struggling away team gets +
+      const homeStreak = SplitStatsEngine.streakModifier(homeCtx.streakScore);
+      const awayStreak = SplitStatsEngine.streakModifier(awayCtx.streakScore);
+      differential += homeStreak - awayStreak;
+
+      // Rest/fatigue: apply to differential proportionally
+      const restDiff = (homeCtx.restModifier - awayCtx.restModifier) * 0.15;
+      differential += restDiff;
+
+      // Blend split win rates into differential (0.08 weight)
+      const splitDiff = (homeCtx.winRate - awayCtx.winRate) * 0.08;
+      differential += splitDiff;
+    }
+
+    // Final NaN guard
+    if (isNaN(differential) || !isFinite(differential)) differential = 0;
     
     // Base probabilities from sigmoid
     const rawWinProb = this.sigmoid(differential * 4.5);

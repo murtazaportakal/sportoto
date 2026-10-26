@@ -1,15 +1,15 @@
-Corendon Alanyaspor - Kocaelispor
-Eyüpspor - Kasımpaşa
-Gaziantep FK - Erzurumspor FK
-Samsunspor - Amed Sportif Faaliyetler
-Tümosan Konyaspor - Gençlerbirliği
-Göztepe - Arca Çorum FK
-Beşiktaş - İstanbul Başakşehir
-Çaykur Rizespor - Trabzonspor
-Galatasaray - Fenerbahçe
-Borussia Dortmund - Eintracht Frankfurt
-Monaco - Lille
-Paris St Germain - Olympique Lyon
-Chelsea - Tottenham Hotspur
-Barcelona - Real Madrid
-Napoli - Roma
+Tümosan Konyaspor - Galatasaray
+Erzurumspor FK - Arca Çorum FK
+Kocaelispor - Çaykur Rizespor
+Fenerbahçe - Göztepe
+Amed Sportif Faaliyetler - Eyüpspor
+İstanbul Başakşehir - Samsunspor
+Trabzonspor - Gaziantep FK
+Kasımpaşa - Beşiktaş
+Gençlerbirliği - Corendon Alanyaspor
+Bayern Münih - Borussia Dortmund
+Chelsea - Manchester United
+Liverpool - Arsenal
+Athletic Bilbao - Real Sociedad
+Milan - Inter
+Juventus - Napoli

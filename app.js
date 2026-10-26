@@ -255,8 +255,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // 1. Build Feature Vectors
       this.featureVectors = FeatureEngineering.buildAllFeatureVectors(TEAMS_DATA, []);
-      
-      // 2. Calculate match probabilities using current tuned parameters
+
+      // 2. Build H2H map and split stats from historical data (if available in browser)
+      let h2hMap = null;
+      let splitStats = null;
+      if (typeof H2HEngine !== 'undefined' && typeof HISTORICAL_DATA !== 'undefined') {
+        h2hMap = H2HEngine.buildH2HMap(HISTORICAL_DATA.matches || []);
+      }
+      if (typeof SplitStatsEngine !== 'undefined' && typeof HISTORICAL_DATA !== 'undefined') {
+        splitStats = SplitStatsEngine.buildSplitStats(HISTORICAL_DATA.matches || []);
+      }
+
+      // 3. Calculate match probabilities using current tuned parameters
       const fixturesToUse = this.activeFixtures || FIXTURES_DATA;
       
       this.predictions = fixturesToUse.map(fixture => {
@@ -267,8 +277,33 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const homeFeatures = this.featureVectors[homeTeam.code];
         const awayFeatures = this.featureVectors[awayTeam.code];
+
+        // Base differential
+        let differential = FeatureEngineering.calculateMatchDifferential(homeFeatures, awayFeatures);
+
+        // ─ H2H modifier ──────────────────────────────────────────────
+        if (h2hMap && typeof H2HEngine !== 'undefined') {
+          differential += H2HEngine.calculateH2HModifier(h2hMap, homeTeam.code, awayTeam.code);
+        }
+
+        // ─ Split stats: streak momentum + rest/fatigue + home/away win rates ──
+        if (splitStats && typeof SplitStatsEngine !== 'undefined') {
+          const homeCtx = SplitStatsEngine.getContextFeatures(splitStats, homeTeam.code, 'home');
+          const awayCtx = SplitStatsEngine.getContextFeatures(splitStats, awayTeam.code, 'away');
+
+          differential += SplitStatsEngine.streakModifier(homeCtx.streakScore)
+                        - SplitStatsEngine.streakModifier(awayCtx.streakScore);
+          differential += (homeCtx.restModifier - awayCtx.restModifier) * 0.15;
+          differential += (homeCtx.winRate - awayCtx.winRate) * 0.08;
+
+          // Store context for display
+          fixture._homeCtx = homeCtx;
+          fixture._awayCtx = awayCtx;
+        }
+
+        // Guard
+        if (isNaN(differential) || !isFinite(differential)) differential = 0;
         
-        const differential = FeatureEngineering.calculateMatchDifferential(homeFeatures, awayFeatures);
         const rawWinProb = PredictionEngine.sigmoid(differential * this.currentParams.sigmoidScale);
         const strengthGap = Math.abs(differential);
         const drawBase = this.currentParams.drawBase * Math.exp(-strengthGap * 3.5);
@@ -286,13 +321,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const drawProb = drawBase / total;
         const awayProb = lossRaw / total;
 
+        // H2H summary for display
+        const h2hSummary = (h2hMap && typeof H2HEngine !== 'undefined')
+          ? H2HEngine.getH2HSummary(h2hMap, homeTeam.code, awayTeam.code, homeTeam.name, awayTeam.name)
+          : null;
+
+        // Streak info for display
+        const homeStreak = (splitStats && splitStats[homeTeam.code]) ? {
+          winStreak: splitStats[homeTeam.code].currentWinStreak,
+          lossStreak: splitStats[homeTeam.code].currentLossStreak,
+          streakScore: splitStats[homeTeam.code].streakScore,
+          restDays: splitStats[homeTeam.code].restDays
+        } : null;
+        const awayStreak = (splitStats && splitStats[awayTeam.code]) ? {
+          winStreak: splitStats[awayTeam.code].currentWinStreak,
+          lossStreak: splitStats[awayTeam.code].currentLossStreak,
+          streakScore: splitStats[awayTeam.code].streakScore,
+          restDays: splitStats[awayTeam.code].restDays
+        } : null;
+
         return {
           id: fixture.id,
           homeTeam: homeTeam.name,
           awayTeam: awayTeam.name,
           homeWin: (homeProb * 100).toFixed(1),
           draw: (drawProb * 100).toFixed(1),
-          awayWin: (awayProb * 100).toFixed(1)
+          awayWin: (awayProb * 100).toFixed(1),
+          h2h: h2hSummary,
+          homeStreak,
+          awayStreak,
+          differential: differential.toFixed(3)
         };
       }).filter(p => p !== null);
 
@@ -323,16 +381,29 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           recommended = '1';
         }
+
+        // Build streak badges
+        const streakBadge = (s, label) => {
+          if (!s) return '';
+          if (s.winStreak >= 3) return `<span title="${label} on ${s.winStreak}-game win streak" style="font-size:0.7rem;margin-left:3px;color:#10B981;">🔥${s.winStreak}</span>`;
+          if (s.lossStreak >= 3) return `<span title="${label} on ${s.lossStreak}-game losing streak" style="font-size:0.7rem;margin-left:3px;color:#EF4444;">❄️${s.lossStreak}</span>`;
+          return '';
+        };
+
+        // H2H mini badge
+        const h2hBadge = pred.h2h && pred.h2h.played > 0
+          ? `<span title="H2H: ${pred.h2h.homeWins}W-${pred.h2h.draws}D-${pred.h2h.awayWins}L (last ${pred.h2h.played})" style="font-size:0.65rem;color:var(--text-muted);margin-left:4px;cursor:help;">[H2H ${pred.h2h.homeWins}-${pred.h2h.draws}-${pred.h2h.awayWins}]</span>`
+          : '';
         
         tr.innerHTML = `
           <td>${pred.id}</td>
-          <td style="font-weight: 600;">${pred.homeTeam}</td>
-          <td style="font-weight: 600;">${pred.awayTeam}</td>
+          <td style="font-weight: 600;">${pred.homeTeam}${streakBadge(pred.homeStreak, pred.homeTeam)}</td>
+          <td style="font-weight: 600;">${pred.awayTeam}${streakBadge(pred.awayStreak, pred.awayTeam)}</td>
           <td class="${recommended === '1' ? 'highlight-cell' : ''}">${pred.homeWin}%</td>
           <td class="${recommended === 'X' ? 'highlight-cell highlight-draw' : ''}">${pred.draw}%</td>
           <td class="${recommended === '2' ? 'highlight-cell' : ''}">${pred.awayWin}%</td>
           <td>
-            <span class="pick-badge ${recommended === 'X' ? 'badge-draw' : ''}">${recommended}</span>
+            <span class="pick-badge ${recommended === 'X' ? 'badge-draw' : ''}">${recommended}</span>${h2hBadge}
           </td>
         `;
         tbody.appendChild(tr);

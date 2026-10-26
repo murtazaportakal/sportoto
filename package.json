@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "sync": "node auto_sync.js",
+    "schedule": "node setup_scheduler.js",
+    "tune": "node -e \"const {TEAMS_DATA}=require('./data/sportoto_data.js');const {FeatureEngineering}=require('./ml/feature_engineering.js');const {PredictionEngine}=require('./ml/prediction_engine.js');const {ModelTuner}=require('./ml/model_tuner.js');const hist=require('./data/historical_matches.json');const r=ModelTuner.tune(hist.matches,TEAMS_DATA,FeatureEngineering,PredictionEngine);console.log(JSON.stringify(r,null,2));\"",
     "test": "node test_pipeline.js"
   },
   "keywords": [],
