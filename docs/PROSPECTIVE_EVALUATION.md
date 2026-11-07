@@ -2,6 +2,8 @@
 
 Implemented 7 November 2026. The active baseline remains unvalidated. This completes the software needed to collect paired evidence; future results and a favorable independent review are still required.
 
+Release verification: commit 32c2526 passed Reliability checks run 42407946471 and real sync/deployment run 42407946592. The remote sync found all 15 paired records already present, with no pause or capture exclusions. Original and paired forecast/input/code artifacts were unchanged. The generated report's evidence hash matched when recomputed on Windows after the Linux runner, and the hosted snapshot matched repository data and rendered 15 rows in Chrome. Verification evidence is retained in data/remote_release.json.
+
 ## Frozen comparison
 
 data/prospective_experiment.json declares the incumbent, compatible live-composite challenger, simple standings-rating baseline and uniform reference. The challenger is a diagnostic-grid hypothesis, not a validated replacement. Daily tuning never edits it. The simple baseline uses the same snapshot's standings-derived rating, a declared rating scale/home adjustment and constant draw probability. It is also an unvalidated heuristic.

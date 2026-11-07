@@ -84,6 +84,8 @@ Remote verification: implementation commit 6891fca passed Reliability checks run
 
 The progress notes below describe earlier milestones; the table above supersedes their earlier planned/unfinished status for work now implemented.
 
+Paired-pipeline release: commit 32c2526 passed remote CI (42407946471) and real sync/Pages deployment (42407946592). There are 15 original forecasts and a separate 15-match paired cohort, zero settled matches, and no promotion. Both cohorts' immutable artifacts were preserved, Windows/Linux evaluation hashes matched, and the hosted site passed an unmocked Chrome check. Remaining validation work is a real settlement cycle, the required paired sample, favorable comparison evidence and independent/class/league review; see PROSPECTIVE_EVALUATION.md.
+
 ### Phase 1 verification evidence
 
 `npm test` passes both suites. The reliability suite loads the actual browser engine, feature, H2H, split, tuner and coupon scripts into an isolated JavaScript context and checks all 15 outputs against Node. It checks draw/close-win/tie and rounding behavior, invalid probability rejection, coupon constraints, and that running diagnostics leaves predictions and active parameters unchanged. The existing suite checks fixture coverage, missing-team handling and import provenance. These checks are not a rendered-browser smoke test or predictive validation.
