@@ -46,4 +46,6 @@ Remote activation is complete. Actions and workflow-based Pages are enabled at h
 
 Recurring verification checks that the successful sync job itself passed data tests, browser checks and deployment. Its source commit may differ from the latest push-CI commit after automatic data commits. Both commits and each required sync check are recorded separately. Verification rejects stale snapshots, compares hosted data with committed data and checks that Chrome loaded that same snapshot.
 
+This recurring case was verified on 7 November 2026: CI run 42406098480 passed at fdb88b2, and follow-up sync/deployment run 42406177852 passed at generated data commit fa5b76a. The hosted snapshot matched repository data and rendered all 15 rows in Chrome. Git comparison against the first capture commit 6891fca confirmed the original forecast, input and source-code artifacts were unchanged. Fifteen forecasts still await finals for fixtures dated 13–16 November; evidence progress remains zero settled matches.
+
 NosyAPI is retired at the user's request; no client or secret is needed for operation. Provider-side revocation has not been independently verified. Deleting a client does not revoke credentials or erase Git history. No provider login or secret should be pasted into chat or committed.

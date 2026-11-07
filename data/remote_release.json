@@ -1,33 +1,33 @@
 {
-  "verifiedAt": "2026-11-07T19:24:16.456Z",
+  "verifiedAt": "2026-11-07T19:27:02.764Z",
   "url": "https://murtazaportakal.github.io/sportoto/",
   "pagesBuildType": "workflow",
-  "sourceCommit": "6891fcaea820d73ce4722133e99e7078c12d1d9b",
+  "sourceCommit": "fa5b76a3ef3ad844e5a7411793768d0902bca58a",
   "ci": {
-    "id": 42405370192,
-    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42405370192",
+    "id": 42406098480,
+    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42406098480",
     "conclusion": "success",
-    "sourceCommit": "6891fcaea820d73ce4722133e99e7078c12d1d9b"
+    "sourceCommit": "fdb88b237675c8c3b93e2cbc88d92f191b17bc09"
   },
   "sync": {
-    "id": 42405370209,
-    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42405370209",
+    "id": 42406177852,
+    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42406177852",
     "conclusion": "success",
-    "sourceCommit": "6891fcaea820d73ce4722133e99e7078c12d1d9b",
+    "sourceCommit": "fa5b76a3ef3ad844e5a7411793768d0902bca58a",
     "checks": {
       "Validate updated data": true,
       "Package and smoke-test browser assets": true,
       "Publish refreshed site": true
     }
   },
-  "snapshotHash": "1bf0033c50415e5e9b70649a8ce5b0dc474d1d7a85c732aac5535a9e36b336e8",
+  "snapshotHash": "e9b717af57b6800a0ca0c3d269f9bfc3ffbb9771b7f43965fa82b8fd4f4c5cff",
   "snapshotMatchesRepository": true,
-  "updatedAt": "2026-11-07T19:16:23.125Z",
+  "updatedAt": "2026-11-07T19:26:12.711Z",
   "modelVersion": "baseline-v1",
   "rows": 15,
   "coverage": "15/15 matches have supported team inputs. Missing inputs disable full coupons.",
   "modelStatus": "Model: baseline-v1. Predictive validation pending.",
-  "freshness": "Last synced: 07.11.2026 22:16:23. Automatically checks every 5 minutes. Source statistics may be older.",
+  "freshness": "Last synced: 07.11.2026 22:26:12. Automatically checks every 5 minutes. Source statistics may be older.",
   "recording": {
     "captured": 0,
     "existing": 15,
