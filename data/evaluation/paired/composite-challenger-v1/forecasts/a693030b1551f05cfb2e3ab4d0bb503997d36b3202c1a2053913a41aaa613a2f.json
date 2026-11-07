@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "evaluationType": "prospective-paired-live-models",
+  "experimentId": "composite-challenger-v1",
+  "provider": "sportoto",
+  "providerId": "084ca742-0095-45d8-1639-08df15776e55",
+  "roundId": 1542,
+  "fixture": {
+    "id": 6,
+    "providerId": "084ca742-0095-45d8-1639-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_GEO",
+    "away": "NAT_HUN",
+    "homeName": "Gürcistan",
+    "awayName": "Macaristan",
+    "kickoffRaw": "2026-11-14T20:00:00",
+    "kickoff": "2026-11-14T17:00:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047895",
+      "url": "https://match.uefa.com/v5/matches/2047895",
+      "fetchedAt": "2026-11-07T19:40:38.739Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-14T17:00:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  "capturedAt": "2026-11-07T19:40:38.847Z",
+  "protocolHash": "f6a9d062cf8c333a746f3b2af21fbcc3b0740300674971cb4ebb7d1ee510f380",
+  "codeHash": "7fae7683fa21693bf9e9631f5c033e76a86b61bbd50e1d2573258409188491d0",
+  "inputHash": "134030ec73a5d0fcf729db3a34ba37e677f251a2206a1d009029122f20426547",
+  "predictions": {
+    "incumbent": {
+      "win": 0.3984891458517024,
+      "draw": 0.2385990582912872,
+      "loss": 0.36291179585701044,
+      "differential": -0.04571572580645161
+    },
+    "candidate": {
+      "win": 0.3949671742433186,
+      "draw": 0.25564184816923624,
+      "loss": 0.3493909775874452,
+      "differential": -0.04571572580645161
+    },
+    "baseline": {
+      "win": 0.35403573354215234,
+      "draw": 0.26,
+      "loss": 0.3859642664578476
+    },
+    "uniform": {
+      "win": 0.3333333333333333,
+      "draw": 0.3333333333333333,
+      "loss": 0.3333333333333333
+    }
+  },
+  "policy": "first-eligible-paired-observation-after-protocol-registration"
+}

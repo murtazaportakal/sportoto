@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "experimentId": "composite-challenger-v1",
+  "modelFamily": "live-composite-v1",
+  "purpose": "Frozen prospective shadow comparison; never automatically promoted",
+  "incumbent": {
+    "version": "baseline-v1",
+    "params": {"sigmoidScale": 4, "drawBase": 0.28, "drawGapThreshold": 4, "homeAdvantageBoost": 0.07}
+  },
+  "candidate": {
+    "version": "composite-shadow-v1",
+    "validationStatus": "unvalidated-shadow-only",
+    "origin": "Diagnostic grid hypothesis frozen before prospective collection; historical fit is not validation",
+    "params": {"sigmoidScale": 3.5, "drawBase": 0.3, "drawGapThreshold": 6, "homeAdvantageBoost": 0.07}
+  },
+  "baseline": {"version": "standings-rating-v1", "ratingScale": 400, "homeAdvantage": 60, "drawProbability": 0.26},
+  "uniform": {"version": "uniform-v1"}
+}

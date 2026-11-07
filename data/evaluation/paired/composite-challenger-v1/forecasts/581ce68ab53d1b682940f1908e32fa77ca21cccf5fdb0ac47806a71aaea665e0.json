@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "evaluationType": "prospective-paired-live-models",
+  "experimentId": "composite-challenger-v1",
+  "provider": "sportoto",
+  "providerId": "cfacc145-37f9-43c7-1643-08df15776e55",
+  "roundId": 1542,
+  "fixture": {
+    "id": 9,
+    "providerId": "cfacc145-37f9-43c7-1643-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_BEL",
+    "away": "NAT_ITA",
+    "homeName": "Belçika",
+    "awayName": "İtalya",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047900",
+      "url": "https://match.uefa.com/v5/matches/2047900",
+      "fetchedAt": "2026-11-07T19:40:38.739Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  "capturedAt": "2026-11-07T19:40:38.847Z",
+  "protocolHash": "f6a9d062cf8c333a746f3b2af21fbcc3b0740300674971cb4ebb7d1ee510f380",
+  "codeHash": "7fae7683fa21693bf9e9631f5c033e76a86b61bbd50e1d2573258409188491d0",
+  "inputHash": "134030ec73a5d0fcf729db3a34ba37e677f251a2206a1d009029122f20426547",
+  "predictions": {
+    "incumbent": {
+      "win": 0.4068954212497162,
+      "draw": 0.2601642402042313,
+      "loss": 0.33294033854605254,
+      "differential": -0.02099327956989245
+    },
+    "candidate": {
+      "win": 0.3998834820062335,
+      "draw": 0.2787474002188192,
+      "loss": 0.3213691177749472,
+      "differential": -0.02099327956989245
+    },
+    "baseline": {
+      "win": 0.4103073367760402,
+      "draw": 0.26,
+      "loss": 0.3296926632239598
+    },
+    "uniform": {
+      "win": 0.3333333333333333,
+      "draw": 0.3333333333333333,
+      "loss": 0.3333333333333333
+    }
+  },
+  "policy": "first-eligible-paired-observation-after-protocol-registration"
+}

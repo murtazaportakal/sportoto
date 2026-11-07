@@ -25,13 +25,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 28,
       "goalsFor": 27,
       "goalsAgainst": 15,
       "goalDifference": 12,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "432"
     }
   },
   {
@@ -60,13 +61,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 16,
       "goalsFor": 24,
       "goalsAgainst": 10,
       "goalDifference": 14,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "436"
     }
   },
   {
@@ -95,13 +97,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 19,
       "goalsFor": 20,
       "goalsAgainst": 12,
       "goalDifference": 8,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "1895"
     }
   },
   {
@@ -130,13 +133,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 22,
       "goalsFor": 24,
       "goalsAgainst": 8,
       "goalDifference": 16,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "997"
     }
   },
   {
@@ -165,13 +169,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 17,
       "goalsFor": 19,
       "goalsAgainst": 17,
       "goalDifference": 2,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "7914"
     }
   },
   {
@@ -248,13 +253,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 20,
       "goalsFor": 17,
       "goalsAgainst": 11,
       "goalDifference": 6,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "6870"
     }
   },
   {
@@ -283,13 +289,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 12,
       "goalsFor": 9,
       "goalsAgainst": 16,
       "goalDifference": -7,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "9078"
     }
   },
   {
@@ -366,13 +373,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 8,
       "goalsFor": 6,
       "goalsAgainst": 14,
       "goalDifference": -8,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "7648"
     }
   },
   {
@@ -473,13 +481,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 8,
       "goalsFor": 9,
       "goalsAgainst": 19,
       "goalDifference": -10,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "20070"
     }
   },
   {
@@ -508,13 +517,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 7,
       "goalsFor": 11,
       "goalsAgainst": 26,
       "goalDifference": -15,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "11429"
     }
   },
   {
@@ -543,13 +553,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 11,
       "goalsFor": 11,
       "goalsAgainst": 15,
       "goalDifference": -4,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "7656"
     }
   },
   {
@@ -626,13 +637,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 15,
       "goalsFor": 22,
       "goalsAgainst": 19,
       "goalDifference": 3,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "789"
     }
   },
   {
@@ -661,13 +673,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 27,
       "goalsFor": 28,
       "goalsAgainst": 10,
       "goalDifference": 18,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "86"
     }
   },
   {
@@ -696,19 +709,20 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 30,
       "goalsFor": 46,
       "goalsAgainst": 12,
       "goalDifference": 34,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "83"
     }
   },
   {
     "name": "Manchester City",
     "code": "MCI",
-    "eloRating": 1852,
+    "eloRating": 1842,
     "impliedProb": 0.35,
     "squadDepth": 10,
     "historicalPedigree": 9,
@@ -720,8 +734,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 10,
     "recentForm": {
-      "goalsFor": 2.22,
-      "goalsAgainst": 1.11
+      "goalsFor": 2.1,
+      "goalsAgainst": 1.3
     },
     "starDependency": 0.15,
     "homeAdvantage": 0.8,
@@ -731,13 +745,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
-      "gamesPlayed": 9,
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
+      "gamesPlayed": 10,
       "points": 21,
-      "goalsFor": 20,
-      "goalsAgainst": 10,
-      "goalDifference": 10,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "goalsFor": 21,
+      "goalsAgainst": 13,
+      "goalDifference": 8,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "382"
     }
   },
   {
@@ -766,13 +781,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 27,
       "goalsFor": 15,
       "goalsAgainst": 5,
       "goalDifference": 10,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "359"
     }
   },
   {
@@ -801,13 +817,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 15,
       "goalsFor": 11,
       "goalsAgainst": 9,
       "goalDifference": 2,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "364"
     }
   },
   {
@@ -836,13 +853,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 21,
       "goalsFor": 29,
       "goalsAgainst": 9,
       "goalDifference": 20,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "132"
     }
   },
   {
@@ -895,13 +913,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 21,
       "goalsFor": 21,
       "goalsAgainst": 12,
       "goalDifference": 9,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "103"
     }
   },
   {
@@ -930,13 +949,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 17,
       "goalsFor": 13,
       "goalsAgainst": 10,
       "goalDifference": 3,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "111"
     }
   },
   {
@@ -965,13 +985,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 11,
       "goalsFor": 12,
       "goalsAgainst": 18,
       "goalDifference": -6,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "996"
     }
   },
   {
@@ -1000,13 +1021,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 23,
       "goalsFor": 28,
       "goalsAgainst": 15,
       "goalDifference": 13,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "132335"
     }
   },
   {
@@ -1035,13 +1057,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 14,
       "goalsFor": 9,
       "goalsAgainst": 15,
       "goalDifference": -6,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "19267"
     }
   },
   {
@@ -1070,13 +1093,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 19,
       "goalsFor": 13,
       "goalsAgainst": 9,
       "goalDifference": 4,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "995"
     }
   },
   {
@@ -1105,13 +1129,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 3,
       "goalsFor": 3,
       "goalsAgainst": 30,
       "goalDifference": -27,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "20729"
     }
   },
   {
@@ -1140,13 +1165,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 16,
       "goalsFor": 21,
       "goalsAgainst": 16,
       "goalDifference": 5,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "132334"
     }
   },
   {
@@ -1175,13 +1201,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 9,
       "goalsFor": 20,
       "goalsAgainst": 20,
       "goalDifference": 0,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "3841"
     }
   },
   {
@@ -1210,13 +1237,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 18,
       "goalsFor": 27,
       "goalsAgainst": 13,
       "goalDifference": 14,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "11420"
     }
   },
   {
@@ -1245,13 +1273,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 12,
       "goalsFor": 15,
       "goalsAgainst": 20,
       "goalDifference": -5,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "125"
     }
   },
   {
@@ -1280,13 +1309,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 7,
       "goalsFor": 10,
       "goalsAgainst": 15,
       "goalDifference": -5,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "360"
     }
   },
   {
@@ -1315,13 +1345,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 12,
       "goalsFor": 10,
       "goalsAgainst": 11,
       "goalDifference": -1,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "367"
     }
   },
   {
@@ -1350,13 +1381,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 12,
       "goalsFor": 15,
       "goalsAgainst": 15,
       "goalDifference": 0,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "102"
     }
   },
   {
@@ -1385,13 +1417,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 23,
       "goalsFor": 18,
       "goalsAgainst": 8,
       "goalDifference": 10,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "2572"
     }
   },
   {
@@ -1420,13 +1453,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 24,
       "goalsFor": 28,
       "goalsAgainst": 10,
       "goalDifference": 18,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "104"
     }
   },
   {
@@ -1455,13 +1489,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 16,
       "goalsFor": 12,
       "goalsAgainst": 10,
       "goalDifference": 2,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "368"
     }
   },
   {
@@ -1490,13 +1525,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 16,
       "goalsFor": 19,
       "goalsAgainst": 15,
       "goalDifference": 4,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "363"
     }
   },
   {
@@ -1525,13 +1561,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 14,
       "goalsFor": 16,
       "goalsAgainst": 9,
       "goalDifference": 7,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "337"
     }
   },
   {
@@ -1560,13 +1597,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 23,
       "goalsFor": 18,
       "goalsAgainst": 15,
       "goalDifference": 3,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "244"
     }
   },
   {
@@ -1595,13 +1633,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 12,
       "points": 18,
       "goalsFor": 17,
       "goalsAgainst": 19,
       "goalDifference": -2,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "243"
     }
   },
   {
@@ -1630,13 +1669,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 11,
       "goalsFor": 16,
       "goalsAgainst": 20,
       "goalDifference": -4,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "105"
     }
   },
   {
@@ -1665,13 +1705,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 28,
       "goalsFor": 24,
       "goalsAgainst": 8,
       "goalDifference": 16,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "112"
     }
   },
   {
@@ -1700,13 +1741,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 21,
       "goalsFor": 16,
       "goalsAgainst": 7,
       "goalDifference": 9,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "124"
     }
   },
   {
@@ -1735,13 +1777,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
       "season": "2026-27 French Ligue 1",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 15,
       "goalsFor": 12,
       "goalsAgainst": 10,
       "goalDifference": 2,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "174"
     }
   },
   {
@@ -1770,13 +1813,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
       "season": "2026-27 French Ligue 1",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 18,
       "goalsFor": 12,
       "goalsAgainst": 6,
       "goalDifference": 6,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "166"
     }
   },
   {
@@ -1805,13 +1849,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
       "season": "2026-27 French Ligue 1",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 17,
       "goalsFor": 16,
       "goalsAgainst": 10,
       "goalDifference": 6,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "6851"
     }
   },
   {
@@ -1840,13 +1885,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
       "season": "2026-27 French Ligue 1",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 17,
       "goalsFor": 15,
       "goalsAgainst": 7,
       "goalDifference": 8,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "167"
     }
   },
   {
@@ -1875,13 +1921,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 10,
       "points": 14,
       "goalsFor": 17,
       "goalsAgainst": 13,
       "goalDifference": 4,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "114"
     }
   },
   {
@@ -1925,13 +1972,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 12,
       "goalsFor": 10,
       "goalsAgainst": 13,
       "goalDifference": -3,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "362"
     }
   },
   {
@@ -1975,13 +2023,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 28,
       "goalsFor": 22,
       "goalsAgainst": 8,
       "goalDifference": 14,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "1068"
     }
   },
   {
@@ -2025,13 +2074,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 11,
       "points": 9,
       "goalsFor": 8,
       "goalsAgainst": 17,
       "goalDifference": -9,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "94"
     }
   },
   {
@@ -2075,13 +2125,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 15,
       "goalsFor": 17,
       "goalsAgainst": 15,
       "goalDifference": 2,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "137"
     }
   },
   {
@@ -2125,13 +2176,14 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 9,
       "points": 12,
       "goalsFor": 15,
       "goalsAgainst": 15,
       "goalDifference": 0,
-      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "providerTeamId": "134"
     }
   },
   {
@@ -2176,15 +2228,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 7,
       "goalsFor": 8,
       "goalsAgainst": 5,
       "goalDifference": 3,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A1",
-      "providerTeamId": "162"
+      "providerTeamId": "162",
+      "group": "Group A1"
     },
     "teamType": "national"
   },
@@ -2230,15 +2282,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 6,
       "goalsFor": 6,
       "goalsAgainst": 5,
       "goalDifference": 1,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A1",
-      "providerTeamId": "459"
+      "providerTeamId": "459",
+      "group": "Group A1"
     },
     "teamType": "national"
   },
@@ -2284,15 +2336,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 0,
       "goalsFor": 2,
       "goalsAgainst": 11,
       "goalDifference": -9,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A1",
-      "providerTeamId": "465"
+      "providerTeamId": "465",
+      "group": "Group A1"
     },
     "teamType": "national"
   },
@@ -2338,15 +2390,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 10,
       "goalsFor": 7,
       "goalsAgainst": 2,
       "goalDifference": 5,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A1",
-      "providerTeamId": "478"
+      "providerTeamId": "478",
+      "group": "Group A1"
     },
     "teamType": "national"
   },
@@ -2392,15 +2444,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 8,
       "goalsFor": 7,
       "goalsAgainst": 5,
       "goalDifference": 2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A2",
-      "providerTeamId": "449"
+      "providerTeamId": "449",
+      "group": "Group A2"
     },
     "teamType": "national"
   },
@@ -2446,15 +2498,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 8,
       "goalsFor": 5,
       "goalsAgainst": 3,
       "goalDifference": 2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A2",
-      "providerTeamId": "455"
+      "providerTeamId": "455",
+      "group": "Group A2"
     },
     "teamType": "national"
   },
@@ -2500,15 +2552,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 5,
       "goalsFor": 3,
       "goalsAgainst": 2,
       "goalDifference": 1,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A2",
-      "providerTeamId": "481"
+      "providerTeamId": "481",
+      "group": "Group A2"
     },
     "teamType": "national"
   },
@@ -2554,15 +2606,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 0,
       "goalsFor": 3,
       "goalsAgainst": 8,
       "goalDifference": -5,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A2",
-      "providerTeamId": "6757"
+      "providerTeamId": "6757",
+      "group": "Group A2"
     },
     "teamType": "national"
   },
@@ -2608,15 +2660,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 12,
       "goalsFor": 12,
       "goalsAgainst": 5,
       "goalDifference": 7,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A3",
-      "providerTeamId": "164"
+      "providerTeamId": "164",
+      "group": "Group A3"
     },
     "teamType": "national"
   },
@@ -2662,15 +2714,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 9,
       "goalsFor": 14,
       "goalsAgainst": 3,
       "goalDifference": 11,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A3",
-      "providerTeamId": "448"
+      "providerTeamId": "448",
+      "group": "Group A3"
     },
     "teamType": "national"
   },
@@ -2716,15 +2768,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 0,
       "goalsFor": 2,
       "goalsAgainst": 10,
       "goalDifference": -8,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A3",
-      "providerTeamId": "450"
+      "providerTeamId": "450",
+      "group": "Group A3"
     },
     "teamType": "national"
   },
@@ -2770,15 +2822,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 3,
       "goalsFor": 4,
       "goalsAgainst": 14,
       "goalDifference": -10,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A3",
-      "providerTeamId": "477"
+      "providerTeamId": "477",
+      "group": "Group A3"
     },
     "teamType": "national"
   },
@@ -2824,15 +2876,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 3,
       "goalsFor": 6,
       "goalsAgainst": 8,
       "goalDifference": -2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A4",
-      "providerTeamId": "464"
+      "providerTeamId": "464",
+      "group": "Group A4"
     },
     "teamType": "national"
   },
@@ -2878,15 +2930,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 6,
       "goalsFor": 7,
       "goalsAgainst": 7,
       "goalDifference": 0,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A4",
-      "providerTeamId": "479"
+      "providerTeamId": "479",
+      "group": "Group A4"
     },
     "teamType": "national"
   },
@@ -2932,15 +2984,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 12,
       "goalsFor": 9,
       "goalsAgainst": 4,
       "goalDifference": 5,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A4",
-      "providerTeamId": "482"
+      "providerTeamId": "482",
+      "group": "Group A4"
     },
     "teamType": "national"
   },
@@ -2986,15 +3038,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 3,
       "goalsFor": 2,
       "goalsAgainst": 5,
       "goalDifference": -3,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group A4",
-      "providerTeamId": "578"
+      "providerTeamId": "578",
+      "group": "Group A4"
     },
     "teamType": "national"
   },
@@ -3040,15 +3092,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 0,
       "goalsFor": 0,
       "goalsAgainst": 10,
       "goalDifference": -10,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B1",
-      "providerTeamId": "463"
+      "providerTeamId": "463",
+      "group": "Group B1"
     },
     "teamType": "national"
   },
@@ -3094,15 +3146,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 7,
       "goalsFor": 5,
       "goalsAgainst": 3,
       "goalDifference": 2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B1",
-      "providerTeamId": "472"
+      "providerTeamId": "472",
+      "group": "Group B1"
     },
     "teamType": "national"
   },
@@ -3148,15 +3200,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 12,
       "goalsFor": 11,
       "goalsAgainst": 1,
       "goalDifference": 10,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B1",
-      "providerTeamId": "475"
+      "providerTeamId": "475",
+      "group": "Group B1"
     },
     "teamType": "national"
   },
@@ -3202,15 +3254,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 4,
       "goalsFor": 3,
       "goalsAgainst": 5,
       "goalDifference": -2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B1",
-      "providerTeamId": "580"
+      "providerTeamId": "580",
+      "group": "Group B1"
     },
     "teamType": "national"
   },
@@ -3256,15 +3308,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 4,
       "goalsFor": 2,
       "goalsAgainst": 5,
       "goalDifference": -3,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B2",
-      "providerTeamId": "457"
+      "providerTeamId": "457",
+      "group": "Group B2"
     },
     "teamType": "national"
   },
@@ -3310,15 +3362,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 7,
       "goalsFor": 3,
       "goalsAgainst": 2,
       "goalDifference": 1,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B2",
-      "providerTeamId": "480"
+      "providerTeamId": "480",
+      "group": "Group B2"
     },
     "teamType": "national"
   },
@@ -3364,15 +3416,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 2,
       "goalsFor": 0,
       "goalsAgainst": 2,
       "goalDifference": -2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B2",
-      "providerTeamId": "584"
+      "providerTeamId": "584",
+      "group": "Group B2"
     },
     "teamType": "national"
   },
@@ -3418,15 +3470,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 8,
       "goalsFor": 4,
       "goalsAgainst": 0,
       "goalDifference": 4,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B2",
-      "providerTeamId": "586"
+      "providerTeamId": "586",
+      "group": "Group B2"
     },
     "teamType": "national"
   },
@@ -3472,15 +3524,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 2,
       "goalsFor": 2,
       "goalsAgainst": 7,
       "goalDifference": -5,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B3",
-      "providerTeamId": "461"
+      "providerTeamId": "461",
+      "group": "Group B3"
     },
     "teamType": "national"
   },
@@ -3526,15 +3578,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 8,
       "goalsFor": 9,
       "goalsAgainst": 5,
       "goalDifference": 4,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B3",
-      "providerTeamId": "474"
+      "providerTeamId": "474",
+      "group": "Group B3"
     },
     "teamType": "national"
   },
@@ -3580,15 +3632,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 5,
       "goalsFor": 6,
       "goalsAgainst": 4,
       "goalDifference": 2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B3",
-      "providerTeamId": "476"
+      "providerTeamId": "476",
+      "group": "Group B3"
     },
     "teamType": "national"
   },
@@ -3634,15 +3686,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 5,
       "goalsFor": 3,
       "goalsAgainst": 4,
       "goalDifference": -1,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B3",
-      "providerTeamId": "18272"
+      "providerTeamId": "18272",
+      "group": "Group B3"
     },
     "teamType": "national"
   },
@@ -3688,15 +3740,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 8,
       "goalsFor": 6,
       "goalsAgainst": 3,
       "goalDifference": 3,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B4",
-      "providerTeamId": "452"
+      "providerTeamId": "452",
+      "group": "Group B4"
     },
     "teamType": "national"
   },
@@ -3742,15 +3794,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 10,
       "goalsFor": 7,
       "goalsAgainst": 3,
       "goalDifference": 4,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B4",
-      "providerTeamId": "466"
+      "providerTeamId": "466",
+      "group": "Group B4"
     },
     "teamType": "national"
   },
@@ -3796,15 +3848,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 4,
       "goalsFor": 7,
       "goalsAgainst": 4,
       "goalDifference": 3,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B4",
-      "providerTeamId": "471"
+      "providerTeamId": "471",
+      "group": "Group B4"
     },
     "teamType": "national"
   },
@@ -3850,15 +3902,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 0,
       "goalsFor": 3,
       "goalsAgainst": 13,
       "goalDifference": -10,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group B4",
-      "providerTeamId": "473"
+      "providerTeamId": "473",
+      "group": "Group B4"
     },
     "teamType": "national"
   },
@@ -3904,15 +3956,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 7,
       "goalsFor": 9,
       "goalsAgainst": 2,
       "goalDifference": 7,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C1",
-      "providerTeamId": "458"
+      "providerTeamId": "458",
+      "group": "Group C1"
     },
     "teamType": "national"
   },
@@ -3958,15 +4010,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 7,
       "goalsFor": 5,
       "goalsAgainst": 2,
       "goalDifference": 3,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C1",
-      "providerTeamId": "583"
+      "providerTeamId": "583",
+      "group": "Group C1"
     },
     "teamType": "national"
   },
@@ -4012,15 +4064,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 9,
       "goalsFor": 8,
       "goalsAgainst": 3,
       "goalDifference": 5,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C1",
-      "providerTeamId": "585"
+      "providerTeamId": "585",
+      "group": "Group C1"
     },
     "teamType": "national"
   },
@@ -4066,15 +4118,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 0,
       "goalsFor": 1,
       "goalsAgainst": 16,
       "goalDifference": -15,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C1",
-      "providerTeamId": "588"
+      "providerTeamId": "588",
+      "group": "Group C1"
     },
     "teamType": "national"
   },
@@ -4120,15 +4172,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 7,
       "goalsFor": 5,
       "goalsAgainst": 3,
       "goalDifference": 2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C2",
-      "providerTeamId": "445"
+      "providerTeamId": "445",
+      "group": "Group C2"
     },
     "teamType": "national"
   },
@@ -4174,15 +4226,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 1,
       "goalsFor": 2,
       "goalsAgainst": 6,
       "goalDifference": -4,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C2",
-      "providerTeamId": "456"
+      "providerTeamId": "456",
+      "group": "Group C2"
     },
     "teamType": "national"
   },
@@ -4228,15 +4280,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 4,
       "goalsFor": 4,
       "goalsAgainst": 5,
       "goalDifference": -1,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C2",
-      "providerTeamId": "579"
+      "providerTeamId": "579",
+      "group": "Group C2"
     },
     "teamType": "national"
   },
@@ -4282,15 +4334,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 10,
       "goalsFor": 7,
       "goalsAgainst": 4,
       "goalDifference": 3,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C2",
-      "providerTeamId": "6775"
+      "providerTeamId": "6775",
+      "group": "Group C2"
     },
     "teamType": "national"
   },
@@ -4336,15 +4388,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 4,
       "goalsFor": 5,
       "goalsAgainst": 5,
       "goalDifference": 0,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C3",
-      "providerTeamId": "447"
+      "providerTeamId": "447",
+      "group": "Group C3"
     },
     "teamType": "national"
   },
@@ -4390,15 +4442,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 10,
       "goalsFor": 9,
       "goalsAgainst": 2,
       "goalDifference": 7,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C3",
-      "providerTeamId": "468"
+      "providerTeamId": "468",
+      "group": "Group C3"
     },
     "teamType": "national"
   },
@@ -4444,15 +4496,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 4,
       "goalsFor": 3,
       "goalsAgainst": 8,
       "goalDifference": -5,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C3",
-      "providerTeamId": "483"
+      "providerTeamId": "483",
+      "group": "Group C3"
     },
     "teamType": "national"
   },
@@ -4498,15 +4550,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 2,
       "goalsFor": 5,
       "goalsAgainst": 7,
       "goalDifference": -2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C3",
-      "providerTeamId": "2619"
+      "providerTeamId": "2619",
+      "group": "Group C3"
     },
     "teamType": "national"
   },
@@ -4552,15 +4604,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 6,
       "goalsFor": 2,
       "goalsAgainst": 1,
       "goalDifference": 1,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C4",
-      "providerTeamId": "444"
+      "providerTeamId": "444",
+      "group": "Group C4"
     },
     "teamType": "national"
   },
@@ -4606,15 +4658,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 4,
       "goalsFor": 3,
       "goalsAgainst": 5,
       "goalDifference": -2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C4",
-      "providerTeamId": "462"
+      "providerTeamId": "462",
+      "group": "Group C4"
     },
     "teamType": "national"
   },
@@ -4660,15 +4712,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 8,
       "goalsFor": 7,
       "goalsAgainst": 1,
       "goalDifference": 6,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C4",
-      "providerTeamId": "470"
+      "providerTeamId": "470",
+      "group": "Group C4"
     },
     "teamType": "national"
   },
@@ -4714,15 +4766,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 4,
       "points": 3,
       "goalsFor": 2,
       "goalsAgainst": 7,
       "goalDifference": -5,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group C4",
-      "providerTeamId": "582"
+      "providerTeamId": "582",
+      "group": "Group C4"
     },
     "teamType": "national"
   },
@@ -4768,15 +4820,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 3,
       "points": 7,
       "goalsFor": 4,
       "goalsAgainst": 2,
       "goalDifference": 2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group D1",
-      "providerTeamId": "453"
+      "providerTeamId": "453",
+      "group": "Group D1"
     },
     "teamType": "national"
   },
@@ -4822,15 +4874,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 3,
       "points": 1,
       "goalsFor": 1,
       "goalsAgainst": 3,
       "goalDifference": -2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group D1",
-      "providerTeamId": "587"
+      "providerTeamId": "587",
+      "group": "Group D1"
     },
     "teamType": "national"
   },
@@ -4876,15 +4928,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 2,
       "points": 2,
       "goalsFor": 1,
       "goalsAgainst": 1,
       "goalDifference": 0,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group D1",
-      "providerTeamId": "16721"
+      "providerTeamId": "16721",
+      "group": "Group D1"
     },
     "teamType": "national"
   },
@@ -4930,15 +4982,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 3,
       "points": 4,
       "goalsFor": 3,
       "goalsAgainst": 2,
       "goalDifference": 1,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group D2",
-      "providerTeamId": "460"
+      "providerTeamId": "460",
+      "group": "Group D2"
     },
     "teamType": "national"
   },
@@ -4984,15 +5036,15 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 3,
       "points": 5,
       "goalsFor": 2,
       "goalsAgainst": 1,
       "goalDifference": 1,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group D2",
-      "providerTeamId": "581"
+      "providerTeamId": "581",
+      "group": "Group D2"
     },
     "teamType": "national"
   },
@@ -5038,411 +5090,36 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
       "season": "2026-27 UEFA Nations League",
-      "fetchedAt": "2026-11-07T19:26:12.628Z",
+      "fetchedAt": "2026-11-07T19:40:37.474Z",
       "gamesPlayed": 2,
       "points": 1,
       "goalsFor": 0,
       "goalsAgainst": 2,
       "goalDifference": -2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
-      "group": "Group D2",
-      "providerTeamId": "589"
+      "providerTeamId": "589",
+      "group": "Group D2"
     },
     "teamType": "national"
   }
 ];
 
 const FIXTURES_DATA = [
-  {
-    "id": 1,
-    "providerId": "340098a9-978f-4d14-1645-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_FRA",
-    "away": "NAT_TUR",
-    "homeName": "Fransa",
-    "awayName": "Türkiye",
-    "kickoffRaw": "2026-11-15T22:45:00",
-    "kickoff": "2026-11-15T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047898",
-      "url": "https://match.uefa.com/v5/matches/2047898",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-15T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 2,
-    "providerId": "4d3ecee8-01e5-41c2-162f-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_BUL",
-    "away": "NAT_ISL",
-    "homeName": "Bulgaristan",
-    "awayName": "İzlanda",
-    "kickoffRaw": "2026-11-13T22:45:00",
-    "kickoff": "2026-11-13T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047882",
-      "url": "https://match.uefa.com/v5/matches/2047882",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-13T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 3,
-    "providerId": "cf705df5-5c48-45f8-1634-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_LIE",
-    "away": "NAT_AZE",
-    "homeName": "Lihtenştayn",
-    "awayName": "Azerbaycan",
-    "kickoffRaw": "2026-11-13T22:45:00",
-    "kickoff": "2026-11-13T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047885",
-      "url": "https://match.uefa.com/v5/matches/2047885",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-13T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 4,
-    "providerId": "7bea3e14-b1b0-4755-1630-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_LUX",
-    "away": "NAT_EST",
-    "homeName": "Lüksemburg",
-    "awayName": "Estonya",
-    "kickoffRaw": "2026-11-13T22:45:00",
-    "kickoff": "2026-11-13T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047881",
-      "url": "https://match.uefa.com/v5/matches/2047881",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-13T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 5,
-    "providerId": "c33c3751-98b8-46ad-162e-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_SVK",
-    "away": "NAT_FRO",
-    "homeName": "Slovakya",
-    "awayName": "Faroe Adaları",
-    "kickoffRaw": "2026-11-13T22:45:00",
-    "kickoff": "2026-11-13T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047880",
-      "url": "https://match.uefa.com/v5/matches/2047880",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-13T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 6,
-    "providerId": "084ca742-0095-45d8-1639-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_GEO",
-    "away": "NAT_HUN",
-    "homeName": "Gürcistan",
-    "awayName": "Macaristan",
-    "kickoffRaw": "2026-11-14T20:00:00",
-    "kickoff": "2026-11-14T17:00:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047895",
-      "url": "https://match.uefa.com/v5/matches/2047895",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-14T17:00:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 7,
-    "providerId": "d06ffcaf-1712-49a7-1638-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_NOR",
-    "away": "NAT_WAL",
-    "homeName": "Norveç",
-    "awayName": "Galler",
-    "kickoffRaw": "2026-11-14T20:00:00",
-    "kickoff": "2026-11-14T17:00:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047893",
-      "url": "https://match.uefa.com/v5/matches/2047893",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-14T17:00:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 8,
-    "providerId": "176dc7d0-8feb-435f-163a-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_POR",
-    "away": "NAT_DEN",
-    "homeName": "Portekiz",
-    "awayName": "Danimarka",
-    "kickoffRaw": "2026-11-14T22:45:00",
-    "kickoff": "2026-11-14T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047892",
-      "url": "https://match.uefa.com/v5/matches/2047892",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-14T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 9,
-    "providerId": "cfacc145-37f9-43c7-1643-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_BEL",
-    "away": "NAT_ITA",
-    "homeName": "Belçika",
-    "awayName": "İtalya",
-    "kickoffRaw": "2026-11-15T22:45:00",
-    "kickoff": "2026-11-15T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047900",
-      "url": "https://match.uefa.com/v5/matches/2047900",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-15T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 10,
-    "providerId": "648c6def-36d4-44d0-1644-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_CRO",
-    "away": "NAT_CZE",
-    "homeName": "Hırvatistan",
-    "awayName": "Çekya",
-    "kickoffRaw": "2026-11-15T22:45:00",
-    "kickoff": "2026-11-15T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047902",
-      "url": "https://match.uefa.com/v5/matches/2047902",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-15T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 11,
-    "providerId": "5401e803-6451-4fe0-1646-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_ESP",
-    "away": "NAT_ENG",
-    "homeName": "İspanya",
-    "awayName": "İngiltere",
-    "kickoffRaw": "2026-11-15T22:45:00",
-    "kickoff": "2026-11-15T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047904",
-      "url": "https://match.uefa.com/v5/matches/2047904",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-15T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 12,
-    "providerId": "c3658ae1-53ab-4a94-164c-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_GER",
-    "away": "NAT_NED",
-    "homeName": "Almanya",
-    "awayName": "Hollanda",
-    "kickoffRaw": "2026-11-16T22:45:00",
-    "kickoff": "2026-11-16T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047909",
-      "url": "https://match.uefa.com/v5/matches/2047909",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-16T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 13,
-    "providerId": "d9713b86-ad27-4183-1650-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_MKD",
-    "away": "NAT_SVN",
-    "homeName": "Kuzey Makedonya Cumhuriyeti",
-    "awayName": "Slovenya",
-    "kickoffRaw": "2026-11-16T22:45:00",
-    "kickoff": "2026-11-16T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047915",
-      "url": "https://match.uefa.com/v5/matches/2047915",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-16T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 14,
-    "providerId": "68a07749-e313-4a4d-164d-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_GRE",
-    "away": "NAT_SRB",
-    "homeName": "Yunanistan",
-    "awayName": "Sırbistan",
-    "kickoffRaw": "2026-11-16T22:45:00",
-    "kickoff": "2026-11-16T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047912",
-      "url": "https://match.uefa.com/v5/matches/2047912",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-16T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  },
-  {
-    "id": 15,
-    "providerId": "92f6495b-e5a2-4fb8-164f-08df15776e55",
-    "roundId": 1542,
-    "leagueId": 258,
-    "home": "NAT_SUI",
-    "away": "NAT_SCO",
-    "homeName": "İsviçre",
-    "awayName": "İskoçya",
-    "kickoffRaw": "2026-11-16T22:45:00",
-    "kickoff": "2026-11-16T19:45:00.000Z",
-    "timezoneStatus": "independently-matched-utc",
-    "providerStatusRaw": null,
-    "providerUpdatedAtRaw": null,
-    "status": "unconfirmed",
-    "result": null,
-    "kickoffSource": {
-      "provider": "uefa",
-      "matchId": "2047914",
-      "url": "https://match.uefa.com/v5/matches/2047914",
-      "fetchedAt": "2026-11-07T19:26:12.455Z",
-      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
-      "rawKickoff": "2026-11-16T19:45:00Z",
-      "status": "UPCOMING"
-    }
-  }
+  {"id":1,"providerId":"340098a9-978f-4d14-1645-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_FRA","away":"NAT_TUR","homeName":"Fransa","awayName":"Türkiye","kickoffRaw":"2026-11-15T22:45:00","kickoff":"2026-11-15T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047898","url":"https://match.uefa.com/v5/matches/2047898","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-15T19:45:00Z","status":"UPCOMING"}},
+  {"id":2,"providerId":"4d3ecee8-01e5-41c2-162f-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_BUL","away":"NAT_ISL","homeName":"Bulgaristan","awayName":"İzlanda","kickoffRaw":"2026-11-13T22:45:00","kickoff":"2026-11-13T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047882","url":"https://match.uefa.com/v5/matches/2047882","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-13T19:45:00Z","status":"UPCOMING"}},
+  {"id":3,"providerId":"cf705df5-5c48-45f8-1634-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_LIE","away":"NAT_AZE","homeName":"Lihtenştayn","awayName":"Azerbaycan","kickoffRaw":"2026-11-13T22:45:00","kickoff":"2026-11-13T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047885","url":"https://match.uefa.com/v5/matches/2047885","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-13T19:45:00Z","status":"UPCOMING"}},
+  {"id":4,"providerId":"7bea3e14-b1b0-4755-1630-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_LUX","away":"NAT_EST","homeName":"Lüksemburg","awayName":"Estonya","kickoffRaw":"2026-11-13T22:45:00","kickoff":"2026-11-13T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047881","url":"https://match.uefa.com/v5/matches/2047881","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-13T19:45:00Z","status":"UPCOMING"}},
+  {"id":5,"providerId":"c33c3751-98b8-46ad-162e-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_SVK","away":"NAT_FRO","homeName":"Slovakya","awayName":"Faroe Adaları","kickoffRaw":"2026-11-13T22:45:00","kickoff":"2026-11-13T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047880","url":"https://match.uefa.com/v5/matches/2047880","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-13T19:45:00Z","status":"UPCOMING"}},
+  {"id":6,"providerId":"084ca742-0095-45d8-1639-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_GEO","away":"NAT_HUN","homeName":"Gürcistan","awayName":"Macaristan","kickoffRaw":"2026-11-14T20:00:00","kickoff":"2026-11-14T17:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047895","url":"https://match.uefa.com/v5/matches/2047895","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-14T17:00:00Z","status":"UPCOMING"}},
+  {"id":7,"providerId":"d06ffcaf-1712-49a7-1638-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_NOR","away":"NAT_WAL","homeName":"Norveç","awayName":"Galler","kickoffRaw":"2026-11-14T20:00:00","kickoff":"2026-11-14T17:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047893","url":"https://match.uefa.com/v5/matches/2047893","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-14T17:00:00Z","status":"UPCOMING"}},
+  {"id":8,"providerId":"176dc7d0-8feb-435f-163a-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_POR","away":"NAT_DEN","homeName":"Portekiz","awayName":"Danimarka","kickoffRaw":"2026-11-14T22:45:00","kickoff":"2026-11-14T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047892","url":"https://match.uefa.com/v5/matches/2047892","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-14T19:45:00Z","status":"UPCOMING"}},
+  {"id":9,"providerId":"cfacc145-37f9-43c7-1643-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_BEL","away":"NAT_ITA","homeName":"Belçika","awayName":"İtalya","kickoffRaw":"2026-11-15T22:45:00","kickoff":"2026-11-15T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047900","url":"https://match.uefa.com/v5/matches/2047900","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-15T19:45:00Z","status":"UPCOMING"}},
+  {"id":10,"providerId":"648c6def-36d4-44d0-1644-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_CRO","away":"NAT_CZE","homeName":"Hırvatistan","awayName":"Çekya","kickoffRaw":"2026-11-15T22:45:00","kickoff":"2026-11-15T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047902","url":"https://match.uefa.com/v5/matches/2047902","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-15T19:45:00Z","status":"UPCOMING"}},
+  {"id":11,"providerId":"5401e803-6451-4fe0-1646-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_ESP","away":"NAT_ENG","homeName":"İspanya","awayName":"İngiltere","kickoffRaw":"2026-11-15T22:45:00","kickoff":"2026-11-15T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047904","url":"https://match.uefa.com/v5/matches/2047904","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-15T19:45:00Z","status":"UPCOMING"}},
+  {"id":12,"providerId":"c3658ae1-53ab-4a94-164c-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_GER","away":"NAT_NED","homeName":"Almanya","awayName":"Hollanda","kickoffRaw":"2026-11-16T22:45:00","kickoff":"2026-11-16T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047909","url":"https://match.uefa.com/v5/matches/2047909","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-16T19:45:00Z","status":"UPCOMING"}},
+  {"id":13,"providerId":"d9713b86-ad27-4183-1650-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_MKD","away":"NAT_SVN","homeName":"Kuzey Makedonya Cumhuriyeti","awayName":"Slovenya","kickoffRaw":"2026-11-16T22:45:00","kickoff":"2026-11-16T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047915","url":"https://match.uefa.com/v5/matches/2047915","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-16T19:45:00Z","status":"UPCOMING"}},
+  {"id":14,"providerId":"68a07749-e313-4a4d-164d-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_GRE","away":"NAT_SRB","homeName":"Yunanistan","awayName":"Sırbistan","kickoffRaw":"2026-11-16T22:45:00","kickoff":"2026-11-16T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047912","url":"https://match.uefa.com/v5/matches/2047912","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-16T19:45:00Z","status":"UPCOMING"}},
+  {"id":15,"providerId":"92f6495b-e5a2-4fb8-164f-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_SUI","away":"NAT_SCO","homeName":"İsviçre","awayName":"İskoçya","kickoffRaw":"2026-11-16T22:45:00","kickoff":"2026-11-16T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047914","url":"https://match.uefa.com/v5/matches/2047914","fetchedAt":"2026-11-07T19:40:38.739Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-16T19:45:00Z","status":"UPCOMING"}}
 ];
 
 if (typeof module !== 'undefined' && module.exports) { module.exports = { TEAMS_DATA, FIXTURES_DATA }; }

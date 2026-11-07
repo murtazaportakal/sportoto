@@ -68,7 +68,6 @@ async function syncInto(directory) {
 
       fixtures.push(normalizeFixture(item, latestRound.id, idCounter++));
     }
-    fixtures = await resolveKickoffs(fixtures);
 
     // 3. Save matches.txt automatically
     fs.writeFileSync(matchesFile, matchLines.join('\n') + '\n', 'utf8');
@@ -97,8 +96,14 @@ async function syncInto(directory) {
     // 6. Automatically run auto_stats_update.js to refresh live ESPN ratings
     console.log("3. Triggering live stats update from ESPN across all 6 leagues...");
     const sources = await require('./auto_stats_update.js').updateStats(path.join(directory, 'data'));
+    delete require.cache[require.resolve(dataFile)];
+    const refreshedTeams=require(dataFile).TEAMS_DATA;
+    fixtures=await resolveKickoffs(fixtures,refreshedTeams);
+    const resolvedFixtures=`const FIXTURES_DATA = [\n${fixtures.map(f=>'  '+JSON.stringify(f)).join(',\n')}\n];`;
+    fs.writeFileSync(dataFile,fs.readFileSync(dataFile,'utf8').replace(/const FIXTURES_DATA = \[[\s\S]*?\];/,resolvedFixtures),'utf8');
     sources.push({source:'sportoto',status:'ok',fetchedAt:new Date().toISOString()});
     if(fixtures.some(f=>f.kickoffSource?.provider==='uefa'))sources.push({source:'uefa:nations-kickoffs',status:'ok',fetchedAt:new Date().toISOString(),matched:fixtures.filter(f=>f.timezoneStatus==='independently-matched-utc').length});
+    for(const league of new Set(fixtures.filter(f=>f.kickoffSource?.provider==='espn').map(f=>f.kickoffSource.league)))sources.push({source:'espn:'+league+':kickoffs',status:'ok',fetchedAt:new Date().toISOString(),matched:fixtures.filter(f=>f.kickoffSource?.league===league&&f.kickoff).length});
 
     // 7. Pull live odds and update impliedProb in sportoto_data.js
     console.log("4. Fetching live odds from open API...");
@@ -110,13 +115,32 @@ async function syncInto(directory) {
     const published = require('./publish_live_data').publishLiveData({id: latestRound.id, name: latestRound.name, closesAt: latestRound.roundCloseDate}, new Date().toISOString(), path.join(directory, 'data'));
     const records = require('./evaluation_records');
     const evaluationDirectory = path.join(directory, 'data', 'evaluation');
-    console.log('Evaluation records:', records.recordEvaluation(published, evaluationDirectory));
-    await records.refreshRecordedResults(async roundId => {
-      const response = await axios.get('https://webapi.sportoto.gov.tr/api/GameMatch/GetGameMatches/?gameRoundId=' + encodeURIComponent(roundId), {httpsAgent, timeout:8000});
-      return response.data.object;
-    }, latestRound.id, evaluationDirectory, new Date().toISOString(), resolveKickoffs);
+    const capturedAt=new Date().toISOString();
+    console.log('Evaluation records:', records.recordEvaluation(published, evaluationDirectory,capturedAt));
+    const config=JSON.parse(fs.readFileSync(path.join(directory,'data','prospective_experiment.json'),'utf8'));
+    require('./paired_records').validateProtocol(config);
+    const pairedDirectory=path.join(evaluationDirectory,'paired',config.experimentId);
+    console.log('Paired records:',require('./paired_records').recordPaired(published,config,pairedDirectory,capturedAt));
+    const rounds=new Map();
+    const fetchRecordedRound=async roundId=>{
+      if(!rounds.has(roundId))rounds.set(roundId,axios.get('https://webapi.sportoto.gov.tr/api/GameMatch/GetGameMatches/?gameRoundId='+encodeURIComponent(roundId),{httpsAgent,timeout:8000}).then(response=>response.data.object));
+      return rounds.get(roundId);
+    };
+    const pairedRoot=path.join(evaluationDirectory,'paired');
+    const pairedDirectories=fs.readdirSync(pairedRoot,{withFileTypes:true}).filter(entry=>entry.isDirectory()&&fs.existsSync(path.join(pairedRoot,entry.name,'protocol.json'))).map(entry=>path.join(pairedRoot,entry.name));
+    for(const target of [evaluationDirectory,...pairedDirectories])await records.refreshRecordedResults(fetchRecordedRound,latestRound.id,target,new Date().toISOString(),items=>resolveKickoffs(items,refreshedTeams));
     fs.writeFileSync(path.join(evaluationDirectory,'report.json'), JSON.stringify(require('./evaluate_records').evaluateRecords(evaluationDirectory),null,2)+'\n');
-    fs.writeFileSync(path.join(directory,'data','health.json'),JSON.stringify(require('./health_report').healthReport(published,previous,sources),null,2)+'\n');
+    const pairedStatus=[];
+    for(const target of pairedDirectories) {
+      const report=require('./evaluate_paired').evaluatePaired(target);
+      fs.writeFileSync(path.join(target,'report.json'),JSON.stringify(report,null,2)+'\n');
+      const status=JSON.parse(fs.readFileSync(path.join(target,'status.json'),'utf8'));
+      pairedStatus.push({experimentId:report.experimentId,captured:report.totalForecasts,settled:report.evaluated,paused:status.paused,releaseEligible:report.release.eligible});
+    }
+    const health=require('./health_report').healthReport(published,previous,sources);
+    health.pairedExperiments=pairedStatus;
+    if(pairedStatus.some(s=>s.paused)){health.warnings.push('prospective-experiment-paused');health.status='degraded';}
+    fs.writeFileSync(path.join(directory,'data','health.json'),JSON.stringify(health,null,2)+'\n');
 
   } catch (err) {
     console.error("❌ Auto Sync failed:", err.message);

@@ -98,8 +98,10 @@ async function refreshRecordedResults(fetchRound, currentRoundId, directory=path
   }
   for(const [id,schedule] of latestSchedules)if(schedule.status!=='final')settled.delete(id);
   const rounds=new Set();
+  const savedFixtures=new Map();
   for(const file of fs.readdirSync(forecastsPath)) {
     const f=JSON.parse(fs.readFileSync(path.join(forecastsPath,file),'utf8'));
+    savedFixtures.set(f.providerId,f.fixture);
     // Unsettled forecasts are never aged out. Recheck recent settled forecasts for corrections.
     if(f.roundId!==currentRoundId && (!settled.has(f.providerId) || Date.parse(observedAt)-(settledAt.get(f.providerId)||0)<30*86400000))rounds.add(f.roundId);
   }
@@ -107,7 +109,11 @@ async function refreshRecordedResults(fetchRound, currentRoundId, directory=path
   for(const round of rounds) {
     const items=await fetchRound(round);
     if(!Array.isArray(items)||!items.length)throw new Error('Missing recorded-round results');
-    const fixtures=await resolveFixtures(items.map((item,i)=>require('./provider_fixture').normalizeFixture(item,round,i+1)));
+    const fixtures=await resolveFixtures(items.map((item,i)=>{
+      const fixture=require('./provider_fixture').normalizeFixture(item,round,i+1);
+      const previous=savedFixtures.get(fixture.providerId);
+      return previous?.kickoffSource?{...fixture,kickoffSource:previous.kickoffSource}:fixture;
+    }));
     for(const f of fixtures) {
       recordSchedule(f,directory,observedAt);
       if(recordResult(f,directory,observedAt))added++;
@@ -115,4 +121,4 @@ async function refreshRecordedResults(fetchRound, currentRoundId, directory=path
   }
   return {checked:rounds.size,added};
 }
-module.exports={recordEvaluation,eligibility,digest,refreshRecordedResults,recordSchedule,recordResult};
+module.exports={recordEvaluation,eligibility,digest,writeOnce,refreshRecordedResults,recordSchedule,recordResult};

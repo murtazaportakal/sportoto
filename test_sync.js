@@ -6,7 +6,7 @@ const root=fs.mkdtempSync(path.join(os.tmpdir(),'sportoto-sync-'));
 const originalGet=axios.get,originalLog=console.log,originalError=console.error,originalKey=process.env.ODDS_API_KEY;
 (async()=>{
   try {
-    for(const file of ['data/sportoto_data.js','data/active_model.json','data/live.json','index.html','matches.txt']) {
+    for(const file of ['data/sportoto_data.js','data/active_model.json','data/prospective_experiment.json','data/live.json','index.html','matches.txt']) {
       const target=path.join(root,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(file,target);
     }
     delete process.env.ODDS_API_KEY;
@@ -26,6 +26,8 @@ const originalGet=axios.get,originalLog=console.log,originalError=console.error,
     assert.equal(live.round.id,99);assert.equal(live.fixtures[0].providerId,'fixture-0');
     assert.equal(JSON.parse(fs.readFileSync(path.join(root,'data/health.json'),'utf8')).supportedFixtures,15);
     assert.equal(JSON.parse(fs.readFileSync(path.join(root,'data/evaluation/status.json'),'utf8')).captured,15);
+    const paired=JSON.parse(fs.readFileSync(path.join(root,'data/evaluation/paired',require('./data/prospective_experiment.json').experimentId,'report.json'),'utf8'));
+    assert.equal(paired.totalForecasts,15);assert.equal(paired.evaluated,0);assert.equal(paired.release.eligible,false);
     const files=['data/live.json','data/sportoto_data.js','matches.txt','index.html','data/evaluation/status.json'];
     const before=files.map(f=>fs.readFileSync(path.join(root,f),'utf8'));
     fail=true;await assert.rejects(syncTransaction(root,syncInto),/simulated source timeout/);

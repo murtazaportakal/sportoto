@@ -21,14 +21,17 @@ function matchKickoffs(fixtures,matches,fetchedAt) {
     const result={...f,kickoff,timezoneStatus:'independently-matched-utc',kickoffSource:{provider:'uefa',matchId:String(m.id),url:'https://match.uefa.com/v5/matches/'+m.id,fetchedAt,matchingPolicy:'unique national identities, home/away, competition, season and calendar date',rawKickoff:raw,status:m.status}};
     if(['POSTPONED','CANCELLED','CANCELED','ABANDONED','SUSPENDED'].includes(m.status))return {...result,status:m.status.toLowerCase(),result:null};
     if(f.status==='final'&&m.status!=='FINISHED')return {...result,status:'source-status-conflict',result:null};
+    if(m.status==='FINISHED'&&f.status!=='final')return {...result,status:'source-final-awaiting-primary',result:null};
+    if(!['UPCOMING','FINISHED'].includes(m.status))return {...result,status:'unverified-secondary-status',result:null};
     return result;
   });
 }
 function kickoffResolver() {
   const cache=new Map();
-  return async fixtures=>{
+  const resolveClubs=require('./club_kickoffs').clubKickoffResolver();
+  return async(fixtures,teams=[])=>{
     const seasons=[...new Set(fixtures.filter(f=>f.home.startsWith('NAT_')&&f.away.startsWith('NAT_')&&f.kickoffRaw).map(f=>seasonYear(f.kickoffRaw)))];
-    if(!seasons.length)return fixtures;
+    if(!seasons.length)return resolveClubs(fixtures,teams);
     const records=[];
     for(const season of seasons) {
       if(!cache.has(season)) {
@@ -39,7 +42,7 @@ function kickoffResolver() {
       }
       records.push(...cache.get(season));
     }
-    return matchKickoffs(fixtures,records,new Date().toISOString());
+    return resolveClubs(matchKickoffs(fixtures,records,new Date().toISOString()),teams);
   };
 }
 module.exports={matchKickoffs,kickoffResolver,seasonYear};

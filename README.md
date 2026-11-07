@@ -14,7 +14,8 @@ Scope: a 15-match Sportoto ticket, 1/X/2 probabilities, system coupons, and hist
 - `npm run research` / `npm run research:final` — freeze a results-only chronological experiment and record its final evaluation once.
 - `node walk_forward_evaluation.js` — evaluate expanding-window development folds without touching the final test.
 - `node release_gate.js <evidence.json>` — check prospective release requirements; never changes the active model.
-- `npm run evidence` — show captured/settled counts, exclusions and progress toward the 500-match/100-per-league requirements. Thresholds alone do not authorize promotion; paired candidate evidence and review are also required.
+- `npm run evidence` — show the original incumbent stream and paired experiments, exclusions, pauses and progress toward the 500-match/100-per-league requirements. Thresholds alone do not authorize promotion; comparison results and review are also required.
+- `npm run evaluate:paired` — replay and score the frozen prospective comparison; produces evidence in the format consumed by release_gate.js.
 
 Serve the project directory over HTTP. Opening index.html directly can prevent the tuning JSON from loading.
 
@@ -27,6 +28,7 @@ Serve the project directory over HTTP. Opening index.html directly can prevent t
 | `site.web.api.espn.com/apis/v2/sports/soccer/{league}/standings` | auto_stats_update.js | Refresh team statistics for six leagues in data/sportoto_data.js |
 | `site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings` | auto_stats_update.js | Current Nations League national-team statistics with labelled generic priors |
 | `match.uefa.com/v5/matches?competitionId=2014&seasonYear={year}` | verified_kickoffs.js | Independently match national fixtures and preserve explicit UTC kickoff evidence |
+| `site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates={YYYYMMDD}` | club_kickoffs.js | Club UTC matching using team identities, available ESPN IDs, home/away, league and date |
 | `api.the-odds-api.com/v4/sports/soccer/soccer_turkey_super_league/odds/` | auto_sync.js | Optional implied-probability refresh, enabled only by ODDS_API_KEY |
 | `raw.githubusercontent.com/openfootball/football.json/master/{season}/tr.1.json` | fetch_historical_data.js | Explicit historical import for 2024-25 and 2020-21; writes historical_matches.json and historical_data.js |
 | `fonts.googleapis.com` / `fonts.gstatic.com` | index.css | Display fonts only; no prediction data |
@@ -42,6 +44,7 @@ ESPN supplies standings statistics. The rating derived from points and goal diff
 ## Current status
 
 - The saved round has 15/15 supported fixtures, with national-team standings and independently matched UEFA UTC kickoffs. The first 15 pre-match forecasts are saved. Unavailable composite inputs use explicitly labelled generic priors; national strength across Nations League tiers remains uncalibrated.
+- A separately registered prospective experiment has 15 paired records for the same upcoming fixtures. Each contains a newly computed incumbent, frozen shadow candidate, simple standings-rating baseline and uniform reference at one cutoff. The original 15 forecasts are preserved; these are not 30 distinct matches. No results have settled yet.
 - The full live sync and regression suite passed locally on 7 November 2026.
 - Endpoint cleanup preserves prediction outputs. Obsolete NosyAPI/CollectAPI clients, diagnostic scripts, alternate fixture writers and unused World Cup assets were removed.
 - Published at https://murtazaportakal.github.io/sportoto/. Remote CI, real sync, browser checks and Pages deployment passed on 7 November 2026. Hosted data was verified against the repository snapshot; evidence is saved in data/remote_release.json.
@@ -74,4 +77,6 @@ Schedule observations and result revisions are append-only and ordered. Repeated
 
 Timezone investigation on 7 November 2026: Sportoto's listing/bundle did not establish a timezone contract. The current national fixtures now use independently matched official UEFA timestamps with explicit UTC; no default Sportoto offset was inferred. See kickoffSource on each fixture for the retained evidence.
 
-Regression tests handle unsupported teams explicitly, preserve complete-ticket/browser parity checks, and test national identities, sourced standings, UTC matching, ambiguous/reversed fixtures, conflicts and postponements. All nine Node test files and rendered Chrome smoke checks pass locally. Passing tests is not evidence of future accuracy. Settlement rejects invalid or non-post-kickoff result/final-confirmation times and verifies saved forecast replay.
+Regression tests handle unsupported teams explicitly, preserve browser parity, and test sourced identities, UTC matching, ambiguity, conflicts, postponements and frozen paired replay. All eleven Node test files pass locally; browser checks run before each deployment. Passing tests is not evidence of future accuracy. Settlement rejects invalid or non-post-kickoff result/final-confirmation times and verifies saved prediction replay.
+
+See [prospective evaluation and review](docs/PROSPECTIVE_EVALUATION.md) for the immutable experiment, club kickoff coverage, pauses and evidence-bound approvals. The active model stays unchanged until sufficient favorable evidence is reviewed.

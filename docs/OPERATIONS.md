@@ -12,7 +12,7 @@ International rounds additionally load ESPN Nations League standings and match o
 
 `npm run evaluate` scores recorded forecasts only after artifact replay and confirmed final observations. It reports proper scores, confusion matrices, per-class calibration bins, league/season/estimated-input subsets, and seeded matchweek-bootstrap differences against uniform probabilities. Coupon coverage uses a declared retrospective four-double rule on complete recorded rounds. Coupon cost is null without a declared unit price, and returns are never inferred. Bookmaker comparisons are explicitly unavailable until fixture-specific pre-match odds snapshots exist.
 
-`npm run evidence` reports capture/settlement counts, exclusions, recorded kickoff dates and remaining samples from the same thresholds used by the release gate. Current collection covers the incumbent only; a sufficient incumbent sample is not paired candidate evidence and cannot authorize promotion. The sync report retains this progress automatically. Empty and unsettled samples keep null performance metrics.
+`npm run evidence` reports the original incumbent stream and each paired experiment, including capture/settlement counts, exclusions, pauses, kickoff dates and remaining samples. The legacy progress object is scoped to incumbent-only forecasts; pairedExperiments contains the comparison progress. Empty and unsettled samples keep null performance metrics. See [prospective evaluation](PROSPECTIVE_EVALUATION.md) for registration, supported club feeds, shared settlement and review requirements.
 
 ## Sync recovery
 

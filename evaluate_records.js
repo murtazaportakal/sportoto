@@ -11,7 +11,6 @@ function evaluateRecords(directory=path.join(__dirname,'data','evaluation')) {
  let correct=0,brier=0,loss=0;
  const scored=[];
  const exclude=reason=>{report.excluded[reason]=(report.excluded[reason]||0)+1;};
- const newest=list=>list.sort((a,b)=>(b.revision||0)-(a.revision||0)||Date.parse(b.observedAt)-Date.parse(a.observedAt))[0];
  for(const forecast of forecasts) {
   const captured=Date.parse(forecast.capturedAt),kickoff=Date.parse(forecast.fixture?.kickoff);
   if(!Number.isFinite(captured)||!Number.isFinite(kickoff)||captured>=kickoff){exclude('invalid-pre-match-cutoff');continue;}
@@ -26,19 +25,9 @@ function evaluateRecords(directory=path.join(__dirname,'data','evaluation')) {
    PredictionEngine.pickOutcome(forecast.probabilities);
    require('./replay_forecast').replayForecast(forecast,artifacts.inputs,artifacts.code);
   } catch {exclude('invalid-or-missing-artifact');continue;}
-  // Changes known before a first eligible forecast do not invalidate that forecast.
-  const history=schedules.filter(s=>s.providerId===forecast.providerId&&(!Number.isFinite(Date.parse(s.observedAt))||Date.parse(s.observedAt)>=captured));
-  if(history.some(s=>Date.parse(s.kickoff)!==kickoff || s.home!==forecast.fixture.home || s.away!==forecast.fixture.away)) {exclude('fixture-changed-review-required');continue;}
-  const latestSchedule=newest(history);
-  if(!latestSchedule||latestSchedule.status!=='final'){exclude('awaiting-confirmed-final');continue;}
-  const confirmedAt=Date.parse(latestSchedule.observedAt);
-  if(!Number.isFinite(confirmedAt)||confirmedAt<=kickoff){exclude('invalid-final-confirmation-time');continue;}
-  const result=newest(results.filter(r=>r.providerId===forecast.providerId));
-  if(!result){exclude('awaiting-result');continue;}
-  const resultObservedAt=Date.parse(result.observedAt);
-  if(Date.parse(result.kickoff)!==kickoff || !Number.isFinite(resultObservedAt) || resultObservedAt<=kickoff){exclude('result-cutoff-mismatch');continue;}
-  const r=result.result;
-  if(!Number.isInteger(r?.homeGoals)||r.homeGoals<0||!Number.isInteger(r?.awayGoals)||r.awayGoals<0||r.outcome!==(r.homeGoals>r.awayGoals?'1':r.homeGoals<r.awayGoals?'2':'X')){exclude('invalid-result');continue;}
+  const settlement=require('./settlement').settleForecast(forecast,schedules,results);
+  if(settlement.reason){exclude(settlement.reason);continue;}
+  const r=settlement.result;
   const p=[forecast.probabilities.win,forecast.probabilities.draw,forecast.probabilities.loss],index=['1','X','2'].indexOf(r.outcome);
   correct+=PredictionEngine.pickOutcome(forecast.probabilities)===r.outcome?1:0;
   brier+=p.reduce((sum,value,i)=>sum+(value-(i===index?1:0))**2,0);

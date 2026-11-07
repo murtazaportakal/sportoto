@@ -43,6 +43,7 @@ function applyStandings(teams, payload, league, fetchedAt) {
     team.eloRating = 1350 + points * 12 + gd * 5 + (league === 'tur.1' ? 0 : 200);
     team.recentForm = {goalsFor: Number((gf / games).toFixed(2)), goalsAgainst: Number((ga / games).toFixed(2))};
     team.statsSource = {url: `https://site.web.api.espn.com/apis/v2/sports/soccer/${league}/standings`, season: payload.season?.displayName || null, fetchedAt, gamesPlayed: games, points, goalsFor: gf, goalsAgainst: ga, goalDifference: gd, ratingMethod: '1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating'};
+    if(entry.team.id!=null)team.statsSource.providerTeamId=String(entry.team.id);
     if(league==='uefa.nations') {
       team.teamType='national';
       team.statsSource.group=entry.group;

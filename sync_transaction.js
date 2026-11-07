@@ -55,7 +55,7 @@ async function syncTransaction(root, task, {beforeReplace = () => {}} = {}) {
     if (fs.existsSync(transaction)) throw new Error('Unowned transaction directory; inspect before recovery');
     owned=true;
     const stage = path.join(transaction, 'stage');
-    for (const file of files(root, [...outputs, 'data/active_model.json'])) copy(within(root,file),within(stage,file));
+    for (const file of files(root, [...outputs, 'data/active_model.json', 'data/prospective_experiment.json'])) copy(within(root,file),within(stage,file));
     const result = await task(stage);
     const staged = files(stage, outputs).sort((a,b) => Number(a.replaceAll('\\','/') === 'data/live.json') - Number(b.replaceAll('\\','/') === 'data/live.json') || a.localeCompare(b));
     manifest = staged.map(file => ({file,existed:fs.existsSync(within(root,file))}));
