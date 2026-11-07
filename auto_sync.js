@@ -3,97 +3,17 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const dataFile    = path.join(__dirname, 'data', 'sportoto_data.js');
-const matchesFile = path.join(__dirname, 'matches.txt');
-const indexHtmlFile = path.join(__dirname, 'index.html');
-const tuneResultFile = path.join(__dirname, 'data', 'tuned_params.json');
+const { getCode } = require('./team_mapping');
+const { normalizeFixture } = require('./provider_fixture');
 
-// ── Levenshtein distance for fuzzy team name matching ─────────────────────────
-function levenshtein(a, b) {
-  const m = a.length, n = b.length;
-  const dp = Array.from({ length: m + 1 }, (_, i) => Array.from({ length: n + 1 }, (_, j) => i === 0 ? j : j === 0 ? i : 0));
-  for (let i = 1; i <= m; i++) {
-    for (let j = 1; j <= n; j++) {
-      dp[i][j] = a[i-1] === b[j-1] ? dp[i-1][j-1] : 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
-    }
-  }
-  return dp[m][n];
-}
-
-const teamMap = {
-  // Turkish Super Lig & 1. Lig
-  'galatasaray': 'GAL', 'fenerbahce': 'FEN', 'besiktas': 'BJK',
-  'trabzonspor': 'TRA', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
-  'antalyaspor': 'ANT', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
-  'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON',
-  'ankaragucu': 'ANK', 'hatayspor': 'HAT', 'karagumruk': 'FKG',
-  'gaziantep': 'GAZ', 'samsunspor': 'SAM', 'rizespor': 'RIZ',
-  'pendikspor': 'PEN', 'istanbulspor': 'IST', 'goztepe': 'GOZ',
-  'amed': 'AME', 'genclerbirligi': 'GEN', 'erzurum': 'ERZ',
-  'kocaelispor': 'KOC', 'eyupspor': 'EYU', 'corum': 'COR',
-
-  // European Teams
-  'everton': 'EVE', 'chelsea': 'CHE', 'brentford': 'BRE',
-  'liverpool': 'LIV', 'manchester city': 'MCI', 'man city': 'MCI',
-  'arsenal': 'ARS', 'manchester united': 'MUN', 'tottenham': 'TOT',
-  'real betis': 'BET', 'betis': 'BET', 'barcelona': 'BAR',
-  'real madrid': 'RMA', 'sevilla': 'SEV', 'villarreal': 'VIL',
-  'milan': 'MIL', 'atalanta': 'ATA', 'juventus': 'JUV',
-  'lazio': 'LAZ', 'inter': 'INT', 'roma': 'ROM', 'como': 'COM',
-  'bayern': 'BAY', 'leipzig': 'RBL', 'frankfurt': 'EIN', 'augsburg': 'AUG',
-  'dortmund': 'BVB', 'borussia dortmund': 'BVB',
-  'monaco': 'ASM', 'as monaco': 'ASM',
-  'lille': 'LIL',
-  'paris': 'PSG', 'psg': 'PSG',
-  'lyon': 'LYO', 'olympique lyon': 'LYO',
-  'napoli': 'NAP'
-};
-
-function normalizeName(name) {
-  return name
-    .trim()
-    .toLowerCase()
-    .replace(/ı/g, 'i')
-    .replace(/İ/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/ç/g, 'c')
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-}
-
-function getCode(name) {
-  const clean = normalizeName(name);
-
-  // 1. Exact / substring match (original logic)
-  for (const [key, code] of Object.entries(teamMap)) {
-    if (clean.includes(normalizeName(key))) return code;
-  }
-
-  // 2. Fuzzy fallback: accept closest match within edit-distance threshold
-  const keys = Object.keys(teamMap);
-  let bestKey = null, bestDist = Infinity;
-  for (const key of keys) {
-    const dist = levenshtein(clean, normalizeName(key));
-    // Allow at most 40% of the longer string's length as edit distance
-    const threshold = Math.ceil(Math.max(clean.length, key.length) * 0.40);
-    if (dist < bestDist && dist <= threshold) {
-      bestDist = dist;
-      bestKey = key;
-    }
-  }
-
-  if (bestKey) {
-    console.log(`  ⚠️  Fuzzy match: "${name}" → "${bestKey}" (${teamMap[bestKey]}, dist=${bestDist})`);
-    return teamMap[bestKey];
-  }
-
-  return null;
-}
-
-async function autoSync() {
+async function syncInto(directory) {
+  const dataFile = path.join(directory, 'data', 'sportoto_data.js');
+  const matchesFile = path.join(directory, 'matches.txt');
+  const indexHtmlFile = path.join(directory, 'index.html');
+  const tuneResultFile = path.join(directory, 'data', 'tuning_report.json');
+  const previousFile = path.join(directory, 'data', 'live.json');
+  const previous = fs.existsSync(previousFile) ? JSON.parse(fs.readFileSync(previousFile, 'utf8')) : null;
+  const resolveKickoffs = require('./verified_kickoffs').kickoffResolver();
   console.log("==================================================");
   console.log("🤖 100% AUTOMATIC SPOR TOTO FIXTURES & STATS SYNC");
   console.log("==================================================");
@@ -101,10 +21,12 @@ async function autoSync() {
   try {
     // 1. Fetch latest published game round directly from official Spor Toto REST API
     console.log("1. Fetching latest bulletin from official Spor Toto API...");
-    const httpsAgent = new https.Agent({ rejectUnauthorized: false });
+    const httpsAgent = new https.Agent();
 
     // Try current season
-    const years = ['2026/2027', '2025/2026', '2024/2025'];
+    const now = new Date();
+    const seasonStart = now.getUTCFullYear() - (now.getUTCMonth() < 6 ? 1 : 0);
+    const years = [0, 1, 2].map(offset => `${seasonStart-offset}/${seasonStart-offset+1}`);
     let latestRound = null;
 
     for (const yr of years) {
@@ -129,14 +51,14 @@ async function autoSync() {
     const matchesRes = await axios.get(`https://webapi.sportoto.gov.tr/api/GameMatch/GetGameMatches/?gameRoundId=${latestRound.id}`, { httpsAgent, timeout: 8000 });
     const matchesList = matchesRes.data.object || [];
 
-    if (matchesList.length === 0) {
-      throw new Error("No matches returned for the active round.");
+    if (matchesList.length !== 15) {
+      throw new Error("Expected exactly 15 matches for the active round.");
     }
 
     console.log(`✅ Found ${matchesList.length} matches.`);
 
     const matchLines = [];
-    const fixtures = [];
+    let fixtures = [];
     let idCounter = 1;
 
     for (const item of matchesList) {
@@ -144,10 +66,9 @@ async function autoSync() {
       const awayRaw = item.match.awayTeam.name;
       matchLines.push(`${homeRaw} - ${awayRaw}`);
 
-      const homeCode = getCode(homeRaw) || "UNKNOWN";
-      const awayCode = getCode(awayRaw) || "UNKNOWN";
-      fixtures.push({ id: idCounter++, home: homeCode, away: awayCode });
+      fixtures.push(normalizeFixture(item, latestRound.id, idCounter++));
     }
+    fixtures = await resolveKickoffs(fixtures);
 
     // 3. Save matches.txt automatically
     fs.writeFileSync(matchesFile, matchLines.join('\n') + '\n', 'utf8');
@@ -156,7 +77,7 @@ async function autoSync() {
     // 4. Update FIXTURES_DATA in data/sportoto_data.js
     let dataContent = fs.readFileSync(dataFile, 'utf8');
     const newFixturesStr = `const FIXTURES_DATA = [\n` + 
-      fixtures.map(f => `  { id: ${f.id}, home: "${f.home}", away: "${f.away}" }`).join(',\n') +
+      fixtures.map(f => `  ${JSON.stringify(f)}`).join(',\n') +
       `\n];`;
 
     dataContent = dataContent.replace(/const FIXTURES_DATA = \[[\s\S]*?\];/, newFixturesStr);
@@ -175,33 +96,46 @@ async function autoSync() {
 
     // 6. Automatically run auto_stats_update.js to refresh live ESPN ratings
     console.log("3. Triggering live stats update from ESPN across all 6 leagues...");
-    require('./auto_stats_update.js');
+    const sources = await require('./auto_stats_update.js').updateStats(path.join(directory, 'data'));
+    sources.push({source:'sportoto',status:'ok',fetchedAt:new Date().toISOString()});
+    if(fixtures.some(f=>f.kickoffSource?.provider==='uefa'))sources.push({source:'uefa:nations-kickoffs',status:'ok',fetchedAt:new Date().toISOString(),matched:fixtures.filter(f=>f.timezoneStatus==='independently-matched-utc').length});
 
     // 7. Pull live odds and update impliedProb in sportoto_data.js
     console.log("4. Fetching live odds from open API...");
-    await updateLiveOdds();
+    sources.push(await updateLiveOdds(dataFile));
 
     // 8. Auto-backtest & tune model hyperparameters
     console.log("5. Running model backtest and hyperparameter tuning...");
-    await runAutoTune();
+    await runAutoTune(dataFile, tuneResultFile);
+    const published = require('./publish_live_data').publishLiveData({id: latestRound.id, name: latestRound.name, closesAt: latestRound.roundCloseDate}, new Date().toISOString(), path.join(directory, 'data'));
+    const records = require('./evaluation_records');
+    const evaluationDirectory = path.join(directory, 'data', 'evaluation');
+    console.log('Evaluation records:', records.recordEvaluation(published, evaluationDirectory));
+    await records.refreshRecordedResults(async roundId => {
+      const response = await axios.get('https://webapi.sportoto.gov.tr/api/GameMatch/GetGameMatches/?gameRoundId=' + encodeURIComponent(roundId), {httpsAgent, timeout:8000});
+      return response.data.object;
+    }, latestRound.id, evaluationDirectory, new Date().toISOString(), resolveKickoffs);
+    fs.writeFileSync(path.join(evaluationDirectory,'report.json'), JSON.stringify(require('./evaluate_records').evaluateRecords(evaluationDirectory),null,2)+'\n');
+    fs.writeFileSync(path.join(directory,'data','health.json'),JSON.stringify(require('./health_report').healthReport(published,previous,sources),null,2)+'\n');
 
   } catch (err) {
     console.error("❌ Auto Sync failed:", err.message);
+    throw err;
   }
 }
 
 // ── Live Odds Update ─────────────────────────────────────────────────────────
 // Uses The Odds API (free tier) or falls back silently if unavailable.
 // Set ODDS_API_KEY env variable to enable. Without it, this step is skipped.
-async function updateLiveOdds() {
+async function updateLiveOdds(dataFile) {
   const apiKey = process.env.ODDS_API_KEY;
   if (!apiKey) {
     console.log("  ℹ️  ODDS_API_KEY not set — skipping live odds update.");
-    return;
+    return {source:'odds',status:'disabled',reason:'ODDS_API_KEY absent'};
   }
 
   try {
-    const httpsAgent = new (require('https').Agent)({ rejectUnauthorized: false });
+    const httpsAgent = new https.Agent();
     // Turkish Süper Lig odds
     const url = `https://api.the-odds-api.com/v4/sports/soccer_turkey_super_league/odds/?apiKey=${apiKey}&regions=eu&markets=h2h&oddsFormat=decimal`;
     const res = await axios.get(url, { httpsAgent, timeout: 8000 });
@@ -239,7 +173,7 @@ async function updateLiveOdds() {
       const impliedHome = (pHome / total).toFixed(4);
 
       // Patch home team implied prob in sportoto_data.js
-      const teamRegex = new RegExp(`(code:\\s*"${homeCode}"[\\s\\S]*?impliedProb:\\s*)([\\d.]+)`, 'g');
+      const teamRegex = new RegExp(`("?code"?:\\s*"${homeCode}"[\\s\\S]*?"?impliedProb"?:\\s*)([\\d.]+)`, 'g');
       dataContent = dataContent.replace(teamRegex, (match, p1) => `${p1}${impliedHome}`);
       updatedCount++;
     }
@@ -250,15 +184,18 @@ async function updateLiveOdds() {
     } else {
       console.log('  ℹ️  No matching teams found in live odds response.');
     }
+    return {source:'odds',status:'ok',updatedTeams:updatedCount,fetchedAt:new Date().toISOString()};
   } catch (err) {
-    console.log(`  ⚠️  Live odds fetch failed (non-fatal): ${err.message}`);
+    console.log('Optional live odds fetch failed; existing odds retained.');
+    return {source:'odds',status:'failed',reason:'request-or-payload-failure'};
   }
 }
 
 // ── Auto Backtest & Tune ──────────────────────────────────────────────────────
-async function runAutoTune() {
+async function runAutoTune(dataFile, tuneResultFile) {
   try {
-    const { TEAMS_DATA } = require('./data/sportoto_data.js');
+    delete require.cache[require.resolve(dataFile)];
+    const { TEAMS_DATA } = require(dataFile);
     const { FeatureEngineering } = require('./ml/feature_engineering.js');
     const { PredictionEngine }   = require('./ml/prediction_engine.js');
     const { ModelTuner }         = require('./ml/model_tuner.js');
@@ -274,8 +211,9 @@ async function runAutoTune() {
     console.log(`  Running grid-search on ${matches.length} historical matches...`);
     const tuneResult = ModelTuner.tune(matches, TEAMS_DATA, FeatureEngineering, PredictionEngine);
 
-    // Persist best params to data/tuned_params.json
+    // Persist research diagnostics separately; do not promote candidates.
     const output = {
+      validationStatus: "unvalidated-diagnostic-only",
       timestamp: new Date().toISOString(),
       evaluatedMatches: tuneResult.baseline?.evaluatedCount || 0,
       gridIterations: tuneResult.iterations,
@@ -297,31 +235,22 @@ async function runAutoTune() {
     console.log(`  ✅ Tuning complete. Accuracy: ${tuneResult.baseline?.overallAccuracy}% → ${tuneResult.optimized?.overallAccuracy}% (+${tuneResult.improvementPct}pp)`);
     console.log(`  📐 Best params: ${JSON.stringify(tuneResult.bestParams)}`);
 
-    // Write best params into prediction_engine.js as a comment block (for transparency)
-    const engineFile = path.join(__dirname, 'ml', 'prediction_engine.js');
-    let engineContent = fs.readFileSync(engineFile, 'utf8');
-    const paramsBlock = `  // AUTO-TUNED PARAMS (last updated: ${new Date().toISOString().slice(0,10)})
-  // sigmoidScale: ${tuneResult.bestParams.sigmoidScale}, drawBase: ${tuneResult.bestParams.drawBase}
-  // drawGapThreshold: ${tuneResult.bestParams.drawGapThreshold}, homeAdvantageBoost: ${tuneResult.bestParams.homeAdvantageBoost}`;
-    engineContent = engineContent.replace(
-      /\/\/ AUTO-TUNED PARAMS[^\n]*\n[^\n]*\n[^\n]*\n[^\n]*/,
-      paramsBlock
-    );
-    if (!engineContent.includes('AUTO-TUNED PARAMS')) {
-      engineContent = engineContent.replace(
-        '  // =============== RANDOM SEED FOR REPRODUCIBILITY ===============',
-        paramsBlock + '\n\n  // =============== RANDOM SEED FOR REPRODUCIBILITY ==============='
-      );
-    }
-    fs.writeFileSync(engineFile, engineContent);
-
   } catch (err) {
     console.log(`  ⚠️  Auto-tune failed (non-fatal): ${err.message}`);
   }
 }
 
-if (require.main === module) {
-  autoSync();
+async function autoSync() {
+  try {
+    const result=await require('./sync_transaction').syncTransaction(__dirname, syncInto);
+    const failure=path.join(__dirname,'data','sync_failure.json');
+    if(fs.existsSync(failure))fs.unlinkSync(failure);
+    return result;
+  } catch(error) {
+    fs.writeFileSync(path.join(__dirname,'data','sync_failure.json'),JSON.stringify({failedAt:new Date().toISOString(),status:'failed',message:'Sync failed; inspect runner logs. Last committed snapshot retained unless recovery journal is present.'},null,2)+'\n');
+    throw error;
+  }
 }
+if (require.main === module) autoSync().catch(() => {process.exitCode = 1;});
 
-module.exports = { autoSync };
+module.exports = { autoSync, syncInto, getCode };

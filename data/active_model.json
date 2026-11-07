@@ -1,0 +1,11 @@
+{
+  "version": "baseline-v1",
+  "validationStatus": "unvalidated",
+  "contextPolicy": "disabled-pending-temporal-validation",
+  "params": {
+    "sigmoidScale": 4,
+    "drawBase": 0.28,
+    "drawGapThreshold": 4,
+    "homeAdvantageBoost": 0.07
+  }
+}

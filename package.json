@@ -1,20 +1,28 @@
 {
-  "name": "world-cup",
+  "name": "sportoto-predictor",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Weekly Sportoto predictions, system coupons and historical model tuning",
   "scripts": {
     "sync": "node auto_sync.js",
     "schedule": "node setup_scheduler.js",
     "tune": "node -e \"const {TEAMS_DATA}=require('./data/sportoto_data.js');const {FeatureEngineering}=require('./ml/feature_engineering.js');const {PredictionEngine}=require('./ml/prediction_engine.js');const {ModelTuner}=require('./ml/model_tuner.js');const hist=require('./data/historical_matches.json');const r=ModelTuner.tune(hist.matches,TEAMS_DATA,FeatureEngineering,PredictionEngine);console.log(JSON.stringify(r,null,2));\"",
-    "test": "node test_pipeline.js"
+    "test": "node test_pipeline.js && node test_reliability.js && node test_live.js && node test_records.js && node test_transaction.js && node test_sync.js && node test_chronological.js && node test_operations.js && node test_national.js",
+    "test:browser": "node test_browser.js",
+    "research": "node chronological_evaluation.js",
+    "research:final": "node chronological_evaluation.js --final",
+    "release:check": "node release_gate.js",
+    "history": "node fetch_historical_data.js",
+    "build": "node build_site.js",
+    "evaluate": "node evaluate_records.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "axios": "^1.20.0",
-    "cheerio": "^1.2.0"
+    "axios": "^1.20.0"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.65.0"
   }
 }

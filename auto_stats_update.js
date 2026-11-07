@@ -1,110 +1,76 @@
-const axios = require('axios');
+﻿const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
-
+const { getCode } = require('./team_mapping');
 const dataFile = path.join(__dirname, 'data', 'sportoto_data.js');
+const leagues = ['tur.1', 'eng.1', 'esp.1', 'ger.1', 'ita.1', 'fra.1'];
+const estimatedFields = ['impliedProb', 'squadDepth', 'historicalPedigree', 'tacticalStyle', 'managerExpScore', 'starDependency', 'homeAdvantage', 'altitudeAdaptation', 'groupDifficulty', 'injurySeverity'];
 
-// Map ESPN team names to our internal codes
-const teamMap = {
-  // Turkish
-  'galatasaray': 'GAL', 'fenerbahce': 'FEN', 'besiktas': 'BJK',
-  'trabzonspor': 'TRA', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
-  'antalyaspor': 'ANT', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
-  'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON', 
-  'ankaragucu': 'ANK', 'hatayspor': 'HAT', 'fatih karagumruk': 'FKG', 
-  'gaziantep': 'GAZ', 'samsunspor': 'SAM', 'rizespor': 'RIZ', 
-  'pendikspor': 'PEN', 'istanbulspor': 'IST', 'goztepe': 'GOZ',
-  'amed sfk': 'AME', 'genclerbirligi': 'GEN', 'erzurum': 'ERZ',
-  'kocaelispor': 'KOC', 'eyupspor': 'EYU', 'corum fk': 'COR',
-  
-  // European
-  'real madrid': 'RMA', 'barcelona': 'BAR', 'villarreal': 'VIL',
-  'manchester city': 'MCI', 'arsenal': 'ARS', 'liverpool': 'LIV', 'manchester united': 'MUN', 'tottenham': 'TOT',
-  'bayern munich': 'BAY', 'rb leipzig': 'RBL', 'eintracht frankfurt': 'EIN', 'augsburg': 'AUG',
-  'inter milan': 'INT', 'ac milan': 'MIL', 'juventus': 'JUV', 'roma': 'ROM', 'como': 'COM',
-  'everton': 'EVE', 'chelsea': 'CHE', 'brentford': 'BRE',
-  'real betis': 'BET', 'sevilla': 'SEV', 'atalanta': 'ATA', 'lazio': 'LAZ',
-  'borussia dortmund': 'BVB', 'dortmund': 'BVB',
-  'monaco': 'ASM', 'as monaco': 'ASM',
-  'lille': 'LIL',
-  'paris saint-germain': 'PSG', 'paris sg': 'PSG', 'psg': 'PSG',
-  'lyon': 'LYO', 'olympique lyon': 'LYO',
-  'napoli': 'NAP'
-};
-
-function normalizeName(name) {
-  return name
-    .trim()
-    .toLowerCase()
-    .replace(/ı/g, 'i')
-    .replace(/İ/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/ç/g, 'c')
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+// Existing dataset medians are model priors, never claimed as measured team facts.
+function median(values) {
+  const sorted = values.filter(Number.isFinite).sort((a, b) => a - b);
+  if (!sorted.length) throw new Error('Cannot estimate an input without a baseline');
+  const mid = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
 }
-
-function getCode(name) {
-  const clean = normalizeName(name);
-  for (const [key, code] of Object.entries(teamMap)) {
-    if (clean.includes(key)) return code;
+function baseline(teams) {
+  const result = {};
+  for (const field of estimatedFields) {
+    result[field] = field === 'tacticalStyle'
+      ? Object.fromEntries(['offensive', 'defensive', 'possession', 'transition'].map(k => [k, median(teams.map(t => t.tacticalStyle[k]))]))
+      : median(teams.map(t => t[field]));
   }
-  return null; 
+  return result;
 }
-
-async function updateStats() {
-  console.log("Fetching live team stats from ESPN API for multiple leagues...");
-
-  const leagues = ['tur.1', 'eng.1', 'esp.1', 'ger.1', 'ita.1', 'fra.1'];
-  
-  try {
-    let dataContent = fs.readFileSync(dataFile, 'utf8');
-
-    for (const league of leagues) {
-      const { data } = await axios.get(`https://site.web.api.espn.com/apis/v2/sports/soccer/${league}/standings`);
-      const standings = data.children[0].standings.entries;
-      
-      for (const s of standings) {
-        const teamName = s.team.displayName;
-        const code = getCode(teamName);
-        
-        if (!code) continue; // Skip teams not mapped or not needed for Sportoto
-
-        const stats = s.stats;
-        const getStat = (name) => stats.find(st => st.name === name)?.value || 0;
-        
-        const points = getStat('points');
-        const gamesPlayed = getStat('gamesPlayed') || 1;
-        const goalsFor = getStat('pointsFor');
-        const goalsAgainst = getStat('pointsAgainst');
-        const gd = getStat('pointDifferential');
-        
-        // Calculate dynamic ratings based on live data
-        // We add a slight boost for Top 5 European leagues to represent their higher difficulty coefficient
-        const leagueBoost = league === 'tur.1' ? 0 : 200; 
-        const newElo = 1350 + (points * 12) + (gd * 5) + leagueBoost; 
-        const gfPerGame = (goalsFor / gamesPlayed).toFixed(2);
-        const gaPerGame = (goalsAgainst / gamesPlayed).toFixed(2);
-
-        const teamRegex = new RegExp(`(code:\\s*"${code}"[\\s\\S]*?eloRating:\\s*)\\d+(,[\\s\\S]*?recentForm:\\s*\\{)[^}]+(\\})`, "g");
-        
-        dataContent = dataContent.replace(teamRegex, (match, p1, p2, p3) => {
-          return `${p1}${newElo}${p2} goalsFor: ${gfPerGame}, goalsAgainst: ${gaPerGame} ${p3}`;
-        });
-
-        console.log(`Updated ${teamName} (${code}) -> Elo: ${newElo}, GF/G: ${gfPerGame}, GA/G: ${gaPerGame}`);
-      }
+function applyStandings(teams, payload, league, fetchedAt) {
+  const entries = payload.children?.flatMap(c => (c.standings?.entries || []).map(entry=>({...entry,group:c.name}))) || [];
+  if (!entries.length) throw new Error(`No standings returned for ${league}`);
+  const defaults = baseline(teams.filter(t => !t.dataQuality?.estimatedFields?.length));
+  let count = 0;
+  for (const entry of entries) {
+    const code = getCode(entry.team.displayName);
+    if (!code) continue;
+    if(league==='uefa.nations'&&(!entry.team.isNational||!code.startsWith('NAT_')))continue;
+    if(league!=='uefa.nations'&&code.startsWith('NAT_'))continue;
+    const stat = name => entry.stats.find(s => s.name === name)?.value;
+    const [games, points, gf, ga, gd] = ['gamesPlayed', 'points', 'pointsFor', 'pointsAgainst', 'pointDifferential'].map(stat);
+    if (![games, points, gf, ga, gd].every(Number.isFinite) || games <= 0) continue;
+    let team = teams.find(t => t.code === code);
+    if (!team) {
+      team = {name: entry.team.displayName, code, ...structuredClone(defaults), dataQuality: {estimatedFields, estimationMethod: 'Median of existing team inputs; not measured team statistics'}};
+      teams.push(team);
     }
-
-    fs.writeFileSync(dataFile, dataContent);
-    console.log("Successfully updated TEAMS_DATA in sportoto_data.js with live stats for all leagues!");
-
-  } catch (err) {
-    console.error("Failed to fetch or update stats:", err.message);
+    team.eloRating = 1350 + points * 12 + gd * 5 + (league === 'tur.1' ? 0 : 200);
+    team.recentForm = {goalsFor: Number((gf / games).toFixed(2)), goalsAgainst: Number((ga / games).toFixed(2))};
+    team.statsSource = {url: `https://site.web.api.espn.com/apis/v2/sports/soccer/${league}/standings`, season: payload.season?.displayName || null, fetchedAt, gamesPlayed: games, points, goalsFor: gf, goalsAgainst: ga, goalDifference: gd, ratingMethod: '1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating'};
+    if(league==='uefa.nations') {
+      team.teamType='national';
+      team.statsSource.group=entry.group;
+      team.statsSource.providerTeamId=String(entry.team.id);
+      team.dataQuality={...team.dataQuality,estimatedFields:[...new Set([...(team.dataQuality?.estimatedFields||[]),'eloRating'])],estimationMethod:'Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated.'};
+    }
+    count++;
   }
+  return count;
 }
-
-updateStats();
+async function updateStats(directory = path.join(__dirname, 'data')) {
+  const dataFile = path.join(directory, 'sportoto_data.js');
+  delete require.cache[require.resolve(dataFile)];
+  const {TEAMS_DATA, FIXTURES_DATA} = require(dataFile);
+  const requestedLeagues=[...leagues];
+  if(FIXTURES_DATA.some(f=>f.home.startsWith('NAT_')||f.away.startsWith('NAT_')))requestedLeagues.push('uefa.nations');
+  // Fetch everything before writing, so a failed league cannot leave a partial refresh.
+  const responses = await Promise.all(requestedLeagues.map(league => axios.get(`https://site.web.api.espn.com/apis/v2/sports/soccer/${league}/standings`, {timeout: 15000}).then(r => ({league, data: r.data}))));
+  const nationalResponse=responses.find(r=>r.league==='uefa.nations');
+  if(nationalResponse) {
+    const dates=FIXTURES_DATA.filter(f=>f.home.startsWith('NAT_')).map(f=>f.kickoffRaw?.slice(0,10)).filter(Boolean);
+    const expected=new Set(dates.map(date=>{const year=Number(date.slice(0,4))-(Number(date.slice(5,7))<7?1:0);return year-year%2;}));
+    if(expected.size!==1||!expected.has(nationalResponse.data.season?.year))throw new Error('National standings season does not match fixtures');
+  }
+  const fetchedAt = new Date().toISOString();
+  for (const {league, data} of responses) console.log(`${league}: updated ${applyStandings(TEAMS_DATA, data, league, fetchedAt)} teams`);
+  fs.writeFileSync(dataFile, `const TEAMS_DATA = ${JSON.stringify(TEAMS_DATA, null, 2)};\n\nconst FIXTURES_DATA = ${JSON.stringify(FIXTURES_DATA, null, 2)};\n\nif (typeof module !== 'undefined' && module.exports) { module.exports = { TEAMS_DATA, FIXTURES_DATA }; }\n`);
+  return responses.map(({league})=>({source:'espn:'+league,status:'ok',fetchedAt}));
+}
+if (require.main === module) updateStats().catch(error => { console.error(error.message); process.exitCode = 1; });
+module.exports = { updateStats, applyStandings };

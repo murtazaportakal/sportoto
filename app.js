@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const progressBar = document.getElementById('loading-progress-bar');
       
       progressBar.style.width = '30%';
-      loadingText.textContent = "Fetching Live Fixtures...";
+      loadingText.textContent = "Loading synced fixtures...";
       await this.fetchLiveFixtures();
 
       progressBar.style.width = '60%';
-      loadingText.textContent = "Fetching Live Team Stats...";
-      await this.fetchLiveStats();
+      loadingText.textContent = "Loading synced team stats...";
+      // Team statistics are refreshed by the scheduled sync.
 
       progressBar.style.width = '90%';
       loadingText.textContent = "Calculating ML Predictions...";
@@ -51,198 +51,58 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     async fetchLiveFixtures() {
-      const apiKey = "JVpXsaqNmtR2s2QamdkI7AMSKQ9IdvKBZ7XarlDqJuzWhCpJBAN4zLFNtnNB";
-      const apiUrl = `https://www.nosyapi.com/apiv2/service/bettable-matches/sporToto?apiKey=${apiKey}`;
-      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
-      
-      try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 2000);
-        const response = await fetch(proxyUrl, { signal: controller.signal });
-        clearTimeout(timeoutId);
-        if (response.ok) {
-          const data = await response.json();
-          const matches = data.data || data;
-          if (matches && matches.length > 0) {
-            this.mapApiDataToFixtures(matches);
-            return;
-          }
-        }
-      } catch (err) {
-        console.warn("Live API unavailable. Falling back to local updated dataset.", err.message);
-      }
-      // Fall back to local fixtures
+      this.activeTeams = TEAMS_DATA;
       this.activeFixtures = FIXTURES_DATA;
+      await this.refreshLiveData(false);
+      this.refreshTimer = setInterval(() => {
+        if (!document.hidden) this.refreshLiveData();
+      }, 5 * 60 * 1000);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) this.refreshLiveData();
+      });
     },
 
-    mapApiDataToFixtures(matches) {
-      const teamMap = {
-        // Turkish Super Lig & 1. Lig
-        'galatasaray': 'GAL', 'fenerbahce': 'FEN', 'besiktas': 'BJK',
-        'trabzonspor': 'TRA', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
-        'antalyaspor': 'ANT', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
-        'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON',
-        'ankaragucu': 'ANK', 'hatayspor': 'HAT', 'karagumruk': 'FKG',
-        'gaziantep': 'GAZ', 'samsunspor': 'SAM', 'rizespor': 'RIZ',
-        'pendikspor': 'PEN', 'istanbulspor': 'IST', 'goztepe': 'GOZ',
-        'amed': 'AME', 'genclerbirligi': 'GEN', 'erzurum': 'ERZ',
-        'kocaelispor': 'KOC', 'eyupspor': 'EYU', 'corum': 'COR',
-
-        // European
-        'everton': 'EVE', 'chelsea': 'CHE', 'brentford': 'BRE',
-        'liverpool': 'LIV', 'manchester city': 'MCI', 'man city': 'MCI',
-        'arsenal': 'ARS', 'manchester united': 'MUN', 'tottenham': 'TOT',
-        'real betis': 'BET', 'betis': 'BET', 'barcelona': 'BAR',
-        'real madrid': 'RMA', 'sevilla': 'SEV', 'villarreal': 'VIL',
-        'milan': 'MIL', 'atalanta': 'ATA', 'juventus': 'JUV',
-        'lazio': 'LAZ', 'inter': 'INT', 'roma': 'ROM', 'como': 'COM',
-        'bayern': 'BAY', 'leipzig': 'RBL', 'frankfurt': 'EIN', 'augsburg': 'AUG',
-        'dortmund': 'BVB', 'borussia dortmund': 'BVB',
-        'monaco': 'ASM', 'as monaco': 'ASM',
-        'lille': 'LIL',
-        'paris': 'PSG', 'psg': 'PSG',
-        'lyon': 'LYO', 'olympique lyon': 'LYO',
-        'napoli': 'NAP'
-      };
-
-      function normalizeName(name) {
-        return name
-          .trim()
-          .toLowerCase()
-          .replace(/ı/g, 'i')
-          .replace(/İ/g, 'i')
-          .replace(/ğ/g, 'g')
-          .replace(/ü/g, 'u')
-          .replace(/ş/g, 's')
-          .replace(/ö/g, 'o')
-          .replace(/ç/g, 'c')
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "");
-      }
-
-      function getCode(name) {
-        const clean = normalizeName(name);
-        for (const [key, code] of Object.entries(teamMap)) {
-          if (clean.includes(key)) return code;
-        }
-        return "UNKNOWN"; 
-      }
-
-      const parsedFixtures = [];
-      let idCounter = 1;
-      
-      for (const match of matches) {
-         const homeRaw = match.homeTeam || match.home || match.Team1 || "";
-         const awayRaw = match.awayTeam || match.away || match.Team2 || "";
-         if (!homeRaw || !awayRaw) continue;
-         parsedFixtures.push({ id: idCounter++, home: getCode(homeRaw), away: getCode(awayRaw) });
-      }
-      
-      this.activeFixtures = parsedFixtures.slice(0, 15);
-      if (this.activeFixtures.length === 0) this.activeFixtures = FIXTURES_DATA;
-    },
-
-    async fetchLiveStats() {
-      console.log("Fetching live team stats from ESPN API...");
-      const leagues = ['tur.1', 'eng.1', 'esp.1', 'ger.1', 'ita.1', 'fra.1'];
-      
-      const espnTeamMap = {
-        // Turkish
-        'galatasaray': 'GAL', 'fenerbahce': 'FEN', 'besiktas': 'BJK',
-        'trabzonspor': 'TRA', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
-        'antalyaspor': 'ANT', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
-        'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON', 
-        'ankaragucu': 'ANK', 'hatayspor': 'HAT', 'fatih karagumruk': 'FKG', 
-        'gaziantep': 'GAZ', 'samsunspor': 'SAM', 'rizespor': 'RIZ', 
-        'pendikspor': 'PEN', 'istanbulspor': 'IST', 'goztepe': 'GOZ',
-        'amed sfk': 'AME', 'genclerbirligi': 'GEN', 'erzurum': 'ERZ',
-        'kocaelispor': 'KOC', 'eyupspor': 'EYU', 'corum fk': 'COR',
-        
-        // European
-        'real madrid': 'RMA', 'barcelona': 'BAR', 'villarreal': 'VIL',
-        'manchester city': 'MCI', 'arsenal': 'ARS', 'liverpool': 'LIV', 'manchester united': 'MUN', 'tottenham': 'TOT',
-        'bayern munich': 'BAY', 'rb leipzig': 'RBL', 'eintracht frankfurt': 'EIN', 'augsburg': 'AUG',
-        'inter milan': 'INT', 'ac milan': 'MIL', 'juventus': 'JUV', 'roma': 'ROM', 'como': 'COM',
-        'everton': 'EVE', 'chelsea': 'CHE', 'brentford': 'BRE',
-        'real betis': 'BET', 'sevilla': 'SEV', 'atalanta': 'ATA', 'lazio': 'LAZ',
-        'borussia dortmund': 'BVB', 'dortmund': 'BVB',
-        'monaco': 'ASM', 'as monaco': 'ASM',
-        'lille': 'LIL',
-        'paris saint-germain': 'PSG', 'paris sg': 'PSG', 'psg': 'PSG',
-        'lyon': 'LYO', 'olympique lyon': 'LYO',
-        'napoli': 'NAP'
-      };
-
-      function normalizeName(name) {
-        return name
-          .trim()
-          .toLowerCase()
-          .replace(/ı/g, 'i')
-          .replace(/İ/g, 'i')
-          .replace(/ğ/g, 'g')
-          .replace(/ü/g, 'u')
-          .replace(/ş/g, 's')
-          .replace(/ö/g, 'o')
-          .replace(/ç/g, 'c')
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "");
-      }
-
-      function getCode(name) {
-        const clean = normalizeName(name);
-        for (const [key, code] of Object.entries(espnTeamMap)) {
-          if (clean.includes(key)) return code;
-        }
-        return null; 
-      }
-
+    async refreshLiveData(render = true) {
+      if (this.refreshing) return;
+      this.refreshing = true;
       try {
-        for (const league of leagues) {
-          const response = await fetch(`https://site.web.api.espn.com/apis/v2/sports/soccer/${league}/standings`);
-          if (!response.ok) continue;
-          const data = await response.json();
-          const standings = data.children[0].standings.entries;
-          
-          for (const s of standings) {
-            const teamName = s.team.displayName;
-            const code = getCode(teamName);
-            if (!code) continue;
-
-            const stats = s.stats;
-            const getStat = (name) => stats.find(st => st.name === name)?.value || 0;
-            
-            const points = getStat('points');
-            const gamesPlayed = getStat('gamesPlayed') || 1;
-            const goalsFor = getStat('pointsFor');
-            const goalsAgainst = getStat('pointsAgainst');
-            const gd = getStat('pointDifferential');
-            
-            const leagueBoost = league === 'tur.1' ? 0 : 200; 
-            const newElo = 1350 + (points * 12) + (gd * 5) + leagueBoost; 
-            const gfPerGame = (goalsFor / gamesPlayed).toFixed(2);
-            const gaPerGame = (goalsAgainst / gamesPlayed).toFixed(2);
-
-            // Dynamically update TEAMS_DATA in memory before predictions
-            const teamIndex = TEAMS_DATA.findIndex(t => t.code === code);
-            if (teamIndex !== -1) {
-              TEAMS_DATA[teamIndex].eloRating = newElo;
-              TEAMS_DATA[teamIndex].recentForm.goalsFor = parseFloat(gfPerGame);
-              TEAMS_DATA[teamIndex].recentForm.goalsAgainst = parseFloat(gaPerGame);
-            }
-          }
-        }
-        console.log("Dynamically updated TEAMS_DATA from ESPN API");
-      } catch (err) {
-        console.warn("Could not fetch live stats.", err);
+        const response = await fetch('data/live.json?t=' + Date.now(), {cache: 'no-store', signal: AbortSignal.timeout(10000)});
+        if (!response.ok) throw new Error('Data update unavailable');
+        const data = LiveData.validate(await response.json());
+        if (this.updatedAt && Date.parse(data.updatedAt) < Date.parse(this.updatedAt)) throw new Error('Older update ignored');
+        // Commit one validated fixture/statistics/model snapshot together.
+        this.activeTeams = data.teams;
+        this.activeFixtures = data.fixtures;
+        this.currentParams = {...data.model.params};
+        this.modelVersion = data.model.version;
+        this.updatedAt = data.updatedAt;
+        this.refreshError = false;
+        const badge = document.querySelector('#predictions .section-tag');
+        if (badge) badge.textContent = data.round.name;
+        if (render) this.runPredictions();
+      } catch (error) {
+        this.refreshError = true;
+        console.warn('Keeping last available dataset:', error.message);
+      } finally {
+        this.refreshing = false;
+        this.renderFreshness();
       }
     },
 
-    currentParams: {
-      sigmoidScale: 3.5,
-      drawBase: 0.30,
-      drawGapThreshold: 4.0,
-      homeAdvantageBoost: 0.07
+    renderFreshness() {
+      const status = document.getElementById('data-freshness');
+      if (!status) return;
+      if (!this.updatedAt) {
+        status.textContent = 'Update unavailable. Showing bundled data; freshness unverified.';
+        return;
+      }
+      const stale = LiveData.freshness(this.updatedAt) === 'stale';
+      status.textContent = (this.refreshError ? 'Refresh failed; showing last successful update. ' : '') +
+        (stale ? 'Data may be stale. ' : '') + 'Last synced: ' + new Date(this.updatedAt).toLocaleString() +
+        '. Automatically checks every 5 minutes. Source statistics may be older.';
     },
+
+    currentParams: { ...PredictionEngine.params },
 
     couponConfig: {
       doubleChanceCount: 4,
@@ -250,76 +110,33 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     runPredictions() {
+      const teams = this.activeTeams || TEAMS_DATA;
+      const modelStatus = document.getElementById('model-status');
+      if(modelStatus)modelStatus.textContent = 'Model: ' + (this.modelVersion || 'bundled baseline (version unverified)') + '. Predictive validation pending.';
       const heroTeamsEl = document.getElementById('hero-teams');
-      if (heroTeamsEl) heroTeamsEl.textContent = TEAMS_DATA.length;
+      if (heroTeamsEl) heroTeamsEl.textContent = teams.length;
 
       // 1. Build Feature Vectors
-      this.featureVectors = FeatureEngineering.buildAllFeatureVectors(TEAMS_DATA, []);
+      this.featureVectors = FeatureEngineering.buildAllFeatureVectors(teams, []);
 
-      // 2. Build H2H map and split stats from historical data (if available in browser)
-      let h2hMap = null;
-      let splitStats = null;
-      if (typeof H2HEngine !== 'undefined' && typeof HISTORICAL_DATA !== 'undefined') {
-        h2hMap = H2HEngine.buildH2HMap(HISTORICAL_DATA.matches || []);
-      }
-      if (typeof SplitStatsEngine !== 'undefined' && typeof HISTORICAL_DATA !== 'undefined') {
-        splitStats = SplitStatsEngine.buildSplitStats(HISTORICAL_DATA.matches || []);
-      }
+      // Historical context is disabled until time-aware evaluation validates it.
+      const h2hMap = null;
+      const splitStats = null;
 
       // 3. Calculate match probabilities using current tuned parameters
       const fixturesToUse = this.activeFixtures || FIXTURES_DATA;
       
       this.predictions = fixturesToUse.map(fixture => {
-        const homeTeam = TEAMS_DATA.find(t => t.code === fixture.home);
-        const awayTeam = TEAMS_DATA.find(t => t.code === fixture.away);
+        const homeTeam = teams.find(t => t.code === fixture.home);
+        const awayTeam = teams.find(t => t.code === fixture.away);
         
-        if (!homeTeam || !awayTeam) return null;
+        if (!homeTeam || !awayTeam) return { id: fixture.id, unavailable: true, homeTeam: fixture.homeName || fixture.home, awayTeam: fixture.awayName || fixture.away };
         
         const homeFeatures = this.featureVectors[homeTeam.code];
         const awayFeatures = this.featureVectors[awayTeam.code];
 
-        // Base differential
-        let differential = FeatureEngineering.calculateMatchDifferential(homeFeatures, awayFeatures);
-
-        // ─ H2H modifier ──────────────────────────────────────────────
-        if (h2hMap && typeof H2HEngine !== 'undefined') {
-          differential += H2HEngine.calculateH2HModifier(h2hMap, homeTeam.code, awayTeam.code);
-        }
-
-        // ─ Split stats: streak momentum + rest/fatigue + home/away win rates ──
-        if (splitStats && typeof SplitStatsEngine !== 'undefined') {
-          const homeCtx = SplitStatsEngine.getContextFeatures(splitStats, homeTeam.code, 'home');
-          const awayCtx = SplitStatsEngine.getContextFeatures(splitStats, awayTeam.code, 'away');
-
-          differential += SplitStatsEngine.streakModifier(homeCtx.streakScore)
-                        - SplitStatsEngine.streakModifier(awayCtx.streakScore);
-          differential += (homeCtx.restModifier - awayCtx.restModifier) * 0.15;
-          differential += (homeCtx.winRate - awayCtx.winRate) * 0.08;
-
-          // Store context for display
-          fixture._homeCtx = homeCtx;
-          fixture._awayCtx = awayCtx;
-        }
-
-        // Guard
-        if (isNaN(differential) || !isFinite(differential)) differential = 0;
-        
-        const rawWinProb = PredictionEngine.sigmoid(differential * this.currentParams.sigmoidScale);
-        const strengthGap = Math.abs(differential);
-        const drawBase = this.currentParams.drawBase * Math.exp(-strengthGap * 3.5);
-
-        let winRaw = rawWinProb * (1 - drawBase);
-        let lossRaw = (1 - rawWinProb) * (1 - drawBase);
-
-        // Apply Home Advantage Boost dynamically
-        const homeBoost = (homeTeam.homeAdvantage || 0.8) * this.currentParams.homeAdvantageBoost;
-        winRaw += homeBoost;
-        lossRaw = Math.max(0.05, lossRaw - homeBoost);
-
-        const total = winRaw + drawBase + lossRaw;
-        const homeProb = winRaw / total;
-        const drawProb = drawBase / total;
-        const awayProb = lossRaw / total;
+        const outcome = PredictionPipeline.predict({fixture, vectors:this.featureVectors, params:this.currentParams, asOf:this.updatedAt || new Date().toISOString()}, FeatureEngineering, PredictionEngine).probabilities;
+        const { win: homeProb, draw: drawProb, loss: awayProb, differential } = outcome;
 
         // H2H summary for display
         const h2hSummary = (h2hMap && typeof H2HEngine !== 'undefined')
@@ -341,6 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } : null;
 
         return {
+          probabilities: outcome,
+          pick: PredictionEngine.pickOutcome(outcome),
+          usesEstimatedInputs: !!(homeTeam.dataQuality?.estimatedFields?.length || awayTeam.dataQuality?.estimatedFields?.length),
           id: fixture.id,
           homeTeam: homeTeam.name,
           awayTeam: awayTeam.name,
@@ -361,6 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     renderTicket() {
+      const coverage=document.getElementById('prediction-coverage');
+      if(coverage)coverage.textContent = `${this.predictions.filter(p=>!p.unavailable).length}/${this.predictions.length} matches have supported team inputs. Missing inputs disable full coupons.`;
       const tbody = document.getElementById('sportoto-table-body');
       if (!tbody) return;
       tbody.innerHTML = '';
@@ -368,19 +190,13 @@ document.addEventListener('DOMContentLoaded', () => {
       this.predictions.forEach((pred) => {
         const tr = document.createElement('tr');
         
-        const hWin = parseFloat(pred.homeWin);
-        const aWin = parseFloat(pred.awayWin);
-        const winGap = Math.abs(hWin - aWin);
-
-        // Determine recommended pick using tuned Competitive Equilibrium
-        let recommended = '1';
-        if (winGap <= this.currentParams.drawGapThreshold) {
-          recommended = 'X';
-        } else if (aWin > hWin) {
-          recommended = '2';
-        } else {
-          recommended = '1';
+        if (pred.unavailable) {
+          for (const value of [pred.id, pred.homeTeam, pred.awayTeam, '?', '?', '?', 'Team data unavailable']) {
+            const td = document.createElement('td'); td.textContent = value; tr.appendChild(td);
+          }
+          tbody.appendChild(tr); return;
         }
+        const recommended = pred.pick;
 
         // Build streak badges
         const streakBadge = (s, label) => {
@@ -403,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <td class="${recommended === 'X' ? 'highlight-cell highlight-draw' : ''}">${pred.draw}%</td>
           <td class="${recommended === '2' ? 'highlight-cell' : ''}">${pred.awayWin}%</td>
           <td>
-            <span class="pick-badge ${recommended === 'X' ? 'badge-draw' : ''}">${recommended}</span>${h2hBadge}
+            <span class="pick-badge ${recommended === 'X' ? 'badge-draw' : ''}">${recommended}</span>${h2hBadge}${pred.usesEstimatedInputs ? '<small style="display:block">Includes baseline estimates</small>' : ''}
           </td>
         `;
         tbody.appendChild(tr);
@@ -411,6 +227,15 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     renderSystemCoupon() {
+      if (this.predictions.length !== 15 || this.predictions.some(p => p.unavailable)) {
+        const tbody = document.getElementById('coupon-table-body');
+        if (tbody) tbody.innerHTML = '<tr><td colspan="8">Coupon unavailable: all 15 matches need team data.</td></tr>';
+        for (const name of ['columns', 'cost', 'bankos', 'doubles']) {
+          const element = document.getElementById('coupon-stat-' + name);
+          if (element) element.textContent = '?';
+        }
+        return;
+      }
       if (typeof SystemCouponGenerator === 'undefined') return;
 
       const coupon = SystemCouponGenerator.generateCoupon(
@@ -482,49 +307,31 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     setupTuningControls() {
-      const btnTune = document.getElementById('btn-run-tuning');
-      if (!btnTune || btnTune.dataset.bound) return;
-      btnTune.dataset.bound = "true";
-
-      btnTune.onclick = () => {
-        const btnText = document.getElementById('btn-tuning-text');
-        if (btnText) btnText.textContent = "Optimizing Across 680 Matches...";
-        btnTune.disabled = true;
-
+      const button = document.getElementById('btn-run-tuning');
+      if (!button || button.dataset.bound) return;
+      button.dataset.bound = 'true';
+      button.onclick = () => {
+        const label = document.getElementById('btn-tuning-text');
+        button.disabled = true;
+        if (label) label.textContent = 'Running diagnostic fit...';
         setTimeout(() => {
-          if (typeof ModelTuner !== 'undefined' && typeof HISTORICAL_DATA !== 'undefined') {
-            const report = ModelTuner.tune(
-              HISTORICAL_DATA.matches,
-              TEAMS_DATA,
-              FeatureEngineering,
-              PredictionEngine
-            );
-
-            // Update UI
-            const optAccEl = document.getElementById('optimized-acc');
-            const optBrierEl = document.getElementById('optimized-brier');
-            const optBadgeEl = document.getElementById('tuning-improvement-badge');
-            const optParamsEl = document.getElementById('optimized-params');
-
-            if (optAccEl) optAccEl.textContent = `${report.optimized.overallAccuracy}%`;
-            if (optBrierEl) optBrierEl.textContent = report.optimized.brierScore;
-            if (optBadgeEl) optBadgeEl.textContent = `+${report.improvementPct}% Accuracy`;
-            if (optParamsEl) {
-              optParamsEl.innerHTML = `
-                Sigmoid: ${report.bestParams.sigmoidScale} • Draw Base: ${report.bestParams.drawBase}<br>
-                Gap Threshold: ${report.bestParams.drawGapThreshold}% • Home Boost: ${report.bestParams.homeAdvantageBoost * 100}%
-              `;
-            }
-
-            // Apply tuned parameters to live model
-            this.currentParams = report.bestParams;
-            this.runPredictions();
-
-            if (btnText) btnText.textContent = "✅ Model Tuned & Applied!";
-            setTimeout(() => {
-              if (btnText) btnText.textContent = "Re-Calibrate & Tune Model";
-              btnTune.disabled = false;
-            }, 3000);
+          try {
+            if (typeof HISTORICAL_DATA === 'undefined') throw new Error('Historical data unavailable');
+            const report = ModelTuner.tune(HISTORICAL_DATA.matches, this.activeTeams || TEAMS_DATA, FeatureEngineering, PredictionEngine);
+            const show = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+            show('baseline-acc', report.baseline.overallAccuracy + '%');
+            show('baseline-brier', report.baseline.brierScore);
+            show('optimized-acc', report.optimized.overallAccuracy + '%');
+            show('optimized-brier', report.optimized.brierScore);
+            show('tuning-improvement-badge', report.improvementPct + ' pp fitted accuracy change');
+            show('baseline-params', JSON.stringify(report.baseline.params));
+            show('optimized-params', JSON.stringify(report.bestParams));
+            show('diagnostic-coverage', report.optimized.evaluatedCount + ' evaluated; ' + report.optimized.skippedCount + ' skipped. Current inputs on old results; not predictive validation.');
+            if (label) label.textContent = 'Diagnostic complete; active model unchanged';
+          } catch (error) {
+            if (label) label.textContent = 'Diagnostic failed: ' + error.message;
+          } finally {
+            button.disabled = false;
           }
         }, 400);
       };

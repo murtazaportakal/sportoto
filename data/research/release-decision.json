@@ -1,0 +1,17 @@
+{
+  "eligible": false,
+  "reasons": [
+    "Prospective paired live-model evidence required",
+    "Incompatible model family",
+    "Missing versioned evidence or rollback reference",
+    "At least 500 eligible prospective forecasts required",
+    "Models must use exactly the same fixtures",
+    "Missing valid probabilistic metrics",
+    "Inconclusive paired interval: incumbent",
+    "Inconclusive paired interval: baseline",
+    "At least 100 eligible forecasts per reported league required",
+    "League and class regression review required",
+    "Independent test review required"
+  ],
+  "automaticPromotion": false
+}

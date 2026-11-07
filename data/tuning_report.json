@@ -1,0 +1,23 @@
+{
+  "validationStatus": "unvalidated-diagnostic-only",
+  "timestamp": "2026-11-07T19:12:08.711Z",
+  "evaluatedMatches": 645,
+  "gridIterations": 48,
+  "baseline": {
+    "accuracy": 46.2,
+    "brierScore": 0.637,
+    "logLoss": 1.0712
+  },
+  "optimized": {
+    "accuracy": 48.99,
+    "brierScore": 0.6252,
+    "logLoss": 1.0524
+  },
+  "bestParams": {
+    "sigmoidScale": 3.5,
+    "drawBase": 0.3,
+    "drawGapThreshold": 6,
+    "homeAdvantageBoost": 0.07
+  },
+  "improvementPct": 2.79
+}

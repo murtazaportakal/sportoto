@@ -33,42 +33,13 @@ const ModelTuner = {
       const homeFeatures = featureVectors[match.homeCode];
       const awayFeatures = featureVectors[match.awayCode];
       
+      if (!["1", "X", "2"].includes(match.actualOutcome)) throw new Error("Invalid actual outcome");
       // If team vector is missing, skip
       if (!homeFeatures || !awayFeatures) continue;
 
-      const differential = featureEngine.calculateMatchDifferential(homeFeatures, awayFeatures);
-      
-      // 1. Calculate probabilities with tunable parameters
-      const rawWinProb = predictionEngine.sigmoid(differential * params.sigmoidScale);
-      const strengthGap = Math.abs(differential);
-      const drawBase = params.drawBase * Math.exp(-strengthGap * 3.5);
-      
-      let winRaw = rawWinProb * (1 - drawBase);
-      let lossRaw = (1 - rawWinProb) * (1 - drawBase);
-      
-      // Apply Home Advantage Boost
-      const homeBoost = (homeFeatures.features.homeAdvantage || 0.8) * params.homeAdvantageBoost;
-      winRaw += homeBoost;
-      lossRaw = Math.max(0.05, lossRaw - homeBoost);
-
-      const total = winRaw + drawBase + lossRaw;
-      const pHome = winRaw / total;
-      const pDraw = drawBase / total;
-      const pAway = lossRaw / total;
-
-      const hPct = pHome * 100;
-      const aPct = pAway * 100;
-      const gap = Math.abs(hPct - aPct);
-
-      // 2. Classify prediction using Equilibrium Rule
-      let predictedOutcome = '1';
-      if (gap <= params.drawGapThreshold) {
-        predictedOutcome = 'X';
-      } else if (aPct > hPct) {
-        predictedOutcome = '2';
-      } else {
-        predictedOutcome = '1';
-      }
+      const outcome = predictionEngine.predictMatchOutcome(homeFeatures, awayFeatures, featureEngine, null, null, params);
+      const pHome = outcome.win, pDraw = outcome.draw, pAway = outcome.loss;
+      const predictedOutcome = predictionEngine.pickOutcome(outcome);
 
       const actual = match.actualOutcome;
       evaluatedCount++;
@@ -108,6 +79,8 @@ const ModelTuner = {
     const logLoss = totalLogLoss / evaluatedCount;
 
     return {
+      evaluationType: "diagnostic-current-inputs-on-historical-results",
+      skippedCount: matches.length - evaluatedCount,
       evaluatedCount,
       params,
       overallAccuracy: parseFloat(overallAccuracy.toFixed(2)),
@@ -140,10 +113,11 @@ const ModelTuner = {
   tune(matches, teamsData, featureEngine, predictionEngine) {
     const candidateSigmoid = [3.5, 4.0, 4.5, 5.0];
     const candidateDrawBase = [0.24, 0.26, 0.28, 0.30];
-    const candidateDrawThreshold = [4.0, 5.0, 6.0, 7.0, 8.0];
+    const candidateDrawThreshold = [this.defaultParams.drawGapThreshold]; // Retained config field; not a prediction rule.
     const candidateHomeBoost = [0.03, 0.05, 0.07];
 
     const baseline = this.evaluate(matches, teamsData, featureEngine, predictionEngine, this.defaultParams);
+    if (!baseline) throw new Error("No historical matches have matching team data.");
     let bestResult = baseline;
     let bestParams = { ...this.defaultParams };
 
@@ -158,10 +132,9 @@ const ModelTuner = {
             
             if (!result) continue;
 
-            // Objective function: balance Accuracy and balanced draw detection (lower Brier score)
-            // We favor higher overall accuracy while penalizing extreme draw neglect
-            const score = result.overallAccuracy - (result.brierScore * 10) + (result.draw.correct > 0 ? 1.0 : 0);
-            const bestScore = bestResult.overallAccuracy - (bestResult.brierScore * 10) + (bestResult.draw.correct > 0 ? 1.0 : 0);
+            // Research objective: minimize proper probabilistic log loss.
+            const score = -result.logLoss;
+            const bestScore = -bestResult.logLoss;
 
             if (score > bestScore) {
               bestResult = result;
@@ -173,6 +146,7 @@ const ModelTuner = {
     }
 
     return {
+      validationStatus: "unvalidated-diagnostic-only",
       iterations,
       baseline,
       optimized: bestResult,

@@ -1,41 +1,89 @@
 name: Spor Toto Auto-Sync
 
 on:
+  push:
+    branches: [main]
   schedule:
-    # Runs at 02:00 UTC daily (~05:00 AM TR time)
-    - cron: '0 2 * * *'
+    # Every 30 minutes, away from the busiest minute; runs may be delayed.
+    - cron: '7,37 * * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
+
+concurrency:
+  group: sportoto-sync
+  cancel-in-progress: false
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci || npm install
+        run: npm ci
 
       - name: Run Auto Sync & Model Tuning
         run: node auto_sync.js
+
+      - name: Validate updated data
+        run: npm test
+
+      - name: Package and smoke-test browser assets
+        run: |
+          npm run build
+          npm run test:browser
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
 
       - name: Commit and push updated data if changes exist
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action [Auto-Sync]"
-          git add -A
+          git add data/sportoto_data.js data/live.json data/tuning_report.json data/evaluation data/health.json matches.txt index.html
           if git diff --staged --quiet; then
             echo "No data changes found. Skipping commit."
           else
-            git commit -m "chore(sync): automated nightly sportoto sync [skip ci]"
+            git commit -m "chore(sync): automated sportoto sync [skip ci]"
             git push
           fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Publish refreshed site
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Retain failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sync-failure
+          path: |
+            data/sync_failure.json
+            data/health.json
+            test-results/
+
+      - name: Report failed sync
+        if: failure()
+        run: echo "Sync or validation failed. No new Pages deployment was completed. Inspect logs and failure artifacts before retrying." >> "$GITHUB_STEP_SUMMARY"

@@ -33,7 +33,10 @@
   </nav>
 
   <div class="main-container">
-    
+    <p id="data-freshness" role="status" aria-live="polite">Checking for updated data...</p>
+    <p id="model-status">Model validation pending.</p>
+    <p id="prediction-coverage" role="status" aria-live="polite"></p>
+
     <!-- ====== HERO SECTION ====== -->
     <section class="hero" id="hero">
       <div class="hero-badge">
@@ -45,7 +48,7 @@
         <span class="gradient-text">ML Prediction Engine</span>
       </h1>
       <p class="hero-subtitle">
-        Machine learning model predicting 15 Sportoto matches using logistic regression 
+        Statistical model estimating 15 Sportoto matches using logistic regression
         and feature-based composite scoring of Turkish Super League teams.
       </p>
       <div class="hero-stats">
@@ -67,13 +70,13 @@
     <!-- ====== PREDICTIONS TICKET ====== -->
     <section class="section" id="predictions">
       <div class="section-header">
-        <div class="section-tag">12. HAFTA • 30.10.2026</div>
+        <div class="section-tag">15. OYUN PROGRAMI • 13.11.2026</div>
         <h2 class="section-title">Weekly Sportoto Ticket</h2>
         <p class="section-subtitle">
           AI-generated predictions for all 15 matches of the current Sportoto round. The highlighted box indicates the highest probability outcome recommended by the model.
         </p>
       </div>
-      
+
       <div class="glass-card animate-in" style="overflow-x:auto;">
         <table class="mc-advancement-table" id="sportoto-table">
           <thead>
@@ -175,7 +178,7 @@
         <div class="section-tag">EMPİRİK KALİBRASYON & GERİYE DÖNÜK TEST</div>
         <h2 class="section-title">Long-Term Statistics & Model Tuning</h2>
         <p class="section-subtitle">
-          Evaluate and optimize model hyperparameters against a compiled database of 680+ real historical match results.
+          Explore historical fitting diagnostics. Future-match accuracy has not been validated.
         </p>
       </div>
 
@@ -212,8 +215,8 @@
       <div class="glass-card animate-in" style="padding: 1.5rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
           <div>
-            <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.25rem;">Hyperparameter Optimization & Validation</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Grid search calibration across Sigmoid Scale, Draw Base, Equilibrium Gap, and Home Boost.</p>
+            <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.25rem;">Research diagnostics ? not predictive validation</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Fits current team inputs to old results. This is not a pre-match backtest; candidates are not applied to the active model.</p><p id="diagnostic-coverage" style="color:var(--text-secondary)">Active model: unvalidated baseline. Historical form adjustments are disabled pending validation.</p>
           </div>
           <button id="btn-run-tuning" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); border: none; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);">
             <span>⚡</span>
@@ -228,26 +231,20 @@
               <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">BASELINE MODEL</span>
               <span style="background: rgba(255,255,255,0.05); color: var(--text-secondary); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem;">Default</span>
             </div>
-            <div style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;" id="baseline-acc">44.96%</div>
+            <div style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;" id="baseline-acc">Not evaluated</div>
             <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Brier Score: <span id="baseline-brier" style="color: var(--text-primary); font-weight: 600;">0.6322</span></div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.6;" id="baseline-params">
-              Sigmoid: 4.5 • Draw Base: 0.26<br>
-              Gap Threshold: 6.0% • Home Boost: 5%
-            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.6;" id="baseline-params">Parameters shown after diagnostic run.</div>
           </div>
 
           <!-- Optimized Card -->
           <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(99, 102, 241, 0.08)); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 1.25rem; position: relative;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
               <span style="font-size: 0.85rem; font-weight: 600; color: #10B981;">OPTIMIZED MODEL</span>
-              <span style="background: rgba(16, 185, 129, 0.2); color: #10B981; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;" id="tuning-improvement-badge">+3.26% Accuracy</span>
+              <span style="background: rgba(16, 185, 129, 0.2); color: #10B981; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;" id="tuning-improvement-badge">Not evaluated</span>
             </div>
-            <div style="font-size: 2rem; font-weight: 800; color: #10B981; margin-bottom: 0.5rem;" id="optimized-acc">48.22%</div>
+            <div style="font-size: 2rem; font-weight: 800; color: #10B981; margin-bottom: 0.5rem;" id="optimized-acc">Not evaluated</div>
             <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Brier Score: <span id="optimized-brier" style="color: #10B981; font-weight: 600;">0.6220</span> (Lower is better)</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;" id="optimized-params">
-              Sigmoid: 3.5 • Draw Base: 0.30<br>
-              Gap Threshold: 4.0% • Home Boost: 7%
-            </div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;" id="optimized-params">Parameters shown after diagnostic run.</div>
           </div>
         </div>
       </div>
@@ -258,7 +255,7 @@
   <!-- Footer -->
   <footer class="footer">
     <p class="footer-text">
-      ⚽ Weekly Sportoto ML Prediction Engine — Built with pure JavaScript ML • 
+      ⚽ Weekly Sportoto ML Prediction Engine — Built with pure JavaScript ML •
       Not financial advice
     </p>
   </footer>
@@ -270,8 +267,10 @@
   <script src="ml/h2h_engine.js"></script>
   <script src="ml/split_stats_engine.js"></script>
   <script src="ml/prediction_engine.js"></script>
+  <script src="ml/prediction_pipeline.js"></script>
   <script src="ml/model_tuner.js"></script>
   <script src="ml/system_coupon_generator.js"></script>
+  <script src="live_data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

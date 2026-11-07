@@ -2,40 +2,7 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
-const teamMap = {
-  'galatasaray': 'GAL', 'fenerbahce': 'FEN', 'besiktas': 'BJK',
-  'trabzonspor': 'TRA', 'basaksehir': 'IBFK', 'adana demirspor': 'ADS',
-  'antalyaspor': 'ANT', 'kasimpasa': 'KAS', 'alanyaspor': 'ALA',
-  'kayserispor': 'KAY', 'sivasspor': 'SIV', 'konyaspor': 'KON',
-  'ankaragucu': 'ANK', 'hatayspor': 'HAT', 'fatih karagumruk': 'FKG',
-  'gaziantep': 'GAZ', 'samsunspor': 'SAM', 'rizespor': 'RIZ',
-  'pendikspor': 'PEN', 'istanbulspor': 'IST', 'goztepe': 'GOZ',
-  'amed': 'AME', 'genclerbirligi': 'GEN', 'erzurum': 'ERZ',
-  'kocaelispor': 'KOC', 'eyupspor': 'EYU', 'corum': 'COR', 'bodrum': 'BOD'
-};
-
-function normalizeName(name) {
-  return name
-    .trim()
-    .toLowerCase()
-    .replace(/ı/g, 'i')
-    .replace(/İ/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/ç/g, 'c')
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-}
-
-function getCode(name) {
-  const clean = normalizeName(name);
-  for (const [key, code] of Object.entries(teamMap)) {
-    if (clean.includes(key)) return code;
-  }
-  return null;
-}
+const { getCode } = require('./team_mapping');
 
 async function fetchHistoricalData() {
   console.log("Fetching historical Turkish Super Lig matches from openfootball...");
@@ -79,11 +46,13 @@ async function fetchHistoricalData() {
         });
       }
     } catch (e) {
-      console.warn("Could not fetch url:", url, e.message);
+      throw new Error(`Historical refresh failed for ${url}: ${e.message}`);
     }
   }
 
   console.log(`Processed ${allMatches.length} valid historical matches with full-time scores.`);
+
+  if (!allMatches.length) throw new Error('Historical refresh returned no valid matches; existing data preserved.');
 
   // Calculate long-term baseline statistics
   const homeWins = allMatches.filter(m => m.actualOutcome === '1').length;
@@ -117,4 +86,5 @@ async function fetchHistoricalData() {
   console.log(`Saved browser-ready data to ${jsOutputPath}`);
 }
 
-fetchHistoricalData();
+if (require.main === module) fetchHistoricalData().catch(error => { console.error(error.message); process.exitCode = 1; });
+module.exports = { fetchHistoricalData };

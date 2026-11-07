@@ -5,6 +5,8 @@
  * system coupons (Single, Double Chance, and Banko combinations).
  */
 
+const CouponPredictionEngine = typeof module !== 'undefined' && module.exports ? require('./prediction_engine').PredictionEngine : PredictionEngine;
+
 const SystemCouponGenerator = {
   columnPriceTL: 5, // Official Spor Toto price per column in TL
 
@@ -16,7 +18,10 @@ const SystemCouponGenerator = {
    * @returns {Object} coupon details
    */
   generateCoupon(predictions, doubleChanceCount = 4, strategy = 'draw_protection') {
-    if (!predictions || predictions.length === 0) return null;
+    if (!predictions || predictions.length !== 15 || predictions.some(p => p.unavailable || !['homeWin', 'draw', 'awayWin'].every(k => Number.isFinite(Number(p[k])) && Number(p[k]) >= 0 && Number(p[k]) <= 100))) return null;
+
+    if (!Number.isInteger(doubleChanceCount) || doubleChanceCount < 0 || doubleChanceCount > 15) throw new Error('Invalid double chance count');
+    if (predictions.some(p => Math.abs(Number(p.homeWin) + Number(p.draw) + Number(p.awayWin) - 100) > 0.2)) return null;
 
     // Calculate volatility / uncertainty for each match
     // Volatility is highest when gap between Home and Away is minimal and Draw is high
@@ -66,14 +71,8 @@ const SystemCouponGenerator = {
         }
         pickType = 'Double (Çifte Şans)';
       } else {
-        // Banko pick: dominant side or equilibrium X
-        if (Math.abs(h - a) <= 4.0) {
-          pick = 'X';
-        } else if (a > h) {
-          pick = '2';
-        } else {
-          pick = '1';
-        }
+        const total = h + d + a;
+        pick = CouponPredictionEngine.pickOutcome(p.probabilities || {win: h / total, draw: d / total, loss: a / total});
         pickType = 'Banko (Single)';
       }
 

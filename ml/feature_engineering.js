@@ -1,5 +1,5 @@
 /**
- * Feature Engineering Module for World Cup 2026 ML Prediction
+ * Feature Engineering for Weekly Sportoto Match Predictions
  * 
  * Transforms raw team/player data into model-ready feature vectors.
  * Handles normalization, composite feature construction, and geographical calculations.
@@ -257,60 +257,6 @@ const FeatureEngineering = {
     return vectors;
   },
 
-  // =============== GOLDEN BOOT FEATURES ===============
-
-  /**
-   * Build Golden Boot prediction features for a player
-   */
-  buildGoldenBootFeatures(player, teamFeatureVector) {
-    // Expected minutes normalized (max ~640 minutes for 8 full matches)
-    const minutesNorm = player.expectedMinutes / 720;
-    
-    // Goal scoring rate
-    const goalRate = player.goalsPerGame;
-    
-    // Club season form
-    const clubFormNorm = player.clubGoals / 30; // Normalize against top scorer benchmark
-    
-    // Penalty bonus
-    const penaltyBonus = player.penaltyTaker ? 0.15 : 0;
-    
-    // Fatigue/injury penalty
-    const fitnessPenalty = player.injuryStatus === 'fit' ? 0 : 
-                           player.injuryStatus === 'managing' ? 0.1 :
-                           player.injuryStatus === 'doubtful' ? 0.25 : 0.5;
-    
-    // Team's expected tournament depth boosts minutes
-    const teamDepthBoost = teamFeatureVector ? teamFeatureVector.compositeScore / 100 : 0.5;
-    
-    // Age-related fatigue for 8-match tournament
-    const agePenalty = player.age > 35 ? 0.15 : player.age > 32 ? 0.08 : 0;
-
-    const rawScore = (
-      goalRate * 0.30 +
-      minutesNorm * 0.20 +
-      clubFormNorm * 0.15 +
-      penaltyBonus * 0.10 +
-      teamDepthBoost * 0.15 -
-      fitnessPenalty * 0.05 -
-      agePenalty * 0.05
-    );
-
-    return {
-      playerName: player.name,
-      team: player.team,
-      rawScore,
-      features: {
-        minutesNorm,
-        goalRate,
-        clubFormNorm,
-        penaltyBonus,
-        fitnessPenalty,
-        teamDepthBoost,
-        agePenalty
-      }
-    };
-  }
 };
 
 if (typeof module !== 'undefined' && module.exports) {

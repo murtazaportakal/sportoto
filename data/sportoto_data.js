@@ -1,312 +1,5448 @@
 const TEAMS_DATA = [
-  // TURKISH SUPER LIG
   {
-    name: "Galatasaray", code: "GAL", eloRating: 1608, impliedProb: 0.25, squadDepth: 9, historicalPedigree: 10,
-    tacticalStyle: { offensive: 0.8, defensive: 0.7, possession: 0.7, transition: 0.75 }, managerExpScore: 8, recentForm: { goalsFor: 2.13, goalsAgainst: 1.38 },
-    starDependency: 0.3, homeAdvantage: 0.9, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Galatasaray",
+    "code": "GAL",
+    "eloRating": 1746,
+    "impliedProb": 0.25,
+    "squadDepth": 9,
+    "historicalPedigree": 10,
+    "tacticalStyle": {
+      "offensive": 0.8,
+      "defensive": 0.7,
+      "possession": 0.7,
+      "transition": 0.75
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 2.45,
+      "goalsAgainst": 1.36
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.9,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 28,
+      "goalsFor": 27,
+      "goalsAgainst": 15,
+      "goalDifference": 12,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Fenerbahçe", code: "FEN", eloRating: 1622, impliedProb: 0.24, squadDepth: 9, historicalPedigree: 9,
-    tacticalStyle: { offensive: 0.85, defensive: 0.65, possession: 0.65, transition: 0.8 }, managerExpScore: 9, recentForm: { goalsFor: 2.75, goalsAgainst: 0.75 },
-    starDependency: 0.35, homeAdvantage: 0.9, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Fenerbahçe",
+    "code": "FEN",
+    "eloRating": 1612,
+    "impliedProb": 0.24,
+    "squadDepth": 9,
+    "historicalPedigree": 9,
+    "tacticalStyle": {
+      "offensive": 0.85,
+      "defensive": 0.65,
+      "possession": 0.65,
+      "transition": 0.8
+    },
+    "managerExpScore": 9,
+    "recentForm": {
+      "goalsFor": 2.4,
+      "goalsAgainst": 1
+    },
+    "starDependency": 0.35,
+    "homeAdvantage": 0.9,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 16,
+      "goalsFor": 24,
+      "goalsAgainst": 10,
+      "goalDifference": 14,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Beşiktaş", code: "BJK", eloRating: 1560, impliedProb: 0.15, squadDepth: 7, historicalPedigree: 9,
-    tacticalStyle: { offensive: 0.7, defensive: 0.6, possession: 0.6, transition: 0.65 }, managerExpScore: 7, recentForm: { goalsFor: 2.00, goalsAgainst: 1.25 },
-    starDependency: 0.4, homeAdvantage: 0.85, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 3
+    "name": "Beşiktaş",
+    "code": "BJK",
+    "eloRating": 1618,
+    "impliedProb": 0.15,
+    "squadDepth": 7,
+    "historicalPedigree": 9,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.6,
+      "possession": 0.6,
+      "transition": 0.65
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 2,
+      "goalsAgainst": 1.2
+    },
+    "starDependency": 0.4,
+    "homeAdvantage": 0.85,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 3,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 19,
+      "goalsFor": 20,
+      "goalsAgainst": 12,
+      "goalDifference": 8,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Trabzonspor", code: "TRA", eloRating: 1607, impliedProb: 0.10, squadDepth: 7, historicalPedigree: 8,
-    tacticalStyle: { offensive: 0.65, defensive: 0.65, possession: 0.55, transition: 0.6 }, managerExpScore: 7, recentForm: { goalsFor: 2.25, goalsAgainst: 0.63 },
-    starDependency: 0.3, homeAdvantage: 0.85, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Trabzonspor",
+    "code": "TRA",
+    "eloRating": 1694,
+    "impliedProb": 0.1,
+    "squadDepth": 7,
+    "historicalPedigree": 8,
+    "tacticalStyle": {
+      "offensive": 0.65,
+      "defensive": 0.65,
+      "possession": 0.55,
+      "transition": 0.6
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 2.4,
+      "goalsAgainst": 0.8
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.85,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 22,
+      "goalsFor": 24,
+      "goalsAgainst": 8,
+      "goalDifference": 16,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Başakşehir", code: "IBFK", eloRating: 1482, impliedProb: 0.08, squadDepth: 7, historicalPedigree: 7,
-    tacticalStyle: { offensive: 0.6, defensive: 0.7, possession: 0.65, transition: 0.5 }, managerExpScore: 6, recentForm: { goalsFor: 1.50, goalsAgainst: 1.50 },
-    starDependency: 0.25, homeAdvantage: 0.6, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Başakşehir",
+    "code": "IBFK",
+    "eloRating": 1564,
+    "impliedProb": 0.08,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.6,
+      "defensive": 0.7,
+      "possession": 0.65,
+      "transition": 0.5
+    },
+    "managerExpScore": 6,
+    "recentForm": {
+      "goalsFor": 1.73,
+      "goalsAgainst": 1.55
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.6,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 17,
+      "goalsFor": 19,
+      "goalsAgainst": 17,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Adana Demirspor", code: "ADS", eloRating: 1520, impliedProb: 0.05, squadDepth: 6, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.65, defensive: 0.5, possession: 0.5, transition: 0.7 }, managerExpScore: 5, recentForm: { goalsFor: 1.6, goalsAgainst: 1.5 },
-    starDependency: 0.4, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 4
+    "name": "Adana Demirspor",
+    "code": "ADS",
+    "eloRating": 1520,
+    "impliedProb": 0.05,
+    "squadDepth": 6,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.65,
+      "defensive": 0.5,
+      "possession": 0.5,
+      "transition": 0.7
+    },
+    "managerExpScore": 5,
+    "recentForm": {
+      "goalsFor": 1.6,
+      "goalsAgainst": 1.5
+    },
+    "starDependency": 0.4,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 4
   },
   {
-    name: "Antalyaspor", code: "ANT", eloRating: 1500, impliedProb: 0.03, squadDepth: 6, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.55, defensive: 0.6, possession: 0.5, transition: 0.55 }, managerExpScore: 6, recentForm: { goalsFor: 1.2, goalsAgainst: 1.2 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Antalyaspor",
+    "code": "ANT",
+    "eloRating": 1500,
+    "impliedProb": 0.03,
+    "squadDepth": 6,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.55,
+      "defensive": 0.6,
+      "possession": 0.5,
+      "transition": 0.55
+    },
+    "managerExpScore": 6,
+    "recentForm": {
+      "goalsFor": 1.2,
+      "goalsAgainst": 1.2
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2
   },
   {
-    name: "Kasımpaşa", code: "KAS", eloRating: 1562, impliedProb: 0.02, squadDepth: 5, historicalPedigree: 4,
-    tacticalStyle: { offensive: 0.6, defensive: 0.45, possession: 0.45, transition: 0.65 }, managerExpScore: 5, recentForm: { goalsFor: 1.44, goalsAgainst: 1.00 },
-    starDependency: 0.35, homeAdvantage: 0.5, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Kasımpaşa",
+    "code": "KAS",
+    "eloRating": 1620,
+    "impliedProb": 0.02,
+    "squadDepth": 5,
+    "historicalPedigree": 4,
+    "tacticalStyle": {
+      "offensive": 0.6,
+      "defensive": 0.45,
+      "possession": 0.45,
+      "transition": 0.65
+    },
+    "managerExpScore": 5,
+    "recentForm": {
+      "goalsFor": 1.55,
+      "goalsAgainst": 1
+    },
+    "starDependency": 0.35,
+    "homeAdvantage": 0.5,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 20,
+      "goalsFor": 17,
+      "goalsAgainst": 11,
+      "goalDifference": 6,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Alanyaspor", code: "ALA", eloRating: 1484, impliedProb: 0.02, squadDepth: 5, historicalPedigree: 4,
-    tacticalStyle: { offensive: 0.55, defensive: 0.55, possession: 0.55, transition: 0.5 }, managerExpScore: 5, recentForm: { goalsFor: 1.00, goalsAgainst: 1.22 },
-    starDependency: 0.25, homeAdvantage: 0.6, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Alanyaspor",
+    "code": "ALA",
+    "eloRating": 1459,
+    "impliedProb": 0.02,
+    "squadDepth": 5,
+    "historicalPedigree": 4,
+    "tacticalStyle": {
+      "offensive": 0.55,
+      "defensive": 0.55,
+      "possession": 0.55,
+      "transition": 0.5
+    },
+    "managerExpScore": 5,
+    "recentForm": {
+      "goalsFor": 0.9,
+      "goalsAgainst": 1.6
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.6,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 12,
+      "goalsFor": 9,
+      "goalsAgainst": 16,
+      "goalDifference": -7,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Kayserispor", code: "KAY", eloRating: 1460, impliedProb: 0.02, squadDepth: 5, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.5, defensive: 0.55, possession: 0.45, transition: 0.55 }, managerExpScore: 5, recentForm: { goalsFor: 1.1, goalsAgainst: 1.2 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 3
+    "name": "Kayserispor",
+    "code": "KAY",
+    "eloRating": 1460,
+    "impliedProb": 0.02,
+    "squadDepth": 5,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.5,
+      "defensive": 0.55,
+      "possession": 0.45,
+      "transition": 0.55
+    },
+    "managerExpScore": 5,
+    "recentForm": {
+      "goalsFor": 1.1,
+      "goalsAgainst": 1.2
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 3
   },
   {
-    name: "Sivasspor", code: "SIV", eloRating: 1450, impliedProb: 0.02, squadDepth: 5, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.45, defensive: 0.65, possession: 0.4, transition: 0.5 }, managerExpScore: 6, recentForm: { goalsFor: 1.0, goalsAgainst: 1.1 },
-    starDependency: 0.25, homeAdvantage: 0.75, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Sivasspor",
+    "code": "SIV",
+    "eloRating": 1450,
+    "impliedProb": 0.02,
+    "squadDepth": 5,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.45,
+      "defensive": 0.65,
+      "possession": 0.4,
+      "transition": 0.5
+    },
+    "managerExpScore": 6,
+    "recentForm": {
+      "goalsFor": 1,
+      "goalsAgainst": 1.1
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1
   },
   {
-    name: "Konyaspor", code: "KON", eloRating: 1431, impliedProb: 0.01, squadDepth: 5, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.45, defensive: 0.6, possession: 0.45, transition: 0.5 }, managerExpScore: 5, recentForm: { goalsFor: 0.67, goalsAgainst: 1.00 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Konyaspor",
+    "code": "KON",
+    "eloRating": 1406,
+    "impliedProb": 0.01,
+    "squadDepth": 5,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.45,
+      "defensive": 0.6,
+      "possession": 0.45,
+      "transition": 0.5
+    },
+    "managerExpScore": 5,
+    "recentForm": {
+      "goalsFor": 0.55,
+      "goalsAgainst": 1.27
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 8,
+      "goalsFor": 6,
+      "goalsAgainst": 14,
+      "goalDifference": -8,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Ankaragücü", code: "ANK", eloRating: 1430, impliedProb: 0.01, squadDepth: 5, historicalPedigree: 6,
-    tacticalStyle: { offensive: 0.5, defensive: 0.5, possession: 0.4, transition: 0.6 }, managerExpScore: 4, recentForm: { goalsFor: 1.2, goalsAgainst: 1.4 },
-    starDependency: 0.35, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Ankaragücü",
+    "code": "ANK",
+    "eloRating": 1430,
+    "impliedProb": 0.01,
+    "squadDepth": 5,
+    "historicalPedigree": 6,
+    "tacticalStyle": {
+      "offensive": 0.5,
+      "defensive": 0.5,
+      "possession": 0.4,
+      "transition": 0.6
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 1.2,
+      "goalsAgainst": 1.4
+    },
+    "starDependency": 0.35,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2
   },
   {
-    name: "Hatayspor", code: "HAT", eloRating: 1420, impliedProb: 0.01, squadDepth: 4, historicalPedigree: 3,
-    tacticalStyle: { offensive: 0.5, defensive: 0.45, possession: 0.45, transition: 0.55 }, managerExpScore: 4, recentForm: { goalsFor: 1.1, goalsAgainst: 1.5 },
-    starDependency: 0.4, homeAdvantage: 0.6, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 3
+    "name": "Hatayspor",
+    "code": "HAT",
+    "eloRating": 1420,
+    "impliedProb": 0.01,
+    "squadDepth": 4,
+    "historicalPedigree": 3,
+    "tacticalStyle": {
+      "offensive": 0.5,
+      "defensive": 0.45,
+      "possession": 0.45,
+      "transition": 0.55
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 1.1,
+      "goalsAgainst": 1.5
+    },
+    "starDependency": 0.4,
+    "homeAdvantage": 0.6,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 3
   },
   {
-    name: "Fatih Karagümrük", code: "FKG", eloRating: 1410, impliedProb: 0.01, squadDepth: 4, historicalPedigree: 3,
-    tacticalStyle: { offensive: 0.55, defensive: 0.4, possession: 0.5, transition: 0.5 }, managerExpScore: 4, recentForm: { goalsFor: 1.3, goalsAgainst: 1.6 },
-    starDependency: 0.3, homeAdvantage: 0.4, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Fatih Karagümrük",
+    "code": "FKG",
+    "eloRating": 1410,
+    "impliedProb": 0.01,
+    "squadDepth": 4,
+    "historicalPedigree": 3,
+    "tacticalStyle": {
+      "offensive": 0.55,
+      "defensive": 0.4,
+      "possession": 0.5,
+      "transition": 0.5
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 1.3,
+      "goalsAgainst": 1.6
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.4,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1
   },
   {
-    name: "Gaziantep FK", code: "GAZ", eloRating: 1416, impliedProb: 0.01, squadDepth: 4, historicalPedigree: 4,
-    tacticalStyle: { offensive: 0.4, defensive: 0.55, possession: 0.4, transition: 0.45 }, managerExpScore: 4, recentForm: { goalsFor: 1.00, goalsAgainst: 1.67 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Gaziantep FK",
+    "code": "GAZ",
+    "eloRating": 1396,
+    "impliedProb": 0.01,
+    "squadDepth": 4,
+    "historicalPedigree": 4,
+    "tacticalStyle": {
+      "offensive": 0.4,
+      "defensive": 0.55,
+      "possession": 0.4,
+      "transition": 0.45
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 0.82,
+      "goalsAgainst": 1.73
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 8,
+      "goalsFor": 9,
+      "goalsAgainst": 19,
+      "goalDifference": -10,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Samsunspor", code: "SAM", eloRating: 1333, impliedProb: 0.01, squadDepth: 4, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.45, defensive: 0.5, possession: 0.45, transition: 0.5 }, managerExpScore: 4, recentForm: { goalsFor: 0.89, goalsAgainst: 2.33 },
-    starDependency: 0.25, homeAdvantage: 0.75, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Samsunspor",
+    "code": "SAM",
+    "eloRating": 1359,
+    "impliedProb": 0.01,
+    "squadDepth": 4,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.45,
+      "defensive": 0.5,
+      "possession": 0.45,
+      "transition": 0.5
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 1,
+      "goalsAgainst": 2.36
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 7,
+      "goalsFor": 11,
+      "goalsAgainst": 26,
+      "goalDifference": -15,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Rizespor", code: "RIZ", eloRating: 1455, impliedProb: 0.01, squadDepth: 4, historicalPedigree: 4,
-    tacticalStyle: { offensive: 0.5, defensive: 0.45, possession: 0.4, transition: 0.55 }, managerExpScore: 4, recentForm: { goalsFor: 1.00, goalsAgainst: 1.38 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Rizespor",
+    "code": "RIZ",
+    "eloRating": 1462,
+    "impliedProb": 0.01,
+    "squadDepth": 4,
+    "historicalPedigree": 4,
+    "tacticalStyle": {
+      "offensive": 0.5,
+      "defensive": 0.45,
+      "possession": 0.4,
+      "transition": 0.55
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 1.1,
+      "goalsAgainst": 1.5
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 11,
+      "goalsFor": 11,
+      "goalsAgainst": 15,
+      "goalDifference": -4,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Pendikspor", code: "PEN", eloRating: 1350, impliedProb: 0.005, squadDepth: 3, historicalPedigree: 1,
-    tacticalStyle: { offensive: 0.4, defensive: 0.4, possession: 0.4, transition: 0.4 }, managerExpScore: 3, recentForm: { goalsFor: 0.8, goalsAgainst: 1.8 },
-    starDependency: 0.4, homeAdvantage: 0.5, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Pendikspor",
+    "code": "PEN",
+    "eloRating": 1350,
+    "impliedProb": 0.005,
+    "squadDepth": 3,
+    "historicalPedigree": 1,
+    "tacticalStyle": {
+      "offensive": 0.4,
+      "defensive": 0.4,
+      "possession": 0.4,
+      "transition": 0.4
+    },
+    "managerExpScore": 3,
+    "recentForm": {
+      "goalsFor": 0.8,
+      "goalsAgainst": 1.8
+    },
+    "starDependency": 0.4,
+    "homeAdvantage": 0.5,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1
   },
   {
-    name: "İstanbulspor", code: "IST", eloRating: 1330, impliedProb: 0.005, squadDepth: 3, historicalPedigree: 3,
-    tacticalStyle: { offensive: 0.35, defensive: 0.4, possession: 0.35, transition: 0.4 }, managerExpScore: 3, recentForm: { goalsFor: 0.7, goalsAgainst: 2.0 },
-    starDependency: 0.3, homeAdvantage: 0.4, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "İstanbulspor",
+    "code": "IST",
+    "eloRating": 1330,
+    "impliedProb": 0.005,
+    "squadDepth": 3,
+    "historicalPedigree": 3,
+    "tacticalStyle": {
+      "offensive": 0.35,
+      "defensive": 0.4,
+      "possession": 0.35,
+      "transition": 0.4
+    },
+    "managerExpScore": 3,
+    "recentForm": {
+      "goalsFor": 0.7,
+      "goalsAgainst": 2
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.4,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2
   },
   {
-    name: "Göztepe", code: "GOZ", eloRating: 1509, impliedProb: 0.01, squadDepth: 4, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.5, defensive: 0.5, possession: 0.5, transition: 0.5 }, managerExpScore: 4, recentForm: { goalsFor: 2.11, goalsAgainst: 1.78 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
-  },
-  
-  // TOP EUROPEAN TEAMS (Often on Sportoto)
-  {
-    name: "Real Madrid", code: "RMA", eloRating: 1872, impliedProb: 0.30, squadDepth: 10, historicalPedigree: 10,
-    tacticalStyle: { offensive: 0.9, defensive: 0.8, possession: 0.85, transition: 0.95 }, managerExpScore: 10, recentForm: { goalsFor: 2.56, goalsAgainst: 1.00 },
-    starDependency: 0.2, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
-  },
-  {
-    name: "Barcelona", code: "BAR", eloRating: 2024, impliedProb: 0.25, squadDepth: 9, historicalPedigree: 10,
-    tacticalStyle: { offensive: 0.85, defensive: 0.75, possession: 0.9, transition: 0.8 }, managerExpScore: 8, recentForm: { goalsFor: 4.33, goalsAgainst: 1.00 },
-    starDependency: 0.25, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 3
-  },
-  {
-    name: "Manchester City", code: "MCI", eloRating: 1857, impliedProb: 0.35, squadDepth: 10, historicalPedigree: 9,
-    tacticalStyle: { offensive: 0.95, defensive: 0.85, possession: 0.95, transition: 0.9 }, managerExpScore: 10, recentForm: { goalsFor: 2.50, goalsAgainst: 1.13 },
-    starDependency: 0.15, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
-  },
-  {
-    name: "Arsenal", code: "ARS", eloRating: 1842, impliedProb: 0.20, squadDepth: 8, historicalPedigree: 8,
-    tacticalStyle: { offensive: 0.85, defensive: 0.85, possession: 0.85, transition: 0.85 }, managerExpScore: 8, recentForm: { goalsFor: 1.63, goalsAgainst: 0.63 },
-    starDependency: 0.2, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
-  },
-  {
-    name: "Liverpool", code: "LIV", eloRating: 1745, impliedProb: 0.22, squadDepth: 8, historicalPedigree: 10,
-    tacticalStyle: { offensive: 0.9, defensive: 0.8, possession: 0.8, transition: 0.9 }, managerExpScore: 8, recentForm: { goalsFor: 1.38, goalsAgainst: 1.00 },
-    starDependency: 0.25, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
-  },
-  {
-    name: "Bayern Munich", code: "BAY", eloRating: 1849, impliedProb: 0.28, squadDepth: 9, historicalPedigree: 10,
-    tacticalStyle: { offensive: 0.95, defensive: 0.8, possession: 0.9, transition: 0.85 }, managerExpScore: 9, recentForm: { goalsFor: 3.57, goalsAgainst: 0.86 },
-    starDependency: 0.2, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Göztepe",
+    "code": "GOZ",
+    "eloRating": 1545,
+    "impliedProb": 0.01,
+    "squadDepth": 4,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.5,
+      "defensive": 0.5,
+      "possession": 0.5,
+      "transition": 0.5
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 2,
+      "goalsAgainst": 1.73
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 15,
+      "goalsFor": 22,
+      "goalsAgainst": 19,
+      "goalDifference": 3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Inter", code: "INT", eloRating: 1980, impliedProb: 0.18, squadDepth: 8, historicalPedigree: 9,
-    tacticalStyle: { offensive: 0.8, defensive: 0.9, possession: 0.75, transition: 0.8 }, managerExpScore: 8, recentForm: { goalsFor: 2.2, goalsAgainst: 0.6 },
-    starDependency: 0.2, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Real Madrid",
+    "code": "RMA",
+    "eloRating": 1964,
+    "impliedProb": 0.3,
+    "squadDepth": 10,
+    "historicalPedigree": 10,
+    "tacticalStyle": {
+      "offensive": 0.9,
+      "defensive": 0.8,
+      "possession": 0.85,
+      "transition": 0.95
+    },
+    "managerExpScore": 10,
+    "recentForm": {
+      "goalsFor": 2.55,
+      "goalsAgainst": 0.91
+    },
+    "starDependency": 0.2,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "season": "2026-27 Spanish LALIGA",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 27,
+      "goalsFor": 28,
+      "goalsAgainst": 10,
+      "goalDifference": 18,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "AC Milan", code: "MIL", eloRating: 1765, impliedProb: 0.12, squadDepth: 8, historicalPedigree: 10,
-    tacticalStyle: { offensive: 0.8, defensive: 0.75, possession: 0.7, transition: 0.85 }, managerExpScore: 7, recentForm: { goalsFor: 2.00, goalsAgainst: 1.00 },
-    starDependency: 0.3, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Barcelona",
+    "code": "BAR",
+    "eloRating": 2080,
+    "impliedProb": 0.25,
+    "squadDepth": 9,
+    "historicalPedigree": 10,
+    "tacticalStyle": {
+      "offensive": 0.85,
+      "defensive": 0.75,
+      "possession": 0.9,
+      "transition": 0.8
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 4.18,
+      "goalsAgainst": 1.09
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 3,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "season": "2026-27 Spanish LALIGA",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 30,
+      "goalsFor": 46,
+      "goalsAgainst": 12,
+      "goalDifference": 34,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Juventus", code: "JUV", eloRating: 1687, impliedProb: 0.15, squadDepth: 8, historicalPedigree: 10,
-    tacticalStyle: { offensive: 0.75, defensive: 0.85, possession: 0.7, transition: 0.75 }, managerExpScore: 8, recentForm: { goalsFor: 1.29, goalsAgainst: 1.14 },
-    starDependency: 0.25, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Manchester City",
+    "code": "MCI",
+    "eloRating": 1852,
+    "impliedProb": 0.35,
+    "squadDepth": 10,
+    "historicalPedigree": 9,
+    "tacticalStyle": {
+      "offensive": 0.95,
+      "defensive": 0.85,
+      "possession": 0.95,
+      "transition": 0.9
+    },
+    "managerExpScore": 10,
+    "recentForm": {
+      "goalsFor": 2.22,
+      "goalsAgainst": 1.11
+    },
+    "starDependency": 0.15,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
+      "season": "2026-27 English Premier League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 21,
+      "goalsFor": 20,
+      "goalsAgainst": 10,
+      "goalDifference": 10,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Gençlerbirliği", code: "GEN", eloRating: 1391, impliedProb: 0.01, squadDepth: 4, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.45, defensive: 0.5, possession: 0.45, transition: 0.5 }, managerExpScore: 4, recentForm: { goalsFor: 0.78, goalsAgainst: 2.00 },
-    starDependency: 0.3, homeAdvantage: 0.6, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Arsenal",
+    "code": "ARS",
+    "eloRating": 1924,
+    "impliedProb": 0.2,
+    "squadDepth": 8,
+    "historicalPedigree": 8,
+    "tacticalStyle": {
+      "offensive": 0.85,
+      "defensive": 0.85,
+      "possession": 0.85,
+      "transition": 0.85
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 1.5,
+      "goalsAgainst": 0.5
+    },
+    "starDependency": 0.2,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
+      "season": "2026-27 English Premier League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 27,
+      "goalsFor": 15,
+      "goalsAgainst": 5,
+      "goalDifference": 10,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Amed SK", code: "AME", eloRating: 1640, impliedProb: 0.01, squadDepth: 3, historicalPedigree: 2,
-    tacticalStyle: { offensive: 0.4, defensive: 0.5, possession: 0.4, transition: 0.4 }, managerExpScore: 3, recentForm: { goalsFor: 2.22, goalsAgainst: 1.11 },
-    starDependency: 0.4, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Liverpool",
+    "code": "LIV",
+    "eloRating": 1740,
+    "impliedProb": 0.22,
+    "squadDepth": 8,
+    "historicalPedigree": 10,
+    "tacticalStyle": {
+      "offensive": 0.9,
+      "defensive": 0.8,
+      "possession": 0.8,
+      "transition": 0.9
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 1.22,
+      "goalsAgainst": 1
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
+      "season": "2026-27 English Premier League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 15,
+      "goalsFor": 11,
+      "goalsAgainst": 9,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Erzurumspor FK", code: "ERZ", eloRating: 1498, impliedProb: 0.01, squadDepth: 3, historicalPedigree: 3,
-    tacticalStyle: { offensive: 0.4, defensive: 0.55, possession: 0.4, transition: 0.45 }, managerExpScore: 4, recentForm: { goalsFor: 0.89, goalsAgainst: 1.33 },
-    starDependency: 0.3, homeAdvantage: 0.8, altitudeAdaptation: 0.2, groupDifficulty: 5, injurySeverity: 1
+    "name": "Bayern Munich",
+    "code": "BAY",
+    "eloRating": 1902,
+    "impliedProb": 0.28,
+    "squadDepth": 9,
+    "historicalPedigree": 10,
+    "tacticalStyle": {
+      "offensive": 0.95,
+      "defensive": 0.8,
+      "possession": 0.9,
+      "transition": 0.85
+    },
+    "managerExpScore": 9,
+    "recentForm": {
+      "goalsFor": 3.22,
+      "goalsAgainst": 1
+    },
+    "starDependency": 0.2,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
+      "season": "2026-27 German Bundesliga",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 21,
+      "goalsFor": 29,
+      "goalsAgainst": 9,
+      "goalDifference": 20,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Kocaelispor", code: "KOC", eloRating: 1540, impliedProb: 0.01, squadDepth: 4, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.5, defensive: 0.45, possession: 0.45, transition: 0.55 }, managerExpScore: 5, recentForm: { goalsFor: 1.22, goalsAgainst: 1.00 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Inter",
+    "code": "INT",
+    "eloRating": 1980,
+    "impliedProb": 0.18,
+    "squadDepth": 8,
+    "historicalPedigree": 9,
+    "tacticalStyle": {
+      "offensive": 0.8,
+      "defensive": 0.9,
+      "possession": 0.75,
+      "transition": 0.8
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 2.2,
+      "goalsAgainst": 0.6
+    },
+    "starDependency": 0.2,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1
   },
   {
-    name: "Eyüpspor", code: "EYU", eloRating: 1281, impliedProb: 0.02, squadDepth: 5, historicalPedigree: 2,
-    tacticalStyle: { offensive: 0.6, defensive: 0.5, possession: 0.55, transition: 0.6 }, managerExpScore: 6, recentForm: { goalsFor: 0.22, goalsAgainst: 2.56 },
-    starDependency: 0.4, homeAdvantage: 0.6, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "AC Milan",
+    "code": "MIL",
+    "eloRating": 1847,
+    "impliedProb": 0.12,
+    "squadDepth": 8,
+    "historicalPedigree": 10,
+    "tacticalStyle": {
+      "offensive": 0.8,
+      "defensive": 0.75,
+      "possession": 0.7,
+      "transition": 0.85
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 2.1,
+      "goalsAgainst": 1.2
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
+      "season": "2026-27 Italian Serie A",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 21,
+      "goalsFor": 21,
+      "goalsAgainst": 12,
+      "goalDifference": 9,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Çorum FK", code: "COR", eloRating: 1521, impliedProb: 0.01, squadDepth: 4, historicalPedigree: 2,
-    tacticalStyle: { offensive: 0.45, defensive: 0.45, possession: 0.45, transition: 0.5 }, managerExpScore: 4, recentForm: { goalsFor: 2.00, goalsAgainst: 1.67 },
-    starDependency: 0.3, homeAdvantage: 0.6, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Juventus",
+    "code": "JUV",
+    "eloRating": 1769,
+    "impliedProb": 0.15,
+    "squadDepth": 8,
+    "historicalPedigree": 10,
+    "tacticalStyle": {
+      "offensive": 0.75,
+      "defensive": 0.85,
+      "possession": 0.7,
+      "transition": 0.75
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 1.3,
+      "goalsAgainst": 1
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
+      "season": "2026-27 Italian Serie A",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 17,
+      "goalsFor": 13,
+      "goalsAgainst": 10,
+      "goalDifference": 3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Augsburg", code: "AUG", eloRating: 1678, impliedProb: 0.1, squadDepth: 6, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.5, defensive: 0.6, possession: 0.45, transition: 0.6 }, managerExpScore: 6, recentForm: { goalsFor: 2.43, goalsAgainst: 1.86 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Gençlerbirliği",
+    "code": "GEN",
+    "eloRating": 1452,
+    "impliedProb": 0.01,
+    "squadDepth": 4,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.45,
+      "defensive": 0.5,
+      "possession": 0.45,
+      "transition": 0.5
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 1.2,
+      "goalsAgainst": 1.8
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.6,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 11,
+      "goalsFor": 12,
+      "goalsAgainst": 18,
+      "goalDifference": -6,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "RB Leipzig", code: "RBL", eloRating: 1739, impliedProb: 0.15, squadDepth: 8, historicalPedigree: 6,
-    tacticalStyle: { offensive: 0.8, defensive: 0.7, possession: 0.7, transition: 0.9 }, managerExpScore: 8, recentForm: { goalsFor: 2.86, goalsAgainst: 1.57 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Amed SK",
+    "code": "AME",
+    "eloRating": 1691,
+    "impliedProb": 0.01,
+    "squadDepth": 3,
+    "historicalPedigree": 2,
+    "tacticalStyle": {
+      "offensive": 0.4,
+      "defensive": 0.5,
+      "possession": 0.4,
+      "transition": 0.4
+    },
+    "managerExpScore": 3,
+    "recentForm": {
+      "goalsFor": 2.55,
+      "goalsAgainst": 1.36
+    },
+    "starDependency": 0.4,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 23,
+      "goalsFor": 28,
+      "goalsAgainst": 15,
+      "goalDifference": 13,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Eintracht Frankfurt", code: "EIN", eloRating: 1611, impliedProb: 0.12, squadDepth: 7, historicalPedigree: 7,
-    tacticalStyle: { offensive: 0.7, defensive: 0.6, possession: 0.6, transition: 0.8 }, managerExpScore: 7, recentForm: { goalsFor: 1.43, goalsAgainst: 2.43 },
-    starDependency: 0.3, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Erzurumspor FK",
+    "code": "ERZ",
+    "eloRating": 1488,
+    "impliedProb": 0.01,
+    "squadDepth": 3,
+    "historicalPedigree": 3,
+    "tacticalStyle": {
+      "offensive": 0.4,
+      "defensive": 0.55,
+      "possession": 0.4,
+      "transition": 0.45
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 0.9,
+      "goalsAgainst": 1.5
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.2,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 14,
+      "goalsFor": 9,
+      "goalsAgainst": 15,
+      "goalDifference": -6,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Manchester United", code: "MUN", eloRating: 1619, impliedProb: 0.15, squadDepth: 9, historicalPedigree: 10,
-    tacticalStyle: { offensive: 0.7, defensive: 0.65, possession: 0.65, transition: 0.75 }, managerExpScore: 7, recentForm: { goalsFor: 1.25, goalsAgainst: 1.63 },
-    starDependency: 0.4, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 3
+    "name": "Kocaelispor",
+    "code": "KOC",
+    "eloRating": 1598,
+    "impliedProb": 0.01,
+    "squadDepth": 4,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.5,
+      "defensive": 0.45,
+      "possession": 0.45,
+      "transition": 0.55
+    },
+    "managerExpScore": 5,
+    "recentForm": {
+      "goalsFor": 1.18,
+      "goalsAgainst": 0.82
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 19,
+      "goalsFor": 13,
+      "goalsAgainst": 9,
+      "goalDifference": 4,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Tottenham Hotspur", code: "TOT", eloRating: 1648, impliedProb: 0.15, squadDepth: 8, historicalPedigree: 8,
-    tacticalStyle: { offensive: 0.85, defensive: 0.6, possession: 0.7, transition: 0.8 }, managerExpScore: 8, recentForm: { goalsFor: 1.00, goalsAgainst: 1.25 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Eyüpspor",
+    "code": "EYU",
+    "eloRating": 1251,
+    "impliedProb": 0.02,
+    "squadDepth": 5,
+    "historicalPedigree": 2,
+    "tacticalStyle": {
+      "offensive": 0.6,
+      "defensive": 0.5,
+      "possession": 0.55,
+      "transition": 0.6
+    },
+    "managerExpScore": 6,
+    "recentForm": {
+      "goalsFor": 0.27,
+      "goalsAgainst": 2.73
+    },
+    "starDependency": 0.4,
+    "homeAdvantage": 0.6,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 3,
+      "goalsFor": 3,
+      "goalsAgainst": 30,
+      "goalDifference": -27,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Villarreal", code: "VIL", eloRating: 1699, impliedProb: 0.12, squadDepth: 7, historicalPedigree: 7,
-    tacticalStyle: { offensive: 0.7, defensive: 0.65, possession: 0.65, transition: 0.7 }, managerExpScore: 7, recentForm: { goalsFor: 1.50, goalsAgainst: 1.40 },
-    starDependency: 0.3, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Çorum FK",
+    "code": "COR",
+    "eloRating": 1567,
+    "impliedProb": 0.01,
+    "squadDepth": 4,
+    "historicalPedigree": 2,
+    "tacticalStyle": {
+      "offensive": 0.45,
+      "defensive": 0.45,
+      "possession": 0.45,
+      "transition": 0.5
+    },
+    "managerExpScore": 4,
+    "recentForm": {
+      "goalsFor": 2.1,
+      "goalsAgainst": 1.6
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.6,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
+      "season": "2026-27 Turkish Super Lig",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 16,
+      "goalsFor": 21,
+      "goalsAgainst": 16,
+      "goalDifference": 5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Como", code: "COM", eloRating: 1789, impliedProb: 0.08, squadDepth: 6, historicalPedigree: 4,
-    tacticalStyle: { offensive: 0.6, defensive: 0.5, possession: 0.55, transition: 0.6 }, managerExpScore: 6, recentForm: { goalsFor: 1.75, goalsAgainst: 0.88 },
-    starDependency: 0.3, homeAdvantage: 0.6, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Augsburg",
+    "code": "AUG",
+    "eloRating": 1658,
+    "impliedProb": 0.1,
+    "squadDepth": 6,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.5,
+      "defensive": 0.6,
+      "possession": 0.45,
+      "transition": 0.6
+    },
+    "managerExpScore": 6,
+    "recentForm": {
+      "goalsFor": 2.22,
+      "goalsAgainst": 2.22
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
+      "season": "2026-27 German Bundesliga",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 9,
+      "goalsFor": 20,
+      "goalsAgainst": 20,
+      "goalDifference": 0,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Roma", code: "ROM", eloRating: 1831, impliedProb: 0.12, squadDepth: 8, historicalPedigree: 9,
-    tacticalStyle: { offensive: 0.7, defensive: 0.7, possession: 0.6, transition: 0.7 }, managerExpScore: 7, recentForm: { goalsFor: 2.38, goalsAgainst: 0.75 },
-    starDependency: 0.3, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "RB Leipzig",
+    "code": "RBL",
+    "eloRating": 1836,
+    "impliedProb": 0.15,
+    "squadDepth": 8,
+    "historicalPedigree": 6,
+    "tacticalStyle": {
+      "offensive": 0.8,
+      "defensive": 0.7,
+      "possession": 0.7,
+      "transition": 0.9
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 3,
+      "goalsAgainst": 1.44
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
+      "season": "2026-27 German Bundesliga",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 18,
+      "goalsFor": 27,
+      "goalsAgainst": 13,
+      "goalDifference": 14,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Everton", code: "EVE", eloRating: 1665, impliedProb: 0.10, squadDepth: 6, historicalPedigree: 6,
-    tacticalStyle: { offensive: 0.6, defensive: 0.65, possession: 0.45, transition: 0.65 }, managerExpScore: 6, recentForm: { goalsFor: 1.00, goalsAgainst: 1.13 },
-    starDependency: 0.3, homeAdvantage: 0.75, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Eintracht Frankfurt",
+    "code": "EIN",
+    "eloRating": 1669,
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.6,
+      "possession": 0.6,
+      "transition": 0.8
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 1.67,
+      "goalsAgainst": 2.22
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
+      "season": "2026-27 German Bundesliga",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 12,
+      "goalsFor": 15,
+      "goalsAgainst": 20,
+      "goalDifference": -5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Chelsea", code: "CHE", eloRating: 1716, impliedProb: 0.22, squadDepth: 9, historicalPedigree: 9,
-    tacticalStyle: { offensive: 0.85, defensive: 0.7, possession: 0.8, transition: 0.8 }, managerExpScore: 8, recentForm: { goalsFor: 2.13, goalsAgainst: 1.88 },
-    starDependency: 0.25, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Manchester United",
+    "code": "MUN",
+    "eloRating": 1609,
+    "impliedProb": 0.15,
+    "squadDepth": 9,
+    "historicalPedigree": 10,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.65,
+      "transition": 0.75
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 1.11,
+      "goalsAgainst": 1.67
+    },
+    "starDependency": 0.4,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 3,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
+      "season": "2026-27 English Premier League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 7,
+      "goalsFor": 10,
+      "goalsAgainst": 15,
+      "goalDifference": -5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Brentford", code: "BRE", eloRating: 1707, impliedProb: 0.10, squadDepth: 6, historicalPedigree: 5,
-    tacticalStyle: { offensive: 0.7, defensive: 0.55, possession: 0.5, transition: 0.75 }, managerExpScore: 7, recentForm: { goalsFor: 1.75, goalsAgainst: 1.13 },
-    starDependency: 0.35, homeAdvantage: 0.7, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Tottenham Hotspur",
+    "code": "TOT",
+    "eloRating": 1689,
+    "impliedProb": 0.15,
+    "squadDepth": 8,
+    "historicalPedigree": 8,
+    "tacticalStyle": {
+      "offensive": 0.85,
+      "defensive": 0.6,
+      "possession": 0.7,
+      "transition": 0.8
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 1,
+      "goalsAgainst": 1.1
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
+      "season": "2026-27 English Premier League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 12,
+      "goalsFor": 10,
+      "goalsAgainst": 11,
+      "goalDifference": -1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Real Betis", code: "BET", eloRating: 1800, impliedProb: 0.15, squadDepth: 7, historicalPedigree: 7,
-    tacticalStyle: { offensive: 0.7, defensive: 0.65, possession: 0.65, transition: 0.7 }, managerExpScore: 7, recentForm: { goalsFor: 1.60, goalsAgainst: 1.40 },
-    starDependency: 0.3, homeAdvantage: 0.75, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Villarreal",
+    "code": "VIL",
+    "eloRating": 1694,
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.65,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 1.36,
+      "goalsAgainst": 1.36
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "season": "2026-27 Spanish LALIGA",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 12,
+      "goalsFor": 15,
+      "goalsAgainst": 15,
+      "goalDifference": 0,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Sevilla", code: "SEV", eloRating: 1708, impliedProb: 0.12, squadDepth: 7, historicalPedigree: 8,
-    tacticalStyle: { offensive: 0.65, defensive: 0.6, possession: 0.6, transition: 0.65 }, managerExpScore: 7, recentForm: { goalsFor: 1.56, goalsAgainst: 1.78 },
-    starDependency: 0.3, homeAdvantage: 0.75, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Como",
+    "code": "COM",
+    "eloRating": 1876,
+    "impliedProb": 0.08,
+    "squadDepth": 6,
+    "historicalPedigree": 4,
+    "tacticalStyle": {
+      "offensive": 0.6,
+      "defensive": 0.5,
+      "possession": 0.55,
+      "transition": 0.6
+    },
+    "managerExpScore": 6,
+    "recentForm": {
+      "goalsFor": 1.8,
+      "goalsAgainst": 0.8
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.6,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
+      "season": "2026-27 Italian Serie A",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 23,
+      "goalsFor": 18,
+      "goalsAgainst": 8,
+      "goalDifference": 10,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Atalanta", code: "ATA", eloRating: 1665, impliedProb: 0.15, squadDepth: 8, historicalPedigree: 8,
-    tacticalStyle: { offensive: 0.85, defensive: 0.7, possession: 0.75, transition: 0.85 }, managerExpScore: 8, recentForm: { goalsFor: 1.75, goalsAgainst: 1.88 },
-    starDependency: 0.25, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Roma",
+    "code": "ROM",
+    "eloRating": 1928,
+    "impliedProb": 0.12,
+    "squadDepth": 8,
+    "historicalPedigree": 9,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.7,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 2.8,
+      "goalsAgainst": 1
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
+      "season": "2026-27 Italian Serie A",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 24,
+      "goalsFor": 28,
+      "goalsAgainst": 10,
+      "goalDifference": 18,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Lazio", code: "LAZ", eloRating: 1869, impliedProb: 0.18, squadDepth: 8, historicalPedigree: 8,
-    tacticalStyle: { offensive: 0.8, defensive: 0.75, possession: 0.7, transition: 0.75 }, managerExpScore: 7, recentForm: { goalsFor: 2.00, goalsAgainst: 0.63 },
-    starDependency: 0.3, homeAdvantage: 0.75, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Everton",
+    "code": "EVE",
+    "eloRating": 1752,
+    "impliedProb": 0.1,
+    "squadDepth": 6,
+    "historicalPedigree": 6,
+    "tacticalStyle": {
+      "offensive": 0.6,
+      "defensive": 0.65,
+      "possession": 0.45,
+      "transition": 0.65
+    },
+    "managerExpScore": 6,
+    "recentForm": {
+      "goalsFor": 1.2,
+      "goalsAgainst": 1
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
+      "season": "2026-27 English Premier League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 16,
+      "goalsFor": 12,
+      "goalsAgainst": 10,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Borussia Dortmund", code: "BVB", eloRating: 1794, impliedProb: 0.18, squadDepth: 8, historicalPedigree: 9,
-    tacticalStyle: { offensive: 0.82, defensive: 0.70, possession: 0.75, transition: 0.85 }, managerExpScore: 8, recentForm: { goalsFor: 1.71, goalsAgainst: 0.57 },
-    starDependency: 0.25, homeAdvantage: 0.85, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Chelsea",
+    "code": "CHE",
+    "eloRating": 1762,
+    "impliedProb": 0.22,
+    "squadDepth": 9,
+    "historicalPedigree": 9,
+    "tacticalStyle": {
+      "offensive": 0.85,
+      "defensive": 0.7,
+      "possession": 0.8,
+      "transition": 0.8
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 2.11,
+      "goalsAgainst": 1.67
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
+      "season": "2026-27 English Premier League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 16,
+      "goalsFor": 19,
+      "goalsAgainst": 15,
+      "goalDifference": 4,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Monaco", code: "ASM", eloRating: 1750, impliedProb: 0.15, squadDepth: 7, historicalPedigree: 8,
-    tacticalStyle: { offensive: 0.78, defensive: 0.68, possession: 0.70, transition: 0.80 }, managerExpScore: 7, recentForm: { goalsFor: 1.38, goalsAgainst: 0.88 },
-    starDependency: 0.3, homeAdvantage: 0.75, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Brentford",
+    "code": "BRE",
+    "eloRating": 1753,
+    "impliedProb": 0.1,
+    "squadDepth": 6,
+    "historicalPedigree": 5,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.55,
+      "possession": 0.5,
+      "transition": 0.75
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 1.78,
+      "goalsAgainst": 1
+    },
+    "starDependency": 0.35,
+    "homeAdvantage": 0.7,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
+      "season": "2026-27 English Premier League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 14,
+      "goalsFor": 16,
+      "goalsAgainst": 9,
+      "goalDifference": 7,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Lille", code: "LIL", eloRating: 1755, impliedProb: 0.12, squadDepth: 7, historicalPedigree: 7,
-    tacticalStyle: { offensive: 0.72, defensive: 0.75, possession: 0.65, transition: 0.75 }, managerExpScore: 7, recentForm: { goalsFor: 1.38, goalsAgainst: 0.75 },
-    starDependency: 0.3, homeAdvantage: 0.75, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Real Betis",
+    "code": "BET",
+    "eloRating": 1841,
+    "impliedProb": 0.15,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.65,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 1.64,
+      "goalsAgainst": 1.36
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "season": "2026-27 Spanish LALIGA",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 23,
+      "goalsFor": 18,
+      "goalsAgainst": 15,
+      "goalDifference": 3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Paris Saint-Germain", code: "PSG", eloRating: 1743, impliedProb: 0.28, squadDepth: 9, historicalPedigree: 9,
-    tacticalStyle: { offensive: 0.90, defensive: 0.78, possession: 0.88, transition: 0.88 }, managerExpScore: 9, recentForm: { goalsFor: 2.00, goalsAgainst: 1.29 },
-    starDependency: 0.25, homeAdvantage: 0.85, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Sevilla",
+    "code": "SEV",
+    "eloRating": 1756,
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 8,
+    "tacticalStyle": {
+      "offensive": 0.65,
+      "defensive": 0.6,
+      "possession": 0.6,
+      "transition": 0.65
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 1.42,
+      "goalsAgainst": 1.58
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "season": "2026-27 Spanish LALIGA",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 12,
+      "points": 18,
+      "goalsFor": 17,
+      "goalsAgainst": 19,
+      "goalDifference": -2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Olympique Lyon", code: "LYO", eloRating: 1758, impliedProb: 0.12, squadDepth: 7, historicalPedigree: 8,
-    tacticalStyle: { offensive: 0.74, defensive: 0.65, possession: 0.68, transition: 0.72 }, managerExpScore: 7, recentForm: { goalsFor: 1.86, goalsAgainst: 0.71 },
-    starDependency: 0.3, homeAdvantage: 0.8, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 2
+    "name": "Atalanta",
+    "code": "ATA",
+    "eloRating": 1662,
+    "impliedProb": 0.15,
+    "squadDepth": 8,
+    "historicalPedigree": 8,
+    "tacticalStyle": {
+      "offensive": 0.85,
+      "defensive": 0.7,
+      "possession": 0.75,
+      "transition": 0.85
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 1.6,
+      "goalsAgainst": 2
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
+      "season": "2026-27 Italian Serie A",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 11,
+      "goalsFor": 16,
+      "goalsAgainst": 20,
+      "goalDifference": -4,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
   },
   {
-    name: "Napoli", code: "NAP", eloRating: 1697, impliedProb: 0.20, squadDepth: 8, historicalPedigree: 8,
-    tacticalStyle: { offensive: 0.82, defensive: 0.80, possession: 0.75, transition: 0.80 }, managerExpScore: 8, recentForm: { goalsFor: 1.63, goalsAgainst: 1.25 },
-    starDependency: 0.25, homeAdvantage: 0.85, altitudeAdaptation: 0.1, groupDifficulty: 5, injurySeverity: 1
+    "name": "Lazio",
+    "code": "LAZ",
+    "eloRating": 1966,
+    "impliedProb": 0.18,
+    "squadDepth": 8,
+    "historicalPedigree": 8,
+    "tacticalStyle": {
+      "offensive": 0.8,
+      "defensive": 0.75,
+      "possession": 0.7,
+      "transition": 0.75
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 2.4,
+      "goalsAgainst": 0.8
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
+      "season": "2026-27 Italian Serie A",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 28,
+      "goalsFor": 24,
+      "goalsAgainst": 8,
+      "goalDifference": 16,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Borussia Dortmund",
+    "code": "BVB",
+    "eloRating": 1847,
+    "impliedProb": 0.18,
+    "squadDepth": 8,
+    "historicalPedigree": 9,
+    "tacticalStyle": {
+      "offensive": 0.82,
+      "defensive": 0.7,
+      "possession": 0.75,
+      "transition": 0.85
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 1.78,
+      "goalsAgainst": 0.78
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.85,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
+      "season": "2026-27 German Bundesliga",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 21,
+      "goalsFor": 16,
+      "goalsAgainst": 7,
+      "goalDifference": 9,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Monaco",
+    "code": "ASM",
+    "eloRating": 1740,
+    "impliedProb": 0.15,
+    "squadDepth": 7,
+    "historicalPedigree": 8,
+    "tacticalStyle": {
+      "offensive": 0.78,
+      "defensive": 0.68,
+      "possession": 0.7,
+      "transition": 0.8
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 1.33,
+      "goalsAgainst": 1.11
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
+      "season": "2026-27 French Ligue 1",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 15,
+      "goalsFor": 12,
+      "goalsAgainst": 10,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Lille",
+    "code": "LIL",
+    "eloRating": 1796,
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.72,
+      "defensive": 0.75,
+      "possession": 0.65,
+      "transition": 0.75
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 1.33,
+      "goalsAgainst": 0.67
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
+      "season": "2026-27 French Ligue 1",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 18,
+      "goalsFor": 12,
+      "goalsAgainst": 6,
+      "goalDifference": 6,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Paris Saint-Germain",
+    "code": "PSG",
+    "eloRating": 1784,
+    "impliedProb": 0.28,
+    "squadDepth": 9,
+    "historicalPedigree": 9,
+    "tacticalStyle": {
+      "offensive": 0.9,
+      "defensive": 0.78,
+      "possession": 0.88,
+      "transition": 0.88
+    },
+    "managerExpScore": 9,
+    "recentForm": {
+      "goalsFor": 1.78,
+      "goalsAgainst": 1.11
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.85,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
+      "season": "2026-27 French Ligue 1",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 17,
+      "goalsFor": 16,
+      "goalsAgainst": 10,
+      "goalDifference": 6,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Olympique Lyon",
+    "code": "LYO",
+    "eloRating": 1794,
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 8,
+    "tacticalStyle": {
+      "offensive": 0.74,
+      "defensive": 0.65,
+      "possession": 0.68,
+      "transition": 0.72
+    },
+    "managerExpScore": 7,
+    "recentForm": {
+      "goalsFor": 1.67,
+      "goalsAgainst": 0.78
+    },
+    "starDependency": 0.3,
+    "homeAdvantage": 0.8,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
+      "season": "2026-27 French Ligue 1",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 17,
+      "goalsFor": 15,
+      "goalsAgainst": 7,
+      "goalDifference": 8,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Napoli",
+    "code": "NAP",
+    "eloRating": 1738,
+    "impliedProb": 0.2,
+    "squadDepth": 8,
+    "historicalPedigree": 8,
+    "tacticalStyle": {
+      "offensive": 0.82,
+      "defensive": 0.8,
+      "possession": 0.75,
+      "transition": 0.8
+    },
+    "managerExpScore": 8,
+    "recentForm": {
+      "goalsFor": 1.7,
+      "goalsAgainst": 1.3
+    },
+    "starDependency": 0.25,
+    "homeAdvantage": 0.85,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 1,
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
+      "season": "2026-27 Italian Serie A",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 10,
+      "points": 14,
+      "goalsFor": 17,
+      "goalsAgainst": 13,
+      "goalDifference": 4,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Aston Villa",
+    "code": "AVL",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity"
+      ],
+      "estimationMethod": "Median of existing team inputs; not measured team statistics"
+    },
+    "eloRating": 1679,
+    "recentForm": {
+      "goalsFor": 1.11,
+      "goalsAgainst": 1.44
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
+      "season": "2026-27 English Premier League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 9,
+      "points": 12,
+      "goalsFor": 10,
+      "goalsAgainst": 13,
+      "goalDifference": -3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Atlético Madrid",
+    "code": "ATM",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity"
+      ],
+      "estimationMethod": "Median of existing team inputs; not measured team statistics"
+    },
+    "eloRating": 1956,
+    "recentForm": {
+      "goalsFor": 2,
+      "goalsAgainst": 0.73
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "season": "2026-27 Spanish LALIGA",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 28,
+      "goalsFor": 22,
+      "goalsAgainst": 8,
+      "goalDifference": 14,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Valencia",
+    "code": "VAL",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity"
+      ],
+      "estimationMethod": "Median of existing team inputs; not measured team statistics"
+    },
+    "eloRating": 1613,
+    "recentForm": {
+      "goalsFor": 0.73,
+      "goalsAgainst": 1.55
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
+      "season": "2026-27 Spanish LALIGA",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 11,
+      "points": 9,
+      "goalsFor": 8,
+      "goalsAgainst": 17,
+      "goalDifference": -9,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Werder Bremen",
+    "code": "SVW",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity"
+      ],
+      "estimationMethod": "Median of existing team inputs; not measured team statistics"
+    },
+    "eloRating": 1745,
+    "recentForm": {
+      "goalsFor": 2.13,
+      "goalsAgainst": 1.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
+      "season": "2026-27 German Bundesliga",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 8,
+      "points": 15,
+      "goalsFor": 17,
+      "goalsAgainst": 14,
+      "goalDifference": 3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "VfB Stuttgart",
+    "code": "VFB",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity"
+      ],
+      "estimationMethod": "Median of existing team inputs; not measured team statistics"
+    },
+    "eloRating": 1653,
+    "recentForm": {
+      "goalsFor": 1.75,
+      "goalsAgainst": 1.88
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
+      "season": "2026-27 German Bundesliga",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 8,
+      "points": 9,
+      "goalsFor": 14,
+      "goalsAgainst": 15,
+      "goalDifference": -1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating"
+    }
+  },
+  {
+    "name": "Italy",
+    "code": "NAT_ITA",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1649,
+    "recentForm": {
+      "goalsFor": 2,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 7,
+      "goalsFor": 8,
+      "goalsAgainst": 5,
+      "goalDifference": 3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A1",
+      "providerTeamId": "162"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Belgium",
+    "code": "NAT_BEL",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1627,
+    "recentForm": {
+      "goalsFor": 1.5,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 6,
+      "goalsFor": 6,
+      "goalsAgainst": 5,
+      "goalDifference": 1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A1",
+      "providerTeamId": "459"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Türkiye",
+    "code": "NAT_TUR",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1505,
+    "recentForm": {
+      "goalsFor": 0.5,
+      "goalsAgainst": 2.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 0,
+      "goalsFor": 2,
+      "goalsAgainst": 11,
+      "goalDifference": -9,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A1",
+      "providerTeamId": "465"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "France",
+    "code": "NAT_FRA",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1695,
+    "recentForm": {
+      "goalsFor": 1.75,
+      "goalsAgainst": 0.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 10,
+      "goalsFor": 7,
+      "goalsAgainst": 2,
+      "goalDifference": 5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A1",
+      "providerTeamId": "478"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Netherlands",
+    "code": "NAT_NED",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1656,
+    "recentForm": {
+      "goalsFor": 1.75,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 8,
+      "goalsFor": 7,
+      "goalsAgainst": 5,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A2",
+      "providerTeamId": "449"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Greece",
+    "code": "NAT_GRE",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1656,
+    "recentForm": {
+      "goalsFor": 1.25,
+      "goalsAgainst": 0.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 8,
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A2",
+      "providerTeamId": "455"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Germany",
+    "code": "NAT_GER",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1615,
+    "recentForm": {
+      "goalsFor": 0.75,
+      "goalsAgainst": 0.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 5,
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "goalDifference": 1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A2",
+      "providerTeamId": "481"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Serbia",
+    "code": "NAT_SRB",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1525,
+    "recentForm": {
+      "goalsFor": 0.75,
+      "goalsAgainst": 2
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 8,
+      "goalDifference": -5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A2",
+      "providerTeamId": "6757"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Spain",
+    "code": "NAT_ESP",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1729,
+    "recentForm": {
+      "goalsFor": 3,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 12,
+      "goalsFor": 12,
+      "goalsAgainst": 5,
+      "goalDifference": 7,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A3",
+      "providerTeamId": "164"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "England",
+    "code": "NAT_ENG",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1713,
+    "recentForm": {
+      "goalsFor": 3.5,
+      "goalsAgainst": 0.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 9,
+      "goalsFor": 14,
+      "goalsAgainst": 3,
+      "goalDifference": 11,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A3",
+      "providerTeamId": "448"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Czechia",
+    "code": "NAT_CZE",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1510,
+    "recentForm": {
+      "goalsFor": 0.5,
+      "goalsAgainst": 2.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 0,
+      "goalsFor": 2,
+      "goalsAgainst": 10,
+      "goalDifference": -8,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A3",
+      "providerTeamId": "450"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Croatia",
+    "code": "NAT_CRO",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1536,
+    "recentForm": {
+      "goalsFor": 1,
+      "goalsAgainst": 3.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 3,
+      "goalsFor": 4,
+      "goalsAgainst": 14,
+      "goalDifference": -10,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A3",
+      "providerTeamId": "477"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Norway",
+    "code": "NAT_NOR",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1576,
+    "recentForm": {
+      "goalsFor": 1.5,
+      "goalsAgainst": 2
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 3,
+      "goalsFor": 6,
+      "goalsAgainst": 8,
+      "goalDifference": -2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A4",
+      "providerTeamId": "464"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Denmark",
+    "code": "NAT_DEN",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1622,
+    "recentForm": {
+      "goalsFor": 1.75,
+      "goalsAgainst": 1.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 6,
+      "goalsFor": 7,
+      "goalsAgainst": 7,
+      "goalDifference": 0,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A4",
+      "providerTeamId": "479"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Portugal",
+    "code": "NAT_POR",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1719,
+    "recentForm": {
+      "goalsFor": 2.25,
+      "goalsAgainst": 1
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 12,
+      "goalsFor": 9,
+      "goalsAgainst": 4,
+      "goalDifference": 5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A4",
+      "providerTeamId": "482"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Wales",
+    "code": "NAT_WAL",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1571,
+    "recentForm": {
+      "goalsFor": 0.5,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 3,
+      "goalsFor": 2,
+      "goalsAgainst": 5,
+      "goalDifference": -3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group A4",
+      "providerTeamId": "578"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "North Macedonia",
+    "code": "NAT_MKD",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1500,
+    "recentForm": {
+      "goalsFor": 0,
+      "goalsAgainst": 2.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 0,
+      "goalsFor": 0,
+      "goalsAgainst": 10,
+      "goalDifference": -10,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B1",
+      "providerTeamId": "463"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Slovenia",
+    "code": "NAT_SVN",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1644,
+    "recentForm": {
+      "goalsFor": 1.25,
+      "goalsAgainst": 0.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 7,
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B1",
+      "providerTeamId": "472"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Switzerland",
+    "code": "NAT_SUI",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1744,
+    "recentForm": {
+      "goalsFor": 2.75,
+      "goalsAgainst": 0.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 12,
+      "goalsFor": 11,
+      "goalsAgainst": 1,
+      "goalDifference": 10,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B1",
+      "providerTeamId": "475"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Scotland",
+    "code": "NAT_SCO",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1588,
+    "recentForm": {
+      "goalsFor": 0.75,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 4,
+      "goalsFor": 3,
+      "goalsAgainst": 5,
+      "goalDifference": -2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B1",
+      "providerTeamId": "580"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Ukraine",
+    "code": "NAT_UKR",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1583,
+    "recentForm": {
+      "goalsFor": 0.5,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 4,
+      "goalsFor": 2,
+      "goalsAgainst": 5,
+      "goalDifference": -3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B2",
+      "providerTeamId": "457"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Hungary",
+    "code": "NAT_HUN",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1639,
+    "recentForm": {
+      "goalsFor": 0.75,
+      "goalsAgainst": 0.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 7,
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "goalDifference": 1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B2",
+      "providerTeamId": "480"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Georgia",
+    "code": "NAT_GEO",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1564,
+    "recentForm": {
+      "goalsFor": 0,
+      "goalsAgainst": 0.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 2,
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "goalDifference": -2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B2",
+      "providerTeamId": "584"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Northern Ireland",
+    "code": "NAT_NIR",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1666,
+    "recentForm": {
+      "goalsFor": 1,
+      "goalsAgainst": 0
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 8,
+      "goalsFor": 4,
+      "goalsAgainst": 0,
+      "goalDifference": 4,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B2",
+      "providerTeamId": "586"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Israel",
+    "code": "NAT_ISR",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1549,
+    "recentForm": {
+      "goalsFor": 0.5,
+      "goalsAgainst": 1.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 2,
+      "goalsFor": 2,
+      "goalsAgainst": 7,
+      "goalDifference": -5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B3",
+      "providerTeamId": "461"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Austria",
+    "code": "NAT_AUT",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1666,
+    "recentForm": {
+      "goalsFor": 2.25,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 8,
+      "goalsFor": 9,
+      "goalsAgainst": 5,
+      "goalDifference": 4,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B3",
+      "providerTeamId": "474"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Republic of Ireland",
+    "code": "NAT_IRL",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1620,
+    "recentForm": {
+      "goalsFor": 1.5,
+      "goalsAgainst": 1
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 5,
+      "goalsFor": 6,
+      "goalsAgainst": 4,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B3",
+      "providerTeamId": "476"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Kosovo",
+    "code": "NAT_KOS",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1605,
+    "recentForm": {
+      "goalsFor": 0.75,
+      "goalsAgainst": 1
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 5,
+      "goalsFor": 3,
+      "goalsAgainst": 4,
+      "goalDifference": -1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B3",
+      "providerTeamId": "18272"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Bosnia-Herzegovina",
+    "code": "NAT_BIH",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1661,
+    "recentForm": {
+      "goalsFor": 1.5,
+      "goalsAgainst": 0.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 8,
+      "goalsFor": 6,
+      "goalsAgainst": 3,
+      "goalDifference": 3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B4",
+      "providerTeamId": "452"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Sweden",
+    "code": "NAT_SWE",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1690,
+    "recentForm": {
+      "goalsFor": 1.75,
+      "goalsAgainst": 0.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 10,
+      "goalsFor": 7,
+      "goalsAgainst": 3,
+      "goalDifference": 4,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B4",
+      "providerTeamId": "466"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Poland",
+    "code": "NAT_POL",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1613,
+    "recentForm": {
+      "goalsFor": 1.75,
+      "goalsAgainst": 1
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 4,
+      "goalsFor": 7,
+      "goalsAgainst": 4,
+      "goalDifference": 3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B4",
+      "providerTeamId": "471"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Romania",
+    "code": "NAT_ROU",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1500,
+    "recentForm": {
+      "goalsFor": 0.75,
+      "goalsAgainst": 3.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 13,
+      "goalDifference": -10,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group B4",
+      "providerTeamId": "473"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Finland",
+    "code": "NAT_FIN",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1669,
+    "recentForm": {
+      "goalsFor": 2.25,
+      "goalsAgainst": 0.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 7,
+      "goalsFor": 9,
+      "goalsAgainst": 2,
+      "goalDifference": 7,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C1",
+      "providerTeamId": "458"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Belarus",
+    "code": "NAT_BLR",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1649,
+    "recentForm": {
+      "goalsFor": 1.25,
+      "goalsAgainst": 0.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 7,
+      "goalsFor": 5,
+      "goalsAgainst": 2,
+      "goalDifference": 3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C1",
+      "providerTeamId": "583"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Albania",
+    "code": "NAT_ALB",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1683,
+    "recentForm": {
+      "goalsFor": 2,
+      "goalsAgainst": 0.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 9,
+      "goalsFor": 8,
+      "goalsAgainst": 3,
+      "goalDifference": 5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C1",
+      "providerTeamId": "585"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "San Marino",
+    "code": "NAT_SMR",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1475,
+    "recentForm": {
+      "goalsFor": 0.25,
+      "goalsAgainst": 4
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 0,
+      "goalsFor": 1,
+      "goalsAgainst": 16,
+      "goalDifference": -15,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C1",
+      "providerTeamId": "588"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Cyprus",
+    "code": "NAT_CYP",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1644,
+    "recentForm": {
+      "goalsFor": 1.25,
+      "goalsAgainst": 0.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 7,
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C2",
+      "providerTeamId": "445"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Latvia",
+    "code": "NAT_LVA",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1542,
+    "recentForm": {
+      "goalsFor": 0.5,
+      "goalsAgainst": 1.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 6,
+      "goalDifference": -4,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C2",
+      "providerTeamId": "456"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Armenia",
+    "code": "NAT_ARM",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1593,
+    "recentForm": {
+      "goalsFor": 1,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 4,
+      "goalsFor": 4,
+      "goalsAgainst": 5,
+      "goalDifference": -1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C2",
+      "providerTeamId": "579"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Montenegro",
+    "code": "NAT_MNE",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1685,
+    "recentForm": {
+      "goalsFor": 1.75,
+      "goalsAgainst": 1
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 10,
+      "goalsFor": 7,
+      "goalsAgainst": 4,
+      "goalDifference": 3,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C2",
+      "providerTeamId": "6775"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Faroe Islands",
+    "code": "NAT_FRO",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1598,
+    "recentForm": {
+      "goalsFor": 1.25,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 4,
+      "goalsFor": 5,
+      "goalsAgainst": 5,
+      "goalDifference": 0,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C3",
+      "providerTeamId": "447"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Slovakia",
+    "code": "NAT_SVK",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1705,
+    "recentForm": {
+      "goalsFor": 2.25,
+      "goalsAgainst": 0.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 10,
+      "goalsFor": 9,
+      "goalsAgainst": 2,
+      "goalDifference": 7,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C3",
+      "providerTeamId": "468"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Moldova",
+    "code": "NAT_MDA",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1573,
+    "recentForm": {
+      "goalsFor": 0.75,
+      "goalsAgainst": 2
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 4,
+      "goalsFor": 3,
+      "goalsAgainst": 8,
+      "goalDifference": -5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C3",
+      "providerTeamId": "483"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Kazakhstan",
+    "code": "NAT_KAZ",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1564,
+    "recentForm": {
+      "goalsFor": 1.25,
+      "goalsAgainst": 1.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 2,
+      "goalsFor": 5,
+      "goalsAgainst": 7,
+      "goalDifference": -2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C3",
+      "providerTeamId": "2619"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Estonia",
+    "code": "NAT_EST",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1627,
+    "recentForm": {
+      "goalsFor": 0.5,
+      "goalsAgainst": 0.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 6,
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "goalDifference": 1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C4",
+      "providerTeamId": "444"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Bulgaria",
+    "code": "NAT_BUL",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1588,
+    "recentForm": {
+      "goalsFor": 0.75,
+      "goalsAgainst": 1.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 4,
+      "goalsFor": 3,
+      "goalsAgainst": 5,
+      "goalDifference": -2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C4",
+      "providerTeamId": "462"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Iceland",
+    "code": "NAT_ISL",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1676,
+    "recentForm": {
+      "goalsFor": 1.75,
+      "goalsAgainst": 0.25
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 8,
+      "goalsFor": 7,
+      "goalsAgainst": 1,
+      "goalDifference": 6,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C4",
+      "providerTeamId": "470"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Luxembourg",
+    "code": "NAT_LUX",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1561,
+    "recentForm": {
+      "goalsFor": 0.5,
+      "goalsAgainst": 1.75
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 4,
+      "points": 3,
+      "goalsFor": 2,
+      "goalsAgainst": 7,
+      "goalDifference": -5,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group C4",
+      "providerTeamId": "582"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Malta",
+    "code": "NAT_MLT",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1644,
+    "recentForm": {
+      "goalsFor": 1.33,
+      "goalsAgainst": 0.67
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 3,
+      "points": 7,
+      "goalsFor": 4,
+      "goalsAgainst": 2,
+      "goalDifference": 2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group D1",
+      "providerTeamId": "453"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Andorra",
+    "code": "NAT_AND",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1552,
+    "recentForm": {
+      "goalsFor": 0.33,
+      "goalsAgainst": 1
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 3,
+      "points": 1,
+      "goalsFor": 1,
+      "goalsAgainst": 3,
+      "goalDifference": -2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group D1",
+      "providerTeamId": "587"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Gibraltar",
+    "code": "NAT_GIB",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1574,
+    "recentForm": {
+      "goalsFor": 0.5,
+      "goalsAgainst": 0.5
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 2,
+      "points": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "goalDifference": 0,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group D1",
+      "providerTeamId": "16721"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Lithuania",
+    "code": "NAT_LTU",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1603,
+    "recentForm": {
+      "goalsFor": 1,
+      "goalsAgainst": 0.67
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 3,
+      "points": 4,
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "goalDifference": 1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group D2",
+      "providerTeamId": "460"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Azerbaijan",
+    "code": "NAT_AZE",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1615,
+    "recentForm": {
+      "goalsFor": 0.67,
+      "goalsAgainst": 0.33
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 3,
+      "points": 5,
+      "goalsFor": 2,
+      "goalsAgainst": 1,
+      "goalDifference": 1,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group D2",
+      "providerTeamId": "581"
+    },
+    "teamType": "national"
+  },
+  {
+    "name": "Liechtenstein",
+    "code": "NAT_LIE",
+    "impliedProb": 0.12,
+    "squadDepth": 7,
+    "historicalPedigree": 7,
+    "tacticalStyle": {
+      "offensive": 0.7,
+      "defensive": 0.65,
+      "possession": 0.6,
+      "transition": 0.7
+    },
+    "managerExpScore": 7,
+    "starDependency": 0.3,
+    "homeAdvantage": 0.75,
+    "altitudeAdaptation": 0.1,
+    "groupDifficulty": 5,
+    "injurySeverity": 2,
+    "dataQuality": {
+      "estimatedFields": [
+        "impliedProb",
+        "squadDepth",
+        "historicalPedigree",
+        "tacticalStyle",
+        "managerExpScore",
+        "starDependency",
+        "homeAdvantage",
+        "altitudeAdaptation",
+        "groupDifficulty",
+        "injurySeverity",
+        "eloRating"
+      ],
+      "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
+    },
+    "eloRating": 1552,
+    "recentForm": {
+      "goalsFor": 0,
+      "goalsAgainst": 1
+    },
+    "statsSource": {
+      "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/uefa.nations/standings",
+      "season": "2026-27 UEFA Nations League",
+      "fetchedAt": "2026-11-07T19:12:08.634Z",
+      "gamesPlayed": 2,
+      "points": 1,
+      "goalsFor": 0,
+      "goalsAgainst": 2,
+      "goalDifference": -2,
+      "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating",
+      "group": "Group D2",
+      "providerTeamId": "589"
+    },
+    "teamType": "national"
   }
 ];
 
 const FIXTURES_DATA = [
-  { id: 1, home: "KON", away: "GAL" },
-  { id: 2, home: "ERZ", away: "COR" },
-  { id: 3, home: "KOC", away: "RIZ" },
-  { id: 4, home: "FEN", away: "GOZ" },
-  { id: 5, home: "AME", away: "EYU" },
-  { id: 6, home: "IBFK", away: "SAM" },
-  { id: 7, home: "TRA", away: "GAZ" },
-  { id: 8, home: "KAS", away: "BJK" },
-  { id: 9, home: "GEN", away: "ALA" },
-  { id: 10, home: "BAY", away: "BVB" },
-  { id: 11, home: "CHE", away: "MUN" },
-  { id: 12, home: "LIV", away: "ARS" },
-  { id: 13, home: "UNKNOWN", away: "UNKNOWN" },
-  { id: 14, home: "MIL", away: "INT" },
-  { id: 15, home: "JUV", away: "NAP" }
+  {
+    "id": 1,
+    "providerId": "340098a9-978f-4d14-1645-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_FRA",
+    "away": "NAT_TUR",
+    "homeName": "Fransa",
+    "awayName": "Türkiye",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047898",
+      "url": "https://match.uefa.com/v5/matches/2047898",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 2,
+    "providerId": "4d3ecee8-01e5-41c2-162f-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_BUL",
+    "away": "NAT_ISL",
+    "homeName": "Bulgaristan",
+    "awayName": "İzlanda",
+    "kickoffRaw": "2026-11-13T22:45:00",
+    "kickoff": "2026-11-13T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047882",
+      "url": "https://match.uefa.com/v5/matches/2047882",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-13T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 3,
+    "providerId": "cf705df5-5c48-45f8-1634-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_LIE",
+    "away": "NAT_AZE",
+    "homeName": "Lihtenştayn",
+    "awayName": "Azerbaycan",
+    "kickoffRaw": "2026-11-13T22:45:00",
+    "kickoff": "2026-11-13T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047885",
+      "url": "https://match.uefa.com/v5/matches/2047885",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-13T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 4,
+    "providerId": "7bea3e14-b1b0-4755-1630-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_LUX",
+    "away": "NAT_EST",
+    "homeName": "Lüksemburg",
+    "awayName": "Estonya",
+    "kickoffRaw": "2026-11-13T22:45:00",
+    "kickoff": "2026-11-13T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047881",
+      "url": "https://match.uefa.com/v5/matches/2047881",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-13T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 5,
+    "providerId": "c33c3751-98b8-46ad-162e-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_SVK",
+    "away": "NAT_FRO",
+    "homeName": "Slovakya",
+    "awayName": "Faroe Adaları",
+    "kickoffRaw": "2026-11-13T22:45:00",
+    "kickoff": "2026-11-13T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047880",
+      "url": "https://match.uefa.com/v5/matches/2047880",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-13T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 6,
+    "providerId": "084ca742-0095-45d8-1639-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_GEO",
+    "away": "NAT_HUN",
+    "homeName": "Gürcistan",
+    "awayName": "Macaristan",
+    "kickoffRaw": "2026-11-14T20:00:00",
+    "kickoff": "2026-11-14T17:00:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047895",
+      "url": "https://match.uefa.com/v5/matches/2047895",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-14T17:00:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 7,
+    "providerId": "d06ffcaf-1712-49a7-1638-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_NOR",
+    "away": "NAT_WAL",
+    "homeName": "Norveç",
+    "awayName": "Galler",
+    "kickoffRaw": "2026-11-14T20:00:00",
+    "kickoff": "2026-11-14T17:00:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047893",
+      "url": "https://match.uefa.com/v5/matches/2047893",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-14T17:00:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 8,
+    "providerId": "176dc7d0-8feb-435f-163a-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_POR",
+    "away": "NAT_DEN",
+    "homeName": "Portekiz",
+    "awayName": "Danimarka",
+    "kickoffRaw": "2026-11-14T22:45:00",
+    "kickoff": "2026-11-14T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047892",
+      "url": "https://match.uefa.com/v5/matches/2047892",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-14T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 9,
+    "providerId": "cfacc145-37f9-43c7-1643-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_BEL",
+    "away": "NAT_ITA",
+    "homeName": "Belçika",
+    "awayName": "İtalya",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047900",
+      "url": "https://match.uefa.com/v5/matches/2047900",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 10,
+    "providerId": "648c6def-36d4-44d0-1644-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_CRO",
+    "away": "NAT_CZE",
+    "homeName": "Hırvatistan",
+    "awayName": "Çekya",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047902",
+      "url": "https://match.uefa.com/v5/matches/2047902",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 11,
+    "providerId": "5401e803-6451-4fe0-1646-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_ESP",
+    "away": "NAT_ENG",
+    "homeName": "İspanya",
+    "awayName": "İngiltere",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047904",
+      "url": "https://match.uefa.com/v5/matches/2047904",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 12,
+    "providerId": "c3658ae1-53ab-4a94-164c-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_GER",
+    "away": "NAT_NED",
+    "homeName": "Almanya",
+    "awayName": "Hollanda",
+    "kickoffRaw": "2026-11-16T22:45:00",
+    "kickoff": "2026-11-16T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047909",
+      "url": "https://match.uefa.com/v5/matches/2047909",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-16T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 13,
+    "providerId": "d9713b86-ad27-4183-1650-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_MKD",
+    "away": "NAT_SVN",
+    "homeName": "Kuzey Makedonya Cumhuriyeti",
+    "awayName": "Slovenya",
+    "kickoffRaw": "2026-11-16T22:45:00",
+    "kickoff": "2026-11-16T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047915",
+      "url": "https://match.uefa.com/v5/matches/2047915",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-16T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 14,
+    "providerId": "68a07749-e313-4a4d-164d-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_GRE",
+    "away": "NAT_SRB",
+    "homeName": "Yunanistan",
+    "awayName": "Sırbistan",
+    "kickoffRaw": "2026-11-16T22:45:00",
+    "kickoff": "2026-11-16T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047912",
+      "url": "https://match.uefa.com/v5/matches/2047912",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-16T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 15,
+    "providerId": "92f6495b-e5a2-4fb8-164f-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_SUI",
+    "away": "NAT_SCO",
+    "homeName": "İsviçre",
+    "awayName": "İskoçya",
+    "kickoffRaw": "2026-11-16T22:45:00",
+    "kickoff": "2026-11-16T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047914",
+      "url": "https://match.uefa.com/v5/matches/2047914",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-16T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  }
 ];
 
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { TEAMS_DATA, FIXTURES_DATA };
-}
+if (typeof module !== 'undefined' && module.exports) { module.exports = { TEAMS_DATA, FIXTURES_DATA }; }

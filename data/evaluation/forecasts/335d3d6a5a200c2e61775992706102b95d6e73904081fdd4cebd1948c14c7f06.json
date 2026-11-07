@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "featureSchemaVersion": "team-composite-v1",
+  "pipelineVersion": "live-composite-v1",
+  "provider": "sportoto",
+  "providerId": "5401e803-6451-4fe0-1646-08df15776e55",
+  "roundId": 1542,
+  "fixture": {
+    "id": 11,
+    "providerId": "5401e803-6451-4fe0-1646-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_ESP",
+    "away": "NAT_ENG",
+    "homeName": "İspanya",
+    "awayName": "İngiltere",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047904",
+      "url": "https://match.uefa.com/v5/matches/2047904",
+      "fetchedAt": "2026-11-07T19:12:07.252Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  "capturedAt": "2026-11-07T19:12:08.720Z",
+  "inputHash": "de236381a21ed786a5b9b1dcfb7d14c6edd76ef0123fd2f02b49c3b83b0be317",
+  "codeHash": "708eb2f214e97944fbe52a668048867574217c1960c715040c7c0b88fcc3b59d",
+  "model": {
+    "version": "baseline-v1",
+    "validationStatus": "unvalidated",
+    "contextPolicy": "disabled-pending-temporal-validation",
+    "params": {
+      "sigmoidScale": 4,
+      "drawBase": 0.28,
+      "drawGapThreshold": 4,
+      "homeAdvantageBoost": 0.07
+    }
+  },
+  "probabilities": {
+    "win": 0.40949380257406837,
+    "draw": 0.26852522169986925,
+    "loss": 0.32198097572606243,
+    "differential": -0.011955645161290336
+  },
+  "pick": "1",
+  "policy": "first-eligible-observation-before-explicit-kickoff"
+}
