@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Weekly Sportoto predictions, system coupons and historical model tuning",
   "scripts": {
+    "start": "node serve.js",
     "sync": "node auto_sync.js",
     "schedule": "node setup_scheduler.js",
     "tune": "node -e \"const {TEAMS_DATA}=require('./data/sportoto_data.js');const {FeatureEngineering}=require('./ml/feature_engineering.js');const {PredictionEngine}=require('./ml/prediction_engine.js');const {ModelTuner}=require('./ml/model_tuner.js');const hist=require('./data/historical_matches.json');const r=ModelTuner.tune(hist.matches,TEAMS_DATA,FeatureEngineering,PredictionEngine);console.log(JSON.stringify(r,null,2));\"",
-    "test": "node test_pipeline.js && node test_reliability.js && node test_live.js && node test_records.js && node test_transaction.js && node test_sync.js && node test_chronological.js && node test_operations.js && node test_national.js && node test_paired.js && node test_club_kickoffs.js",
+    "test": "node test_pipeline.js && node test_reliability.js && node test_live.js && node test_records.js && node test_transaction.js && node test_sync.js && node test_chronological.js && node test_operations.js && node test_national.js && node test_paired.js && node test_club_kickoffs.js && node test_serve.js",
     "test:browser": "node test_browser.js",
     "research": "node chronological_evaluation.js",
     "research:final": "node chronological_evaluation.js --final",

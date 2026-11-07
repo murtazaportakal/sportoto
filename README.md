@@ -4,6 +4,7 @@ Scope: a 15-match Sportoto ticket, 1/X/2 probabilities, system coupons, and hist
 
 ## Commands
 
+- `npm start` — open the local app server at http://localhost:3000. In PowerShell use `npm.cmd start` if execution policy blocks npm.ps1. Requires Node; Python is not needed. Press Ctrl+C to stop.
 - `npm ci` — install the locked dependencies (Node 24).
 - `npm test` — validate live fixture coverage, controlled 15-match predictions, mappings, model parity, data imports and incomplete-coupon guards without network access.
 - `npm run sync` — refresh the official round, standings, optional odds and a diagnostic tuning report.
@@ -17,7 +18,9 @@ Scope: a 15-match Sportoto ticket, 1/X/2 probabilities, system coupons, and hist
 - `npm run evidence` — show the original incumbent stream and paired experiments, exclusions, pauses and progress toward the 500-match/100-per-league requirements. Thresholds alone do not authorize promotion; comparison results and review are also required.
 - `npm run evaluate:paired` — replay and score the frozen prospective comparison; produces evidence in the format consumed by release_gate.js.
 
-Serve the project directory over HTTP. Opening index.html directly can prevent the tuning JSON from loading.
+Use the hosted site or `npm start`. Opening index.html directly can prevent data updates from loading. The local server exposes only browser assets, serves the saved preview with the published model, and reads current source files on refresh.
+
+The match guide supports English/Turkish, team search, mobile match cards and a ticket shortcut. Coverage, selection style, entered column price and language are saved on the device. Ticket cost is an estimate based on your entered price. Copy or download the generated ticket; the app does not submit it. Model diagnostics are optional under About. Interface changes do not alter the frozen forecast experiment.
 
 ## Data flow and endpoints
 
@@ -77,6 +80,6 @@ Schedule observations and result revisions are append-only and ordered. Repeated
 
 Timezone investigation on 7 November 2026: Sportoto's listing/bundle did not establish a timezone contract. The current national fixtures now use independently matched official UEFA timestamps with explicit UTC; no default Sportoto offset was inferred. See kickoffSource on each fixture for the retained evidence.
 
-Regression tests handle unsupported teams explicitly, preserve browser parity, and test sourced identities, UTC matching, ambiguity, conflicts, postponements and frozen paired replay. All eleven Node test files pass locally; browser checks run before each deployment. Passing tests is not evidence of future accuracy. Settlement rejects invalid or non-post-kickoff result/final-confirmation times and verifies saved prediction replay.
+Regression tests handle unsupported teams explicitly, preserve browser parity, and test sourced identities, UTC matching, ambiguity, conflicts, postponements and frozen paired replay. All twelve Node test files pass locally; browser checks cover desktop/mobile UI, EN/TR, preferences, ticket export and failure states before deployment. Passing tests is not evidence of future accuracy. Settlement rejects invalid or non-post-kickoff result/final-confirmation times and verifies saved prediction replay.
 
 See [prospective evaluation and review](docs/PROSPECTIVE_EVALUATION.md) for the immutable experiment, club kickoff coverage, pauses and evidence-bound approvals. The active model stays unchanged until sufficient favorable evidence is reviewed.

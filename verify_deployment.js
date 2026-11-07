@@ -40,6 +40,7 @@ async function verifyDeployment() {
     page.on('pageerror',error=>errors.push(error.message));
     const [browserResponse]=await Promise.all([loaded,page.goto(url,{waitUntil:'domcontentloaded',timeout:30000})]);
     await page.waitForFunction(()=>document.querySelectorAll('#sportoto-table-body tr').length===15,{},{timeout:20000});
+    await page.waitForFunction(()=>document.querySelector('#data-freshness')?.textContent.includes('Last synced:'),{},{timeout:20000});
     if(digest(await browserResponse.json())!==digest(hosted))throw new Error('Browser did not load the verified snapshot');
     rows=await page.locator('#sportoto-table-body tr').count();
     coverage=await page.locator('#prediction-coverage').textContent();modelStatus=await page.locator('#model-status').textContent();freshness=await page.locator('#data-freshness').textContent();

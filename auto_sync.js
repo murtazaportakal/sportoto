@@ -113,6 +113,7 @@ async function syncInto(directory) {
     console.log("5. Running model backtest and hyperparameter tuning...");
     await runAutoTune(dataFile, tuneResultFile);
     const published = require('./publish_live_data').publishLiveData({id: latestRound.id, name: latestRound.name, closesAt: latestRound.roundCloseDate}, new Date().toISOString(), path.join(directory, 'data'));
+    if(fs.existsSync(indexHtmlFile))fs.writeFileSync(indexHtmlFile,require('./browser_model').embedBrowserModel(fs.readFileSync(indexHtmlFile,'utf8'),published.model));
     const records = require('./evaluation_records');
     const evaluationDirectory = path.join(directory, 'data', 'evaluation');
     const capturedAt=new Date().toISOString();

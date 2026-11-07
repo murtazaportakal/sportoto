@@ -4,6 +4,9 @@ Verified locally on 7 November 2026. The active model remains `baseline-v1`, unv
 
 ## Routine checks
 
+For everyday use, open the hosted site or run `npm.cmd start` and visit http://localhost:3000. Node serves the browser assets directly, so a local sync appears on the next refresh without rebuilding. Source-only working files, evaluation records and Git metadata are not served by this preview command.
+
+The interface offers EN/TR switching, normalized team search, mobile cards, persisted ticket preferences, entered-price estimates and copy/download actions. Clipboard denial falls back to a selected text field. Missing team data and invalid prices disable export. The immediate saved preview uses the same model as the published snapshot, while freshness remains unverified until a successful fetch. Technical diagnostics are collapsed by default and do not promote models. Browser checks cover these flows at desktop and mobile sizes.
 Run `npm ci`, `npm test`, `npm run build`, and `npm run test:browser` (use `npm.cmd` in PowerShell when script execution policy blocks npm.ps1). Browser tests need installed Chrome; set `CHROME_PATH` if auto-detection does not find it. Screenshots are written under `test-results/` and CI retains them as artifacts. Tests use synthetic fixtures where current provider coverage is absent; successful tests do not imply all current matches are predictable.
 
 `npm run sync` refreshes official fixtures, six ESPN standings sources, optional odds and diagnostic tuning. `data/health.json` reports source status, supported fixtures, stale/unverified team inputs and probability changes on matching fixtures. A change above 0.15 triggers a drift warning, not automatic model modification. `data/sync_failure.json` is written after an unsuccessful sync and removed after success. Do not expose credentials in logs. The optional odds key is read from `ODDS_API_KEY`; it is never required for a successful refresh.

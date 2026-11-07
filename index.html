@@ -3,264 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ML-powered prediction model for Weekly Sportoto. Feature-based analysis of Turkish Super League teams.">
-  <title>Weekly Sportoto ML Predictions | AI-Powered 1-X-2 Analysis</title>
+  <meta name="theme-color" content="#0c1422">
+  <meta name="description" content="Explore this week's Sportoto matches, understand the probabilities, and build your own system ticket.">
+  <title>Sportoto · Your weekly match guide</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+  <script type="application/json" id="initial-model">{"version":"baseline-v1","validationStatus":"unvalidated","contextPolicy":"disabled-pending-temporal-validation","params":{"sigmoidScale":4,"drawBase":0.28,"drawGapThreshold":4,"homeAdvantageBoost":0.07}}</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%237d91ff'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='29' font-family='sans-serif' font-weight='bold' fill='%230c1422'%3EST%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-
-  <!-- Loading Overlay -->
-  <div class="loading-overlay" id="loading-overlay">
-    <div class="loading-spinner"></div>
-    <div class="loading-text" id="loading-text">Initializing Sportoto ML Engine...</div>
-    <div class="loading-progress">
-      <div class="loading-progress-bar" id="loading-progress-bar"></div>
+  <a class="skip-link" href="#predictions" data-i18n="skip">Skip to matches</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Sportoto home"><span class="brand-mark" aria-hidden="true">ST</span><span>Sportoto<span class="brand-note" data-i18n="brandNote">The weekly match guide</span></span></a>
+      <nav aria-label="Main navigation" class="nav-links"><a href="#predictions" data-i18n="matches">Matches</a><a href="#system-coupon" data-i18n="myTicket">My ticket</a><a href="#about" data-i18n="about">About</a></nav>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-label="English" aria-pressed="true">EN</button><button type="button" data-language="tr" aria-label="Türkçe" aria-pressed="false">TR</button></div>
     </div>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="nav" id="main-nav">
-    <a href="#" class="nav-brand">
-      <span class="nav-brand-icon">⚽</span>
-      <span class="nav-brand-text">Sportoto ML Predictor</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#predictions">Weekly Ticket</a></li>
-      <li><a href="#system-coupon">System Kupon</a></li>
-      <li><a href="#tuning">Model Tuning & Benchmark</a></li>
-    </ul>
-  </nav>
-
-  <div class="main-container">
-    <p id="data-freshness" role="status" aria-live="polite">Checking for updated data...</p>
-    <p id="model-status">Model validation pending.</p>
-    <p id="prediction-coverage" role="status" aria-live="polite"></p>
-
-    <!-- ====== HERO SECTION ====== -->
-    <section class="hero" id="hero">
-      <div class="hero-badge">
-        <span class="pulse-dot"></span>
-        <span>LIVE MODEL • TURKISH SUPER LEAGUE</span>
-      </div>
-      <h1>
-        Weekly Sportoto<br>
-        <span class="gradient-text">ML Prediction Engine</span>
-      </h1>
-      <p class="hero-subtitle">
-        Statistical model estimating 15 Sportoto matches using logistic regression
-        and feature-based composite scoring of Turkish Super League teams.
-      </p>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-value" id="hero-teams">20</div>
-          <div class="hero-stat-label">Teams Analyzed</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value" id="hero-matches">15</div>
-          <div class="hero-stat-label">Matches Predicted</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value" id="hero-features">12+</div>
-          <div class="hero-stat-label">ML Features</div>
-        </div>
-      </div>
+  </header>
+  <main class="main-container" id="top">
+    <div class="update-bar">
+      <div class="update-message"><span class="status-dot" id="freshness-dot" aria-hidden="true"></span><p id="data-freshness" role="status" aria-live="polite">Checking the latest matches…</p></div>
+      <button class="text-button" id="refresh-data" type="button"><span aria-hidden="true">↻</span> <span data-i18n="refresh">Refresh</span></button>
+    </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div><p class="eyebrow" data-i18n="eyebrow">A clearer view of this week's football</p><h1 id="hero-title" data-i18n="heroTitle">Your matches. Your game plan.</h1><p class="hero-description" data-i18n="heroDescription">Compare all 15 matches, understand the model's picks, and build a ticket with the coverage you choose.</p><a class="button primary" href="#predictions"><span data-i18n="viewMatches">Explore the matches</span><span aria-hidden="true">↓</span></a></div>
+      <div class="round-overview" aria-label="Round overview"><div><span data-i18n="readyMatches">Matches ready</span><strong id="hero-ready">— / 15</strong></div><div><span data-i18n="nextKickoff">Next kickoff</span><strong id="hero-next">—</strong></div><div><span data-i18n="roundTeams">Teams this round</span><strong id="hero-teams">—</strong></div></div>
     </section>
-
-    <!-- ====== PREDICTIONS TICKET ====== -->
-    <section class="section" id="predictions">
-      <div class="section-header">
-        <div class="section-tag">15. OYUN PROGRAMI • 13.11.2026</div>
-        <h2 class="section-title">Weekly Sportoto Ticket</h2>
-        <p class="section-subtitle">
-          AI-generated predictions for all 15 matches of the current Sportoto round. The highlighted box indicates the highest probability outcome recommended by the model.
-        </p>
-      </div>
-
-      <div class="glass-card animate-in" style="overflow-x:auto;">
-        <table class="mc-advancement-table" id="sportoto-table">
-          <thead>
-            <tr>
-              <th style="width:32px">#</th>
-              <th>Home Team</th>
-              <th>Away Team</th>
-              <th>1 (Home Win)</th>
-              <th>X (Draw)</th>
-              <th>2 (Away Win)</th>
-              <th>Recommended Pick</th>
-            </tr>
-          </thead>
-          <tbody id="sportoto-table-body">
-            <!-- Populated by JS -->
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ====== SYSTEM COUPON GENERATOR ====== -->
-    <section class="section" id="system-coupon">
-      <div class="section-header">
-        <div class="section-tag">SPOR TOTO KUPON OLUŞTURUCU</div>
-        <h2 class="section-title">System Ticket Generator</h2>
-        <p class="section-subtitle">
-          Generate mathematically optimized multi-column Spor Toto coupons covering banko matches and high-uncertainty derbies with Double Chances (Çifte Şans).
-        </p>
-      </div>
-
-      <!-- Coupon Controls -->
-      <div class="glass-card animate-in" style="margin-bottom: 1.5rem; padding: 1.5rem;">
-        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between;">
-          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-            <label style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">DOUBLE CHANCES COVERAGE (ÇİFTE ŞANS SAYISI)</label>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="coupon-dc-selector">
-              <button class="btn-chip" data-count="2">2 Çifte (4 Kolon • 20 ₺)</button>
-              <button class="btn-chip" data-count="3">3 Çifte (8 Kolon • 40 ₺)</button>
-              <button class="btn-chip active" data-count="4">4 Çifte (16 Kolon • 80 ₺)</button>
-              <button class="btn-chip" data-count="5">5 Çifte (32 Kolon • 160 ₺)</button>
-              <button class="btn-chip" data-count="6">6 Çifte (64 Kolon • 320 ₺)</button>
-            </div>
-          </div>
-
-          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-            <label style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">DOUBLE STRATEGY</label>
-            <div style="display: flex; gap: 0.5rem;" id="coupon-strategy-selector">
-              <button class="btn-chip active" data-strategy="draw_protection">Draw Protection (1-X / X-2)</button>
-              <button class="btn-chip" data-strategy="max_coverage">Top 2 Probabilities</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Metrics bar -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
-          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-secondary);">Total Columns</div>
-            <div style="font-size: 1.4rem; font-weight: 700; color: #60A5FA;" id="coupon-stat-columns">16</div>
-          </div>
-          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-secondary);">Ticket Cost</div>
-            <div style="font-size: 1.4rem; font-weight: 700; color: #34D399;" id="coupon-stat-cost">80 ₺</div>
-          </div>
-          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-secondary);">Banko Matches</div>
-            <div style="font-size: 1.4rem; font-weight: 700; color: #F59E0B;" id="coupon-stat-bankos">11</div>
-          </div>
-          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.75rem 1rem; border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-secondary);">Doubles Covered</div>
-            <div style="font-size: 1.4rem; font-weight: 700; color: #A78BFA;" id="coupon-stat-doubles">4</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="glass-card animate-in" style="overflow-x:auto;">
-        <table class="mc-advancement-table" id="coupon-table">
-          <thead>
-            <tr>
-              <th style="width:32px">#</th>
-              <th>Home Team</th>
-              <th>Away Team</th>
-              <th>1 (Home)</th>
-              <th>X (Draw)</th>
-              <th>2 (Away)</th>
-              <th>System Pick</th>
-              <th>Classification</th>
-            </tr>
-          </thead>
-          <tbody id="coupon-table-body">
-            <!-- Populated by JS -->
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ====== LONG-TERM STATISTICS & MODEL TUNING ====== -->
-    <section class="section" id="tuning">
-      <div class="section-header">
-        <div class="section-tag">EMPİRİK KALİBRASYON & GERİYE DÖNÜK TEST</div>
-        <h2 class="section-title">Long-Term Statistics & Model Tuning</h2>
-        <p class="section-subtitle">
-          Explore historical fitting diagnostics. Future-match accuracy has not been validated.
-        </p>
-      </div>
-
-      <!-- Long-term historical benchmark cards -->
-      <div class="glass-card animate-in" style="margin-bottom: 1.5rem; padding: 1.5rem;">
-        <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
-          <span>📚</span> Long-Term Süper Lig Benchmark (680 Matches)
-        </h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem;">
-          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Historical Home Wins</div>
-            <div style="font-size: 1.6rem; font-weight: 700; color: #60A5FA;">44.7%</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">304 Matches</div>
-          </div>
-          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Historical Draws (X)</div>
-            <div style="font-size: 1.6rem; font-weight: 700; color: #F59E0B;">25.3%</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">172 Matches (~1 in 4)</div>
-          </div>
-          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Historical Away Wins</div>
-            <div style="font-size: 1.6rem; font-weight: 700; color: #34D399;">30.0%</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">204 Matches</div>
-          </div>
-          <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 1rem; border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Goal Averages</div>
-            <div style="font-size: 1.3rem; font-weight: 700; color: #E0E7FF;">1.58 : 1.25</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Home : Away G/G</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tuning Comparison Card -->
-      <div class="glass-card animate-in" style="padding: 1.5rem;">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-          <div>
-            <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.25rem;">Research diagnostics ? not predictive validation</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Fits current team inputs to old results. This is not a pre-match backtest; candidates are not applied to the active model.</p><p id="diagnostic-coverage" style="color:var(--text-secondary)">Active model: unvalidated baseline. Historical form adjustments are disabled pending validation.</p>
-          </div>
-          <button id="btn-run-tuning" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); border: none; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);">
-            <span>⚡</span>
-            <span id="btn-tuning-text">Calibrate & Tune Model</span>
-          </button>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-          <!-- Baseline Card -->
-          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.25rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-              <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">BASELINE MODEL</span>
-              <span style="background: rgba(255,255,255,0.05); color: var(--text-secondary); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem;">Default</span>
-            </div>
-            <div style="font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;" id="baseline-acc">Not evaluated</div>
-            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Brier Score: <span id="baseline-brier" style="color: var(--text-primary); font-weight: 600;">0.6322</span></div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.6;" id="baseline-params">Parameters shown after diagnostic run.</div>
-          </div>
-
-          <!-- Optimized Card -->
-          <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(99, 102, 241, 0.08)); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 1.25rem; position: relative;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-              <span style="font-size: 0.85rem; font-weight: 600; color: #10B981;">OPTIMIZED MODEL</span>
-              <span style="background: rgba(16, 185, 129, 0.2); color: #10B981; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600;" id="tuning-improvement-badge">Not evaluated</span>
-            </div>
-            <div style="font-size: 2rem; font-weight: 800; color: #10B981; margin-bottom: 0.5rem;" id="optimized-acc">Not evaluated</div>
-            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Brier Score: <span id="optimized-brier" style="color: #10B981; font-weight: 600;">0.6220</span> (Lower is better)</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;" id="optimized-params">Parameters shown after diagnostic run.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p class="footer-text">
-      ⚽ Weekly Sportoto ML Prediction Engine — Built with pure JavaScript ML •
-      Not financial advice
-    </p>
-  </footer>
-
-  <!-- Scripts -->
+    <details class="reading-guide" id="how-to-read"><summary data-i18n="readGuide">New to 1 / X / 2? Start here</summary><div class="guide-content"><p><b>1</b><span data-i18n="homeMeaning">The home team wins.</span></p><p><b>X</b><span data-i18n="drawMeaning">The match ends in a draw.</span></p><p><b>2</b><span data-i18n="awayMeaning">The away team wins.</span></p><p class="guide-note" data-i18n="probabilityMeaning">Percentages are model estimates. The highlighted outcome has the highest probability; it is not a guaranteed result.</p></div></details>
+    <div class="workspace">
+      <section id="predictions" class="matches-section" aria-labelledby="matches-title">
+        <div class="section-header"><div class="section-tag">15. OYUN PROGRAMI</div><h2 id="matches-title" data-i18n="thisWeek">This week's matches</h2><p class="muted" id="prediction-coverage" role="status" aria-live="polite"></p></div>
+        <div class="match-toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only" data-i18n="searchLabel">Search for a team</span><input id="match-search" type="search" placeholder="Find a team…" data-i18n-placeholder="searchPlaceholder" autocomplete="off"></label><button type="button" class="text-button" id="clear-search" hidden data-i18n="clear">Clear</button><span id="match-count" class="muted small" aria-live="polite"></span></div>
+        <p class="table-hint" data-i18n="tableHint">Highlighted percentage = highest-probability outcome</p>
+        <div class="table-card"><table id="sportoto-table"><caption class="sr-only" data-i18n="tableCaption">Match probabilities and highest-probability picks</caption><thead><tr><th scope="col">#</th><th scope="col" data-i18n="homeTeam">Home team</th><th scope="col" data-i18n="awayTeam">Away team</th><th scope="col">1</th><th scope="col">X</th><th scope="col">2</th><th scope="col" data-i18n="modelPick">Model pick</th></tr></thead><tbody id="sportoto-table-body"></tbody></table></div>
+        <p class="section-footnote" data-i18n="estimatesNote">Some team inputs use baseline estimates. Estimated inputs are marked on each match. The model is still being evaluated.</p>
+      </section>
+      <aside class="ticket-sidebar">
+        <section id="system-coupon" class="ticket-panel" aria-labelledby="ticket-title">
+          <div class="section-header"><p class="eyebrow" data-i18n="stepTwo">Make it your ticket</p><h2 id="ticket-title" data-i18n="myTicket">My ticket</h2><p class="muted" data-i18n="ticketIntro">Choose how many matches include two possible outcomes.</p></div>
+          <fieldset><legend data-i18n="coverage">Two-outcome matches</legend><div id="coupon-dc-selector" class="coverage-options"><button type="button" class="btn-chip" data-count="0" aria-pressed="false">0</button><button type="button" class="btn-chip" data-count="2" aria-pressed="false">2</button><button type="button" class="btn-chip active" data-count="4" aria-pressed="true">4</button><button type="button" class="btn-chip" data-count="6" aria-pressed="false">6</button></div><p class="field-help" data-i18n="coverageHelp">Each extra two-outcome match doubles the number of combinations.</p></fieldset>
+          <fieldset><legend data-i18n="selectionStyle">How to choose the two outcomes</legend><div id="coupon-strategy-selector" class="strategy-options"><button type="button" class="btn-chip active" data-strategy="draw_protection" aria-pressed="true" data-i18n="drawStrategy">Include the draw</button><button type="button" class="btn-chip" data-strategy="max_coverage" aria-pressed="false" data-i18n="topStrategy">Top two probabilities</button></div><p id="strategy-description" class="field-help"></p></fieldset>
+          <div class="ticket-totals" aria-live="polite"><div><span data-i18n="combinations">Combinations</span><strong id="coupon-stat-columns">—</strong></div><div><span data-i18n="estimatedCost">Estimated cost</span><strong id="coupon-stat-cost">—</strong></div><div class="small"><span data-i18n="singleSelections">Single selections</span><strong id="coupon-stat-bankos">—</strong></div><div class="small"><span data-i18n="doubleSelections">Two-outcome selections</span><strong id="coupon-stat-doubles">—</strong></div></div>
+          <label class="price-field" for="column-price"><span data-i18n="columnPrice">Your price per combination (TL)</span><input id="column-price" type="text" maxlength="12" value="5" inputmode="decimal" aria-describedby="price-help price-error"></label><p class="field-help" id="price-help" data-i18n="priceHelp">This estimate uses the price you enter. Check the current price with the operator.</p><p class="error-text" id="price-error" role="status"></p>
+          <p id="ticket-availability" role="status" class="availability"></p>
+          <div class="ticket-actions"><button type="button" class="button primary" id="copy-ticket" disabled data-i18n="copyTicket">Copy ticket</button><button type="button" class="button secondary" id="download-ticket" disabled data-i18n="downloadTicket">Download .txt</button></div><p class="action-feedback" id="ticket-feedback" role="status" aria-live="polite"></p>
+          <div id="ticket-export" hidden><label for="ticket-text" class="small" data-i18n="manualCopy">Select and copy this text:</label><textarea id="ticket-text" readonly rows="8"></textarea></div>
+          <details id="ticket-preview" class="ticket-preview"><summary data-i18n="previewTicket">See all ticket selections</summary><div class="ticket-scroll"><table id="coupon-table"><caption class="sr-only" data-i18n="ticketCaption">Generated ticket selections</caption><thead><tr><th>#</th><th data-i18n="homeTeam">Home team</th><th data-i18n="awayTeam">Away team</th><th>1</th><th>X</th><th>2</th><th data-i18n="pick">Pick</th><th data-i18n="coverage">Coverage</th></tr></thead><tbody id="coupon-table-body"></tbody></table></div></details>
+          <p class="ticket-note" data-i18n="ticketNote">Your choices stay on this device. This app prepares a ticket; it does not submit it.</p>
+        </section>
+      </aside>
+    </div>
+    <section id="about" class="about-section" aria-labelledby="about-title"><div><p class="eyebrow" data-i18n="underTheHood">A little context</p><h2 id="about-title" data-i18n="aboutTitle">Understand the estimates</h2><p class="muted" data-i18n="aboutDescription">The model compares team statistics to estimate each outcome. Some inputs are estimated, and future-match accuracy is still being measured.</p></div><details id="research-details" class="research-details"><summary data-i18n="technicalDetails">Model details and research diagnostics</summary><div class="research-content" id="tuning"><p id="model-status"></p><p id="diagnostic-coverage" class="muted" data-i18n="diagnosticIntro">Historical diagnostics fit today's inputs to old results. They do not validate future predictions or change the active model.</p><button type="button" class="button secondary" id="btn-run-tuning"><span id="btn-tuning-text" data-i18n="runDiagnostic">Run historical diagnostic</span></button><div class="diagnostic-grid"><div><h3 data-i18n="baselineLabel">Baseline diagnostic</h3><strong id="baseline-acc">—</strong><p>Brier: <span id="baseline-brier">—</span></p><code id="baseline-params"></code></div><div><h3 data-i18n="candidateLabel">Candidate diagnostic</h3><strong id="optimized-acc">—</strong><p>Brier: <span id="optimized-brier">—</span></p><code id="optimized-params"></code></div></div><p id="tuning-improvement-badge" class="muted"></p></div></details></section>
+    <noscript><p class="availability">Enable JavaScript to load the match guide and build a ticket.</p></noscript>
+  </main>
+  <footer class="footer"><a class="footer-brand" href="#top">Sportoto</a><p data-i18n="footerNote">A match guide built on estimates. Results are never guaranteed.</p><a href="#how-to-read" data-i18n="readGuideShort">How to read the picks</a></footer>
+  <a class="mobile-ticket-link" href="#system-coupon"><span data-i18n="viewTicket">View my ticket</span><span id="mobile-ticket-summary">—</span><span aria-hidden="true">→</span></a>
   <script src="data/sportoto_data.js"></script>
   <script src="data/historical_data.js"></script>
   <script src="ml/feature_engineering.js"></script>
