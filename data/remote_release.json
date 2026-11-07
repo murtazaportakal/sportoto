@@ -1,0 +1,30 @@
+{
+  "verifiedAt": "2026-11-07T19:17:44.539Z",
+  "url": "https://murtazaportakal.github.io/sportoto/",
+  "pagesBuildType": "workflow",
+  "sourceCommit": "6891fcaea820d73ce4722133e99e7078c12d1d9b",
+  "ci": {
+    "id": 42405370192,
+    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42405370192",
+    "conclusion": "success"
+  },
+  "sync": {
+    "id": 42405370209,
+    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42405370209",
+    "conclusion": "success"
+  },
+  "snapshotHash": "1bf0033c50415e5e9b70649a8ce5b0dc474d1d7a85c732aac5535a9e36b336e8",
+  "snapshotMatchesRepository": true,
+  "updatedAt": "2026-11-07T19:16:23.125Z",
+  "modelVersion": "baseline-v1",
+  "rows": 15,
+  "coverage": "15/15 matches have supported team inputs. Missing inputs disable full coupons.",
+  "modelStatus": "Model: baseline-v1. Predictive validation pending.",
+  "freshness": "Last synced: 07.11.2026 22:16:23. Automatically checks every 5 minutes. Source statistics may be older.",
+  "recording": {
+    "captured": 0,
+    "existing": 15,
+    "ineligible": {}
+  },
+  "predictiveValidation": "pending-settled-prospective-evidence"
+}

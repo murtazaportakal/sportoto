@@ -43,17 +43,17 @@ ESPN supplies standings statistics. The rating derived from points and goal diff
 - The saved round has 15/15 supported fixtures, with national-team standings and independently matched UEFA UTC kickoffs. The first 15 pre-match forecasts are saved. Unavailable composite inputs use explicitly labelled generic priors; national strength across Nations League tiers remains uncalibrated.
 - The full live sync and regression suite passed locally on 7 November 2026.
 - Endpoint cleanup preserves prediction outputs. Obsolete NosyAPI/CollectAPI clients, diagnostic scripts, alternate fixture writers and unused World Cup assets were removed.
-- Changes remain local; the repaired GitHub workflow has not been verified in a remote run.
+- Published at https://murtazaportakal.github.io/sportoto/. Remote CI, real sync, browser checks and Pages deployment passed on 7 November 2026. Hosted data was verified against the repository snapshot; evidence is saved in data/remote_release.json.
 - Live odds are optional and were skipped during verification because ODDS_API_KEY was absent.
-- The previously exposed NosyAPI key still needs provider-side revocation. Removing source files does not revoke a credential or remove it from Git history.
+- NosyAPI is retired at the user's request and is not used by the application. Provider-side revocation was not independently verified.
 
 ## Reliability work
 
-See [the implementation status](docs/RELIABILITY_PLAN.md) and [operations runbook](docs/OPERATIONS.md). Local implementation includes shared predictions, immutable snapshots and replay, staged sync/rollback, chronological research, calibrated probabilities, baseline comparisons, confidence intervals, release gates and browser checks. Live historical modifiers remain disabled. Prospective evidence, current national-team coverage, verified provider timezone semantics and remote release verification remain open. Passing tests is not proof of future prediction accuracy.
+See [the implementation status](docs/RELIABILITY_PLAN.md) and [operations runbook](docs/OPERATIONS.md). Implementation includes shared predictions, immutable snapshots and replay, staged sync/rollback, chronological research, calibrated probabilities, baseline comparisons, confidence intervals, release gates and browser checks. National-team coverage, verified UTC matching and remote deployment are operational. Live historical modifiers remain disabled. Sufficient settled prospective evidence remains open; passing tests is not proof of future prediction accuracy.
 
 ## Automatic data delivery
 
-One-time hosted setup: push the changes, enable GitHub Actions, and set repository Settings > Pages > Build and deployment > Source to GitHub Actions. The workflow publishes the site after successful sync and tests; token-created commits alone do not rebuild Pages. Remote activation has not been performed or verified in this workspace. See [GitHub Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+Hosted setup is complete: Actions and workflow-based Pages are enabled. The workflow publishes after successful sync and tests; token-created commits alone do not rebuild Pages. [Reliability CI](https://github.com/murtazaportakal/sportoto/actions/runs/42405370192) and [sync/deployment](https://github.com/murtazaportakal/sportoto/actions/runs/42405370209) passed. The published site was checked in Chrome and its live snapshot matched committed data. See data/remote_release.json for evidence.
 
 `npm run build` recreates _site with only browser assets. The refresh contract is in live_data.js. Sync stages all working outputs, records rollback originals, replaces live.json last and recovers interrupted commits. Existing data remains available after source failure. Its timestamp means last successful refresh, not that every team has current source coverage. See the runbook for filesystem transaction limits and recovery.
 

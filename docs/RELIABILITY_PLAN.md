@@ -64,7 +64,7 @@ Exit: successful remote CI and sync, tested rollback, visible freshness, and a r
 
 ## Implementation status
 
-The local implementation for phases 1–5 is in place as described below. Current national-team coverage and UTC matching are implemented, with the first 15 forecasts captured. The end-to-end plan is **not complete**: settled prospective evidence, remote release verification and provider-side key revocation remain open. Future unsupported competitions remain gated. Existing historical fit metrics must not be described as predictive validation. See [operations and recovery](OPERATIONS.md).
+The implementation and hosted release for phases 1–5 are operational as described below. Current national-team coverage and UTC matching are implemented, with the first 15 forecasts captured. **Predictive validation remains pending** until sufficient future results are available. Future unsupported competitions remain gated. NosyAPI is retired at the user's request; provider revocation is not independently verified. Existing historical fit metrics must not be described as predictive validation. See [operations and recovery](OPERATIONS.md).
 
 | Phase | Implemented and locally verified | Remaining exit requirements |
 | --- | --- | --- |
@@ -72,13 +72,15 @@ The local implementation for phases 1–5 is in place as described below. Curren
 | 2 | Immutable forecasts, exact replay, schedule/result revisions, timestamp checks, staged sync/recovery, verified UEFA UTC matching and first 15 captures | A real capture-to-settlement cycle; other competitions need their own verified kickoff source |
 | 3 | Results-only chronological model, whole-date cutoffs, rolling history coverage, season resets, development/validation/test split, expanding-window folds, frozen protocol | New independent prospective test evidence; complete fixture history before enabling rest/fatigue or live historical modifiers |
 | 4 | Uniform/frequency/rating research baselines, scores, class confusion/recall, calibration bins, league/season/estimated subsets, seeded paired matchweek intervals, validation-fitted temperature, separate coupon coverage/cost calculation | At least 500 paired prospective matches and 100 per reported league; timestamped bookmaker snapshots if comparing odds; favorable reviewed evidence |
-| 5 | Push/PR CI, scheduled sync checks, rendered Chrome tests, visible coverage/model/freshness, health/drift reports, failure artifacts, release gate and recovery runbook | Remote CI/Pages verification, operator notification configuration, approved promotion/rollback review and exposed-key revocation |
+| 5 | Push/PR CI, real remote sync and Pages deployment, local/hosted Chrome verification, visible coverage/model/freshness, health/drift reports, failure artifacts, release gate and recovery runbook | Any future model promotion requires approved evidence and rollback review; personal failure-notification settings remain account-managed |
 
 ### Final local verification (7 November 2026)
 
 The real staged sync succeeded with TLS verification enabled and refreshed six club leagues plus current Nations League standings. Current round 1542 has 15/15 supported fixtures with matched UEFA UTC kickoffs; 15 eligible forecasts were captured. None is settled yet. The complete offline suite, full mocked sync, fault-injection/recovery tests and rendered Chrome smoke checks pass. Chrome screenshots are retained under test-results locally. The dependency audit found zero vulnerabilities after updating follow-redirects.
 
 The frozen results-only experiment evaluated 137 reserved matches. Candidate log loss is 1.01356 versus 0.99611 for the rating baseline, and all paired 95% confidence intervals cross zero. Candidate draw recall is zero. This unfavorable result is retained; no model was promoted. The reserved data was previously available to diagnostics and exercised during implementation, so it is not independent prospective evidence.
+
+Remote verification: implementation commit 6891fca passed Reliability checks run 42405370192 and Spor Toto Auto-Sync run 42405370209. Pages is enabled at https://murtazaportakal.github.io/sportoto/. An unmocked Chrome visit rendered 15 supported rows and loaded baseline-v1. The hosted snapshot hash matched repository data. Full evidence is in data/remote_release.json; the screenshot is retained locally in test-results/hosted-site.png. The workflow's next sync recognized all 15 forecasts as existing and did not overwrite them.
 
 The progress notes below describe earlier milestones; the table above supersedes their earlier planned/unfinished status for work now implemented.
 
