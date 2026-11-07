@@ -14,6 +14,7 @@ Scope: a 15-match Sportoto ticket, 1/X/2 probabilities, system coupons, and hist
 - `npm run research` / `npm run research:final` — freeze a results-only chronological experiment and record its final evaluation once.
 - `node walk_forward_evaluation.js` — evaluate expanding-window development folds without touching the final test.
 - `node release_gate.js <evidence.json>` — check prospective release requirements; never changes the active model.
+- `npm run evidence` — show captured/settled counts, exclusions and progress toward the 500-match/100-per-league requirements. Thresholds alone do not authorize promotion; paired candidate evidence and review are also required.
 
 Serve the project directory over HTTP. Opening index.html directly can prevent the tuning JSON from loading.
 

@@ -55,6 +55,13 @@ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'sportoto-records-'));
   // The test-0 response above used different team names, so conservative identity review excludes it.
   const initial=evaluateRecords(dir);
   assert.equal(initial.evaluated,14);
+  assert.equal(initial.evidenceProgress.settled,14);
+  assert.equal(initial.evidenceProgress.remainingSettled,486);
+  assert.equal(initial.evidenceProgress.readyForPromotion,false);
+  const evidence=require('./evidence_status').evidenceStatus(dir);
+  assert.equal(evidence.capturedForecasts,15);assert.equal(evidence.settledForecasts,14);
+  assert.equal(evidence.metrics.logLoss,initial.logLoss);assert.equal(evidence.progress.remainingSettled,486);
+  assert.equal(evidence.capturedKickoffRange.first,'2030-01-01T12:00:00Z');
   assert.ok(Number.isFinite(initial.logLoss));
   const f=sample.fixtures[1],homeWin={...f,status:'final',result:{homeGoals:1,awayGoals:0,outcome:'1'}};
   const beforeCorrection=initial.logLoss;

@@ -13,7 +13,8 @@
     "release:check": "node release_gate.js",
     "history": "node fetch_historical_data.js",
     "build": "node build_site.js",
-    "evaluate": "node evaluate_records.js"
+    "evaluate": "node evaluate_records.js",
+    "evidence": "node evidence_status.js"
   },
   "keywords": [],
   "author": "",

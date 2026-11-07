@@ -1,17 +1,24 @@
 {
-  "verifiedAt": "2026-11-07T19:17:44.539Z",
+  "verifiedAt": "2026-11-07T19:24:16.456Z",
   "url": "https://murtazaportakal.github.io/sportoto/",
   "pagesBuildType": "workflow",
   "sourceCommit": "6891fcaea820d73ce4722133e99e7078c12d1d9b",
   "ci": {
     "id": 42405370192,
     "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42405370192",
-    "conclusion": "success"
+    "conclusion": "success",
+    "sourceCommit": "6891fcaea820d73ce4722133e99e7078c12d1d9b"
   },
   "sync": {
     "id": 42405370209,
     "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42405370209",
-    "conclusion": "success"
+    "conclusion": "success",
+    "sourceCommit": "6891fcaea820d73ce4722133e99e7078c12d1d9b",
+    "checks": {
+      "Validate updated data": true,
+      "Package and smoke-test browser assets": true,
+      "Publish refreshed site": true
+    }
   },
   "snapshotHash": "1bf0033c50415e5e9b70649a8ce5b0dc474d1d7a85c732aac5535a9e36b336e8",
   "snapshotMatchesRepository": true,

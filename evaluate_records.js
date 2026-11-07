@@ -53,6 +53,11 @@ function evaluateRecords(directory=path.join(__dirname,'data','evaluation')) {
  report.byLeague=subsets(scored,'league');report.bySeason=subsets(scored,'season');report.byEstimatedInputs=subsets(scored,'estimatedInputs');
  report.uniformLogLossDifference=pairedInterval(scored,'uniform');
  report.release={eligible:false,reasons:['Prospective paired candidate/incumbent comparison and review are required.']};
+ const leagueIds=[...new Set(forecasts.map(f=>String(f.fixture?.leagueId??'unknown')))].sort();
+ const requirements=require('./release_gate').evidenceRequirements;
+ report.evidenceProgress={requiredSettled:requirements.settled,settled:report.evaluated,remainingSettled:Math.max(0,requirements.settled-report.evaluated),
+   requiredPerLeague:requirements.perLeague,byLeague:Object.fromEntries(leagueIds.map(id=>{const settled=report.byLeague[id]?.count||0;return [id,{settled,remaining:Math.max(0,requirements.perLeague-settled)}];})),
+   scope:'incumbent-only recorded forecasts',pairedCandidateEvidenceAvailable:false,readyForPromotion:false};
  const groups=new Map();for(const row of scored){if(!groups.has(row.group))groups.set(row.group,[]);groups.get(row.group).push(row);}
  report.coupons={evaluationType:'retrospective-fixed-rule-on-recorded-forecasts',policy:{doubleChances:4,strategy:'draw_protection'},completeRounds:0,incompleteRounds:0,coveredRounds:0,columnsPerTicket:16,cost:null,returns:null};
  for(const rows of groups.values()) {

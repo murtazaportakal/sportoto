@@ -535,6 +535,21 @@
       "Prospective paired candidate/incumbent comparison and review are required."
     ]
   },
+  "evidenceProgress": {
+    "requiredSettled": 500,
+    "settled": 0,
+    "remainingSettled": 500,
+    "requiredPerLeague": 100,
+    "byLeague": {
+      "258": {
+        "settled": 0,
+        "remaining": 100
+      }
+    },
+    "scope": "incumbent-only recorded forecasts",
+    "pairedCandidateEvidenceAvailable": false,
+    "readyForPromotion": false
+  },
   "coupons": {
     "evaluationType": "retrospective-fixed-rule-on-recorded-forecasts",
     "policy": {
