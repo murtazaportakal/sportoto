@@ -1,17 +1,17 @@
 {
   "validationStatus": "unvalidated-diagnostic-only",
-  "timestamp": "2026-11-08T09:27:03.157Z",
+  "timestamp": "2026-11-08T16:17:04.999Z",
   "evaluatedMatches": 645,
   "gridIterations": 48,
   "baseline": {
-    "accuracy": 46.2,
-    "brierScore": 0.637,
-    "logLoss": 1.0712
+    "accuracy": 46.82,
+    "brierScore": 0.6365,
+    "logLoss": 1.0711
   },
   "optimized": {
-    "accuracy": 48.99,
-    "brierScore": 0.6252,
-    "logLoss": 1.0524
+    "accuracy": 49.3,
+    "brierScore": 0.6245,
+    "logLoss": 1.0519
   },
   "bestParams": {
     "sigmoidScale": 3.5,
@@ -19,5 +19,5 @@
     "drawGapThreshold": 6,
     "homeAdvantageBoost": 0.07
   },
-  "improvementPct": 2.79
+  "improvementPct": 2.48
 }
