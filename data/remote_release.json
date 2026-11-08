@@ -1,33 +1,33 @@
 {
-  "verifiedAt": "2026-11-07T19:50:07.244Z",
+  "verifiedAt": "2026-11-08T09:15:42.205Z",
   "url": "https://murtazaportakal.github.io/sportoto/",
   "pagesBuildType": "workflow",
-  "sourceCommit": "32c25261a550db578a18418642e92997a70746df",
+  "sourceCommit": "0dbf70d238ac28330e7fc23936125ede97a33c97",
   "ci": {
-    "id": 42407946471,
-    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42407946471",
+    "id": 42410831169,
+    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42410831169",
     "conclusion": "success",
-    "sourceCommit": "32c25261a550db578a18418642e92997a70746df"
+    "sourceCommit": "d547800869ac153952c22cfe49d14cbe246c3567"
   },
   "sync": {
-    "id": 42407946592,
-    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42407946592",
+    "id": 42466328010,
+    "url": "https://github.com/murtazaportakal/sportoto/actions/runs/42466328010",
     "conclusion": "success",
-    "sourceCommit": "32c25261a550db578a18418642e92997a70746df",
+    "sourceCommit": "0dbf70d238ac28330e7fc23936125ede97a33c97",
     "checks": {
       "Validate updated data": true,
       "Package and smoke-test browser assets": true,
       "Publish refreshed site": true
     }
   },
-  "snapshotHash": "699ddd7271588e2131a15a37c0bbcbc17b22f2d69e1efd4ac639e7ad40db69f3",
+  "snapshotHash": "c051a18991a924b6da248a0aa2e16df2ced980af54f6d8e09c3ee8963dd90cd0",
   "snapshotMatchesRepository": true,
-  "updatedAt": "2026-11-07T19:48:13.839Z",
+  "updatedAt": "2026-11-08T09:14:38.855Z",
   "modelVersion": "baseline-v1",
   "rows": 15,
-  "coverage": "15/15 matches have supported team inputs. Missing inputs disable full coupons.",
-  "modelStatus": "Model: baseline-v1. Predictive validation pending.",
-  "freshness": "Last synced: 07.11.2026 22:48:13. Automatically checks every 5 minutes. Source statistics may be older.",
+  "coverage": "15/15 matches have predictions.",
+  "modelStatus": "Model: baseline-v1. Evaluation in progress.",
+  "freshness": "Last synced: 8 Nov, 12:14. Checks automatically.",
   "recording": {
     "captured": 0,
     "existing": 15,
