@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "cf705df5-5c48-45f8-1634-08df15776e55",
+  "roundId": 1542,
+  "home": "NAT_LIE",
+  "away": "NAT_AZE",
+  "kickoff": "2026-11-13T19:45:00.000Z",
+  "kickoffRaw": "2026-11-13T22:45:00",
+  "status": "source-final-awaiting-primary",
+  "observedAt": "2026-11-14T00:18:06.131Z",
+  "revision": 2,
+  "stateHash": "0c12bf74d7b3662ea7f99969f68d5ef44e114041b6eab1f1beef6efcaafb931c"
+}

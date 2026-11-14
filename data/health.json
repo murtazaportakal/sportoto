@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-13T18:43:06.731Z",
+  "checkedAt": "2026-11-14T00:18:06.126Z",
   "status": "ok",
   "warnings": [],
   "modelVersion": "baseline-v1",
@@ -12,47 +12,47 @@
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-13T18:43:05.236Z"
+      "fetchedAt": "2026-11-14T00:18:04.776Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-13T18:43:05.236Z"
+      "fetchedAt": "2026-11-14T00:18:04.776Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-13T18:43:05.236Z"
+      "fetchedAt": "2026-11-14T00:18:04.776Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-13T18:43:05.236Z"
+      "fetchedAt": "2026-11-14T00:18:04.776Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-13T18:43:05.236Z"
+      "fetchedAt": "2026-11-14T00:18:04.776Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-13T18:43:05.236Z"
+      "fetchedAt": "2026-11-14T00:18:04.776Z"
     },
     {
       "source": "espn:uefa.nations",
       "status": "ok",
-      "fetchedAt": "2026-11-13T18:43:05.236Z"
+      "fetchedAt": "2026-11-14T00:18:04.776Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-13T18:43:06.653Z"
+      "fetchedAt": "2026-11-14T00:18:06.049Z"
     },
     {
       "source": "uefa:nations-kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-13T18:43:06.653Z",
+      "fetchedAt": "2026-11-14T00:18:06.049Z",
       "matched": 15
     },
     {
@@ -63,7 +63,7 @@
   ],
   "drift": {
     "compared": 15,
-    "maxProbabilityChange": 0,
+    "maxProbabilityChange": 0.08779154854641791,
     "warningThreshold": 0.15
   },
   "pairedExperiments": [

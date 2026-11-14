@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "4d3ecee8-01e5-41c2-162f-08df15776e55",
+  "roundId": 1542,
+  "home": "NAT_BUL",
+  "away": "NAT_ISL",
+  "kickoff": "2026-11-13T19:45:00.000Z",
+  "kickoffRaw": "2026-11-13T22:45:00",
+  "status": "source-final-awaiting-primary",
+  "observedAt": "2026-11-14T00:18:06.131Z",
+  "revision": 2,
+  "stateHash": "249220c6f319cf93af871b239411cd7686bf06c2e0a41e23331df316d1ee32f0"
+}
