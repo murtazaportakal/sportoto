@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "evaluationType": "recorded-pre-match-forecasts",
   "validationStatus": "insufficient-evidence",
-  "totalForecasts": 27,
+  "totalForecasts": 29,
   "evaluated": 7,
   "excluded": {
-    "awaiting-confirmed-final": 20
+    "awaiting-confirmed-final": 22
   },
   "accuracy": 0.42857142857142855,
   "brierScore": 0.657162141316184,
@@ -1300,6 +1300,10 @@
     "remainingSettled": 493,
     "requiredPerLeague": 100,
     "byLeague": {
+      "6": {
+        "settled": 0,
+        "remaining": 100
+      },
       "26": {
         "settled": 0,
         "remaining": 100

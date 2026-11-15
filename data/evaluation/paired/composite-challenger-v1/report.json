@@ -4,13 +4,13 @@
   "modelFamily": "live-composite-v1",
   "experimentId": "composite-challenger-v1",
   "protocolHash": "f6a9d062cf8c333a746f3b2af21fbcc3b0740300674971cb4ebb7d1ee510f380",
-  "dataHash": "511b149681c7581525acb1495f69ba58ac99e54e80bdd6a89a9c48b460e51dee",
-  "evaluationCodeHash": "f442fa37c85660f56ffd4d56e5c586c5053c9ffc6d67db115e17cb8a082f1871",
+  "dataHash": "a12407aa3ac0e03e242bb87cef2b831582685332a0426a81181dba86fc5a874e",
+  "evaluationCodeHash": "6c1badf3d0ae88153f74b0d604fb9af1a3c9e57b4b3f528a437c880acce22bb2",
   "registeredAt": "2026-11-07T19:40:38.847Z",
-  "totalForecasts": 27,
+  "totalForecasts": 29,
   "evaluated": 7,
   "excluded": {
-    "awaiting-confirmed-final": 20
+    "awaiting-confirmed-final": 22
   },
   "candidateVersion": "composite-shadow-v1",
   "incumbentVersion": "baseline-v1",
