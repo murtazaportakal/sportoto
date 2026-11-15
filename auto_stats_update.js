@@ -1,4 +1,4 @@
-﻿const axios = require('axios');
+const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const { getCode } = require('./team_mapping');
@@ -40,15 +40,22 @@ function applyStandings(teams, payload, league, fetchedAt) {
       team = {name: entry.team.displayName, code, ...structuredClone(defaults), dataQuality: {estimatedFields, estimationMethod: 'Median of existing team inputs; not measured team statistics'}};
       teams.push(team);
     }
-    team.eloRating = 1350 + points * 12 + gd * 5 + (league === 'tur.1' ? 0 : 200);
+    let nationalTierAdjustment = 0;
+    if (league === 'uefa.nations') {
+      const tierMatch = String(entry.group || '').match(/Group\s+([A-D])/i);
+      const tier = tierMatch ? tierMatch[1].toUpperCase() : 'B';
+      const tierBonus = { 'A': 300, 'B': 150, 'C': 0, 'D': -150 };
+      nationalTierAdjustment = tierBonus[tier] ?? 0;
+    }
+    team.eloRating = 1350 + points * 12 + gd * 5 + (league === 'tur.1' ? 0 : (200 + nationalTierAdjustment));
     team.recentForm = {goalsFor: Number((gf / games).toFixed(2)), goalsAgainst: Number((ga / games).toFixed(2))};
-    team.statsSource = {url: `https://site.web.api.espn.com/apis/v2/sports/soccer/${league}/standings`, season: payload.season?.displayName || null, fetchedAt, gamesPlayed: games, points, goalsFor: gf, goalsAgainst: ga, goalDifference: gd, ratingMethod: '1350 + points * 12 + goalDifference * 5 + league adjustment; not an official Elo rating'};
+    team.statsSource = {url: `https://site.web.api.espn.com/apis/v2/sports/soccer/${league}/standings`, season: payload.season?.displayName || null, fetchedAt, gamesPlayed: games, points, goalsFor: gf, goalsAgainst: ga, goalDifference: gd, ratingMethod: '1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating'};
     if(entry.team.id!=null)team.statsSource.providerTeamId=String(entry.team.id);
     if(league==='uefa.nations') {
       team.teamType='national';
       team.statsSource.group=entry.group;
       team.statsSource.providerTeamId=String(entry.team.id);
-      team.dataQuality={...team.dataQuality,estimatedFields:[...new Set([...(team.dataQuality?.estimatedFields||[]),'eloRating'])],estimationMethod:'Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated.'};
+      team.dataQuality={...team.dataQuality,estimatedFields:[...new Set([...(team.dataQuality?.estimatedFields||[]),'eloRating'])],estimationMethod:'Generic existing-dataset medians for unavailable inputs; rating is a standings heuristic calibrated by Nations League tier (A/B/C/D).'};
     }
     count++;
   }

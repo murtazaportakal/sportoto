@@ -2220,7 +2220,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1695,
+    "eloRating": 1995,
     "recentForm": {
       "goalsFor": 2.2,
       "goalsAgainst": 1.2
@@ -2274,7 +2274,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1668,
+    "eloRating": 1968,
     "recentForm": {
       "goalsFor": 1.6,
       "goalsAgainst": 1.2
@@ -2328,7 +2328,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1500,
+    "eloRating": 1800,
     "recentForm": {
       "goalsFor": 0.6,
       "goalsAgainst": 2.6
@@ -2382,7 +2382,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1685,
+    "eloRating": 1985,
     "recentForm": {
       "goalsFor": 1.6,
       "goalsAgainst": 1
@@ -2436,7 +2436,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1727,
+    "eloRating": 2027,
     "recentForm": {
       "goalsFor": 2.8,
       "goalsAgainst": 1
@@ -2490,7 +2490,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1621,
+    "eloRating": 1921,
     "recentForm": {
       "goalsFor": 1,
       "goalsAgainst": 2
@@ -2544,7 +2544,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1661,
+    "eloRating": 1961,
     "recentForm": {
       "goalsFor": 1.2,
       "goalsAgainst": 0.6
@@ -2598,7 +2598,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1515,
+    "eloRating": 1815,
     "recentForm": {
       "goalsFor": 0.8,
       "goalsAgainst": 2.2
@@ -2652,7 +2652,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1775,
+    "eloRating": 2075,
     "recentForm": {
       "goalsFor": 2.8,
       "goalsAgainst": 1
@@ -2706,7 +2706,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1754,
+    "eloRating": 2054,
     "recentForm": {
       "goalsFor": 3.2,
       "goalsAgainst": 0.8
@@ -2760,7 +2760,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1500,
+    "eloRating": 1800,
     "recentForm": {
       "goalsFor": 0.4,
       "goalsAgainst": 2.4
@@ -2814,7 +2814,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1531,
+    "eloRating": 1831,
     "recentForm": {
       "goalsFor": 1,
       "goalsAgainst": 3.2
@@ -2868,7 +2868,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1576,
+    "eloRating": 1876,
     "recentForm": {
       "goalsFor": 1.5,
       "goalsAgainst": 2
@@ -2922,7 +2922,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1622,
+    "eloRating": 1922,
     "recentForm": {
       "goalsFor": 1.75,
       "goalsAgainst": 1.75
@@ -2976,7 +2976,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1719,
+    "eloRating": 2019,
     "recentForm": {
       "goalsFor": 2.25,
       "goalsAgainst": 1
@@ -3030,7 +3030,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1571,
+    "eloRating": 1871,
     "recentForm": {
       "goalsFor": 0.5,
       "goalsAgainst": 1.25
@@ -3084,7 +3084,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1495,
+    "eloRating": 1645,
     "recentForm": {
       "goalsFor": 0.2,
       "goalsAgainst": 2.4
@@ -3138,7 +3138,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1656,
+    "eloRating": 1806,
     "recentForm": {
       "goalsFor": 1,
       "goalsAgainst": 0.6
@@ -3192,7 +3192,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1756,
+    "eloRating": 1906,
     "recentForm": {
       "goalsFor": 2.2,
       "goalsAgainst": 0.2
@@ -3246,7 +3246,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1629,
+    "eloRating": 1779,
     "recentForm": {
       "goalsFor": 1,
       "goalsAgainst": 1.2
@@ -3300,7 +3300,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1583,
+    "eloRating": 1733,
     "recentForm": {
       "goalsFor": 0.5,
       "goalsAgainst": 1.25
@@ -3354,7 +3354,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1639,
+    "eloRating": 1789,
     "recentForm": {
       "goalsFor": 0.75,
       "goalsAgainst": 0.5
@@ -3408,7 +3408,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1564,
+    "eloRating": 1714,
     "recentForm": {
       "goalsFor": 0,
       "goalsAgainst": 0.5
@@ -3462,7 +3462,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1666,
+    "eloRating": 1816,
     "recentForm": {
       "goalsFor": 1,
       "goalsAgainst": 0
@@ -3516,7 +3516,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1549,
+    "eloRating": 1699,
     "recentForm": {
       "goalsFor": 0.5,
       "goalsAgainst": 1.75
@@ -3570,7 +3570,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1666,
+    "eloRating": 1816,
     "recentForm": {
       "goalsFor": 2.25,
       "goalsAgainst": 1.25
@@ -3624,7 +3624,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1620,
+    "eloRating": 1770,
     "recentForm": {
       "goalsFor": 1.5,
       "goalsAgainst": 1
@@ -3678,7 +3678,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1605,
+    "eloRating": 1755,
     "recentForm": {
       "goalsFor": 0.75,
       "goalsAgainst": 1
@@ -3732,7 +3732,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1661,
+    "eloRating": 1811,
     "recentForm": {
       "goalsFor": 1.5,
       "goalsAgainst": 0.75
@@ -3786,7 +3786,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1690,
+    "eloRating": 1840,
     "recentForm": {
       "goalsFor": 1.75,
       "goalsAgainst": 0.75
@@ -3840,7 +3840,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1613,
+    "eloRating": 1763,
     "recentForm": {
       "goalsFor": 1.75,
       "goalsAgainst": 1
@@ -3894,7 +3894,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1500,
+    "eloRating": 1650,
     "recentForm": {
       "goalsFor": 0.75,
       "goalsAgainst": 3.25
@@ -4812,7 +4812,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1644,
+    "eloRating": 1494,
     "recentForm": {
       "goalsFor": 1.33,
       "goalsAgainst": 0.67
@@ -4866,7 +4866,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1598,
+    "eloRating": 1448,
     "recentForm": {
       "goalsFor": 0.75,
       "goalsAgainst": 0.75
@@ -4920,7 +4920,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1564,
+    "eloRating": 1414,
     "recentForm": {
       "goalsFor": 0.33,
       "goalsAgainst": 1
@@ -4974,7 +4974,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1603,
+    "eloRating": 1453,
     "recentForm": {
       "goalsFor": 1,
       "goalsAgainst": 0.67
@@ -5028,7 +5028,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1656,
+    "eloRating": 1506,
     "recentForm": {
       "goalsFor": 0.75,
       "goalsAgainst": 0.25
@@ -5082,7 +5082,7 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Generic existing-dataset medians for unavailable inputs; rating is an unvalidated standings heuristic. Nations League tier strengths are not calibrated."
     },
-    "eloRating": 1547,
+    "eloRating": 1397,
     "recentForm": {
       "goalsFor": 0,
       "goalsAgainst": 1
@@ -5105,21 +5105,396 @@ const TEAMS_DATA = [
 ];
 
 const FIXTURES_DATA = [
-  {"id":1,"providerId":"340098a9-978f-4d14-1645-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_FRA","away":"NAT_TUR","homeName":"Fransa","awayName":"Türkiye","kickoffRaw":"2026-11-15T22:45:00","kickoff":"2026-11-15T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047898","url":"https://match.uefa.com/v5/matches/2047898","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-15T19:45:00Z","status":"UPCOMING"}},
-  {"id":2,"providerId":"4d3ecee8-01e5-41c2-162f-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_BUL","away":"NAT_ISL","homeName":"Bulgaristan","awayName":"İzlanda","kickoffRaw":"2026-11-13T22:45:00","kickoff":"2026-11-13T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"source-final-awaiting-primary","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047882","url":"https://match.uefa.com/v5/matches/2047882","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-13T19:45:00Z","status":"FINISHED"}},
-  {"id":3,"providerId":"cf705df5-5c48-45f8-1634-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_LIE","away":"NAT_AZE","homeName":"Lihtenştayn","awayName":"Azerbaycan","kickoffRaw":"2026-11-13T22:45:00","kickoff":"2026-11-13T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"source-final-awaiting-primary","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047885","url":"https://match.uefa.com/v5/matches/2047885","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-13T19:45:00Z","status":"FINISHED"}},
-  {"id":4,"providerId":"7bea3e14-b1b0-4755-1630-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_LUX","away":"NAT_EST","homeName":"Lüksemburg","awayName":"Estonya","kickoffRaw":"2026-11-13T22:45:00","kickoff":"2026-11-13T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"source-final-awaiting-primary","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047881","url":"https://match.uefa.com/v5/matches/2047881","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-13T19:45:00Z","status":"FINISHED"}},
-  {"id":5,"providerId":"c33c3751-98b8-46ad-162e-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_SVK","away":"NAT_FRO","homeName":"Slovakya","awayName":"Faroe Adaları","kickoffRaw":"2026-11-13T22:45:00","kickoff":"2026-11-13T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"source-final-awaiting-primary","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047880","url":"https://match.uefa.com/v5/matches/2047880","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-13T19:45:00Z","status":"FINISHED"}},
-  {"id":6,"providerId":"084ca742-0095-45d8-1639-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_GEO","away":"NAT_HUN","homeName":"Gürcistan","awayName":"Macaristan","kickoffRaw":"2026-11-14T20:00:00","kickoff":"2026-11-14T17:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047895","url":"https://match.uefa.com/v5/matches/2047895","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-14T17:00:00Z","status":"UPCOMING"}},
-  {"id":7,"providerId":"d06ffcaf-1712-49a7-1638-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_NOR","away":"NAT_WAL","homeName":"Norveç","awayName":"Galler","kickoffRaw":"2026-11-14T20:00:00","kickoff":"2026-11-14T17:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047893","url":"https://match.uefa.com/v5/matches/2047893","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-14T17:00:00Z","status":"UPCOMING"}},
-  {"id":8,"providerId":"176dc7d0-8feb-435f-163a-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_POR","away":"NAT_DEN","homeName":"Portekiz","awayName":"Danimarka","kickoffRaw":"2026-11-14T22:45:00","kickoff":"2026-11-14T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047892","url":"https://match.uefa.com/v5/matches/2047892","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-14T19:45:00Z","status":"UPCOMING"}},
-  {"id":9,"providerId":"cfacc145-37f9-43c7-1643-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_BEL","away":"NAT_ITA","homeName":"Belçika","awayName":"İtalya","kickoffRaw":"2026-11-15T22:45:00","kickoff":"2026-11-15T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047900","url":"https://match.uefa.com/v5/matches/2047900","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-15T19:45:00Z","status":"UPCOMING"}},
-  {"id":10,"providerId":"648c6def-36d4-44d0-1644-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_CRO","away":"NAT_CZE","homeName":"Hırvatistan","awayName":"Çekya","kickoffRaw":"2026-11-15T22:45:00","kickoff":"2026-11-15T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047902","url":"https://match.uefa.com/v5/matches/2047902","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-15T19:45:00Z","status":"UPCOMING"}},
-  {"id":11,"providerId":"5401e803-6451-4fe0-1646-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_ESP","away":"NAT_ENG","homeName":"İspanya","awayName":"İngiltere","kickoffRaw":"2026-11-15T22:45:00","kickoff":"2026-11-15T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047904","url":"https://match.uefa.com/v5/matches/2047904","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-15T19:45:00Z","status":"UPCOMING"}},
-  {"id":12,"providerId":"c3658ae1-53ab-4a94-164c-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_GER","away":"NAT_NED","homeName":"Almanya","awayName":"Hollanda","kickoffRaw":"2026-11-16T22:45:00","kickoff":"2026-11-16T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047909","url":"https://match.uefa.com/v5/matches/2047909","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-16T19:45:00Z","status":"UPCOMING"}},
-  {"id":13,"providerId":"d9713b86-ad27-4183-1650-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_MKD","away":"NAT_SVN","homeName":"Kuzey Makedonya Cumhuriyeti","awayName":"Slovenya","kickoffRaw":"2026-11-16T22:45:00","kickoff":"2026-11-16T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047915","url":"https://match.uefa.com/v5/matches/2047915","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-16T19:45:00Z","status":"UPCOMING"}},
-  {"id":14,"providerId":"68a07749-e313-4a4d-164d-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_GRE","away":"NAT_SRB","homeName":"Yunanistan","awayName":"Sırbistan","kickoffRaw":"2026-11-16T22:45:00","kickoff":"2026-11-16T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047912","url":"https://match.uefa.com/v5/matches/2047912","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-16T19:45:00Z","status":"UPCOMING"}},
-  {"id":15,"providerId":"92f6495b-e5a2-4fb8-164f-08df15776e55","roundId":1542,"leagueId":258,"home":"NAT_SUI","away":"NAT_SCO","homeName":"İsviçre","awayName":"İskoçya","kickoffRaw":"2026-11-16T22:45:00","kickoff":"2026-11-16T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"uefa","matchId":"2047914","url":"https://match.uefa.com/v5/matches/2047914","fetchedAt":"2026-11-14T14:05:16.316Z","matchingPolicy":"unique national identities, home/away, competition, season and calendar date","rawKickoff":"2026-11-16T19:45:00Z","status":"UPCOMING"}}
+  {
+    "id": 1,
+    "providerId": "340098a9-978f-4d14-1645-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_FRA",
+    "away": "NAT_TUR",
+    "homeName": "Fransa",
+    "awayName": "Türkiye",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047898",
+      "url": "https://match.uefa.com/v5/matches/2047898",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 2,
+    "providerId": "4d3ecee8-01e5-41c2-162f-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_BUL",
+    "away": "NAT_ISL",
+    "homeName": "Bulgaristan",
+    "awayName": "İzlanda",
+    "kickoffRaw": "2026-11-13T22:45:00",
+    "kickoff": "2026-11-13T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "source-final-awaiting-primary",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047882",
+      "url": "https://match.uefa.com/v5/matches/2047882",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-13T19:45:00Z",
+      "status": "FINISHED"
+    }
+  },
+  {
+    "id": 3,
+    "providerId": "cf705df5-5c48-45f8-1634-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_LIE",
+    "away": "NAT_AZE",
+    "homeName": "Lihtenştayn",
+    "awayName": "Azerbaycan",
+    "kickoffRaw": "2026-11-13T22:45:00",
+    "kickoff": "2026-11-13T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "source-final-awaiting-primary",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047885",
+      "url": "https://match.uefa.com/v5/matches/2047885",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-13T19:45:00Z",
+      "status": "FINISHED"
+    }
+  },
+  {
+    "id": 4,
+    "providerId": "7bea3e14-b1b0-4755-1630-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_LUX",
+    "away": "NAT_EST",
+    "homeName": "Lüksemburg",
+    "awayName": "Estonya",
+    "kickoffRaw": "2026-11-13T22:45:00",
+    "kickoff": "2026-11-13T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "source-final-awaiting-primary",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047881",
+      "url": "https://match.uefa.com/v5/matches/2047881",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-13T19:45:00Z",
+      "status": "FINISHED"
+    }
+  },
+  {
+    "id": 5,
+    "providerId": "c33c3751-98b8-46ad-162e-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_SVK",
+    "away": "NAT_FRO",
+    "homeName": "Slovakya",
+    "awayName": "Faroe Adaları",
+    "kickoffRaw": "2026-11-13T22:45:00",
+    "kickoff": "2026-11-13T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "source-final-awaiting-primary",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047880",
+      "url": "https://match.uefa.com/v5/matches/2047880",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-13T19:45:00Z",
+      "status": "FINISHED"
+    }
+  },
+  {
+    "id": 6,
+    "providerId": "084ca742-0095-45d8-1639-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_GEO",
+    "away": "NAT_HUN",
+    "homeName": "Gürcistan",
+    "awayName": "Macaristan",
+    "kickoffRaw": "2026-11-14T20:00:00",
+    "kickoff": "2026-11-14T17:00:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047895",
+      "url": "https://match.uefa.com/v5/matches/2047895",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-14T17:00:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 7,
+    "providerId": "d06ffcaf-1712-49a7-1638-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_NOR",
+    "away": "NAT_WAL",
+    "homeName": "Norveç",
+    "awayName": "Galler",
+    "kickoffRaw": "2026-11-14T20:00:00",
+    "kickoff": "2026-11-14T17:00:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047893",
+      "url": "https://match.uefa.com/v5/matches/2047893",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-14T17:00:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 8,
+    "providerId": "176dc7d0-8feb-435f-163a-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_POR",
+    "away": "NAT_DEN",
+    "homeName": "Portekiz",
+    "awayName": "Danimarka",
+    "kickoffRaw": "2026-11-14T22:45:00",
+    "kickoff": "2026-11-14T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047892",
+      "url": "https://match.uefa.com/v5/matches/2047892",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-14T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 9,
+    "providerId": "cfacc145-37f9-43c7-1643-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_BEL",
+    "away": "NAT_ITA",
+    "homeName": "Belçika",
+    "awayName": "İtalya",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047900",
+      "url": "https://match.uefa.com/v5/matches/2047900",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 10,
+    "providerId": "648c6def-36d4-44d0-1644-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_CRO",
+    "away": "NAT_CZE",
+    "homeName": "Hırvatistan",
+    "awayName": "Çekya",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047902",
+      "url": "https://match.uefa.com/v5/matches/2047902",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 11,
+    "providerId": "5401e803-6451-4fe0-1646-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_ESP",
+    "away": "NAT_ENG",
+    "homeName": "İspanya",
+    "awayName": "İngiltere",
+    "kickoffRaw": "2026-11-15T22:45:00",
+    "kickoff": "2026-11-15T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047904",
+      "url": "https://match.uefa.com/v5/matches/2047904",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-15T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 12,
+    "providerId": "c3658ae1-53ab-4a94-164c-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_GER",
+    "away": "NAT_NED",
+    "homeName": "Almanya",
+    "awayName": "Hollanda",
+    "kickoffRaw": "2026-11-16T22:45:00",
+    "kickoff": "2026-11-16T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047909",
+      "url": "https://match.uefa.com/v5/matches/2047909",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-16T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 13,
+    "providerId": "d9713b86-ad27-4183-1650-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_MKD",
+    "away": "NAT_SVN",
+    "homeName": "Kuzey Makedonya Cumhuriyeti",
+    "awayName": "Slovenya",
+    "kickoffRaw": "2026-11-16T22:45:00",
+    "kickoff": "2026-11-16T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047915",
+      "url": "https://match.uefa.com/v5/matches/2047915",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-16T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 14,
+    "providerId": "68a07749-e313-4a4d-164d-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_GRE",
+    "away": "NAT_SRB",
+    "homeName": "Yunanistan",
+    "awayName": "Sırbistan",
+    "kickoffRaw": "2026-11-16T22:45:00",
+    "kickoff": "2026-11-16T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047912",
+      "url": "https://match.uefa.com/v5/matches/2047912",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-16T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  },
+  {
+    "id": 15,
+    "providerId": "92f6495b-e5a2-4fb8-164f-08df15776e55",
+    "roundId": 1542,
+    "leagueId": 258,
+    "home": "NAT_SUI",
+    "away": "NAT_SCO",
+    "homeName": "İsviçre",
+    "awayName": "İskoçya",
+    "kickoffRaw": "2026-11-16T22:45:00",
+    "kickoff": "2026-11-16T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "uefa",
+      "matchId": "2047914",
+      "url": "https://match.uefa.com/v5/matches/2047914",
+      "fetchedAt": "2026-11-14T14:05:16.316Z",
+      "matchingPolicy": "unique national identities, home/away, competition, season and calendar date",
+      "rawKickoff": "2026-11-16T19:45:00Z",
+      "status": "UPCOMING"
+    }
+  }
 ];
 
 if (typeof module !== 'undefined' && module.exports) { module.exports = { TEAMS_DATA, FIXTURES_DATA }; }

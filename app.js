@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.predictions=fixtures.map(fixture=>{
         const home=teams.find(t=>t.code===fixture.home),away=teams.find(t=>t.code===fixture.away);
         const names={homeTeam:this.language==='tr'?fixture.homeName:(home?.name||fixture.homeName),awayTeam:this.language==='tr'?fixture.awayName:(away?.name||fixture.awayName),homeLocal:fixture.homeName,awayLocal:fixture.awayName};
-        if(!home||!away)return {id:fixture.id,unavailable:true,...names,kickoff:fixture.kickoff};
+        if(!home||!away)return {id:fixture.id,unavailable:true,homeTeam:fixture.homeName,awayTeam:fixture.awayName,homeLocal:fixture.homeName,awayLocal:fixture.awayName,kickoff:fixture.kickoff};
         const outcome=PredictionPipeline.predict({fixture,vectors:this.featureVectors,params:this.currentParams,asOf:this.updatedAt||new Date().toISOString()},FeatureEngineering,PredictionEngine).probabilities;
         return {probabilities:outcome,pick:PredictionEngine.pickOutcome(outcome),usesEstimatedInputs:!!(home.dataQuality?.estimatedFields?.length||away.dataQuality?.estimatedFields?.length),id:fixture.id,...names,kickoff:fixture.kickoff,
           homeWin:(outcome.win*100).toFixed(1),draw:(outcome.draw*100).toFixed(1),awayWin:(outcome.loss*100).toFixed(1),h2h:null,homeStreak:null,awayStreak:null,differential:outcome.differential.toFixed(3)};
