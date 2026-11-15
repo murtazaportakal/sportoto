@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "evaluationType": "prospective-paired-live-models",
+  "experimentId": "composite-challenger-v1",
+  "provider": "sportoto",
+  "providerId": "444f31d2-92b2-479c-4f47-08def9453ab4",
+  "roundId": 1543,
+  "fixture": {
+    "id": 11,
+    "providerId": "444f31d2-92b2-479c-4f47-08def9453ab4",
+    "roundId": 1543,
+    "leagueId": 26,
+    "home": "LIL",
+    "away": "LYO",
+    "homeName": "Lille",
+    "awayName": "Olympique Lyon",
+    "kickoffRaw": "2026-11-21T22:45:00",
+    "kickoff": "2026-11-21T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "fra.1",
+      "matchId": "401876402",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261121",
+      "fetchedAt": "2026-11-15T21:53:47.749Z",
+      "rawKickoff": "2026-11-21T19:45Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-15T21:53:47.829Z",
+  "protocolHash": "f6a9d062cf8c333a746f3b2af21fbcc3b0740300674971cb4ebb7d1ee510f380",
+  "codeHash": "7fae7683fa21693bf9e9631f5c033e76a86b61bbd50e1d2573258409188491d0",
+  "inputHash": "6f183619929f89aae75d8a5f0c153832431efef11701afb49fef4fa39033707b",
+  "predictions": {
+    "incumbent": {
+      "win": 0.43448098197634627,
+      "draw": 0.26277440868937846,
+      "loss": 0.3027446093342753,
+      "differential": 0.018141057347670207
+    },
+    "candidate": {
+      "win": 0.42312852296028514,
+      "draw": 0.2815440093100483,
+      "loss": 0.29532746772966656,
+      "differential": 0.018141057347670207
+    },
+    "baseline": {
+      "win": 0.48626782800043816,
+      "draw": 0.26,
+      "loss": 0.25373217199956183
+    },
+    "uniform": {
+      "win": 0.3333333333333333,
+      "draw": 0.3333333333333333,
+      "loss": 0.3333333333333333
+    }
+  },
+  "policy": "first-eligible-paired-observation-after-protocol-registration"
+}

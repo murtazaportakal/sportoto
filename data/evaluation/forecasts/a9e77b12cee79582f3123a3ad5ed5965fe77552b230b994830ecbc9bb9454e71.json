@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "featureSchemaVersion": "team-composite-v1",
+  "pipelineVersion": "live-composite-v1",
+  "provider": "sportoto",
+  "providerId": "92e4a1a6-bfe4-4574-5231-08def4816f89",
+  "roundId": 1543,
+  "fixture": {
+    "id": 5,
+    "providerId": "92e4a1a6-bfe4-4574-5231-08def4816f89",
+    "roundId": 1543,
+    "leagueId": 70,
+    "home": "ERZ",
+    "away": "GOZ",
+    "homeName": "Erzurumspor FK",
+    "awayName": "Göztepe",
+    "kickoffRaw": "2026-11-22T13:30:00",
+    "kickoff": "2026-11-22T10:30:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "tur.1",
+      "matchId": "401888243",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261122",
+      "fetchedAt": "2026-11-15T21:53:47.749Z",
+      "rawKickoff": "2026-11-22T10:30Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-15T21:53:47.829Z",
+  "inputHash": "6f183619929f89aae75d8a5f0c153832431efef11701afb49fef4fa39033707b",
+  "codeHash": "708eb2f214e97944fbe52a668048867574217c1960c715040c7c0b88fcc3b59d",
+  "model": {
+    "version": "baseline-v1",
+    "validationStatus": "unvalidated",
+    "contextPolicy": "disabled-pending-temporal-validation",
+    "params": {
+      "sigmoidScale": 4,
+      "drawBase": 0.28,
+      "drawGapThreshold": 4,
+      "homeAdvantageBoost": 0.07
+    }
+  },
+  "probabilities": {
+    "win": 0.388523749398102,
+    "draw": 0.2130423838119221,
+    "loss": 0.39843386678997583,
+    "differential": -0.07808527777777777
+  },
+  "pick": "2",
+  "policy": "first-eligible-observation-before-explicit-kickoff"
+}

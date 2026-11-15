@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "featureSchemaVersion": "team-composite-v1",
+  "pipelineVersion": "live-composite-v1",
+  "provider": "sportoto",
+  "providerId": "444f31d2-92b2-479c-4f47-08def9453ab4",
+  "roundId": 1543,
+  "fixture": {
+    "id": 11,
+    "providerId": "444f31d2-92b2-479c-4f47-08def9453ab4",
+    "roundId": 1543,
+    "leagueId": 26,
+    "home": "LIL",
+    "away": "LYO",
+    "homeName": "Lille",
+    "awayName": "Olympique Lyon",
+    "kickoffRaw": "2026-11-21T22:45:00",
+    "kickoff": "2026-11-21T19:45:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "fra.1",
+      "matchId": "401876402",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261121",
+      "fetchedAt": "2026-11-15T21:53:47.749Z",
+      "rawKickoff": "2026-11-21T19:45Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-15T21:53:47.829Z",
+  "inputHash": "6f183619929f89aae75d8a5f0c153832431efef11701afb49fef4fa39033707b",
+  "codeHash": "708eb2f214e97944fbe52a668048867574217c1960c715040c7c0b88fcc3b59d",
+  "model": {
+    "version": "baseline-v1",
+    "validationStatus": "unvalidated",
+    "contextPolicy": "disabled-pending-temporal-validation",
+    "params": {
+      "sigmoidScale": 4,
+      "drawBase": 0.28,
+      "drawGapThreshold": 4,
+      "homeAdvantageBoost": 0.07
+    }
+  },
+  "probabilities": {
+    "win": 0.43448098197634627,
+    "draw": 0.26277440868937846,
+    "loss": 0.3027446093342753,
+    "differential": 0.018141057347670207
+  },
+  "pick": "1",
+  "policy": "first-eligible-observation-before-explicit-kickoff"
+}

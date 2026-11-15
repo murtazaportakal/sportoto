@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "34c9b6f8-e887-4e19-522d-08def4816f89",
+  "roundId": 1543,
+  "home": "GEN",
+  "away": "GAZ",
+  "kickoff": "2026-11-21T10:30:00.000Z",
+  "kickoffRaw": "2026-11-21T13:30:00",
+  "status": "unconfirmed",
+  "observedAt": "2026-11-15T21:53:47.829Z",
+  "revision": 1,
+  "stateHash": "2b60c86400105fc18338955e201610e26c34842ecac3f3ee0f33c5040715ab2f"
+}

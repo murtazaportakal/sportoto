@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "evaluationType": "prospective-paired-live-models",
+  "experimentId": "composite-challenger-v1",
+  "provider": "sportoto",
+  "providerId": "52ca14f4-7ee7-48cc-7184-08def489a5a2",
+  "roundId": 1543,
+  "fixture": {
+    "id": 14,
+    "providerId": "52ca14f4-7ee7-48cc-7184-08def489a5a2",
+    "roundId": 1543,
+    "leagueId": 44,
+    "home": "SEV",
+    "away": "BET",
+    "homeName": "Sevilla",
+    "awayName": "Real Betis",
+    "kickoffRaw": "2026-11-21T20:30:00",
+    "kickoff": "2026-11-21T17:30:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "esp.1",
+      "matchId": "401882797",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261121",
+      "fetchedAt": "2026-11-15T21:53:47.749Z",
+      "rawKickoff": "2026-11-21T17:30Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-15T21:53:47.829Z",
+  "protocolHash": "f6a9d062cf8c333a746f3b2af21fbcc3b0740300674971cb4ebb7d1ee510f380",
+  "codeHash": "7fae7683fa21693bf9e9631f5c033e76a86b61bbd50e1d2573258409188491d0",
+  "inputHash": "6f183619929f89aae75d8a5f0c153832431efef11701afb49fef4fa39033707b",
+  "predictions": {
+    "incumbent": {
+      "win": 0.387278139636852,
+      "draw": 0.21683052924092752,
+      "loss": 0.3958913311222206,
+      "differential": -0.07304957885304657
+    },
+    "candidate": {
+      "win": 0.3875373871477322,
+      "draw": 0.23231842418670803,
+      "loss": 0.3801441886655597,
+      "differential": -0.07304957885304657
+    },
+    "baseline": {
+      "win": 0.29542409804139186,
+      "draw": 0.26,
+      "loss": 0.4445759019586082
+    },
+    "uniform": {
+      "win": 0.3333333333333333,
+      "draw": 0.3333333333333333,
+      "loss": 0.3333333333333333
+    }
+  },
+  "policy": "first-eligible-paired-observation-after-protocol-registration"
+}

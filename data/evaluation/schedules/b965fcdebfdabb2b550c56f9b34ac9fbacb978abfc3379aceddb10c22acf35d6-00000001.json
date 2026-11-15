@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "4c806e9b-83d2-438b-5230-08def4816f89",
+  "roundId": 1543,
+  "home": "KOC",
+  "away": "FEN",
+  "kickoff": "2026-11-21T16:00:00.000Z",
+  "kickoffRaw": "2026-11-21T19:00:00",
+  "status": "unconfirmed",
+  "observedAt": "2026-11-15T21:53:47.829Z",
+  "revision": 1,
+  "stateHash": "14f142fb56101bd3d6e1ed95489f129fc1000e47ed9701b9ee092a69a6bb28f5"
+}

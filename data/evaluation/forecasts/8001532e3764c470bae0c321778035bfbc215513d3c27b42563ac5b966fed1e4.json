@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "featureSchemaVersion": "team-composite-v1",
+  "pipelineVersion": "live-composite-v1",
+  "provider": "sportoto",
+  "providerId": "bc1e0bcb-0392-43f1-5730-08def9453ab4",
+  "roundId": 1543,
+  "fixture": {
+    "id": 13,
+    "providerId": "bc1e0bcb-0392-43f1-5730-08def9453ab4",
+    "roundId": 1543,
+    "leagueId": 36,
+    "home": "LIV",
+    "away": "MUN",
+    "homeName": "Liverpool",
+    "awayName": "Manchester United",
+    "kickoffRaw": "2026-11-22T19:30:00",
+    "kickoff": "2026-11-22T16:30:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "eng.1",
+      "matchId": "401878755",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122",
+      "fetchedAt": "2026-11-15T21:53:47.749Z",
+      "rawKickoff": "2026-11-22T16:30Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-15T21:53:47.829Z",
+  "inputHash": "6f183619929f89aae75d8a5f0c153832431efef11701afb49fef4fa39033707b",
+  "codeHash": "708eb2f214e97944fbe52a668048867574217c1960c715040c7c0b88fcc3b59d",
+  "model": {
+    "version": "baseline-v1",
+    "validationStatus": "unvalidated",
+    "contextPolicy": "disabled-pending-temporal-validation",
+    "params": {
+      "sigmoidScale": 4,
+      "drawBase": 0.28,
+      "drawGapThreshold": 4,
+      "homeAdvantageBoost": 0.07
+    }
+  },
+  "probabilities": {
+    "win": 0.5991710733526275,
+    "draw": 0.1633750786494097,
+    "loss": 0.23745384799796287,
+    "differential": 0.1539259856630825
+  },
+  "pick": "1",
+  "policy": "first-eligible-observation-before-explicit-kickoff"
+}

@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "c33c3751-98b8-46ad-162e-08df15776e55",
+  "roundId": 1542,
+  "home": "NAT_SVK",
+  "away": "NAT_FRO",
+  "kickoff": "2026-11-13T19:45:00.000Z",
+  "kickoffRaw": "2026-11-13T22:45:00",
+  "status": "final",
+  "observedAt": "2026-11-15T21:53:51.039Z",
+  "revision": 3,
+  "stateHash": "4ed51cebc94784819cb72c3a2025ef63e70c638c4b0de1500502160d3ed40f94"
+}
