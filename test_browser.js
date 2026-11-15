@@ -35,7 +35,7 @@ const server=http.createServer((request,response)=>{
     fs.mkdirSync('test-results',{recursive:true});
     await page.screenshot({path:'test-results/live-round.png',fullPage:true});
     payload=structuredClone(base);payload.updatedAt=new Date().toISOString();payload.model.params.homeAdvantageBoost=.01;
-    payload.fixtures=payload.fixtures.map((f,i)=>({...f,home:payload.teams[i].code,away:payload.teams[i+1].code}));
+    payload.fixtures=payload.fixtures.map((f,i)=>({...f,home:payload.teams[i].code,away:payload.teams[i+1].code,homeName:payload.teams[i].name,awayName:payload.teams[i+1].name}));
     await page.reload();
     await page.waitForFunction(()=>document.querySelectorAll('#coupon-table-body tr').length===15);
     await page.waitForFunction(()=>document.querySelector('#data-freshness').textContent.includes('Last synced:'));
