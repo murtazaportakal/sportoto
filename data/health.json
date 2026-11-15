@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-15T21:53:47.824Z",
+  "checkedAt": "2026-11-15T22:01:17.011Z",
   "status": "degraded",
   "warnings": [
     "missing-team-coverage",
@@ -28,60 +28,60 @@
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.628Z"
+      "fetchedAt": "2026-11-15T22:01:16.812Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.628Z"
+      "fetchedAt": "2026-11-15T22:01:16.812Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.628Z"
+      "fetchedAt": "2026-11-15T22:01:16.812Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.628Z"
+      "fetchedAt": "2026-11-15T22:01:16.812Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.628Z"
+      "fetchedAt": "2026-11-15T22:01:16.812Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.628Z"
+      "fetchedAt": "2026-11-15T22:01:16.812Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.754Z"
+      "fetchedAt": "2026-11-15T22:01:16.960Z"
     },
     {
       "source": "espn:tur.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.754Z",
+      "fetchedAt": "2026-11-15T22:01:16.960Z",
       "matched": 9
     },
     {
       "source": "espn:fra.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.754Z",
+      "fetchedAt": "2026-11-15T22:01:16.960Z",
       "matched": 1
     },
     {
       "source": "espn:eng.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.754Z",
+      "fetchedAt": "2026-11-15T22:01:16.960Z",
       "matched": 1
     },
     {
       "source": "espn:esp.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-15T21:53:47.754Z",
+      "fetchedAt": "2026-11-15T22:01:16.960Z",
       "matched": 1
     },
     {
@@ -91,8 +91,8 @@
     }
   ],
   "drift": {
-    "compared": 0,
-    "maxProbabilityChange": null,
+    "compared": 13,
+    "maxProbabilityChange": 0,
     "warningThreshold": 0.15
   },
   "pairedExperiments": [
