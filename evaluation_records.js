@@ -80,6 +80,39 @@ function recordResult(f, directory, observedAt) {
   if(!f.providerId || !f.result || f.status !== 'final') return false;
   return appendObservation(directory,'results',f.providerId,{provider:'sportoto',providerId:f.providerId,roundId:f.roundId,kickoff:f.kickoff,kickoffRaw:f.kickoffRaw,result:f.result},observedAt);
 }
+function recordHistoricalResult(f, historyPath) {
+  if (!f || f.status !== 'final' || !f.result || !f.home || !f.away) return false;
+  if (f.home === 'UNKNOWN' || f.away === 'UNKNOWN' || f.home === f.away) return false;
+  if (!historyPath || !fs.existsSync(historyPath)) return false;
+  const rawDate = f.kickoff || f.kickoffRaw;
+  if (!rawDate || !Number.isFinite(Date.parse(rawDate))) return false;
+  const date = new Date(rawDate).toISOString().slice(0, 10);
+  const homeGoals = f.result.homeGoals, awayGoals = f.result.awayGoals;
+  if (!Number.isInteger(homeGoals) || homeGoals < 0 || !Number.isInteger(awayGoals) || awayGoals < 0) return false;
+  const actualOutcome = homeGoals > awayGoals ? '1' : homeGoals < awayGoals ? '2' : 'X';
+  let history;
+  try {
+    history = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+  } catch { return false; }
+  if (!Array.isArray(history.matches)) history.matches = [];
+  const exists = history.matches.some(m => m.date === date && m.homeCode === f.home && m.awayCode === f.away);
+  if (exists) return false;
+  history.matches.push({
+    date,
+    round: f.roundId ? `Round ${f.roundId}` : 'Spor Toto',
+    homeTeam: f.homeName || f.home,
+    awayTeam: f.awayName || f.away,
+    homeCode: f.home,
+    awayCode: f.away,
+    homeGoals,
+    awayGoals,
+    actualOutcome,
+    source: 'sportoto-settled'
+  });
+  history.totalMatches = history.matches.length;
+  fs.writeFileSync(historyPath, JSON.stringify(history, null, 2) + '\n', 'utf8');
+  return true;
+}
 async function refreshRecordedResults(fetchRound, currentRoundId, directory=path.join(__dirname,'data','evaluation'), observedAt=new Date().toISOString(), resolveFixtures=async fixtures=>fixtures) {
   const forecastsPath=path.join(directory,'forecasts');
   if(!fs.existsSync(forecastsPath))return {checked:0,added:0};
@@ -114,11 +147,16 @@ async function refreshRecordedResults(fetchRound, currentRoundId, directory=path
       const previous=savedFixtures.get(fixture.providerId);
       return previous?.kickoffSource?{...fixture,kickoffSource:previous.kickoffSource}:fixture;
     }));
+    const historyCandidate = path.resolve(directory, '..', 'historical_matches.json');
+    const historyPath = fs.existsSync(historyCandidate) ? historyCandidate : null;
     for(const f of fixtures) {
       recordSchedule(f,directory,observedAt);
-      if(recordResult(f,directory,observedAt))added++;
+      if(recordResult(f,directory,observedAt)) {
+        added++;
+        if(historyPath) recordHistoricalResult(f, historyPath);
+      }
     }
   }
   return {checked:rounds.size,added};
 }
-module.exports={recordEvaluation,eligibility,digest,writeOnce,refreshRecordedResults,recordSchedule,recordResult};
+module.exports={recordEvaluation,eligibility,digest,writeOnce,refreshRecordedResults,recordSchedule,recordResult,recordHistoricalResult};

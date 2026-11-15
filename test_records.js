@@ -100,6 +100,13 @@ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'sportoto-records-'));
     assert.equal(mutateLatest('schedules','test-3',{observedAt}).excluded['invalid-final-confirmation-time'],1);
   }
   assert.equal(evaluateRecords(dir).evaluated,12);
+  const {recordHistoricalResult} = require('./evaluation_records');
+  const tempHist = path.join(dir, 'test_history.json');
+  fs.writeFileSync(tempHist, JSON.stringify({matches: []}));
+  const testMatch = {home: 'GAL', away: 'FEN', homeName: 'Galatasaray', awayName: 'Fenerbahce', kickoff: '2030-01-01T12:00:00Z', status: 'final', result: {homeGoals: 2, awayGoals: 1, outcome: '1'}, roundId: 10};
+  assert.equal(recordHistoricalResult(testMatch, tempHist), true);
+  assert.equal(recordHistoricalResult(testMatch, tempHist), false);
+  assert.equal(JSON.parse(fs.readFileSync(tempHist, 'utf8')).matches.length, 1);
   assert.deepEqual(forecastFiles.map(f=>fs.readFileSync(path.join(dir,'forecasts',f),'utf8')),before);
   console.log('Passed: explicit timezone normalization, cutoff/staleness gates, immutable forecasts, input hashes, retries, past-round collection and append-only corrections.');
  } finally {
