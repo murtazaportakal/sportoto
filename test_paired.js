@@ -6,7 +6,7 @@ const config=require('./data/prospective_experiment.json'),data=structuredClone(
 const now='2030-01-01T10:00:00Z',finalAt='2030-01-01T13:00:00Z';
 data.updatedAt=now;data.model={...data.model,version:config.incumbent.version,params:structuredClone(config.incumbent.params)};
 data.teams.forEach(t=>t.statsSource={...t.statsSource,fetchedAt:now});
-data.fixtures=data.fixtures.map((f,i)=>({...f,providerId:'paired-'+i,roundId:1,home:data.teams[2].code,away:data.teams[3].code,kickoff:'2030-01-01T12:00:00Z',status:'unconfirmed',result:null}));
+data.fixtures=data.fixtures.map((f,i)=>({...f,leagueId:data.fixtures[0].leagueId,providerId:'paired-'+i,roundId:1,home:data.teams[2].code,away:data.teams[3].code,kickoff:'2030-01-01T12:00:00Z',status:'unconfirmed',result:null}));
 const root=fs.mkdtempSync(path.join(os.tmpdir(),'sportoto-paired-')),directory=path.join(root,'paired',config.experimentId);
 try {
   recordEvaluation(data,root,now);
