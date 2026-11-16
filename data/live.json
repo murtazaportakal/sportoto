@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-15T22:05:55.586Z",
+  "updatedAt": "2026-11-16T01:55:51.801Z",
   "round": {
     "id": 1543,
     "name": "16. Oyun Programı",
@@ -33,7 +33,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 28,
         "goalsFor": 27,
@@ -69,7 +69,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 19,
         "goalsFor": 29,
@@ -105,7 +105,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 22,
         "goalsFor": 23,
@@ -141,7 +141,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 25,
         "goalsFor": 26,
@@ -177,7 +177,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 17,
         "goalsFor": 19,
@@ -261,7 +261,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 20,
         "goalsFor": 17,
@@ -297,7 +297,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 12,
         "goalsFor": 9,
@@ -381,7 +381,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 8,
         "goalsFor": 6,
@@ -489,7 +489,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 8,
         "goalsFor": 9,
@@ -525,7 +525,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 7,
         "goalsFor": 11,
@@ -561,7 +561,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 14,
         "goalsFor": 13,
@@ -645,7 +645,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 15,
         "goalsFor": 22,
@@ -681,7 +681,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
         "season": "2026-27 Spanish LALIGA",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 12,
         "points": 30,
         "goalsFor": 31,
@@ -717,7 +717,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
         "season": "2026-27 Spanish LALIGA",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 12,
         "points": 33,
         "goalsFor": 48,
@@ -753,7 +753,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 21,
         "goalsFor": 21,
@@ -789,7 +789,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 27,
         "goalsFor": 15,
@@ -825,7 +825,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 18,
         "goalsFor": 14,
@@ -861,7 +861,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
         "season": "2026-27 German Bundesliga",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 9,
         "points": 21,
         "goalsFor": 29,
@@ -921,7 +921,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
         "season": "2026-27 Italian Serie A",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 24,
         "goalsFor": 23,
@@ -957,7 +957,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
         "season": "2026-27 Italian Serie A",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 18,
         "goalsFor": 15,
@@ -993,7 +993,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 11,
         "goalsFor": 12,
@@ -1029,7 +1029,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 23,
         "goalsFor": 28,
@@ -1065,7 +1065,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 14,
         "goalsFor": 10,
@@ -1101,7 +1101,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 19,
         "goalsFor": 13,
@@ -1137,7 +1137,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 3,
         "goalsFor": 3,
@@ -1173,7 +1173,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
         "season": "2026-27 Turkish Super Lig",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 16,
         "goalsFor": 21,
@@ -1209,7 +1209,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
         "season": "2026-27 German Bundesliga",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 9,
         "points": 9,
         "goalsFor": 20,
@@ -1245,7 +1245,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
         "season": "2026-27 German Bundesliga",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 9,
         "points": 18,
         "goalsFor": 27,
@@ -1281,7 +1281,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
         "season": "2026-27 German Bundesliga",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 9,
         "points": 12,
         "goalsFor": 15,
@@ -1317,7 +1317,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 8,
         "goalsFor": 14,
@@ -1353,7 +1353,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 12,
         "goalsFor": 10,
@@ -1389,7 +1389,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
         "season": "2026-27 Spanish LALIGA",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 12,
         "points": 15,
         "goalsFor": 17,
@@ -1425,7 +1425,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
         "season": "2026-27 Italian Serie A",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 23,
         "goalsFor": 18,
@@ -1461,7 +1461,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
         "season": "2026-27 Italian Serie A",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 27,
         "goalsFor": 31,
@@ -1497,7 +1497,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 16,
         "goalsFor": 12,
@@ -1533,7 +1533,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 16,
         "goalsFor": 19,
@@ -1569,7 +1569,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 14,
         "goalsFor": 16,
@@ -1605,7 +1605,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
         "season": "2026-27 Spanish LALIGA",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 12,
         "points": 26,
         "goalsFor": 20,
@@ -1641,7 +1641,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
         "season": "2026-27 Spanish LALIGA",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 12,
         "points": 18,
         "goalsFor": 17,
@@ -1677,7 +1677,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
         "season": "2026-27 Italian Serie A",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 14,
         "goalsFor": 17,
@@ -1713,7 +1713,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
         "season": "2026-27 Italian Serie A",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 29,
         "goalsFor": 25,
@@ -1749,7 +1749,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
         "season": "2026-27 German Bundesliga",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 9,
         "points": 21,
         "goalsFor": 16,
@@ -1785,7 +1785,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
         "season": "2026-27 French Ligue 1",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 16,
         "goalsFor": 13,
@@ -1821,7 +1821,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
         "season": "2026-27 French Ligue 1",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 21,
         "goalsFor": 14,
@@ -1857,7 +1857,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
         "season": "2026-27 French Ligue 1",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 20,
         "goalsFor": 17,
@@ -1893,7 +1893,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
         "season": "2026-27 French Ligue 1",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 17,
         "goalsFor": 15,
@@ -1929,7 +1929,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
         "season": "2026-27 Italian Serie A",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 11,
         "points": 15,
         "goalsFor": 18,
@@ -1980,7 +1980,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 13,
         "goalsFor": 14,
@@ -2031,7 +2031,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
         "season": "2026-27 Spanish LALIGA",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 12,
         "points": 28,
         "goalsFor": 23,
@@ -2082,7 +2082,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
         "season": "2026-27 Spanish LALIGA",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 12,
         "points": 9,
         "goalsFor": 8,
@@ -2133,7 +2133,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
         "season": "2026-27 German Bundesliga",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 9,
         "points": 15,
         "goalsFor": 17,
@@ -2184,7 +2184,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
         "season": "2026-27 German Bundesliga",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 9,
         "points": 12,
         "goalsFor": 15,
@@ -5151,7 +5151,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
         "season": "2026-27 English Premier League",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 10,
         "points": 12,
         "goalsFor": 13,
@@ -5202,7 +5202,7 @@
       "statsSource": {
         "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
         "season": "2026-27 German Bundesliga",
-        "fetchedAt": "2026-11-15T22:05:55.068Z",
+        "fetchedAt": "2026-11-16T01:55:51.206Z",
         "gamesPlayed": 9,
         "points": 6,
         "goalsFor": 5,
@@ -5235,7 +5235,7 @@
         "league": "tur.1",
         "matchId": "401888247",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261121",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-21T10:30Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5262,7 +5262,7 @@
         "league": "tur.1",
         "matchId": "401888369",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261121",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-21T13:00Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5289,7 +5289,7 @@
         "league": "tur.1",
         "matchId": "401888245",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261121",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-21T13:00Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5316,7 +5316,7 @@
         "league": "tur.1",
         "matchId": "401888244",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261121",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-21T16:00Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5343,7 +5343,7 @@
         "league": "tur.1",
         "matchId": "401888243",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261122",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-22T10:30Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5370,7 +5370,7 @@
         "league": "tur.1",
         "matchId": "401888248",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261122",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-22T13:00Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5397,7 +5397,7 @@
         "league": "tur.1",
         "matchId": "401888246",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261122",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-22T13:00Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5424,7 +5424,7 @@
         "league": "tur.1",
         "matchId": "401888249",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261122",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-22T16:00Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5451,7 +5451,7 @@
         "league": "tur.1",
         "matchId": "401888370",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261123",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-23T17:00Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5478,7 +5478,7 @@
         "league": "ger.1",
         "matchId": "401884729",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261121",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-21T17:30Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5505,7 +5505,7 @@
         "league": "fra.1",
         "matchId": "401876402",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261121",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-21T19:45Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5532,7 +5532,7 @@
         "league": "eng.1",
         "matchId": "401879232",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261121",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-21T17:30Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5559,7 +5559,7 @@
         "league": "eng.1",
         "matchId": "401878755",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-22T16:30Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
@@ -5586,7 +5586,7 @@
         "league": "esp.1",
         "matchId": "401882797",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261121",
-        "fetchedAt": "2026-11-15T22:05:55.531Z",
+        "fetchedAt": "2026-11-16T01:55:51.728Z",
         "rawKickoff": "2026-11-21T17:30Z",
         "status": "STATUS_SCHEDULED",
         "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
