@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-19T18:38:02.818Z",
+  "checkedAt": "2026-11-20T01:12:45.555Z",
   "status": "degraded",
   "warnings": [
     "stale-or-unverified-team-inputs"
@@ -16,66 +16,66 @@
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.666Z"
+      "fetchedAt": "2026-11-20T01:12:45.272Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.666Z"
+      "fetchedAt": "2026-11-20T01:12:45.272Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.666Z"
+      "fetchedAt": "2026-11-20T01:12:45.272Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.666Z"
+      "fetchedAt": "2026-11-20T01:12:45.272Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.666Z"
+      "fetchedAt": "2026-11-20T01:12:45.272Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.666Z"
+      "fetchedAt": "2026-11-20T01:12:45.272Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.765Z"
+      "fetchedAt": "2026-11-20T01:12:45.505Z"
     },
     {
       "source": "espn:tur.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.765Z",
+      "fetchedAt": "2026-11-20T01:12:45.505Z",
       "matched": 9
     },
     {
       "source": "espn:ger.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.765Z",
+      "fetchedAt": "2026-11-20T01:12:45.505Z",
       "matched": 1
     },
     {
       "source": "espn:fra.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.765Z",
+      "fetchedAt": "2026-11-20T01:12:45.505Z",
       "matched": 1
     },
     {
       "source": "espn:eng.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.765Z",
+      "fetchedAt": "2026-11-20T01:12:45.505Z",
       "matched": 2
     },
     {
       "source": "espn:esp.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-19T18:38:02.765Z",
+      "fetchedAt": "2026-11-20T01:12:45.505Z",
       "matched": 1
     },
     {
