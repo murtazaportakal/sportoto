@@ -25,7 +25,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 31,
       "goalsFor": 29,
@@ -38,7 +38,7 @@ const TEAMS_DATA = [
   {
     "name": "Fenerbahçe",
     "code": "FEN",
-    "eloRating": 1673,
+    "eloRating": 1685,
     "impliedProb": 0.24,
     "squadDepth": 9,
     "historicalPedigree": 9,
@@ -50,8 +50,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 9,
     "recentForm": {
-      "goalsFor": 2.64,
-      "goalsAgainst": 0.91
+      "goalsFor": 2.58,
+      "goalsAgainst": 1
     },
     "starDependency": 0.35,
     "homeAdvantage": 0.9,
@@ -61,11 +61,11 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 11,
-      "points": 19,
-      "goalsFor": 29,
-      "goalsAgainst": 10,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 12,
+      "points": 20,
+      "goalsFor": 31,
+      "goalsAgainst": 12,
       "goalDifference": 19,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "436"
@@ -97,7 +97,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 22,
       "goalsFor": 23,
@@ -133,7 +133,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 25,
       "goalsFor": 26,
@@ -169,7 +169,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 17,
       "goalsFor": 19,
@@ -253,7 +253,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 20,
       "goalsFor": 17,
@@ -289,7 +289,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 12,
       "goalsFor": 9,
@@ -373,7 +373,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 8,
       "goalsFor": 6,
@@ -481,7 +481,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 8,
       "goalsFor": 9,
@@ -517,7 +517,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 7,
       "goalsFor": 12,
@@ -553,7 +553,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 17,
       "goalsFor": 15,
@@ -637,7 +637,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 15,
       "goalsFor": 22,
@@ -673,7 +673,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 30,
       "goalsFor": 31,
@@ -709,7 +709,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 33,
       "goalsFor": 48,
@@ -745,7 +745,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 22,
       "goalsFor": 22,
@@ -758,7 +758,7 @@ const TEAMS_DATA = [
   {
     "name": "Arsenal",
     "code": "ARS",
-    "eloRating": 1924,
+    "eloRating": 1936,
     "impliedProb": 0.2,
     "squadDepth": 8,
     "historicalPedigree": 8,
@@ -770,8 +770,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 8,
     "recentForm": {
-      "goalsFor": 1.5,
-      "goalsAgainst": 0.5
+      "goalsFor": 1.55,
+      "goalsAgainst": 0.64
     },
     "starDependency": 0.2,
     "homeAdvantage": 0.8,
@@ -781,11 +781,11 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 10,
-      "points": 27,
-      "goalsFor": 15,
-      "goalsAgainst": 5,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 11,
+      "points": 28,
+      "goalsFor": 17,
+      "goalsAgainst": 7,
       "goalDifference": 10,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "359"
@@ -817,7 +817,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 10,
       "points": 18,
       "goalsFor": 14,
@@ -853,7 +853,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 10,
       "points": 22,
       "goalsFor": 30,
@@ -913,7 +913,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 24,
       "goalsFor": 23,
@@ -949,7 +949,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 18,
       "goalsFor": 15,
@@ -985,7 +985,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 14,
       "goalsFor": 13,
@@ -1021,7 +1021,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 23,
       "goalsFor": 28,
@@ -1057,7 +1057,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 14,
       "goalsFor": 10,
@@ -1070,7 +1070,7 @@ const TEAMS_DATA = [
   {
     "name": "Kocaelispor",
     "code": "KOC",
-    "eloRating": 1598,
+    "eloRating": 1610,
     "impliedProb": 0.01,
     "squadDepth": 4,
     "historicalPedigree": 5,
@@ -1082,8 +1082,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 5,
     "recentForm": {
-      "goalsFor": 1.18,
-      "goalsAgainst": 0.82
+      "goalsFor": 1.25,
+      "goalsAgainst": 0.92
     },
     "starDependency": 0.3,
     "homeAdvantage": 0.7,
@@ -1093,11 +1093,11 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 11,
-      "points": 19,
-      "goalsFor": 13,
-      "goalsAgainst": 9,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 12,
+      "points": 20,
+      "goalsFor": 15,
+      "goalsAgainst": 11,
       "goalDifference": 4,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "995"
@@ -1129,7 +1129,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 3,
       "goalsFor": 3,
@@ -1165,7 +1165,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/tur.1/standings",
       "season": "2026-27 Turkish Super Lig",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 16,
       "goalsFor": 21,
@@ -1201,7 +1201,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 9,
       "points": 9,
       "goalsFor": 20,
@@ -1214,7 +1214,7 @@ const TEAMS_DATA = [
   {
     "name": "RB Leipzig",
     "code": "RBL",
-    "eloRating": 1836,
+    "eloRating": 1892,
     "impliedProb": 0.15,
     "squadDepth": 8,
     "historicalPedigree": 6,
@@ -1226,8 +1226,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 8,
     "recentForm": {
-      "goalsFor": 3,
-      "goalsAgainst": 1.44
+      "goalsFor": 3.2,
+      "goalsAgainst": 1.4
     },
     "starDependency": 0.3,
     "homeAdvantage": 0.7,
@@ -1237,12 +1237,12 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 9,
-      "points": 18,
-      "goalsFor": 27,
-      "goalsAgainst": 13,
-      "goalDifference": 14,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 10,
+      "points": 21,
+      "goalsFor": 32,
+      "goalsAgainst": 14,
+      "goalDifference": 18,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "11420"
     }
@@ -1250,7 +1250,7 @@ const TEAMS_DATA = [
   {
     "name": "Eintracht Frankfurt",
     "code": "EIN",
-    "eloRating": 1669,
+    "eloRating": 1710,
     "impliedProb": 0.12,
     "squadDepth": 7,
     "historicalPedigree": 7,
@@ -1262,8 +1262,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 7,
     "recentForm": {
-      "goalsFor": 1.67,
-      "goalsAgainst": 2.22
+      "goalsFor": 1.6,
+      "goalsAgainst": 2
     },
     "starDependency": 0.3,
     "homeAdvantage": 0.8,
@@ -1273,12 +1273,12 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 9,
-      "points": 12,
-      "goalsFor": 15,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 10,
+      "points": 15,
+      "goalsFor": 16,
       "goalsAgainst": 20,
-      "goalDifference": -5,
+      "goalDifference": -4,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "125"
     }
@@ -1309,7 +1309,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 10,
       "points": 8,
       "goalsFor": 14,
@@ -1322,7 +1322,7 @@ const TEAMS_DATA = [
   {
     "name": "Tottenham Hotspur",
     "code": "TOT",
-    "eloRating": 1689,
+    "eloRating": 1735,
     "impliedProb": 0.15,
     "squadDepth": 8,
     "historicalPedigree": 8,
@@ -1334,8 +1334,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 8,
     "recentForm": {
-      "goalsFor": 1,
-      "goalsAgainst": 1.1
+      "goalsFor": 1.09,
+      "goalsAgainst": 1
     },
     "starDependency": 0.3,
     "homeAdvantage": 0.7,
@@ -1345,12 +1345,12 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 10,
-      "points": 12,
-      "goalsFor": 10,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 11,
+      "points": 15,
+      "goalsFor": 12,
       "goalsAgainst": 11,
-      "goalDifference": -1,
+      "goalDifference": 1,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "367"
     }
@@ -1381,7 +1381,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 15,
       "goalsFor": 17,
@@ -1394,7 +1394,7 @@ const TEAMS_DATA = [
   {
     "name": "Como",
     "code": "COM",
-    "eloRating": 1866,
+    "eloRating": 1912,
     "impliedProb": 0.08,
     "squadDepth": 6,
     "historicalPedigree": 4,
@@ -1406,8 +1406,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 6,
     "recentForm": {
-      "goalsFor": 1.64,
-      "goalsAgainst": 0.91
+      "goalsFor": 1.67,
+      "goalsAgainst": 0.83
     },
     "starDependency": 0.3,
     "homeAdvantage": 0.6,
@@ -1417,12 +1417,12 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 11,
-      "points": 23,
-      "goalsFor": 18,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 12,
+      "points": 26,
+      "goalsFor": 20,
       "goalsAgainst": 10,
-      "goalDifference": 8,
+      "goalDifference": 10,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "2572"
     }
@@ -1430,7 +1430,7 @@ const TEAMS_DATA = [
   {
     "name": "Roma",
     "code": "ROM",
-    "eloRating": 1979,
+    "eloRating": 2035,
     "impliedProb": 0.12,
     "squadDepth": 8,
     "historicalPedigree": 9,
@@ -1442,8 +1442,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 7,
     "recentForm": {
-      "goalsFor": 2.82,
-      "goalsAgainst": 0.91
+      "goalsFor": 3,
+      "goalsAgainst": 0.92
     },
     "starDependency": 0.3,
     "homeAdvantage": 0.8,
@@ -1453,12 +1453,12 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 11,
-      "points": 27,
-      "goalsFor": 31,
-      "goalsAgainst": 10,
-      "goalDifference": 21,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 12,
+      "points": 30,
+      "goalsFor": 36,
+      "goalsAgainst": 11,
+      "goalDifference": 25,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "104"
     }
@@ -1489,7 +1489,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 10,
       "points": 16,
       "goalsFor": 12,
@@ -1502,7 +1502,7 @@ const TEAMS_DATA = [
   {
     "name": "Chelsea",
     "code": "CHE",
-    "eloRating": 1757,
+    "eloRating": 1742,
     "impliedProb": 0.22,
     "squadDepth": 9,
     "historicalPedigree": 9,
@@ -1514,8 +1514,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 8,
     "recentForm": {
-      "goalsFor": 1.9,
-      "goalsAgainst": 1.6
+      "goalsFor": 1.82,
+      "goalsAgainst": 1.82
     },
     "starDependency": 0.25,
     "homeAdvantage": 0.8,
@@ -1525,12 +1525,12 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 10,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 11,
       "points": 16,
-      "goalsFor": 19,
-      "goalsAgainst": 16,
-      "goalDifference": 3,
+      "goalsFor": 20,
+      "goalsAgainst": 20,
+      "goalDifference": 0,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "363"
     }
@@ -1561,7 +1561,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 10,
       "points": 14,
       "goalsFor": 16,
@@ -1574,7 +1574,7 @@ const TEAMS_DATA = [
   {
     "name": "Real Betis",
     "code": "BET",
-    "eloRating": 1887,
+    "eloRating": 1899,
     "impliedProb": 0.15,
     "squadDepth": 7,
     "historicalPedigree": 7,
@@ -1586,8 +1586,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 7,
     "recentForm": {
-      "goalsFor": 1.67,
-      "goalsAgainst": 1.25
+      "goalsFor": 1.62,
+      "goalsAgainst": 1.23
     },
     "starDependency": 0.3,
     "homeAdvantage": 0.75,
@@ -1597,11 +1597,11 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 12,
-      "points": 26,
-      "goalsFor": 20,
-      "goalsAgainst": 15,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 13,
+      "points": 27,
+      "goalsFor": 21,
+      "goalsAgainst": 16,
       "goalDifference": 5,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "244"
@@ -1610,7 +1610,7 @@ const TEAMS_DATA = [
   {
     "name": "Sevilla",
     "code": "SEV",
-    "eloRating": 1756,
+    "eloRating": 1768,
     "impliedProb": 0.12,
     "squadDepth": 7,
     "historicalPedigree": 8,
@@ -1622,8 +1622,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 7,
     "recentForm": {
-      "goalsFor": 1.42,
-      "goalsAgainst": 1.58
+      "goalsFor": 1.38,
+      "goalsAgainst": 1.54
     },
     "starDependency": 0.3,
     "homeAdvantage": 0.75,
@@ -1633,11 +1633,11 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 12,
-      "points": 18,
-      "goalsFor": 17,
-      "goalsAgainst": 19,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 13,
+      "points": 19,
+      "goalsFor": 18,
+      "goalsAgainst": 20,
       "goalDifference": -2,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "243"
@@ -1669,7 +1669,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 14,
       "goalsFor": 17,
@@ -1682,7 +1682,7 @@ const TEAMS_DATA = [
   {
     "name": "Lazio",
     "code": "LAZ",
-    "eloRating": 1978,
+    "eloRating": 2029,
     "impliedProb": 0.18,
     "squadDepth": 8,
     "historicalPedigree": 8,
@@ -1694,8 +1694,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 7,
     "recentForm": {
-      "goalsFor": 2.27,
-      "goalsAgainst": 0.82
+      "goalsFor": 2.33,
+      "goalsAgainst": 0.75
     },
     "starDependency": 0.3,
     "homeAdvantage": 0.75,
@@ -1705,12 +1705,12 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 11,
-      "points": 29,
-      "goalsFor": 25,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 12,
+      "points": 32,
+      "goalsFor": 28,
       "goalsAgainst": 9,
-      "goalDifference": 16,
+      "goalDifference": 19,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "112"
     }
@@ -1718,7 +1718,7 @@ const TEAMS_DATA = [
   {
     "name": "Borussia Dortmund",
     "code": "BVB",
-    "eloRating": 1847,
+    "eloRating": 1888,
     "impliedProb": 0.18,
     "squadDepth": 8,
     "historicalPedigree": 9,
@@ -1730,8 +1730,8 @@ const TEAMS_DATA = [
     },
     "managerExpScore": 8,
     "recentForm": {
-      "goalsFor": 1.78,
-      "goalsAgainst": 0.78
+      "goalsFor": 1.7,
+      "goalsAgainst": 0.7
     },
     "starDependency": 0.25,
     "homeAdvantage": 0.85,
@@ -1741,12 +1741,12 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 9,
-      "points": 21,
-      "goalsFor": 16,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 10,
+      "points": 24,
+      "goalsFor": 17,
       "goalsAgainst": 7,
-      "goalDifference": 9,
+      "goalDifference": 10,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "124"
     }
@@ -1777,7 +1777,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
       "season": "2026-27 French Ligue 1",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 10,
       "points": 16,
       "goalsFor": 13,
@@ -1813,7 +1813,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
       "season": "2026-27 French Ligue 1",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 10,
       "points": 21,
       "goalsFor": 14,
@@ -1849,7 +1849,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
       "season": "2026-27 French Ligue 1",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 10,
       "points": 20,
       "goalsFor": 17,
@@ -1885,7 +1885,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/fra.1/standings",
       "season": "2026-27 French Ligue 1",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 10,
       "points": 17,
       "goalsFor": 15,
@@ -1921,7 +1921,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ita.1/standings",
       "season": "2026-27 Italian Serie A",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 11,
       "points": 15,
       "goalsFor": 18,
@@ -1964,17 +1964,17 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Median of existing team inputs; not measured team statistics"
     },
-    "eloRating": 1691,
+    "eloRating": 1703,
     "recentForm": {
-      "goalsFor": 1.4,
-      "goalsAgainst": 1.7
+      "goalsFor": 1.27,
+      "goalsAgainst": 1.55
     },
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 10,
-      "points": 13,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 11,
+      "points": 14,
       "goalsFor": 14,
       "goalsAgainst": 17,
       "goalDifference": -3,
@@ -2023,7 +2023,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 12,
       "points": 28,
       "goalsFor": 23,
@@ -2066,20 +2066,20 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Median of existing team inputs; not measured team statistics"
     },
-    "eloRating": 1598,
+    "eloRating": 1639,
     "recentForm": {
-      "goalsFor": 0.67,
-      "goalsAgainst": 1.67
+      "goalsFor": 0.69,
+      "goalsAgainst": 1.54
     },
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/standings",
       "season": "2026-27 Spanish LALIGA",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 12,
-      "points": 9,
-      "goalsFor": 8,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 13,
+      "points": 12,
+      "goalsFor": 9,
       "goalsAgainst": 20,
-      "goalDifference": -12,
+      "goalDifference": -11,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "94"
     }
@@ -2125,7 +2125,7 @@ const TEAMS_DATA = [
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
       "gamesPlayed": 9,
       "points": 15,
       "goalsFor": 17,
@@ -2168,17 +2168,17 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Median of existing team inputs; not measured team statistics"
     },
-    "eloRating": 1694,
+    "eloRating": 1706,
     "recentForm": {
-      "goalsFor": 1.67,
-      "goalsAgainst": 1.67
+      "goalsFor": 1.5,
+      "goalsAgainst": 1.5
     },
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 9,
-      "points": 12,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 10,
+      "points": 13,
       "goalsFor": 15,
       "goalsAgainst": 15,
       "goalDifference": 0,
@@ -5135,19 +5135,19 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Median of existing team inputs; not measured team statistics"
     },
-    "eloRating": 1679,
+    "eloRating": 1691,
     "recentForm": {
-      "goalsFor": 1.3,
-      "goalsAgainst": 1.6
+      "goalsFor": 1.36,
+      "goalsAgainst": 1.64
     },
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/eng.1/standings",
       "season": "2026-27 English Premier League",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 10,
-      "points": 12,
-      "goalsFor": 13,
-      "goalsAgainst": 16,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 11,
+      "points": 13,
+      "goalsFor": 15,
+      "goalsAgainst": 18,
       "goalDifference": -3,
       "ratingMethod": "1350 + points * 12 + goalDifference * 5 + league/tier adjustment; not an official Elo rating",
       "providerTeamId": "361"
@@ -5186,17 +5186,17 @@ const TEAMS_DATA = [
       ],
       "estimationMethod": "Median of existing team inputs; not measured team statistics"
     },
-    "eloRating": 1592,
+    "eloRating": 1604,
     "recentForm": {
-      "goalsFor": 0.56,
-      "goalsAgainst": 1.22
+      "goalsFor": 0.5,
+      "goalsAgainst": 1.1
     },
     "statsSource": {
       "url": "https://site.web.api.espn.com/apis/v2/sports/soccer/ger.1/standings",
       "season": "2026-27 German Bundesliga",
-      "fetchedAt": "2026-11-21T15:16:42.081Z",
-      "gamesPlayed": 9,
-      "points": 6,
+      "fetchedAt": "2026-11-21T21:04:56.854Z",
+      "gamesPlayed": 10,
+      "points": 7,
       "goalsFor": 5,
       "goalsAgainst": 11,
       "goalDifference": -6,
@@ -5207,21 +5207,21 @@ const TEAMS_DATA = [
 ];
 
 const FIXTURES_DATA = [
-  {"id":1,"providerId":"34c9b6f8-e887-4e19-522d-08def4816f89","roundId":1543,"leagueId":70,"home":"GEN","away":"GAZ","homeName":"Gençlerbirliği","awayName":"Gaziantep FK","kickoffRaw":"2026-11-21T13:30:00","kickoff":"2026-11-21T10:30:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"source-final-awaiting-primary","result":null,"kickoffSource":{"provider":"espn","league":"tur.1","matchId":"401888247","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261121","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-21T10:30Z","status":"STATUS_FULL_TIME","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":2,"providerId":"67bd90f1-2308-43d9-522c-08def4816f89","roundId":1543,"leagueId":70,"home":"AME","away":"RIZ","homeName":"Amed Sportif Faaliyetler","awayName":"Çaykur Rizespor","kickoffRaw":"2026-11-21T16:00:00","kickoff":"2026-11-21T13:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"source-final-awaiting-primary","result":null,"kickoffSource":{"provider":"espn","league":"tur.1","matchId":"401888369","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261121","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-21T13:00Z","status":"STATUS_FULL_TIME","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":3,"providerId":"208c7d8d-3c90-4ccc-522f-08def4816f89","roundId":1543,"leagueId":70,"home":"GAL","away":"SAM","homeName":"Galatasaray","awayName":"Samsunspor","kickoffRaw":"2026-11-21T16:00:00","kickoff":"2026-11-21T13:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"source-final-awaiting-primary","result":null,"kickoffSource":{"provider":"espn","league":"tur.1","matchId":"401888245","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261121","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-21T13:00Z","status":"STATUS_FULL_TIME","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":4,"providerId":"4c806e9b-83d2-438b-5230-08def4816f89","roundId":1543,"leagueId":70,"home":"KOC","away":"FEN","homeName":"Kocaelispor","awayName":"Fenerbahçe","kickoffRaw":"2026-11-21T19:00:00","kickoff":"2026-11-21T16:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"tur.1","matchId":"401888244","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261121","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-21T16:00Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":5,"providerId":"92e4a1a6-bfe4-4574-5231-08def4816f89","roundId":1543,"leagueId":70,"home":"ERZ","away":"GOZ","homeName":"Erzurumspor FK","awayName":"Göztepe","kickoffRaw":"2026-11-22T13:30:00","kickoff":"2026-11-22T10:30:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"tur.1","matchId":"401888243","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261122","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-22T10:30Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":6,"providerId":"016746cc-5b53-4b73-522a-08def4816f89","roundId":1543,"leagueId":70,"home":"KAS","away":"ALA","homeName":"Kasımpaşa","awayName":"Corendon Alanyaspor","kickoffRaw":"2026-11-22T16:00:00","kickoff":"2026-11-22T13:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"tur.1","matchId":"401888248","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261122","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-22T13:00Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":7,"providerId":"855273ab-28aa-4544-522e-08def4816f89","roundId":1543,"leagueId":70,"home":"KON","away":"BJK","homeName":"Tümosan Konyaspor","awayName":"Beşiktaş","kickoffRaw":"2026-11-22T16:00:00","kickoff":"2026-11-22T13:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"tur.1","matchId":"401888246","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261122","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-22T13:00Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":8,"providerId":"15cf8bd8-99d9-4243-5229-08def4816f89","roundId":1543,"leagueId":70,"home":"TRA","away":"EYU","homeName":"Trabzonspor","awayName":"Eyüpspor","kickoffRaw":"2026-11-22T19:00:00","kickoff":"2026-11-22T16:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"tur.1","matchId":"401888249","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261122","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-22T16:00Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":9,"providerId":"612667c1-ccdf-4690-522b-08def4816f89","roundId":1543,"leagueId":70,"home":"IBFK","away":"COR","homeName":"İstanbul Başakşehir","awayName":"Arca Çorum FK","kickoffRaw":"2026-11-23T20:00:00","kickoff":"2026-11-23T17:00:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"tur.1","matchId":"401888370","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261123","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-23T17:00Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":10,"providerId":"99619678-ff56-4711-45dd-08def9453ab4","roundId":1543,"leagueId":6,"home":"S04","away":"VFB","homeName":"Schalke 04","awayName":"Vfb Stuttgart","kickoffRaw":"2026-11-21T20:30:00","kickoff":"2026-11-21T17:30:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"ger.1","matchId":"401884729","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261121","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-21T17:30Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":11,"providerId":"444f31d2-92b2-479c-4f47-08def9453ab4","roundId":1543,"leagueId":26,"home":"LIL","away":"LYO","homeName":"Lille","awayName":"Olympique Lyon","kickoffRaw":"2026-11-21T22:45:00","kickoff":"2026-11-21T19:45:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"fra.1","matchId":"401876402","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261121","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-21T19:45Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":12,"providerId":"07bb9008-aab7-404b-5734-08def9453ab4","roundId":1543,"leagueId":36,"home":"NEW","away":"ARS","homeName":"Newcastle United","awayName":"Arsenal","kickoffRaw":"2026-11-21T20:30:00","kickoff":"2026-11-21T17:30:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"eng.1","matchId":"401879232","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261121","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-21T17:30Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":13,"providerId":"bc1e0bcb-0392-43f1-5730-08def9453ab4","roundId":1543,"leagueId":36,"home":"LIV","away":"MUN","homeName":"Liverpool","awayName":"Manchester United","kickoffRaw":"2026-11-22T19:30:00","kickoff":"2026-11-22T16:30:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"eng.1","matchId":"401878755","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-22T16:30Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":14,"providerId":"52ca14f4-7ee7-48cc-7184-08def489a5a2","roundId":1543,"leagueId":44,"home":"SEV","away":"BET","homeName":"Sevilla","awayName":"Real Betis","kickoffRaw":"2026-11-21T20:30:00","kickoff":"2026-11-21T17:30:00.000Z","timezoneStatus":"independently-matched-utc","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null,"kickoffSource":{"provider":"espn","league":"esp.1","matchId":"401882797","url":"https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261121","fetchedAt":"2026-11-21T15:16:42.423Z","rawKickoff":"2026-11-21T17:30Z","status":"STATUS_SCHEDULED","matchingPolicy":"unique club identities and available provider IDs, home/away, league and same calendar date"}},
-  {"id":15,"providerId":"d5776052-325c-432a-3615-08defaa0346c","roundId":1543,"leagueId":56,"home":"ATA","away":"INT","homeName":"Atalanta","awayName":"Inter","kickoffRaw":"2026-11-22T22:45:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null}
+  {"id":1,"providerId":"b659236c-9417-4c68-2861-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"UNKNOWN","away":"UNKNOWN","homeName":"Bodo Glimt","awayName":"LASK","kickoffRaw":"2026-11-24T20:45:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":2,"providerId":"2e68221c-6ef3-4a7c-2860-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"GAL","away":"AVL","homeName":"Galatasaray","awayName":"Aston Villa","kickoffRaw":"2026-11-24T20:45:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":3,"providerId":"e386a722-96cb-427b-2865-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"ARS","away":"BVB","homeName":"Arsenal","awayName":"Borussia Dortmund","kickoffRaw":"2026-11-24T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":4,"providerId":"b7c16f54-54c0-48a6-2866-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"UNKNOWN","away":"UNKNOWN","homeName":"Feyenoord","awayName":"Porto","kickoffRaw":"2026-11-24T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":5,"providerId":"fa2050c0-7576-4dee-2863-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"RBL","away":"UNKNOWN","homeName":"RB Leipzig","awayName":"Lens","kickoffRaw":"2026-11-24T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":6,"providerId":"3d819719-df73-448c-2862-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"MCI","away":"NAP","homeName":"Manchester City","awayName":"Napoli","kickoffRaw":"2026-11-24T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":7,"providerId":"e4d22109-3aa9-4ae6-2867-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"RMA","away":"UNKNOWN","homeName":"Real Madrid","awayName":"PSV Eindhoven","kickoffRaw":"2026-11-24T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":8,"providerId":"44c32a25-223b-47d5-2870-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"ATM","away":"UNKNOWN","homeName":"Atletico Madrid","awayName":"Viking","kickoffRaw":"2026-11-25T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":9,"providerId":"db975cf0-3a9e-4b64-286e-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"UNKNOWN","away":"LIV","homeName":"Club Brugge","awayName":"Liverpool","kickoffRaw":"2026-11-25T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":10,"providerId":"bd55a227-870a-447f-286f-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"INT","away":"VFB","homeName":"Inter","awayName":"Vfb Stuttgart","kickoffRaw":"2026-11-25T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":11,"providerId":"9dd426d3-4f0d-49c1-2871-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"PSG","away":"ROM","homeName":"Paris St Germain","awayName":"Roma","kickoffRaw":"2026-11-25T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":12,"providerId":"fb23dc82-8796-4d65-286b-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"UNKNOWN","away":"FEN","homeName":"Shakhtar Donetsk","awayName":"Fenerbahçe","kickoffRaw":"2026-11-25T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":13,"providerId":"8487267e-7467-4cc9-286c-08df36d0f6ec","roundId":1544,"leagueId":218,"home":"UNKNOWN","away":"MUN","homeName":"Sporting Lizbon","awayName":"Manchester United","kickoffRaw":"2026-11-25T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":14,"providerId":"2845fb1a-8590-4b57-ea9f-08def2f17b1d","roundId":1544,"leagueId":237,"home":"BJK","away":"UNKNOWN","homeName":"Beşiktaş","awayName":"Hapoel Beer Sheva","kickoffRaw":"2026-11-26T20:45:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null},
+  {"id":15,"providerId":"b8204447-be55-48cd-ea2a-08def2f17b1d","roundId":1544,"leagueId":236,"home":"UNKNOWN","away":"TRA","homeName":"CSKA Sofya","awayName":"Trabzonspor","kickoffRaw":"2026-11-26T23:00:00","kickoff":null,"timezoneStatus":"unsupported-secondary-league-or-date","providerStatusRaw":null,"providerUpdatedAtRaw":null,"status":"unconfirmed","result":null}
 ];
 
 if (typeof module !== 'undefined' && module.exports) { module.exports = { TEAMS_DATA, FIXTURES_DATA }; }

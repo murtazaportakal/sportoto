@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "b7c16f54-54c0-48a6-2866-08df36d0f6ec",
+  "roundId": 1544,
+  "home": "UNKNOWN",
+  "away": "UNKNOWN",
+  "kickoff": null,
+  "kickoffRaw": "2026-11-24T23:00:00",
+  "status": "unconfirmed",
+  "observedAt": "2026-11-21T21:04:56.945Z",
+  "revision": 1,
+  "stateHash": "02231a5e4e4c2de86daf40b241378fea0ed2c808d61de11d737d2d076d67000b"
+}

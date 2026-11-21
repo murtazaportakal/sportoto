@@ -1,0 +1,15 @@
+{
+  "provider": "sportoto",
+  "providerId": "4c806e9b-83d2-438b-5230-08def4816f89",
+  "roundId": 1543,
+  "kickoff": "2026-11-21T16:00:00.000Z",
+  "kickoffRaw": "2026-11-21T19:00:00",
+  "result": {
+    "homeGoals": 2,
+    "awayGoals": 2,
+    "outcome": "X"
+  },
+  "observedAt": "2026-11-21T21:05:00.090Z",
+  "revision": 1,
+  "stateHash": "43a1ae4105a81d71ba0197beca5895fa549baf8fdcd6ef1b8461533ee6a7652c"
+}

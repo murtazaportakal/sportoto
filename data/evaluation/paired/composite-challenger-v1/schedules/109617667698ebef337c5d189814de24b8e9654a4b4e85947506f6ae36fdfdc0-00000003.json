@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "99619678-ff56-4711-45dd-08def9453ab4",
+  "roundId": 1543,
+  "home": "S04",
+  "away": "VFB",
+  "kickoff": "2026-11-21T17:30:00.000Z",
+  "kickoffRaw": "2026-11-21T20:30:00",
+  "status": "source-final-awaiting-primary",
+  "observedAt": "2026-11-21T21:05:00.090Z",
+  "revision": 3,
+  "stateHash": "b93b5276794566ec2e1c13cbf4623df3e75a6748cb2d9789157a933601a78533"
+}

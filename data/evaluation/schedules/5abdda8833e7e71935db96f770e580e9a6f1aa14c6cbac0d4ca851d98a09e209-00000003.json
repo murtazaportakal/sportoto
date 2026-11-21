@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "67bd90f1-2308-43d9-522c-08def4816f89",
+  "roundId": 1543,
+  "home": "AME",
+  "away": "RIZ",
+  "kickoff": "2026-11-21T13:00:00.000Z",
+  "kickoffRaw": "2026-11-21T16:00:00",
+  "status": "final",
+  "observedAt": "2026-11-21T21:04:56.956Z",
+  "revision": 3,
+  "stateHash": "634f4fc66e8522d33bb2f18c070177f045584ec4d61bcc58e46f525072959ad8"
+}
