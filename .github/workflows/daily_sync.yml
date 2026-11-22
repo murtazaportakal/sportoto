@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    # Every 30 minutes, away from the busiest minute; runs may be delayed.
-    - cron: '7,37 * * * *'
+    # Twice daily at 06:15 and 18:15 UTC (reduced from every 30m to save quota)
+    - cron: '15 6,18 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 concurrency:
