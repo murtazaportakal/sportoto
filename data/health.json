@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-22T08:45:43.702Z",
+  "checkedAt": "2026-11-22T10:28:02.537Z",
   "status": "degraded",
   "warnings": [
     "missing-team-coverage",
@@ -68,37 +68,37 @@
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T08:45:43.611Z"
+      "fetchedAt": "2026-11-22T10:28:02.478Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T08:45:43.611Z"
+      "fetchedAt": "2026-11-22T10:28:02.478Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T08:45:43.611Z"
+      "fetchedAt": "2026-11-22T10:28:02.478Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T08:45:43.611Z"
+      "fetchedAt": "2026-11-22T10:28:02.478Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T08:45:43.611Z"
+      "fetchedAt": "2026-11-22T10:28:02.478Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T08:45:43.611Z"
+      "fetchedAt": "2026-11-22T10:28:02.478Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-22T08:45:43.629Z"
+      "fetchedAt": "2026-11-22T10:28:02.491Z"
     },
     {
       "source": "odds",
