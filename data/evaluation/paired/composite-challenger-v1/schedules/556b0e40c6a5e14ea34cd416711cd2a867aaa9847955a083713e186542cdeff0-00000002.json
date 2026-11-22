@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "db975cf0-3a9e-4b64-286e-08df36d0f6ec",
+  "roundId": 1544,
+  "home": "BRU",
+  "away": "LIV",
+  "kickoff": null,
+  "kickoffRaw": "2026-11-25T23:00:00",
+  "status": "unconfirmed",
+  "observedAt": "2026-11-22T10:39:45.610Z",
+  "revision": 2,
+  "stateHash": "702c55312e9c14b55d10ca2c7da4dbcf4481d7f254399c2b1047d0fcbb0fd076"
+}

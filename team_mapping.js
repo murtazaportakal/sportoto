@@ -16,7 +16,7 @@ const teamMap = {
   'arsenal': 'ARS', 'manchester united': 'MUN', 'tottenham': 'TOT', 'newcastle': 'NEW', 'newcastle united': 'NEW',
   'real betis': 'BET', 'betis': 'BET', 'barcelona': 'BAR',
   'real madrid': 'RMA', 'sevilla': 'SEV', 'villarreal': 'VIL',
-  'inter milan': 'INT', 'ac milan': 'MIL', 'milan': 'MIL', 'atalanta': 'ATA', 'juventus': 'JUV',
+  'inter milan': 'INT', 'ac milan': 'MIL', 'milan': 'MIL', 'atalanta': 'ATA', 'juventus': 'JUV', 'internazionale': 'INT',
   'lazio': 'LAZ', 'inter': 'INT', 'roma': 'ROM', 'como': 'COM',
   'bayern': 'BAY', 'leipzig': 'RBL', 'frankfurt': 'EIN', 'augsburg': 'AUG', 'schalke': 'S04', 'schalke 04': 'S04',
   'dortmund': 'BVB', 'borussia dortmund': 'BVB',
@@ -24,7 +24,20 @@ const teamMap = {
   'lille': 'LIL',
   'paris': 'PSG', 'psg': 'PSG',
   'lyon': 'LYO', 'olympique lyon': 'LYO',
-  'napoli': 'NAP', 'stuttgart': 'VFB', 'werder bremen': 'SVW', 'aston villa': 'AVL', 'valencia': 'VAL', 'atletico madrid': 'ATM'
+  'napoli': 'NAP', 'stuttgart': 'VFB', 'werder bremen': 'SVW', 'aston villa': 'AVL', 'valencia': 'VAL', 'atletico madrid': 'ATM',
+  // UEFA European Cup Clubs
+  'bodo glimt': 'GLI', 'bodo': 'GLI', 'glimt': 'GLI',
+  'lask': 'LASK', 'lask linz': 'LASK',
+  'feyenoord': 'FEY', 'feyenoord rotterdam': 'FEY',
+  'porto': 'FCP', 'fc porto': 'FCP',
+  'lens': 'RCL',
+  'psv': 'PSV', 'psv eindhoven': 'PSV',
+  'viking': 'VIK', 'viking fk': 'VIK',
+  'club brugge': 'BRU', 'brugge': 'BRU',
+  'shakhtar': 'SHK', 'shakhtar donetsk': 'SHK',
+  'sporting': 'SCP', 'sporting lizbon': 'SCP', 'sporting cp': 'SCP',
+  'hapoel': 'HBS', 'hapoel beer sheva': 'HBS', 'hapoel be er': 'HBS', 'hapoel beer': 'HBS',
+  'cska': 'CSK', 'cska sofya': 'CSK', 'cska sofia': 'CSK'
 };
 
 function normalizeName(name) {
@@ -38,6 +51,8 @@ function normalizeName(name) {
     .replace(/ş/g, 's')
     .replace(/ö/g, 'o')
     .replace(/ç/g, 'c')
+    .replace(/[/'\.\-_]/g, ' ')
+    .replace(/\s+/g, ' ')
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 }

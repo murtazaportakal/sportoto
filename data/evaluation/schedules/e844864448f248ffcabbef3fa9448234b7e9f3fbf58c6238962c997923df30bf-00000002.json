@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "b8204447-be55-48cd-ea2a-08def2f17b1d",
+  "roundId": 1544,
+  "home": "CSK",
+  "away": "TRA",
+  "kickoff": null,
+  "kickoffRaw": "2026-11-26T23:00:00",
+  "status": "unconfirmed",
+  "observedAt": "2026-11-22T10:39:45.610Z",
+  "revision": 2,
+  "stateHash": "125b95fdd74dad3b16e46563ec985a49b4760c8c7dad6919f3aeac6afa9d47f8"
+}

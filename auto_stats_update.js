@@ -4,6 +4,7 @@ const path = require('path');
 const { getCode } = require('./team_mapping');
 const dataFile = path.join(__dirname, 'data', 'sportoto_data.js');
 const leagues = ['tur.1', 'eng.1', 'esp.1', 'ger.1', 'ita.1', 'fra.1'];
+const uefaClubLeagues = ['uefa.champions', 'uefa.europa', 'uefa.europa.conf'];
 const estimatedFields = ['impliedProb', 'squadDepth', 'historicalPedigree', 'tacticalStyle', 'managerExpScore', 'starDependency', 'homeAdvantage', 'altitudeAdaptation', 'groupDifficulty', 'injurySeverity'];
 
 // Existing dataset medians are model priors, never claimed as measured team facts.
@@ -36,6 +37,9 @@ function applyStandings(teams, payload, league, fetchedAt) {
     const [games, points, gf, ga, gd] = ['gamesPlayed', 'points', 'pointsFor', 'pointsAgainst', 'pointDifferential'].map(stat);
     if (![games, points, gf, ga, gd].every(Number.isFinite) || games <= 0) continue;
     let team = teams.find(t => t.code === code);
+    if (team && league.startsWith('uefa.') && league !== 'uefa.nations' && !team.statsSource?.url?.includes('uefa.')) {
+      continue;
+    }
     if (!team) {
       team = {name: entry.team.displayName, code, ...structuredClone(defaults), dataQuality: {estimatedFields, estimationMethod: 'Median of existing team inputs; not measured team statistics'}};
       teams.push(team);
@@ -65,7 +69,7 @@ async function updateStats(directory = path.join(__dirname, 'data')) {
   const dataFile = path.join(directory, 'sportoto_data.js');
   delete require.cache[require.resolve(dataFile)];
   const {TEAMS_DATA, FIXTURES_DATA} = require(dataFile);
-  const requestedLeagues=[...leagues];
+  const requestedLeagues=[...leagues, ...uefaClubLeagues];
   if(FIXTURES_DATA.some(f=>f.home.startsWith('NAT_')||f.away.startsWith('NAT_')))requestedLeagues.push('uefa.nations');
   // Fetch everything before writing, so a failed league cannot leave a partial refresh.
   const responses = await Promise.all(requestedLeagues.map(league => axios.get(`https://site.web.api.espn.com/apis/v2/sports/soccer/${league}/standings`, {timeout: 15000}).then(r => ({league, data: r.data}))));

@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "b7c16f54-54c0-48a6-2866-08df36d0f6ec",
+  "roundId": 1544,
+  "home": "FEY",
+  "away": "FCP",
+  "kickoff": null,
+  "kickoffRaw": "2026-11-24T23:00:00",
+  "status": "unconfirmed",
+  "observedAt": "2026-11-22T10:39:45.610Z",
+  "revision": 2,
+  "stateHash": "e031e58986390cbc73765f73bcf777629867b3661cd9bda512a4a6bf7ef145ca"
+}

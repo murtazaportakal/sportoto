@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "2845fb1a-8590-4b57-ea9f-08def2f17b1d",
+  "roundId": 1544,
+  "home": "BJK",
+  "away": "HBS",
+  "kickoff": null,
+  "kickoffRaw": "2026-11-26T20:45:00",
+  "status": "unconfirmed",
+  "observedAt": "2026-11-22T10:39:45.610Z",
+  "revision": 2,
+  "stateHash": "1d683873c493e304f5b324191898ca3b57968ccb916ca3239ae484512bba38b8"
+}
