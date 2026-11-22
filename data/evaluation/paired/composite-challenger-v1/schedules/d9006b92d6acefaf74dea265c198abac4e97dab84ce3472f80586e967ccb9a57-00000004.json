@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "07bb9008-aab7-404b-5734-08def9453ab4",
+  "roundId": 1543,
+  "home": "NEW",
+  "away": "ARS",
+  "kickoff": "2026-11-21T17:30:00.000Z",
+  "kickoffRaw": "2026-11-21T20:30:00",
+  "status": "final",
+  "observedAt": "2026-11-22T23:35:07.847Z",
+  "revision": 4,
+  "stateHash": "9c48551a12e83243eb60d84cc6c7777aa90baad4c37fad762c58a1f2937dd59e"
+}

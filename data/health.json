@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-22T10:51:18.175Z",
+  "checkedAt": "2026-11-22T23:35:04.600Z",
   "status": "ok",
   "warnings": [],
   "modelVersion": "baseline-v1",
@@ -12,52 +12,52 @@
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.104Z"
+      "fetchedAt": "2026-11-22T23:35:04.495Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.104Z"
+      "fetchedAt": "2026-11-22T23:35:04.495Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.104Z"
+      "fetchedAt": "2026-11-22T23:35:04.495Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.104Z"
+      "fetchedAt": "2026-11-22T23:35:04.495Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.104Z"
+      "fetchedAt": "2026-11-22T23:35:04.495Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.104Z"
+      "fetchedAt": "2026-11-22T23:35:04.495Z"
     },
     {
       "source": "espn:uefa.champions",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.104Z"
+      "fetchedAt": "2026-11-22T23:35:04.495Z"
     },
     {
       "source": "espn:uefa.europa",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.104Z"
+      "fetchedAt": "2026-11-22T23:35:04.495Z"
     },
     {
       "source": "espn:uefa.europa.conf",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.104Z"
+      "fetchedAt": "2026-11-22T23:35:04.495Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-22T10:51:18.125Z"
+      "fetchedAt": "2026-11-22T23:35:04.532Z"
     },
     {
       "source": "odds",
@@ -67,14 +67,14 @@
   ],
   "drift": {
     "compared": 15,
-    "maxProbabilityChange": 0,
+    "maxProbabilityChange": 0.0315598386849848,
     "warningThreshold": 0.15
   },
   "pairedExperiments": [
     {
       "experimentId": "composite-challenger-v1",
       "captured": 29,
-      "settled": 19,
+      "settled": 28,
       "paused": null,
       "releaseEligible": false
     }

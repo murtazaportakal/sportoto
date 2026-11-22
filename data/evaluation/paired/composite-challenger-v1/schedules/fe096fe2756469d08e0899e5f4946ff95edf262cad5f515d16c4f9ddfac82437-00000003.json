@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "52ca14f4-7ee7-48cc-7184-08def489a5a2",
+  "roundId": 1543,
+  "home": "SEV",
+  "away": "BET",
+  "kickoff": "2026-11-21T17:30:00.000Z",
+  "kickoffRaw": "2026-11-21T20:30:00",
+  "status": "final",
+  "observedAt": "2026-11-22T23:35:07.847Z",
+  "revision": 3,
+  "stateHash": "d4551a87db5bd07ece2e072a43d6d6a61812355628aa1a480f24af8c26ab26da"
+}

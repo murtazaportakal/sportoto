@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "444f31d2-92b2-479c-4f47-08def9453ab4",
+  "roundId": 1543,
+  "home": "LIL",
+  "away": "LYO",
+  "kickoff": "2026-11-21T19:45:00.000Z",
+  "kickoffRaw": "2026-11-21T22:45:00",
+  "status": "final",
+  "observedAt": "2026-11-22T23:35:07.847Z",
+  "revision": 4,
+  "stateHash": "e4b3de29868d0362af734b1d537a835cf81874431dc5ea5fdcac7244b972c1b0"
+}

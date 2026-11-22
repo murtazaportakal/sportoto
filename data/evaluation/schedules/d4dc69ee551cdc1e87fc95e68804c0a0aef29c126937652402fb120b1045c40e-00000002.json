@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "016746cc-5b53-4b73-522a-08def4816f89",
+  "roundId": 1543,
+  "home": "KAS",
+  "away": "ALA",
+  "kickoff": "2026-11-22T13:00:00.000Z",
+  "kickoffRaw": "2026-11-22T16:00:00",
+  "status": "final",
+  "observedAt": "2026-11-22T23:35:04.618Z",
+  "revision": 2,
+  "stateHash": "461eca1f233659ef3c2829dfebac206a708428e51606f5bf8c81293cfe720ac4"
+}

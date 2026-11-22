@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "92e4a1a6-bfe4-4574-5231-08def4816f89",
+  "roundId": 1543,
+  "home": "ERZ",
+  "away": "GOZ",
+  "kickoff": "2026-11-22T10:30:00.000Z",
+  "kickoffRaw": "2026-11-22T13:30:00",
+  "status": "final",
+  "observedAt": "2026-11-22T23:35:04.618Z",
+  "revision": 3,
+  "stateHash": "609c0d26cc94153d1ad3a65373fc1ade75d5c005f08b4700ee039e6c58eddd5e"
+}

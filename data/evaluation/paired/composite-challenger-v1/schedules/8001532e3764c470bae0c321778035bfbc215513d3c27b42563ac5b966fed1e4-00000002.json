@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "bc1e0bcb-0392-43f1-5730-08def9453ab4",
+  "roundId": 1543,
+  "home": "LIV",
+  "away": "MUN",
+  "kickoff": "2026-11-22T16:30:00.000Z",
+  "kickoffRaw": "2026-11-22T19:30:00",
+  "status": "final",
+  "observedAt": "2026-11-22T23:35:07.847Z",
+  "revision": 2,
+  "stateHash": "ee5e62850e79e83f74b21c194b48dd9b2aabf2052ff094aea2633acca167ad2f"
+}

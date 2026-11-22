@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "855273ab-28aa-4544-522e-08def4816f89",
+  "roundId": 1543,
+  "home": "KON",
+  "away": "BJK",
+  "kickoff": "2026-11-22T13:00:00.000Z",
+  "kickoffRaw": "2026-11-22T16:00:00",
+  "status": "final",
+  "observedAt": "2026-11-22T23:35:07.847Z",
+  "revision": 2,
+  "stateHash": "84866aa1e5dd0a82c687ce5a53668c3d46398870b2b40dd31acfcc04b74fdfb3"
+}

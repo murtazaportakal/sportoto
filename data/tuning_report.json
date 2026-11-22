@@ -1,17 +1,17 @@
 {
   "validationStatus": "unvalidated-diagnostic-only",
-  "timestamp": "2026-11-22T10:51:18.174Z",
+  "timestamp": "2026-11-22T23:35:04.599Z",
   "evaluatedMatches": 664,
   "gridIterations": 48,
   "baseline": {
-    "accuracy": 47.29,
-    "brierScore": 0.636,
-    "logLoss": 1.0712
+    "accuracy": 47.44,
+    "brierScore": 0.638,
+    "logLoss": 1.075
   },
   "optimized": {
-    "accuracy": 50,
-    "brierScore": 0.6246,
-    "logLoss": 1.053
+    "accuracy": 50.15,
+    "brierScore": 0.6261,
+    "logLoss": 1.056
   },
   "bestParams": {
     "sigmoidScale": 3.5,

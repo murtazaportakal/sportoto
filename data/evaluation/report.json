@@ -3,19 +3,19 @@
   "evaluationType": "recorded-pre-match-forecasts",
   "validationStatus": "insufficient-evidence",
   "totalForecasts": 29,
-  "evaluated": 19,
+  "evaluated": 28,
   "excluded": {
-    "awaiting-confirmed-final": 10
+    "awaiting-confirmed-final": 1
   },
-  "accuracy": 0.631578947368421,
-  "brierScore": 0.5664154646832649,
-  "logLoss": 0.9653290324968166,
+  "accuracy": 0.6071428571428571,
+  "brierScore": 0.5677031109030366,
+  "logLoss": 0.9751326161716257,
   "uniformLogLoss": 1.0986122886681096,
   "metrics": {
-    "count": 19,
-    "accuracy": 0.631578947368421,
-    "logLoss": 0.9653290324968166,
-    "brierScore": 0.5664154646832649,
+    "count": 28,
+    "accuracy": 0.6071428571428571,
+    "logLoss": 0.9751326161716257,
+    "brierScore": 0.5677031109030365,
     "classOrder": [
       "1",
       "X",
@@ -23,24 +23,24 @@
     ],
     "confusionMatrix": [
       [
-        9,
+        12,
         0,
         0
       ],
       [
-        1,
-        0,
-        1
-      ],
-      [
-        5,
+        2,
         0,
         3
+      ],
+      [
+        6,
+        0,
+        5
       ]
     ],
     "recall": {
       "1": 1,
-      "2": 0.375,
+      "2": 0.45454545454545453,
       "X": 0
     },
     "calibration": {
@@ -62,30 +62,30 @@
         {
           "lower": 0.2,
           "upper": 0.3,
-          "count": 1,
-          "meanProbability": 0.24951296027551711,
+          "count": 2,
+          "meanProbability": 0.25417867483983747,
           "observedFrequency": 0
         },
         {
           "lower": 0.3,
           "upper": 0.4,
-          "count": 5,
-          "meanProbability": 0.38490884124045366,
+          "count": 9,
+          "meanProbability": 0.37792928020526984,
           "observedFrequency": 0
         },
         {
           "lower": 0.4,
           "upper": 0.5,
-          "count": 8,
-          "meanProbability": 0.4355156745706654,
-          "observedFrequency": 0.625
+          "count": 9,
+          "meanProbability": 0.43540070872685216,
+          "observedFrequency": 0.5555555555555556
         },
         {
           "lower": 0.5,
           "upper": 0.6,
-          "count": 4,
-          "meanProbability": 0.5522130925824226,
-          "observedFrequency": 0.75
+          "count": 6,
+          "meanProbability": 0.552531328909869,
+          "observedFrequency": 0.8333333333333334
         },
         {
           "lower": 0.6,
@@ -104,8 +104,8 @@
         {
           "lower": 0.8,
           "upper": 0.9,
-          "count": 1,
-          "meanProbability": 0.8730533394066348,
+          "count": 2,
+          "meanProbability": 0.857223617771297,
           "observedFrequency": 1
         },
         {
@@ -120,8 +120,8 @@
         {
           "lower": 0,
           "upper": 0.1,
-          "count": 1,
-          "meanProbability": 0.06951124582459207,
+          "count": 2,
+          "meanProbability": 0.0807555836016346,
           "observedFrequency": 0
         },
         {
@@ -134,16 +134,16 @@
         {
           "lower": 0.2,
           "upper": 0.3,
-          "count": 6,
-          "meanProbability": 0.2702886021758759,
-          "observedFrequency": 0.3333333333333333
+          "count": 8,
+          "meanProbability": 0.2687206234173583,
+          "observedFrequency": 0.25
         },
         {
           "lower": 0.3,
           "upper": 0.4,
-          "count": 9,
-          "meanProbability": 0.33742725608931956,
-          "observedFrequency": 0.4444444444444444
+          "count": 13,
+          "meanProbability": 0.3463700888382016,
+          "observedFrequency": 0.46153846153846156
         },
         {
           "lower": 0.4,
@@ -155,16 +155,16 @@
         {
           "lower": 0.5,
           "upper": 0.6,
-          "count": 0,
-          "meanProbability": null,
-          "observedFrequency": null
+          "count": 1,
+          "meanProbability": 0.5684206688100109,
+          "observedFrequency": 0
         },
         {
           "lower": 0.6,
           "upper": 0.7,
-          "count": 1,
-          "meanProbability": 0.6574668164611616,
-          "observedFrequency": 0
+          "count": 2,
+          "meanProbability": 0.6499992033994668,
+          "observedFrequency": 0.5
         },
         {
           "lower": 0.7,
@@ -192,23 +192,23 @@
         {
           "lower": 0,
           "upper": 0.1,
-          "count": 2,
-          "meanProbability": 0.07522781901604722,
-          "observedFrequency": 0.5
+          "count": 4,
+          "meanProbability": 0.07892146019388209,
+          "observedFrequency": 0.25
         },
         {
           "lower": 0.1,
           "upper": 0.2,
-          "count": 4,
-          "meanProbability": 0.18104678851702785,
-          "observedFrequency": 0
+          "count": 6,
+          "meanProbability": 0.1691205318167662,
+          "observedFrequency": 0.16666666666666666
         },
         {
           "lower": 0.2,
           "upper": 0.3,
-          "count": 13,
-          "meanProbability": 0.24098815639176108,
-          "observedFrequency": 0.07692307692307693
+          "count": 18,
+          "meanProbability": 0.23679190012905613,
+          "observedFrequency": 0.16666666666666666
         },
         {
           "lower": 0.3,
@@ -261,13 +261,13 @@
         }
       ]
     },
-    "calibrationError": 0.20203748827805415
+    "calibrationError": 0.15158079749766168
   },
   "uniformBaseline": {
-    "count": 19,
-    "accuracy": 0.47368421052631576,
-    "logLoss": 1.0986122886681098,
-    "brierScore": 0.6666666666666663,
+    "count": 28,
+    "accuracy": 0.42857142857142855,
+    "logLoss": 1.0986122886681102,
+    "brierScore": 0.666666666666666,
     "classOrder": [
       "1",
       "X",
@@ -275,17 +275,17 @@
     ],
     "confusionMatrix": [
       [
-        9,
+        12,
         0,
         0
       ],
       [
-        2,
+        5,
         0,
         0
       ],
       [
-        8,
+        11,
         0,
         0
       ]
@@ -321,9 +321,9 @@
         {
           "lower": 0.3,
           "upper": 0.4,
-          "count": 19,
-          "meanProbability": 0.3333333333333332,
-          "observedFrequency": 0.47368421052631576
+          "count": 28,
+          "meanProbability": 0.3333333333333333,
+          "observedFrequency": 0.42857142857142855
         },
         {
           "lower": 0.4,
@@ -393,9 +393,9 @@
         {
           "lower": 0.3,
           "upper": 0.4,
-          "count": 19,
-          "meanProbability": 0.3333333333333332,
-          "observedFrequency": 0.42105263157894735
+          "count": 28,
+          "meanProbability": 0.3333333333333333,
+          "observedFrequency": 0.39285714285714285
         },
         {
           "lower": 0.4,
@@ -465,9 +465,9 @@
         {
           "lower": 0.3,
           "upper": 0.4,
-          "count": 19,
-          "meanProbability": 0.3333333333333332,
-          "observedFrequency": 0.10526315789473684
+          "count": 28,
+          "meanProbability": 0.3333333333333333,
+          "observedFrequency": 0.17857142857142858
         },
         {
           "lower": 0.4,
@@ -513,14 +513,14 @@
         }
       ]
     },
-    "calibrationError": 0.152046783625731
+    "calibrationError": 0.10317460317460318
   },
   "byLeague": {
-    "70": {
-      "count": 4,
-      "accuracy": 0.5,
-      "logLoss": 1.142527446983173,
-      "brierScore": 0.6500062351571849,
+    "6": {
+      "count": 1,
+      "accuracy": 0,
+      "logLoss": 1.450278780651597,
+      "brierScore": 0.8793578424349977,
       "classOrder": [
         "1",
         "X",
@@ -528,24 +528,24 @@
       ],
       "confusionMatrix": [
         [
-          2,
+          0,
           0,
           0
-        ],
-        [
-          0,
-          0,
-          1
         ],
         [
           1,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          0
         ]
       ],
       "recall": {
-        "1": 1,
-        "2": 0,
+        "1": null,
+        "2": null,
         "X": 0
       },
       "calibration": {
@@ -567,23 +567,23 @@
           {
             "lower": 0.2,
             "upper": 0.3,
-            "count": 1,
-            "meanProbability": 0.24951296027551711,
-            "observedFrequency": 0
-          },
-          {
-            "lower": 0.3,
-            "upper": 0.4,
             "count": 0,
             "meanProbability": null,
             "observedFrequency": null
           },
           {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.39659905360329306,
+            "observedFrequency": 0
+          },
+          {
             "lower": 0.4,
             "upper": 0.5,
-            "count": 2,
-            "meanProbability": 0.4521465116576465,
-            "observedFrequency": 0.5
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.5,
@@ -609,9 +609,9 @@
           {
             "lower": 0.8,
             "upper": 0.9,
-            "count": 1,
-            "meanProbability": 0.8730533394066348,
-            "observedFrequency": 1
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.9,
@@ -625,9 +625,9 @@
           {
             "lower": 0,
             "upper": 0.1,
-            "count": 1,
-            "meanProbability": 0.06951124582459207,
-            "observedFrequency": 0
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.1,
@@ -639,15 +639,15 @@
           {
             "lower": 0.2,
             "upper": 0.3,
-            "count": 1,
-            "meanProbability": 0.29471786367546904,
-            "observedFrequency": 1
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.3,
             "upper": 0.4,
             "count": 1,
-            "meanProbability": 0.3110504783612099,
+            "meanProbability": 0.3688960428462731,
             "observedFrequency": 0
           },
           {
@@ -667,9 +667,9 @@
           {
             "lower": 0.6,
             "upper": 0.7,
-            "count": 1,
-            "meanProbability": 0.6574668164611616,
-            "observedFrequency": 0
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.7,
@@ -697,9 +697,9 @@
           {
             "lower": 0,
             "upper": 0.1,
-            "count": 2,
-            "meanProbability": 0.07522781901604722,
-            "observedFrequency": 0.5
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.1,
@@ -711,8 +711,260 @@
           {
             "lower": 0.2,
             "upper": 0.3,
-            "count": 2,
-            "meanProbability": 0.244969317324014,
+            "count": 1,
+            "meanProbability": 0.2345049035504338,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ]
+      },
+      "calibrationError": 0.5103300642997107
+    },
+    "26": {
+      "count": 1,
+      "accuracy": 0,
+      "logLoss": 1.1948657023745917,
+      "brierScore": 0.7439891933735949,
+      "classOrder": [
+        "1",
+        "X",
+        "2"
+      ],
+      "confusionMatrix": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "recall": {
+        "1": null,
+        "2": 0,
+        "X": null
+      },
+      "calibration": {
+        "1": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 1,
+            "meanProbability": 0.43448098197634627,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "2": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.3027446093342753,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "X": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 1,
+            "meanProbability": 0.26277440868937846,
             "observedFrequency": 0
           },
           {
@@ -766,7 +1018,763 @@
           }
         ]
       },
-      "calibrationError": 0.2962466892617515
+      "calibrationError": 0.4648369271104831
+    },
+    "36": {
+      "count": 2,
+      "accuracy": 0.5,
+      "logLoss": 1.2872548655515845,
+      "brierScore": 0.7106800850822534,
+      "classOrder": [
+        "1",
+        "X",
+        "2"
+      ],
+      "confusionMatrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "recall": {
+        "1": 1,
+        "2": null,
+        "X": 0
+      },
+      "calibration": {
+        "1": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.30441837300691305,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 1,
+            "meanProbability": 0.5991710733526275,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "2": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 1,
+            "meanProbability": 0.23745384799796287,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 1,
+            "meanProbability": 0.5684206688100109,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "X": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 2,
+            "meanProbability": 0.14526801841624293,
+            "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ]
+      },
+      "calibrationError": 0.3700976299382956
+    },
+    "44": {
+      "count": 1,
+      "accuracy": 0,
+      "logLoss": 1.5286392017985504,
+      "brierScore": 0.9200687234273505,
+      "classOrder": [
+        "1",
+        "X",
+        "2"
+      ],
+      "confusionMatrix": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "recall": {
+        "1": null,
+        "2": null,
+        "X": 0
+      },
+      "calibration": {
+        "1": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.387278139636852,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "2": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.3958913311222206,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "X": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 1,
+            "meanProbability": 0.21683052924092752,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ]
+      },
+      "calibrationError": 0.5221129805060484
+    },
+    "70": {
+      "count": 8,
+      "accuracy": 0.75,
+      "logLoss": 0.8480347509213492,
+      "brierScore": 0.47113028594141015,
+      "classOrder": [
+        "1",
+        "X",
+        "2"
+      ],
+      "confusionMatrix": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "recall": {
+        "1": 1,
+        "2": 0.6666666666666666,
+        "X": 0
+      },
+      "calibration": {
+        "1": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 2,
+            "meanProbability": 0.25417867483983747,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.388523749398102,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 2,
+            "meanProbability": 0.4521465116576465,
+            "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 1,
+            "meanProbability": 0.5071645297768964,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 2,
+            "meanProbability": 0.857223617771297,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "2": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 2,
+            "meanProbability": 0.0807555836016346,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 2,
+            "meanProbability": 0.2926486949805586,
+            "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 2,
+            "meanProbability": 0.3547421725755929,
+            "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 2,
+            "meanProbability": 0.6499992033994668,
+            "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "X": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 4,
+            "meanProbability": 0.07892146019388209,
+            "observedFrequency": 0.25
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 4,
+            "meanProbability": 0.22630924059935137,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ]
+      },
+      "calibrationError": 0.18863563628978208
     },
     "258": {
       "count": 15,
@@ -1022,11 +2030,11 @@
     }
   },
   "bySeason": {
-    "2026-27 Turkish Super Lig/2026-27 Turkish Super Lig": {
-      "count": 4,
+    "2026-27 English Premier League/2026-27 English Premier League": {
+      "count": 2,
       "accuracy": 0.5,
-      "logLoss": 1.142527446983173,
-      "brierScore": 0.6500062351571849,
+      "logLoss": 1.2872548655515845,
+      "brierScore": 0.7106800850822534,
       "classOrder": [
         "1",
         "X",
@@ -1034,7 +2042,7 @@
       ],
       "confusionMatrix": [
         [
-          2,
+          1,
           0,
           0
         ],
@@ -1044,14 +2052,14 @@
           1
         ],
         [
-          1,
+          0,
           0,
           0
         ]
       ],
       "recall": {
         "1": 1,
-        "2": 0,
+        "2": null,
         "X": 0
       },
       "calibration": {
@@ -1073,30 +2081,30 @@
           {
             "lower": 0.2,
             "upper": 0.3,
-            "count": 1,
-            "meanProbability": 0.24951296027551711,
-            "observedFrequency": 0
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.3,
             "upper": 0.4,
-            "count": 0,
-            "meanProbability": null,
-            "observedFrequency": null
+            "count": 1,
+            "meanProbability": 0.30441837300691305,
+            "observedFrequency": 0
           },
           {
             "lower": 0.4,
             "upper": 0.5,
-            "count": 2,
-            "meanProbability": 0.4521465116576465,
-            "observedFrequency": 0.5
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.5,
             "upper": 0.6,
-            "count": 0,
-            "meanProbability": null,
-            "observedFrequency": null
+            "count": 1,
+            "meanProbability": 0.5991710733526275,
+            "observedFrequency": 1
           },
           {
             "lower": 0.6,
@@ -1115,9 +2123,9 @@
           {
             "lower": 0.8,
             "upper": 0.9,
-            "count": 1,
-            "meanProbability": 0.8730533394066348,
-            "observedFrequency": 1
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.9,
@@ -1131,9 +2139,9 @@
           {
             "lower": 0,
             "upper": 0.1,
-            "count": 1,
-            "meanProbability": 0.06951124582459207,
-            "observedFrequency": 0
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.1,
@@ -1146,15 +2154,15 @@
             "lower": 0.2,
             "upper": 0.3,
             "count": 1,
-            "meanProbability": 0.29471786367546904,
-            "observedFrequency": 1
+            "meanProbability": 0.23745384799796287,
+            "observedFrequency": 0
           },
           {
             "lower": 0.3,
             "upper": 0.4,
-            "count": 1,
-            "meanProbability": 0.3110504783612099,
-            "observedFrequency": 0
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.4,
@@ -1166,16 +2174,16 @@
           {
             "lower": 0.5,
             "upper": 0.6,
-            "count": 0,
-            "meanProbability": null,
-            "observedFrequency": null
+            "count": 1,
+            "meanProbability": 0.5684206688100109,
+            "observedFrequency": 0
           },
           {
             "lower": 0.6,
             "upper": 0.7,
-            "count": 1,
-            "meanProbability": 0.6574668164611616,
-            "observedFrequency": 0
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.7,
@@ -1203,9 +2211,117 @@
           {
             "lower": 0,
             "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
             "count": 2,
-            "meanProbability": 0.07522781901604722,
+            "meanProbability": 0.14526801841624293,
             "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ]
+      },
+      "calibrationError": 0.3700976299382956
+    },
+    "2026-27 French Ligue 1/2026-27 French Ligue 1": {
+      "count": 1,
+      "accuracy": 0,
+      "logLoss": 1.1948657023745917,
+      "brierScore": 0.7439891933735949,
+      "classOrder": [
+        "1",
+        "X",
+        "2"
+      ],
+      "confusionMatrix": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "recall": {
+        "1": null,
+        "2": 0,
+        "X": null
+      },
+      "calibration": {
+        "1": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
           },
           {
             "lower": 0.1,
@@ -1217,8 +2333,152 @@
           {
             "lower": 0.2,
             "upper": 0.3,
-            "count": 2,
-            "meanProbability": 0.244969317324014,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 1,
+            "meanProbability": 0.43448098197634627,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "2": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.3027446093342753,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "X": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 1,
+            "meanProbability": 0.26277440868937846,
             "observedFrequency": 0
           },
           {
@@ -1272,7 +2532,763 @@
           }
         ]
       },
-      "calibrationError": 0.2962466892617515
+      "calibrationError": 0.4648369271104831
+    },
+    "2026-27 German Bundesliga/2026-27 German Bundesliga": {
+      "count": 1,
+      "accuracy": 0,
+      "logLoss": 1.450278780651597,
+      "brierScore": 0.8793578424349977,
+      "classOrder": [
+        "1",
+        "X",
+        "2"
+      ],
+      "confusionMatrix": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "recall": {
+        "1": null,
+        "2": null,
+        "X": 0
+      },
+      "calibration": {
+        "1": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.39659905360329306,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "2": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.3688960428462731,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "X": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 1,
+            "meanProbability": 0.2345049035504338,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ]
+      },
+      "calibrationError": 0.5103300642997107
+    },
+    "2026-27 Spanish LALIGA/2026-27 Spanish LALIGA": {
+      "count": 1,
+      "accuracy": 0,
+      "logLoss": 1.5286392017985504,
+      "brierScore": 0.9200687234273505,
+      "classOrder": [
+        "1",
+        "X",
+        "2"
+      ],
+      "confusionMatrix": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "recall": {
+        "1": null,
+        "2": null,
+        "X": 0
+      },
+      "calibration": {
+        "1": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.387278139636852,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "2": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.3958913311222206,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "X": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 1,
+            "meanProbability": 0.21683052924092752,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ]
+      },
+      "calibrationError": 0.5221129805060484
+    },
+    "2026-27 Turkish Super Lig/2026-27 Turkish Super Lig": {
+      "count": 8,
+      "accuracy": 0.75,
+      "logLoss": 0.8480347509213492,
+      "brierScore": 0.47113028594141015,
+      "classOrder": [
+        "1",
+        "X",
+        "2"
+      ],
+      "confusionMatrix": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "recall": {
+        "1": 1,
+        "2": 0.6666666666666666,
+        "X": 0
+      },
+      "calibration": {
+        "1": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 2,
+            "meanProbability": 0.25417867483983747,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanProbability": 0.388523749398102,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 2,
+            "meanProbability": 0.4521465116576465,
+            "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 1,
+            "meanProbability": 0.5071645297768964,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 2,
+            "meanProbability": 0.857223617771297,
+            "observedFrequency": 1
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "2": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 2,
+            "meanProbability": 0.0807555836016346,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 2,
+            "meanProbability": 0.2926486949805586,
+            "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 2,
+            "meanProbability": 0.3547421725755929,
+            "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 2,
+            "meanProbability": 0.6499992033994668,
+            "observedFrequency": 0.5
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ],
+        "X": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 4,
+            "meanProbability": 0.07892146019388209,
+            "observedFrequency": 0.25
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 4,
+            "meanProbability": 0.22630924059935137,
+            "observedFrequency": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 0,
+            "meanProbability": null,
+            "observedFrequency": null
+          }
+        ]
+      },
+      "calibrationError": 0.18863563628978208
     },
     "2026-27 UEFA Nations League/2026-27 UEFA Nations League": {
       "count": 15,
@@ -1529,10 +3545,10 @@
   },
   "byEstimatedInputs": {
     "false": {
-      "count": 4,
-      "accuracy": 0.5,
-      "logLoss": 1.142527446983173,
-      "brierScore": 0.6500062351571849,
+      "count": 11,
+      "accuracy": 0.6363636363636364,
+      "logLoss": 0.9109082759031434,
+      "brierScore": 0.5160763435474773,
       "classOrder": [
         "1",
         "X",
@@ -1540,24 +3556,24 @@
       ],
       "confusionMatrix": [
         [
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
           2,
           0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          0
+          2
         ]
       ],
       "recall": {
         "1": 1,
-        "2": 0,
+        "2": 0.5,
         "X": 0
       },
       "calibration": {
@@ -1579,30 +3595,30 @@
           {
             "lower": 0.2,
             "upper": 0.3,
-            "count": 1,
-            "meanProbability": 0.24951296027551711,
+            "count": 2,
+            "meanProbability": 0.25417867483983747,
             "observedFrequency": 0
           },
           {
             "lower": 0.3,
             "upper": 0.4,
-            "count": 0,
-            "meanProbability": null,
-            "observedFrequency": null
+            "count": 2,
+            "meanProbability": 0.38790094451747703,
+            "observedFrequency": 0
           },
           {
             "lower": 0.4,
             "upper": 0.5,
-            "count": 2,
-            "meanProbability": 0.4521465116576465,
-            "observedFrequency": 0.5
+            "count": 3,
+            "meanProbability": 0.4462580017638798,
+            "observedFrequency": 0.3333333333333333
           },
           {
             "lower": 0.5,
             "upper": 0.6,
-            "count": 0,
-            "meanProbability": null,
-            "observedFrequency": null
+            "count": 2,
+            "meanProbability": 0.553167801564762,
+            "observedFrequency": 1
           },
           {
             "lower": 0.6,
@@ -1621,8 +3637,8 @@
           {
             "lower": 0.8,
             "upper": 0.9,
-            "count": 1,
-            "meanProbability": 0.8730533394066348,
+            "count": 2,
+            "meanProbability": 0.857223617771297,
             "observedFrequency": 1
           },
           {
@@ -1637,8 +3653,8 @@
           {
             "lower": 0,
             "upper": 0.1,
-            "count": 1,
-            "meanProbability": 0.06951124582459207,
+            "count": 2,
+            "meanProbability": 0.0807555836016346,
             "observedFrequency": 0
           },
           {
@@ -1651,16 +3667,16 @@
           {
             "lower": 0.2,
             "upper": 0.3,
-            "count": 1,
-            "meanProbability": 0.29471786367546904,
-            "observedFrequency": 1
+            "count": 3,
+            "meanProbability": 0.2742504126530267,
+            "observedFrequency": 0.3333333333333333
           },
           {
             "lower": 0.3,
             "upper": 0.4,
-            "count": 1,
-            "meanProbability": 0.3110504783612099,
-            "observedFrequency": 0
+            "count": 4,
+            "meanProbability": 0.3520300714019204,
+            "observedFrequency": 0.5
           },
           {
             "lower": 0.4,
@@ -1679,9 +3695,9 @@
           {
             "lower": 0.6,
             "upper": 0.7,
-            "count": 1,
-            "meanProbability": 0.6574668164611616,
-            "observedFrequency": 0
+            "count": 2,
+            "meanProbability": 0.6499992033994668,
+            "observedFrequency": 0.5
           },
           {
             "lower": 0.7,
@@ -1709,23 +3725,23 @@
           {
             "lower": 0,
             "upper": 0.1,
-            "count": 2,
-            "meanProbability": 0.07522781901604722,
-            "observedFrequency": 0.5
+            "count": 4,
+            "meanProbability": 0.07892146019388209,
+            "observedFrequency": 0.25
           },
           {
             "lower": 0.1,
             "upper": 0.2,
-            "count": 0,
-            "meanProbability": null,
-            "observedFrequency": null
+            "count": 1,
+            "meanProbability": 0.1633750786494097,
+            "observedFrequency": 0
           },
           {
             "lower": 0.2,
             "upper": 0.3,
-            "count": 2,
-            "meanProbability": 0.244969317324014,
-            "observedFrequency": 0
+            "count": 6,
+            "meanProbability": 0.23080698338795194,
+            "observedFrequency": 0.16666666666666666
           },
           {
             "lower": 0.3,
@@ -1778,13 +3794,13 @@
           }
         ]
       },
-      "calibrationError": 0.2962466892617515
+      "calibrationError": 0.159555139211248
     },
     "true": {
-      "count": 15,
-      "accuracy": 0.6666666666666666,
-      "logLoss": 0.9180761219671215,
-      "brierScore": 0.544124592556886,
+      "count": 17,
+      "accuracy": 0.5882352941176471,
+      "logLoss": 1.0166895422277027,
+      "brierScore": 0.6011086662507513,
       "classOrder": [
         "1",
         "X",
@@ -1797,9 +3813,9 @@
           0
         ],
         [
-          1,
+          2,
           0,
-          0
+          1
         ],
         [
           4,
@@ -1838,8 +3854,8 @@
           {
             "lower": 0.3,
             "upper": 0.4,
-            "count": 5,
-            "meanProbability": 0.38490884124045366,
+            "count": 7,
+            "meanProbability": 0.37508023325892487,
             "observedFrequency": 0
           },
           {
@@ -1910,9 +3926,9 @@
           {
             "lower": 0.3,
             "upper": 0.4,
-            "count": 8,
-            "meanProbability": 0.34072435330533324,
-            "observedFrequency": 0.5
+            "count": 9,
+            "meanProbability": 0.3438545410321043,
+            "observedFrequency": 0.4444444444444444
           },
           {
             "lower": 0.4,
@@ -1924,9 +3940,9 @@
           {
             "lower": 0.5,
             "upper": 0.6,
-            "count": 0,
-            "meanProbability": null,
-            "observedFrequency": null
+            "count": 1,
+            "meanProbability": 0.5684206688100109,
+            "observedFrequency": 0
           },
           {
             "lower": 0.6,
@@ -1968,16 +3984,16 @@
           {
             "lower": 0.1,
             "upper": 0.2,
-            "count": 4,
-            "meanProbability": 0.18104678851702785,
-            "observedFrequency": 0
+            "count": 5,
+            "meanProbability": 0.17026962245023752,
+            "observedFrequency": 0.2
           },
           {
             "lower": 0.2,
             "upper": 0.3,
-            "count": 11,
-            "meanProbability": 0.2402643089495333,
-            "observedFrequency": 0.09090909090909091
+            "count": 12,
+            "meanProbability": 0.23978435849960833,
+            "observedFrequency": 0.16666666666666666
           },
           {
             "lower": 0.3,
@@ -2030,7 +4046,7 @@
           }
         ]
       },
-      "calibrationError": 0.20527344480422363
+      "calibrationError": 0.1724866020783361
     }
   },
   "uniformLogLossDifference": {
@@ -2041,8 +4057,8 @@
     "reference": "uniform",
     "confidence": 0.95,
     "lower": -0.1805361667009882,
-    "upper": 0.04391515831506326,
-    "mean": -0.1332832561712932
+    "upper": -0.057645256106671136,
+    "mean": -0.12347967249648385
   },
   "release": {
     "eligible": false,
@@ -2052,29 +4068,29 @@
   },
   "evidenceProgress": {
     "requiredSettled": 500,
-    "settled": 19,
-    "remainingSettled": 481,
+    "settled": 28,
+    "remainingSettled": 472,
     "requiredPerLeague": 100,
     "byLeague": {
       "6": {
-        "settled": 0,
-        "remaining": 100
+        "settled": 1,
+        "remaining": 99
       },
       "26": {
-        "settled": 0,
-        "remaining": 100
+        "settled": 1,
+        "remaining": 99
       },
       "36": {
-        "settled": 0,
-        "remaining": 100
+        "settled": 2,
+        "remaining": 98
       },
       "44": {
-        "settled": 0,
-        "remaining": 100
+        "settled": 1,
+        "remaining": 99
       },
       "70": {
-        "settled": 4,
-        "remaining": 96
+        "settled": 8,
+        "remaining": 92
       },
       "258": {
         "settled": 15,
