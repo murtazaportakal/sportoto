@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-23T17:59:09.759Z",
+  "checkedAt": "2026-11-24T03:56:51.581Z",
   "status": "ok",
   "warnings": [],
   "modelVersion": "baseline-v1",
@@ -12,52 +12,52 @@
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.685Z"
+      "fetchedAt": "2026-11-24T03:56:51.480Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.685Z"
+      "fetchedAt": "2026-11-24T03:56:51.480Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.685Z"
+      "fetchedAt": "2026-11-24T03:56:51.480Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.685Z"
+      "fetchedAt": "2026-11-24T03:56:51.480Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.685Z"
+      "fetchedAt": "2026-11-24T03:56:51.480Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.685Z"
+      "fetchedAt": "2026-11-24T03:56:51.480Z"
     },
     {
       "source": "espn:uefa.champions",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.685Z"
+      "fetchedAt": "2026-11-24T03:56:51.480Z"
     },
     {
       "source": "espn:uefa.europa",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.685Z"
+      "fetchedAt": "2026-11-24T03:56:51.480Z"
     },
     {
       "source": "espn:uefa.europa.conf",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.685Z"
+      "fetchedAt": "2026-11-24T03:56:51.480Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-23T17:59:09.711Z"
+      "fetchedAt": "2026-11-24T03:56:51.509Z"
     },
     {
       "source": "odds",
@@ -74,7 +74,7 @@
     {
       "experimentId": "composite-challenger-v1",
       "captured": 29,
-      "settled": 28,
+      "settled": 29,
       "paused": null,
       "releaseEligible": false
     }
