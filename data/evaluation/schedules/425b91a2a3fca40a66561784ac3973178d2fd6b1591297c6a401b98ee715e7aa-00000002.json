@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "3d819719-df73-448c-2862-08df36d0f6ec",
+  "roundId": 1544,
+  "home": "MCI",
+  "away": "NAP",
+  "kickoff": null,
+  "kickoffRaw": "2026-11-24T23:00:00",
+  "status": "final",
+  "observedAt": "2026-11-25T17:08:26.040Z",
+  "revision": 2,
+  "stateHash": "5c29d2db4dd22bfa1cf912632631f15630568a6c07acbd4a68942bc85858bde5"
+}
