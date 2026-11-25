@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "2e68221c-6ef3-4a7c-2860-08df36d0f6ec",
+  "roundId": 1544,
+  "home": "GAL",
+  "away": "AVL",
+  "kickoff": null,
+  "kickoffRaw": "2026-11-24T20:45:00",
+  "status": "final",
+  "observedAt": "2026-11-25T02:22:13.230Z",
+  "revision": 2,
+  "stateHash": "040370efd999d0af7ff8a43c58d1cb442eb86a3c18ccd71627c4fce1c65006fd"
+}

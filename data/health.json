@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-24T17:37:14.414Z",
+  "checkedAt": "2026-11-25T02:22:13.226Z",
   "status": "ok",
   "warnings": [],
   "modelVersion": "baseline-v1",
@@ -12,52 +12,52 @@
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.342Z"
+      "fetchedAt": "2026-11-25T02:22:13.169Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.342Z"
+      "fetchedAt": "2026-11-25T02:22:13.169Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.342Z"
+      "fetchedAt": "2026-11-25T02:22:13.169Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.342Z"
+      "fetchedAt": "2026-11-25T02:22:13.169Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.342Z"
+      "fetchedAt": "2026-11-25T02:22:13.169Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.342Z"
+      "fetchedAt": "2026-11-25T02:22:13.169Z"
     },
     {
       "source": "espn:uefa.champions",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.342Z"
+      "fetchedAt": "2026-11-25T02:22:13.169Z"
     },
     {
       "source": "espn:uefa.europa",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.342Z"
+      "fetchedAt": "2026-11-25T02:22:13.169Z"
     },
     {
       "source": "espn:uefa.europa.conf",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.342Z"
+      "fetchedAt": "2026-11-25T02:22:13.169Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-24T17:37:14.364Z"
+      "fetchedAt": "2026-11-25T02:22:13.187Z"
     },
     {
       "source": "odds",
@@ -67,7 +67,7 @@
   ],
   "drift": {
     "compared": 15,
-    "maxProbabilityChange": 0,
+    "maxProbabilityChange": 0.04277631601017651,
     "warningThreshold": 0.15
   },
   "pairedExperiments": [
