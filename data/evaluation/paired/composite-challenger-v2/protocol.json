@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "config": {
+    "schemaVersion": 1,
+    "experimentId": "composite-challenger-v2",
+    "modelFamily": "live-composite-v1",
+    "purpose": "Frozen prospective shadow comparison for composite-v2; never automatically promoted",
+    "incumbent": {
+      "version": "composite-v2",
+      "params": {
+        "sigmoidScale": 5.5,
+        "drawBase": 0.28,
+        "drawGapThreshold": 4,
+        "homeAdvantageBoost": 0.05
+      }
+    },
+    "candidate": {
+      "version": "composite-shadow-v2",
+      "validationStatus": "unvalidated-shadow-only",
+      "origin": "Sharper differential / lower home bias challenger for composite-v2; historical fit is not validation",
+      "params": {
+        "sigmoidScale": 6,
+        "drawBase": 0.28,
+        "drawGapThreshold": 6,
+        "homeAdvantageBoost": 0.045
+      }
+    },
+    "baseline": {
+      "version": "standings-rating-v1",
+      "ratingScale": 400,
+      "homeAdvantage": 60,
+      "drawProbability": 0.26
+    },
+    "uniform": {
+      "version": "uniform-v1"
+    }
+  },
+  "codeHash": "6551b031f4ebc1b66445f1fb6881af2dc37f2e5d359529a98e639c803c8a0a30",
+  "registeredAt": "2026-11-26T20:37:56.446Z"
+}

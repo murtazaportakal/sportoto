@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "evaluationType": "prospective-paired-live-models",
+  "experimentId": "composite-challenger-v2",
+  "provider": "sportoto",
+  "providerId": "454b2402-d319-4523-5238-08def4816f89",
+  "roundId": 1545,
+  "fixture": {
+    "id": 7,
+    "providerId": "454b2402-d319-4523-5238-08def4816f89",
+    "roundId": 1545,
+    "leagueId": 70,
+    "home": "FEN",
+    "away": "ERZ",
+    "homeName": "Fenerbahçe",
+    "awayName": "Erzurumspor FK",
+    "kickoffRaw": "2026-11-29T19:00:00",
+    "kickoff": "2026-11-29T16:00:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "tur.1",
+      "matchId": "401888238",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261129",
+      "fetchedAt": "2026-11-26T20:37:56.353Z",
+      "rawKickoff": "2026-11-29T16:00Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-26T20:37:56.446Z",
+  "protocolHash": "3741b5d8ffb254c43f2ce5c22e5ed3f708606b1beb796152ed6e9eb660bdd0ec",
+  "codeHash": "6551b031f4ebc1b66445f1fb6881af2dc37f2e5d359529a98e639c803c8a0a30",
+  "inputHash": "58a051cd7b82ac303a0a60dc46e4ff9505d2fbfecf6719d3382db43da9233ff3",
+  "predictions": {
+    "incumbent": {
+      "win": 0.8459244970303414,
+      "draw": 0.08224840612711559,
+      "loss": 0.07182709684254296,
+      "differential": 0.3500130263157895
+    },
+    "candidate": {
+      "win": 0.8581347838518808,
+      "draw": 0.08224840612711559,
+      "loss": 0.0596168100210036,
+      "differential": 0.3500130263157895
+    },
+    "baseline": {
+      "win": 0.6090382254020817,
+      "draw": 0.26,
+      "loss": 0.13096177459791825
+    },
+    "uniform": {
+      "win": 0.3333333333333333,
+      "draw": 0.3333333333333333,
+      "loss": 0.3333333333333333
+    }
+  },
+  "policy": "first-eligible-paired-observation-after-protocol-registration"
+}

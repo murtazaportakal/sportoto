@@ -59,8 +59,8 @@ const FeatureEngineering = {
       starDependencyPenalty: -0.03
     };
 
-    // Normalize Elo to 0-1 (range roughly 1300-1920)
-    const eloNorm = Math.max(0, Math.min(1, (team.eloRating - 1300) / 620));
+    // Normalize Elo to 0-1 (range 1250-2200 so top clubs do not clip)
+    const eloNorm = Math.max(0, Math.min(1, (team.eloRating - 1250) / 950));
     
     // Implied probability is already 0-1
     const probNorm = Math.min(1, team.impliedProb * 5); // Scale up since max is ~0.185
@@ -183,7 +183,7 @@ const FeatureEngineering = {
         injuryImpact,
         geoAdvantage,
         endurance,
-        eloNormalized: (team.eloRating - 1300) / 620,
+        eloNormalized: Math.max(0, Math.min(1, (team.eloRating - 1250) / 950)),
         impliedProbNormalized: Math.min(1, team.impliedProb * 5),
         squadDepthNormalized: (team.squadDepth - 1) / 9,
         offensiveRating: team.tacticalStyle.offensive,
@@ -213,16 +213,16 @@ const FeatureEngineering = {
    */
   calculateMatchDifferential(teamAFeatures, teamBFeatures) {
     const featureWeights = {
-      strengthScore: 0.30,
-      eloNormalized: 0.15,
-      offensiveRating: 0.10,
-      defensiveRating: 0.10,
-      transitionRating: 0.05,
-      historicalNormalized: 0.08,
-      managerExpNormalized: 0.05,
-      goalsForPerGame: 0.07,
-      goalsAgainstPerGame: -0.05,
-      homeAdvantage: 0.05
+      strengthScore: 0.22,
+      eloNormalized: 0.35,
+      offensiveRating: 0.07,
+      defensiveRating: 0.07,
+      transitionRating: 0.03,
+      historicalNormalized: 0.04,
+      managerExpNormalized: 0.02,
+      goalsForPerGame: 0.09,
+      goalsAgainstPerGame: -0.07,
+      homeAdvantage: 0.04
     };
 
     let differential = 0;

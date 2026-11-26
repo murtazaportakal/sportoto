@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "454b2402-d319-4523-5238-08def4816f89",
+  "roundId": 1545,
+  "home": "FEN",
+  "away": "ERZ",
+  "kickoff": "2026-11-29T16:00:00.000Z",
+  "kickoffRaw": "2026-11-29T19:00:00",
+  "status": "unconfirmed",
+  "observedAt": "2026-11-26T20:37:56.446Z",
+  "revision": 1,
+  "stateHash": "dd756ab826cf43edc93b54be2bedba016f9fd3dc367d064148aae59eb1d4e813"
+}

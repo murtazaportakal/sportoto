@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "evaluationType": "prospective-paired-live-models",
+  "experimentId": "composite-challenger-v2",
+  "provider": "sportoto",
+  "providerId": "f776611c-795c-4bd3-45e5-08def9453ab4",
+  "roundId": 1545,
+  "fixture": {
+    "id": 11,
+    "providerId": "f776611c-795c-4bd3-45e5-08def9453ab4",
+    "roundId": 1545,
+    "leagueId": 6,
+    "home": "BVB",
+    "away": "B04",
+    "homeName": "Borussia Dortmund",
+    "awayName": "Bayer Leverkusen",
+    "kickoffRaw": "2026-11-29T21:30:00",
+    "kickoff": "2026-11-29T18:30:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "ger.1",
+      "matchId": "401884727",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261129",
+      "fetchedAt": "2026-11-26T20:37:56.353Z",
+      "rawKickoff": "2026-11-29T18:30Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-26T20:37:56.446Z",
+  "protocolHash": "3741b5d8ffb254c43f2ce5c22e5ed3f708606b1beb796152ed6e9eb660bdd0ec",
+  "codeHash": "6551b031f4ebc1b66445f1fb6881af2dc37f2e5d359529a98e639c803c8a0a30",
+  "inputHash": "58a051cd7b82ac303a0a60dc46e4ff9505d2fbfecf6719d3382db43da9233ff3",
+  "predictions": {
+    "incumbent": {
+      "win": 0.560087537159158,
+      "draw": 0.1932934421536078,
+      "loss": 0.24661902068723415,
+      "differential": 0.10588004093567255
+    },
+    "candidate": {
+      "win": 0.5655826021289068,
+      "draw": 0.1932934421536078,
+      "loss": 0.2411239557174854,
+      "differential": 0.10588004093567255
+    },
+    "baseline": {
+      "win": 0.5069441106550792,
+      "draw": 0.26,
+      "loss": 0.2330558893449208
+    },
+    "uniform": {
+      "win": 0.3333333333333333,
+      "draw": 0.3333333333333333,
+      "loss": 0.3333333333333333
+    }
+  },
+  "policy": "first-eligible-paired-observation-after-protocol-registration"
+}

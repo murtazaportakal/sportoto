@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-26T20:27:47.714Z",
+  "checkedAt": "2026-11-26T20:37:56.431Z",
   "status": "ok",
   "warnings": [],
-  "modelVersion": "baseline-v1",
+  "modelVersion": "composite-v2",
   "supportedFixtures": 15,
   "totalFixtures": 15,
   "missing": [],
@@ -12,81 +12,81 @@
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.510Z"
+      "fetchedAt": "2026-11-26T20:37:55.856Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.510Z"
+      "fetchedAt": "2026-11-26T20:37:55.856Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.510Z"
+      "fetchedAt": "2026-11-26T20:37:55.856Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.510Z"
+      "fetchedAt": "2026-11-26T20:37:55.856Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.510Z"
+      "fetchedAt": "2026-11-26T20:37:55.856Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.510Z"
+      "fetchedAt": "2026-11-26T20:37:55.856Z"
     },
     {
       "source": "espn:uefa.champions",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.510Z"
+      "fetchedAt": "2026-11-26T20:37:55.856Z"
     },
     {
       "source": "espn:uefa.europa",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.510Z"
+      "fetchedAt": "2026-11-26T20:37:55.856Z"
     },
     {
       "source": "espn:uefa.europa.conf",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.510Z"
+      "fetchedAt": "2026-11-26T20:37:55.856Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.663Z"
+      "fetchedAt": "2026-11-26T20:37:56.362Z"
     },
     {
       "source": "espn:tur.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.663Z",
+      "fetchedAt": "2026-11-26T20:37:56.362Z",
       "matched": 9
     },
     {
       "source": "espn:ger.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.663Z",
+      "fetchedAt": "2026-11-26T20:37:56.362Z",
       "matched": 2
     },
     {
       "source": "espn:fra.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.663Z",
+      "fetchedAt": "2026-11-26T20:37:56.362Z",
       "matched": 1
     },
     {
       "source": "espn:eng.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.663Z",
+      "fetchedAt": "2026-11-26T20:37:56.362Z",
       "matched": 2
     },
     {
       "source": "espn:esp.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:27:47.663Z",
+      "fetchedAt": "2026-11-26T20:37:56.362Z",
       "matched": 1
     },
     {
@@ -97,7 +97,7 @@
   ],
   "drift": {
     "compared": 15,
-    "maxProbabilityChange": 0,
+    "maxProbabilityChange": 0.07495035987348489,
     "warningThreshold": 0.15
   },
   "pairedExperiments": [
@@ -105,6 +105,13 @@
       "experimentId": "composite-challenger-v1",
       "captured": 44,
       "settled": 29,
+      "paused": null,
+      "releaseEligible": false
+    },
+    {
+      "experimentId": "composite-challenger-v2",
+      "captured": 15,
+      "settled": 0,
       "paused": null,
       "releaseEligible": false
     }
