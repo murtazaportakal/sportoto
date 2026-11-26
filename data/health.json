@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-26T20:23:58.025Z",
+  "checkedAt": "2026-11-26T20:24:54.056Z",
   "status": "ok",
   "warnings": [],
   "modelVersion": "baseline-v1",
@@ -12,81 +12,81 @@
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.266Z"
+      "fetchedAt": "2026-11-26T20:24:53.856Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.266Z"
+      "fetchedAt": "2026-11-26T20:24:53.856Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.266Z"
+      "fetchedAt": "2026-11-26T20:24:53.856Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.266Z"
+      "fetchedAt": "2026-11-26T20:24:53.856Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.266Z"
+      "fetchedAt": "2026-11-26T20:24:53.856Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.266Z"
+      "fetchedAt": "2026-11-26T20:24:53.856Z"
     },
     {
       "source": "espn:uefa.champions",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.266Z"
+      "fetchedAt": "2026-11-26T20:24:53.856Z"
     },
     {
       "source": "espn:uefa.europa",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.266Z"
+      "fetchedAt": "2026-11-26T20:24:53.856Z"
     },
     {
       "source": "espn:uefa.europa.conf",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.266Z"
+      "fetchedAt": "2026-11-26T20:24:53.856Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.935Z"
+      "fetchedAt": "2026-11-26T20:24:54.005Z"
     },
     {
       "source": "espn:tur.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.936Z",
+      "fetchedAt": "2026-11-26T20:24:54.005Z",
       "matched": 9
     },
     {
       "source": "espn:ger.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.936Z",
+      "fetchedAt": "2026-11-26T20:24:54.005Z",
       "matched": 2
     },
     {
       "source": "espn:fra.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.936Z",
+      "fetchedAt": "2026-11-26T20:24:54.005Z",
       "matched": 1
     },
     {
       "source": "espn:eng.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.936Z",
+      "fetchedAt": "2026-11-26T20:24:54.005Z",
       "matched": 2
     },
     {
       "source": "espn:esp.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T20:23:57.936Z",
+      "fetchedAt": "2026-11-26T20:24:54.005Z",
       "matched": 1
     },
     {
@@ -96,7 +96,7 @@
     }
   ],
   "drift": {
-    "compared": 12,
+    "compared": 15,
     "maxProbabilityChange": 0,
     "warningThreshold": 0.15
   },
