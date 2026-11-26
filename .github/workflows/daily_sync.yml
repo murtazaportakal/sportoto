@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    # Twice daily at 06:15 and 18:15 UTC (reduced from every 30m to save quota)
-    - cron: '15 6,18 * * *'
+    # Twice weekly (Tue & Fri at 15:15 UTC / 18:15 TR) before midweek & weekend bulletins close
+    - cron: '15 15 * * 2,5'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 concurrency:
