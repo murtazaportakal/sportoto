@@ -7,9 +7,11 @@
   "dataHash": "fc21b643863b9535aee8a909731657425571c097bbfbf0055e9b071cfcbadb9e",
   "evaluationCodeHash": "6c1badf3d0ae88153f74b0d604fb9af1a3c9e57b4b3f528a437c880acce22bb2",
   "registeredAt": "2026-11-07T19:40:38.847Z",
-  "totalForecasts": 29,
+  "totalForecasts": 41,
   "evaluated": 29,
-  "excluded": {},
+  "excluded": {
+    "awaiting-confirmed-final": 12
+  },
   "candidateVersion": "composite-shadow-v1",
   "incumbentVersion": "baseline-v1",
   "rollbackVersion": "baseline-v1",

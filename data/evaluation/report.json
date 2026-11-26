@@ -2,9 +2,11 @@
   "schemaVersion": 1,
   "evaluationType": "recorded-pre-match-forecasts",
   "validationStatus": "insufficient-evidence",
-  "totalForecasts": 29,
+  "totalForecasts": 41,
   "evaluated": 29,
-  "excluded": {},
+  "excluded": {
+    "awaiting-confirmed-final": 12
+  },
   "accuracy": 0.6206896551724138,
   "brierScore": 0.5561010343501186,
   "logLoss": 0.9585160126461376,

@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-25T17:08:26.040Z",
-  "roundId": 1544,
-  "captured": 0,
+  "checkedAt": "2026-11-26T01:45:49.568Z",
+  "roundId": 1545,
+  "captured": 12,
   "existing": 0,
   "ineligible": {
-    "unverified-kickoff-timezone": 15
+    "unverified-kickoff-timezone": 3
   },
-  "resultObservations": 5,
+  "resultObservations": 0,
   "paused": null
 }

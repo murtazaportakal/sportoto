@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "featureSchemaVersion": "team-composite-v1",
+  "pipelineVersion": "live-composite-v1",
+  "provider": "sportoto",
+  "providerId": "de32b8f4-d140-41cc-5239-08def4816f89",
+  "roundId": 1545,
+  "fixture": {
+    "id": 9,
+    "providerId": "de32b8f4-d140-41cc-5239-08def4816f89",
+    "roundId": 1545,
+    "leagueId": 70,
+    "home": "BJK",
+    "away": "GAL",
+    "homeName": "Beşiktaş",
+    "awayName": "Galatasaray",
+    "kickoffRaw": "2026-11-30T21:00:00",
+    "kickoff": "2026-11-30T18:00:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "tur.1",
+      "matchId": "401888237",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261130",
+      "fetchedAt": "2026-11-26T01:45:49.512Z",
+      "rawKickoff": "2026-11-30T18:00Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-26T01:45:49.568Z",
+  "inputHash": "377d249da2f7434f7ef24fdded4ab96bbe092210a9361eb9b860cf93982f2def",
+  "codeHash": "708eb2f214e97944fbe52a668048867574217c1960c715040c7c0b88fcc3b59d",
+  "model": {
+    "version": "baseline-v1",
+    "validationStatus": "unvalidated",
+    "contextPolicy": "disabled-pending-temporal-validation",
+    "params": {
+      "sigmoidScale": 4,
+      "drawBase": 0.28,
+      "drawGapThreshold": 4,
+      "homeAdvantageBoost": 0.07
+    }
+  },
+  "probabilities": {
+    "win": 0.3804659654672999,
+    "draw": 0.19570164737730572,
+    "loss": 0.4238323871553944,
+    "differential": -0.10234237455197133
+  },
+  "pick": "2",
+  "policy": "first-eligible-observation-before-explicit-kickoff"
+}
