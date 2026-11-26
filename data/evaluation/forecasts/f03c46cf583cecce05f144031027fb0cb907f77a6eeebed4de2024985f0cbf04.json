@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "featureSchemaVersion": "team-composite-v1",
+  "pipelineVersion": "live-composite-v1",
+  "provider": "sportoto",
+  "providerId": "f776611c-795c-4bd3-45e5-08def9453ab4",
+  "roundId": 1545,
+  "fixture": {
+    "id": 11,
+    "providerId": "f776611c-795c-4bd3-45e5-08def9453ab4",
+    "roundId": 1545,
+    "leagueId": 6,
+    "home": "BVB",
+    "away": "B04",
+    "homeName": "Borussia Dortmund",
+    "awayName": "Bayer Leverkusen",
+    "kickoffRaw": "2026-11-29T21:30:00",
+    "kickoff": "2026-11-29T18:30:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "ger.1",
+      "matchId": "401884727",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261129",
+      "fetchedAt": "2026-11-26T20:23:57.924Z",
+      "rawKickoff": "2026-11-29T18:30Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-26T20:23:58.044Z",
+  "inputHash": "552144e49cc9eafb31b1f56c9855a2b7fce9b0023a0a65e5f58341c231faeac6",
+  "codeHash": "708eb2f214e97944fbe52a668048867574217c1960c715040c7c0b88fcc3b59d",
+  "model": {
+    "version": "baseline-v1",
+    "validationStatus": "unvalidated",
+    "contextPolicy": "disabled-pending-temporal-validation",
+    "params": {
+      "sigmoidScale": 4,
+      "drawBase": 0.28,
+      "drawGapThreshold": 4,
+      "homeAdvantageBoost": 0.07
+    }
+  },
+  "probabilities": {
+    "win": 0.5715332424897991,
+    "draw": 0.17964107148881345,
+    "loss": 0.24882568602138744,
+    "differential": 0.12680822580645162
+  },
+  "pick": "1",
+  "policy": "first-eligible-observation-before-explicit-kickoff"
+}

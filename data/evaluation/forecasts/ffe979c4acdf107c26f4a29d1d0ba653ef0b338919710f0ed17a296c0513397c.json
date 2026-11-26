@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "featureSchemaVersion": "team-composite-v1",
+  "pipelineVersion": "live-composite-v1",
+  "provider": "sportoto",
+  "providerId": "39118b9d-4998-48bc-718d-08def489a5a2",
+  "roundId": 1545,
+  "fixture": {
+    "id": 15,
+    "providerId": "39118b9d-4998-48bc-718d-08def489a5a2",
+    "roundId": 1545,
+    "leagueId": 44,
+    "home": "RSO",
+    "away": "SEV",
+    "homeName": "Real Sociedad",
+    "awayName": "Sevilla",
+    "kickoffRaw": "2026-11-29T23:00:00",
+    "kickoff": "2026-11-29T20:00:00.000Z",
+    "timezoneStatus": "independently-matched-utc",
+    "providerStatusRaw": null,
+    "providerUpdatedAtRaw": null,
+    "status": "unconfirmed",
+    "result": null,
+    "kickoffSource": {
+      "provider": "espn",
+      "league": "esp.1",
+      "matchId": "401882788",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261129",
+      "fetchedAt": "2026-11-26T20:23:57.924Z",
+      "rawKickoff": "2026-11-29T20:00Z",
+      "status": "STATUS_SCHEDULED",
+      "matchingPolicy": "unique club identities and available provider IDs, home/away, league and same calendar date"
+    }
+  },
+  "capturedAt": "2026-11-26T20:23:58.044Z",
+  "inputHash": "552144e49cc9eafb31b1f56c9855a2b7fce9b0023a0a65e5f58341c231faeac6",
+  "codeHash": "708eb2f214e97944fbe52a668048867574217c1960c715040c7c0b88fcc3b59d",
+  "model": {
+    "version": "baseline-v1",
+    "validationStatus": "unvalidated",
+    "contextPolicy": "disabled-pending-temporal-validation",
+    "params": {
+      "sigmoidScale": 4,
+      "drawBase": 0.28,
+      "drawGapThreshold": 4,
+      "homeAdvantageBoost": 0.07
+    }
+  },
+  "probabilities": {
+    "win": 0.4387865353807882,
+    "draw": 0.2595297586429528,
+    "loss": 0.3016837059762591,
+    "differential": 0.02169092293906808
+  },
+  "pick": "1",
+  "policy": "first-eligible-observation-before-explicit-kickoff"
+}

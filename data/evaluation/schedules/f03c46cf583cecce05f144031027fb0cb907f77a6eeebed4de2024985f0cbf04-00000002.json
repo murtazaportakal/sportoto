@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "f776611c-795c-4bd3-45e5-08def9453ab4",
+  "roundId": 1545,
+  "home": "BVB",
+  "away": "B04",
+  "kickoff": "2026-11-29T18:30:00.000Z",
+  "kickoffRaw": "2026-11-29T21:30:00",
+  "status": "unconfirmed",
+  "observedAt": "2026-11-26T20:23:58.044Z",
+  "revision": 2,
+  "stateHash": "b0802191f29f05ac5d02c7dae9b7a7c1a295fe7f183acc79498a324254871c3b"
+}

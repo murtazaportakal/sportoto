@@ -1,99 +1,93 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-26T16:49:11.937Z",
-  "status": "degraded",
-  "warnings": [
-    "missing-team-coverage"
-  ],
+  "checkedAt": "2026-11-26T20:23:58.025Z",
+  "status": "ok",
+  "warnings": [],
   "modelVersion": "baseline-v1",
-  "supportedFixtures": 12,
+  "supportedFixtures": 15,
   "totalFixtures": 15,
-  "missing": [
-    {
-      "id": 10,
-      "home": "Freiburg",
-      "away": "RB Leipzig"
-    },
-    {
-      "id": 11,
-      "home": "Borussia Dortmund",
-      "away": "Bayer Leverkusen"
-    },
-    {
-      "id": 15,
-      "home": "Real Sociedad",
-      "away": "Sevilla"
-    }
-  ],
+  "missing": [],
   "staleTeams": [],
   "sources": [
     {
       "source": "espn:tur.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.478Z"
+      "fetchedAt": "2026-11-26T20:23:57.266Z"
     },
     {
       "source": "espn:eng.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.478Z"
+      "fetchedAt": "2026-11-26T20:23:57.266Z"
     },
     {
       "source": "espn:esp.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.478Z"
+      "fetchedAt": "2026-11-26T20:23:57.266Z"
     },
     {
       "source": "espn:ger.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.478Z"
+      "fetchedAt": "2026-11-26T20:23:57.266Z"
     },
     {
       "source": "espn:ita.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.478Z"
+      "fetchedAt": "2026-11-26T20:23:57.266Z"
     },
     {
       "source": "espn:fra.1",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.478Z"
+      "fetchedAt": "2026-11-26T20:23:57.266Z"
     },
     {
       "source": "espn:uefa.champions",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.478Z"
+      "fetchedAt": "2026-11-26T20:23:57.266Z"
     },
     {
       "source": "espn:uefa.europa",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.478Z"
+      "fetchedAt": "2026-11-26T20:23:57.266Z"
     },
     {
       "source": "espn:uefa.europa.conf",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.478Z"
+      "fetchedAt": "2026-11-26T20:23:57.266Z"
     },
     {
       "source": "sportoto",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.886Z"
+      "fetchedAt": "2026-11-26T20:23:57.935Z"
     },
     {
       "source": "espn:tur.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.887Z",
+      "fetchedAt": "2026-11-26T20:23:57.936Z",
       "matched": 9
+    },
+    {
+      "source": "espn:ger.1:kickoffs",
+      "status": "ok",
+      "fetchedAt": "2026-11-26T20:23:57.936Z",
+      "matched": 2
     },
     {
       "source": "espn:fra.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.887Z",
+      "fetchedAt": "2026-11-26T20:23:57.936Z",
       "matched": 1
     },
     {
       "source": "espn:eng.1:kickoffs",
       "status": "ok",
-      "fetchedAt": "2026-11-26T16:49:11.887Z",
+      "fetchedAt": "2026-11-26T20:23:57.936Z",
       "matched": 2
+    },
+    {
+      "source": "espn:esp.1:kickoffs",
+      "status": "ok",
+      "fetchedAt": "2026-11-26T20:23:57.936Z",
+      "matched": 1
     },
     {
       "source": "odds",
@@ -109,7 +103,7 @@
   "pairedExperiments": [
     {
       "experimentId": "composite-challenger-v1",
-      "captured": 41,
+      "captured": 44,
       "settled": 29,
       "paused": null,
       "releaseEligible": false
