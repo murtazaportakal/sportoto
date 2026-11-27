@@ -1,0 +1,13 @@
+{
+  "provider": "sportoto",
+  "providerId": "5dbd054c-b502-47b2-5235-08def4816f89",
+  "roundId": 1545,
+  "home": "RIZ",
+  "away": "KAS",
+  "kickoff": "2026-11-27T17:00:00.000Z",
+  "kickoffRaw": "2026-11-27T20:00:00",
+  "status": "source-final-awaiting-primary",
+  "observedAt": "2026-11-27T23:27:36.694Z",
+  "revision": 2,
+  "stateHash": "2cbd0ca458e3b1b2a7fedbf7043a626defc62169be6e05a0a10b9e42f9a4b327"
+}
